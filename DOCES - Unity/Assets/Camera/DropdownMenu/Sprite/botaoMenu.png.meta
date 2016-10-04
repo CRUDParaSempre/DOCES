@@ -1,0 +1,207 @@
+fileFormatVersion: 2
+guid: b87e7342dc13b514487d04aec85c4f1a
+timeCreated: 1475523952
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: botaoMenu_0
+    21300002: botaoMenu_1
+    21300004: botaoMenu_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 2
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 400
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: botaoMenu_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1752
+        width: 776
+        height: 710
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 320, y: -152.10925}
+        - {x: 316, y: -144.10925}
+        - {x: 304, y: -134.10925}
+        - {x: -303, y: -134.10925}
+        - {x: -314, y: -136.10925}
+        - {x: -323, y: -145.10925}
+        - {x: -323, y: -177.10925}
+        - {x: -313, y: -188.10925}
+        - {x: 296, y: -188.10925}
+        - {x: 305, y: -186.10925}
+        - {x: 314, y: -180.10925}
+        - {x: 320, y: -167.10925}
+      - - {x: 320, y: 67.89075}
+        - {x: 310, y: 81.89075}
+        - {x: -304, y: 81.89075}
+        - {x: -313, y: 79.89075}
+        - {x: -323, y: 70.89075}
+        - {x: -323, y: 38.890747}
+        - {x: -316, y: 31.890747}
+        - {x: -305, y: 27.890747}
+        - {x: 284, y: 27.890747}
+        - {x: 300, y: 28.890747}
+        - {x: 309, y: 30.890747}
+        - {x: 320, y: 44.890747}
+      - - {x: 319, y: 283.89075}
+        - {x: 314, y: 290.89075}
+        - {x: 309, y: 295.89075}
+        - {x: -314, y: 295.89075}
+        - {x: -319, y: 293.89075}
+        - {x: -323, y: 286.89075}
+        - {x: -323, y: 255.89075}
+        - {x: -313, y: 245.89075}
+        - {x: -307, y: 244.89075}
+        - {x: 304, y: 244.89075}
+        - {x: 316, y: 251.89075}
+        - {x: 320, y: 262.89075}
+        - {x: 320, y: 276.89075}
+    - name: botaoMenu_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 911
+        width: 776
+        height: 710
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 323, y: -144.19006}
+        - {x: 313, y: -134.19006}
+        - {x: 303, y: -133.19006}
+        - {x: -281, y: -133.19006}
+        - {x: -305, y: -134.19006}
+        - {x: -315, y: -143.19006}
+        - {x: -319, y: -151.19006}
+        - {x: -319, y: -172.19006}
+        - {x: -315, y: -179.19006}
+        - {x: -303, y: -188.19006}
+        - {x: 260, y: -188.19006}
+        - {x: 306, y: -187.19006}
+        - {x: 318, y: -182.19006}
+        - {x: 323, y: -177.19006}
+      - - {x: 323, y: 77.80994}
+        - {x: 307, y: 82.80994}
+        - {x: -299, y: 82.80994}
+        - {x: -303, y: 81.80994}
+        - {x: -309, y: 78.80994}
+        - {x: -315, y: 72.80994}
+        - {x: -319, y: 67.80994}
+        - {x: -319, y: 45.809937}
+        - {x: -316, y: 34.809937}
+        - {x: -300, y: 28.809937}
+        - {x: 306, y: 28.809937}
+        - {x: 317, y: 32.809937}
+        - {x: 323, y: 37.809937}
+      - - {x: 323, y: 296.80994}
+        - {x: -310, y: 296.80994}
+        - {x: -319, y: 283.80994}
+        - {x: -319, y: 264.80994}
+        - {x: -317, y: 253.80994}
+        - {x: -305, y: 245.80994}
+        - {x: 306, y: 245.80994}
+        - {x: 311, y: 246.80994}
+        - {x: 320, y: 253.80994}
+        - {x: 323, y: 253.80994}
+    - name: botaoMenu_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 70
+        width: 776
+        height: 710
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 323, y: -145.2709}
+        - {x: 317, y: -137.2709}
+        - {x: 307, y: -133.2709}
+        - {x: -294, y: -133.2709}
+        - {x: -310, y: -141.2709}
+        - {x: -310, y: -180.2709}
+        - {x: -299, y: -185.2709}
+        - {x: -294, y: -187.2709}
+        - {x: 308, y: -187.2709}
+        - {x: 311, y: -186.2709}
+        - {x: 318, y: -182.2709}
+        - {x: 323, y: -176.2709}
+      - - {x: 318, y: 77.729095}
+        - {x: 308, y: 82.729095}
+        - {x: -287, y: 82.729095}
+        - {x: -292, y: 81.729095}
+        - {x: -297, y: 79.729095}
+        - {x: -303, y: 76.729095}
+        - {x: -309, y: 72.729095}
+        - {x: -310, y: 66.729095}
+        - {x: -310, y: 41.729095}
+        - {x: -308, y: 38.729095}
+        - {x: -297, y: 29.729095}
+        - {x: -291, y: 28.729095}
+        - {x: 303, y: 28.729095}
+        - {x: 313, y: 29.729095}
+        - {x: 323, y: 38.729095}
+        - {x: 323, y: 70.729095}
+      - - {x: 323, y: 291.7291}
+        - {x: 316, y: 295.7291}
+        - {x: -299, y: 295.7291}
+        - {x: -306, y: 289.7291}
+        - {x: -310, y: 283.7291}
+        - {x: -310, y: 259.7291}
+        - {x: -302, y: 247.7291}
+        - {x: -293, y: 244.7291}
+        - {x: 302, y: 244.7291}
+        - {x: 308, y: 245.7291}
+        - {x: 316, y: 248.7291}
+        - {x: 323, y: 254.7291}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
