@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MEUBOTAO : MonoBehaviour {
+public class GitLinkButton : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -13,7 +13,7 @@ public class MEUBOTAO : MonoBehaviour {
 	
 	}
 
-	public void qualquernome(){
+	public void OpenLink(){
 		Application.OpenURL ("https://github.com/CRUDParaSempre/DOCES/wiki");
 	}
 }
