@@ -10,7 +10,6 @@ Abra o terminal ou o app do GitHub
 git pull origin sprint01
 git checkout sprint01
 git checkout -b meu_branch
-git checkout meu_branch
 ```
 
 Antes de enviar, sincronize novamente com o sprint01 (ou o sprint atual). Uma maneira de fazer isso é dando merge
