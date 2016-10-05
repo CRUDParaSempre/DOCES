@@ -9,7 +9,7 @@ Abra o terminal ou o app do GitHub
 ```
 git pull origin sprint01
 git checkout sprint01
-git branch -b meu_branch
+git checkout -b meu_branch
 git checkout meu_branch
 ```
 
