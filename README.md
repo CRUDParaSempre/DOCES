@@ -2,9 +2,9 @@
 Trabalho prático de Engenharia de Software
 
 # LEIA ANTES DE CONTRIBUIR!!!!
-O BRANCH **MASTER** NAO DEVE SER USADO PARA DESENVOLVIMENTO. TODOS OS PUSH REQUESTS DEVEM SER ENVIADOS PARA O  BRANCH **SPRINT01** - **SPRINT02** OU **SPRINT03**. DEPENDE APENAS DE QUAL PARTE DO PROJETO ESTAMOS.
+O BRANCH **MASTER** NÃO DEVE SER USADO PARA DESENVOLVIMENTO. TODOS OS PUSH REQUESTS DEVEM SER ENVIADOS PARA O  BRANCH **SPRINT01** - **SPRINT02** OU **SPRINT03**. DEPENDE APENAS DE QUAL PARTE DO PROJETO ESTAMOS.
 
-Se você já tem o projeto no seu computador. Abra o terminal ou o app do GitHub:
+Se você já tem o projeto no seu computador (você pode clonar o projeto inteiro se quiser). Abra o terminal ou o app do GitHub:
 ```
 git pull origin sprint01
 git checkout sprint01
