@@ -14,7 +14,6 @@ git checkout -b meu_branch
 Caso não tenha e queira clonar apenas o branch sprint01
 ```
 git clone -b sprint01 --single-branch https://github.com/CRUDParaSempre/DOCES.git
-git checkout sprint01
 git checkout -b meu_branch
 ```
 
