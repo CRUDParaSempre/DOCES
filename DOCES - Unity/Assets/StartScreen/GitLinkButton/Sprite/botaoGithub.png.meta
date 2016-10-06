@@ -1,0 +1,120 @@
+fileFormatVersion: 2
+guid: d81a540d9abee284ea3cba9cf5d77213
+timeCreated: 1475679849
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: botaoGithub_0
+    21300002: botaoGithub_1
+    21300004: botaoGithub_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: botaoGithub_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1671
+        width: 687
+        height: 666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 30.328625, y: 36.54492}
+        - {x: -33.671375, y: 36.54492}
+        - {x: -37.671375, y: 28.544922}
+        - {x: -37.671375, y: -29.455078}
+        - {x: -23.671375, y: -36.45508}
+        - {x: 29.328625, y: -36.45508}
+        - {x: 35.328625, y: -30.455078}
+        - {x: 38.328625, y: -18.455078}
+        - {x: 38.328625, y: 24.544922}
+    - name: botaoGithub_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 835
+        width: 693
+        height: 667
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 37.46769}
+        - {x: -33, y: 35.46769}
+        - {x: -38, y: 30.46769}
+        - {x: -38, y: -21.53231}
+        - {x: -32, y: -36.53231}
+        - {x: 32, y: -36.53231}
+        - {x: 38, y: -22.53231}
+        - {x: 38, y: 27.46769}
+        - {x: 26, y: 37.46769}
+    - name: botaoGithub_2
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 679
+        height: 666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28.766796, y: 36.5}
+        - {x: -20.233204, y: 36.5}
+        - {x: -37.233204, y: 28.5}
+        - {x: -37.233204, y: -34.5}
+        - {x: -31.233204, y: -36.5}
+        - {x: 28.766796, y: -36.5}
+        - {x: 38.766796, y: -16.5}
+        - {x: 38.766796, y: 14.5}
+        - {x: 36.766796, y: 25.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
