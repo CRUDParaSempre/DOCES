@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+public class GitLinkButton : MonoBehaviour {
 
-
-public class MuteSound : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
-		AudioListener.pause = false;
+	
 	}
 	
 	// Update is called once per frame
@@ -14,8 +13,7 @@ public class MuteSound : MonoBehaviour {
 	
 	}
 
-
-	public void MuteAudioFunction(){				
-		AudioListener.pause = !AudioListener.pause;
+	public void OpenLink(){
+		Application.OpenURL ("https://github.com/CRUDParaSempre/DOCES/wiki");
 	}
 }
