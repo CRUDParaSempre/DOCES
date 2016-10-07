@@ -24,5 +24,7 @@ git checkout meu_branch
 git merge sprint01
 ```
 
+Não envie suas alterações direto para o *sprint01*, prefira subir o teu branch para o GitHub (*git pull origin seu_branch*) e peça um **pull request**. Assim, podemos acompanhar o desenvolvimento de cada feature e reverter rapidamente caso algo dê errado. 
+
 Evite enviar binários desnecessários que o Unity gera. Envie apenas os arquivos importantes para o desenvolvimento da sua feature.
 
