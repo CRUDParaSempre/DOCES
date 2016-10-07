@@ -1,0 +1,165 @@
+fileFormatVersion: 2
+guid: 1634d90e4dcd949a782f9b13e7483bf3
+timeCreated: 1475861423
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: botaoHome_0
+    21300002: botaoHome_1
+    21300004: botaoHome_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 500
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: botaoHome_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1700
+        width: 835
+        height: 679
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 28.88263, y: -162.9414}
+        - {x: 28.88263, y: -289.9414}
+        - {x: 30.88263, y: -291.9414}
+        - {x: 273.88263, y: -291.9414}
+        - {x: 275.88263, y: -289.9414}
+        - {x: 275.88263, y: -75.94141}
+        - {x: 359.88263, y: -75.94141}
+        - {x: 360.88263, y: -74.94141}
+        - {x: 360.88263, y: -48.941406}
+        - {x: 232.88263, y: 79.05859}
+        - {x: 232.88263, y: 273.0586}
+        - {x: 230.88263, y: 275.0586}
+        - {x: 116.88263, y: 275.0586}
+        - {x: 114.88263, y: 273.0586}
+        - {x: 114.88263, y: 197.0586}
+        - {x: 18.88263, y: 293.0586}
+        - {x: -16.11737, y: 293.0586}
+        - {x: -359.11737, y: -49.941406}
+        - {x: -359.11737, y: -74.94141}
+        - {x: -358.11737, y: -75.94141}
+        - {x: -273.11737, y: -75.94141}
+        - {x: -273.11737, y: -289.9414}
+        - {x: -271.11737, y: -291.9414}
+        - {x: -28.11737, y: -291.9414}
+        - {x: -26.11737, y: -289.9414}
+        - {x: -26.11737, y: -162.9414}
+    - name: botaoHome_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 849
+        width: 852
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19.5, y: -164.081}
+        - {x: 19.5, y: -292.081}
+        - {x: 20.5, y: -293.081}
+        - {x: 281.5, y: -293.081}
+        - {x: 282.5, y: -292.081}
+        - {x: 282.5, y: -78.08099}
+        - {x: 366.5, y: -78.08099}
+        - {x: 366.5, y: -49.080994}
+        - {x: 239.5, y: 77.91901}
+        - {x: 239.5, y: 271.919}
+        - {x: 237.5, y: 273.919}
+        - {x: 108.5, y: 273.919}
+        - {x: 105.5, y: 270.919}
+        - {x: 105.5, y: 211.919}
+        - {x: 23.5, y: 293.919}
+        - {x: -23.5, y: 293.919}
+        - {x: -366.5, y: -49.080994}
+        - {x: -366.5, y: -78.08099}
+        - {x: -282.5, y: -78.08099}
+        - {x: -282.5, y: -292.081}
+        - {x: -281.5, y: -293.081}
+        - {x: -20.5, y: -293.081}
+        - {x: -19.5, y: -292.081}
+        - {x: -19.5, y: -164.081}
+    - name: botaoHome_2
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 0
+        width: 816
+        height: 679
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36.9859, y: -292.5}
+        - {x: 265.9859, y: -292.5}
+        - {x: 265.9859, y: -79.5}
+        - {x: 350.9859, y: -79.5}
+        - {x: 351.9859, y: -78.5}
+        - {x: 351.9859, y: -52.5}
+        - {x: 222.9859, y: 76.5}
+        - {x: 222.9859, y: 270.5}
+        - {x: 220.9859, y: 272.5}
+        - {x: 124.9859, y: 272.5}
+        - {x: 122.9859, y: 270.5}
+        - {x: 122.9859, y: 176.5}
+        - {x: 6.985901, y: 292.5}
+        - {x: -6.014099, y: 292.5}
+        - {x: -351.0141, y: -52.5}
+        - {x: -351.0141, y: -78.5}
+        - {x: -350.0141, y: -79.5}
+        - {x: -266.0141, y: -79.5}
+        - {x: -266.0141, y: -292.5}
+        - {x: -36.0141, y: -292.5}
+        - {x: -36.0141, y: -165.5}
+        - {x: 36.9859, y: -165.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
