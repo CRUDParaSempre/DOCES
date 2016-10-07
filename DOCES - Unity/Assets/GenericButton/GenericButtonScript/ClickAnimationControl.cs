@@ -17,6 +17,8 @@ public class ClickAnimationControl : MonoBehaviour {
 	[SerializeField] private string blockName;
 	[SerializeField] private List<Sprite> buttonSprites = new List<Sprite>(); // 0 not selected, 1 selected, 2 pressed
 	[SerializeField] private bool changeSpriteWhileClick = true;
+	[SerializeField] private AudioSource selectedSound = null;
+	[SerializeField] private AudioSource clickSound = null;
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +31,10 @@ public class ClickAnimationControl : MonoBehaviour {
 		if (isMouseOver && Input.GetMouseButtonDown(0)) {
 			setMouseStatus (2);
 			clicked = true;
+
+			if (clickSound != null) {
+				clickSound.Play ();
+			}
 
 			if (changeSpriteWhileClick) {
 				rend.sprite = buttonSprites [2];
@@ -95,6 +101,10 @@ public class ClickAnimationControl : MonoBehaviour {
 
 		if (changeSpriteWhileClick) {
 			rend.sprite = buttonSprites [1];
+		}
+
+		if (selectedSound != null) {
+			selectedSound.Play ();
 		}
 	}
 
