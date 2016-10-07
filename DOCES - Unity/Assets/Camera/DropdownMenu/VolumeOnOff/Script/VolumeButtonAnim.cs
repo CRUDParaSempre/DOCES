@@ -19,6 +19,8 @@ public class VolumeButtonAnim : MonoBehaviour {
 	[SerializeField] private List<Sprite> buttonSpritesON = new List<Sprite>(); // 0 not selected, 1 selected, 2 pressed
 	[SerializeField] private List<Sprite> buttonSpritesOFF = new List<Sprite>(); // 0 not selected, 1 selected, 2 pressed
 	[SerializeField] private bool changeSpriteWhileClick = true;
+	[SerializeField] private AudioSource selectedSound = null;
+	[SerializeField] private AudioSource clickSound = null;
 
 	// Use this for initialization
 	void Start () {
@@ -32,6 +34,10 @@ public class VolumeButtonAnim : MonoBehaviour {
 		if (isMouseOver && Input.GetMouseButtonDown(0)) {
 			setMouseStatus (2);
 			clicked = true;
+
+			if (clickSound != null) {
+				clickSound.Play ();
+			}
 
 			if (changeSpriteWhileClick) {
 				rend.sprite = buttonSprites [2];
@@ -100,6 +106,9 @@ public class VolumeButtonAnim : MonoBehaviour {
 			rend.sprite = buttonSprites [1];
 		}
 
+		if (selectedSound != null) {
+			selectedSound.Play ();
+		}
 	}
 
 	public void OnMouseExit() {
@@ -113,10 +122,12 @@ public class VolumeButtonAnim : MonoBehaviour {
 	}
 
 	public void ChangeSpriteONOFF() {		
-		if(AudioListener.pause)
+		if (buttonSprites == buttonSpritesON) {
 			buttonSprites = buttonSpritesOFF;
-		else
+		} else {
 			buttonSprites = buttonSpritesON;
+		}
+
 		rend.sprite = buttonSprites [0];
 	}
 }
