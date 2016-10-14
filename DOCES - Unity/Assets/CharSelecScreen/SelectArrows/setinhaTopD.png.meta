@@ -1,9 +1,11 @@
 fileFormatVersion: 2
 guid: 3965fa9853db0430c82d4865bce79419
-timeCreated: 1475698373
+timeCreated: 1476482297
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: setinhaTopD_0
+    21300002: setinhaTopD_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,7 +32,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,7 +40,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +51,98 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: setinhaTopD_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 884
+        width: 324
+        height: 451
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: -225.5}
+        - {x: 27, y: -201.5}
+        - {x: 64, y: -162.5}
+        - {x: 137, y: -85.5}
+        - {x: 162, y: -60.5}
+        - {x: 162, y: -37.5}
+        - {x: 136, y: 6.5}
+        - {x: 109, y: 51.5}
+        - {x: 106, y: 58.5}
+        - {x: 81, y: 98.5}
+        - {x: 68, y: 120.5}
+        - {x: 11, y: 217.5}
+        - {x: 1, y: 225.5}
+        - {x: -105, y: 225.5}
+        - {x: -109, y: 223.5}
+        - {x: -159, y: 172.5}
+        - {x: -162, y: 165.5}
+        - {x: -162, y: 150.5}
+        - {x: -153, y: 134.5}
+        - {x: -125, y: 85.5}
+        - {x: -77, y: 4.5}
+        - {x: -68, y: -13.5}
+        - {x: -86, y: -32.5}
+        - {x: -103, y: -50.5}
+        - {x: -121, y: -69.5}
+        - {x: -156, y: -105.5}
+        - {x: -162, y: -113.5}
+        - {x: -162, y: -136.5}
+        - {x: -160, y: -141.5}
+        - {x: -140, y: -174.5}
+        - {x: -112, y: -220.5}
+        - {x: -106, y: -225.5}
+        - {x: -94, y: -225.5}
+        - {x: -93, y: -224.5}
+        - {x: -29, y: -225.5}
+    - name: setinhaTopD_1
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 0
+        width: 324
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: -225}
+        - {x: 41, y: -189}
+        - {x: 78, y: -148}
+        - {x: 96, y: -129}
+        - {x: 115, y: -109}
+        - {x: 133, y: -90}
+        - {x: 162, y: -61}
+        - {x: 162, y: -37}
+        - {x: 148, y: -14}
+        - {x: 127, y: 23}
+        - {x: 96, y: 75}
+        - {x: 58, y: 137}
+        - {x: 34, y: 179}
+        - {x: 12, y: 214}
+        - {x: 7, y: 222}
+        - {x: 1, y: 225}
+        - {x: -105, y: 225}
+        - {x: -107, y: 224}
+        - {x: -125, y: 206}
+        - {x: -159, y: 171}
+        - {x: -162, y: 164}
+        - {x: -162, y: 156}
+        - {x: -161, y: 147}
+        - {x: -154, y: 136}
+        - {x: -113, y: 65}
+        - {x: -67, y: -12}
+        - {x: -90, y: -36}
+        - {x: -125, y: -74}
+        - {x: -161, y: -111}
+        - {x: -162, y: -114}
+        - {x: -162, y: -137}
+        - {x: -161, y: -140}
+        - {x: -117, y: -214}
+        - {x: -108, y: -225}
     outline: []
   spritePackingTag: 
   userData: 
