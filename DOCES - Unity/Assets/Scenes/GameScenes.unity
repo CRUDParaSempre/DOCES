@@ -1279,7 +1279,7 @@ GameObject:
   - 61: {fileID: 1043109119}
   - 114: {fileID: 1043109118}
   m_Layer: 0
-  m_Name: ClickableSprite
+  m_Name: botaomacelu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1342,7 +1342,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ea8f56c43254d41728f5ac4e8299b6c9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0f6d41a3347513d4fb376be7c4be701e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
