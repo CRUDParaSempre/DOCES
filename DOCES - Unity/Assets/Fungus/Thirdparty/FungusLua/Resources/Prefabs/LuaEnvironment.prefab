@@ -26,6 +26,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -41,9 +42,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fungusModule: 0
-  stringTable: {fileID: 0}
   activeLanguage: en
-  timeScale: -1
+  stringTables: []
   registerTypes:
   - {fileID: 4900000, guid: 9c3ab7a98d51241bbb499643399fa761, type: 3}
   - {fileID: 4900000, guid: 93fddea8208764a2dbb189cc238aed40, type: 3}

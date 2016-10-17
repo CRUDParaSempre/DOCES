@@ -434,6 +434,8 @@ MonoBehaviour:
   localizationId: 
   showLineNumbers: 0
   hideCommands: []
+  luaEnvironment: {fileID: 0}
+  luaBindingName: flowchart
 --- !u!114 &2039188991
 MonoBehaviour:
   m_ObjectHideFlags: 2

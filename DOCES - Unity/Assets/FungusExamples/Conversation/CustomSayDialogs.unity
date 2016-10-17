@@ -583,7 +583,7 @@ MonoBehaviour:
   profileSprite: {fileID: 21300000, guid: 58bfb145092302e4083ef8a9e4eeb576, type: 3}
   portraits:
   - {fileID: 21300000, guid: 58bfb145092302e4083ef8a9e4eeb576, type: 3}
-  - {fileID: 21300000, guid: 820bab66bb5a044ec961ba8ee3b045cc, type: 3}
+  - {fileID: 0}
   portraitsFace: 2
   setSayDialog: {fileID: 272906895}
   description: 
