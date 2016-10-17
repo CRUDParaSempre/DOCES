@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 548956416}
+  selectedFlowchart: {fileID: 1960128264}
 --- !u!4 &395558029
 Transform:
   m_ObjectHideFlags: 1
@@ -470,12 +470,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
---- !u!114 &548956416 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11489124, guid: efe0d16fc5efe39419e439a6729d392a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1906951018}
-  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
 --- !u!1 &559374102
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,13 +507,13 @@ GameObject:
   m_Component:
   - 4: {fileID: 597845481}
   - 212: {fileID: 597845489}
-  - 61: {fileID: 597845488}
   - 114: {fileID: 597845487}
   - 95: {fileID: 597845486}
   - 114: {fileID: 597845485}
   - 82: {fileID: 597845484}
   - 82: {fileID: 597845483}
   - 114: {fileID: 597845482}
+  - 58: {fileID: 597845488}
   m_Layer: 0
   m_Name: CreditsButton
   m_TagString: Untagged
@@ -535,7 +529,7 @@ Transform:
   m_GameObject: {fileID: 597845480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.5, y: -6.5, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.7}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2089778184}
@@ -729,7 +723,7 @@ Animator:
   m_GameObject: {fileID: 597845480}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: aac042cbbd7fc7244a717ae3643bbe66, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -752,11 +746,10 @@ MonoBehaviour:
   clickEnabled: 1
   hoverCursor: {fileID: 0}
   useEventSystem: 0
---- !u!61 &597845488
-BoxCollider2D:
+--- !u!58 &597845488
+CircleCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6100000, guid: 0e6bcf37a2876432fa58eff8888bf177,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 597845480}
   m_Enabled: 1
@@ -764,9 +757,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0.0000009536743, y: -0.015271187}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 2.0877137, y: 2.118096}
+  m_Radius: 1.382
 --- !u!212 &597845489
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1619,8 +1612,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1293352857}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1, y: -2.6, z: 0}
-  m_LocalScale: {x: 1.260829, y: 1.260829, z: 0.1260829}
+  m_LocalPosition: {x: 0, y: -2.6, z: 0}
+  m_LocalScale: {x: 3.307706, y: 1.260829, z: 0.1260829}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 88194921}
@@ -1814,13 +1807,13 @@ GameObject:
   m_Component:
   - 4: {fileID: 1777355761}
   - 212: {fileID: 1777355768}
-  - 61: {fileID: 1777355767}
   - 114: {fileID: 1777355766}
   - 95: {fileID: 1777355765}
   - 114: {fileID: 1777355764}
   - 82: {fileID: 1777355763}
   - 82: {fileID: 1777355762}
   - 114: {fileID: 1777355769}
+  - 58: {fileID: 1777355767}
   m_Layer: 0
   m_Name: ProjectPageButton
   m_TagString: Untagged
@@ -1836,7 +1829,7 @@ Transform:
   m_GameObject: {fileID: 1777355760}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.5, y: -6.5, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.7}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2089778184}
@@ -2018,7 +2011,7 @@ Animator:
   m_GameObject: {fileID: 1777355760}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: aac042cbbd7fc7244a717ae3643bbe66, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2041,11 +2034,10 @@ MonoBehaviour:
   clickEnabled: 1
   hoverCursor: {fileID: 0}
   useEventSystem: 0
---- !u!61 &1777355767
-BoxCollider2D:
+--- !u!58 &1777355767
+CircleCollider2D:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6100000, guid: 0e6bcf37a2876432fa58eff8888bf177,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1777355760}
   m_Enabled: 1
@@ -2053,9 +2045,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0.0000009536743, y: -0.015271187}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 2.0877137, y: 2.118096}
+  m_Radius: 1.374
 --- !u!212 &1777355768
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2622,7 +2614,7 @@ Transform:
   m_LocalRotation: {x: 0.40821794, y: -0.23456973, z: 0.109381676, w: 0.87542605}
   m_LocalPosition: {x: -0.05, y: 10.08, z: 0.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -2864,13 +2856,13 @@ MonoBehaviour:
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: SetCameraPosition
-  targetMethod: setCameraPosition
-  targetMethodText: 'setCameraPosition (Int32, Int32, Int32): Void'
+  targetMethod: moveCameraTo
+  targetMethodText: 'moveCameraTo (Vector3, Single): Void'
   methodParameters:
   - objValue:
-      typeAssemblyname: System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Int32
+      typeAssemblyname: UnityEngine.Vector3, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      typeFullname: UnityEngine.Vector3
       intValue: 0
       boolValue: 0
       floatValue: 0
@@ -2882,32 +2874,15 @@ MonoBehaviour:
       spriteValue: {fileID: 0}
       textureValue: {fileID: 0}
       vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
+      vector3Value: {x: 32, y: 600, z: -10}
     variableKey: 
   - objValue:
-      typeAssemblyname: System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral,
+      typeAssemblyname: System.Single, mscorlib, Version=2.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Int32
-      intValue: 300
+      typeFullname: System.Single
+      intValue: 0
       boolValue: 0
-      floatValue: 0
-      stringValue: 
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  - objValue:
-      typeAssemblyname: System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Int32
-      intValue: -10
-      boolValue: 0
-      floatValue: 0
+      floatValue: 0.5
       stringValue: 
       colorValue: {r: 0, g: 0, b: 0, a: 0}
       gameObjectValue: {fileID: 0}
@@ -2937,8 +2912,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 334.1463
-    y: 16.463425
-    width: 130
+    y: 18.90245
+    width: 139
     height: 40
   itemId: 0
   blockName: NewGameBlock
@@ -3001,7 +2976,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 335
     y: 76
-    width: 128
+    width: 136
     height: 40
   itemId: 2
   blockName: ExitGameBlock
@@ -3024,7 +2999,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 323
     y: 134
-    width: 157
+    width: 166
     height: 40
   itemId: 4
   blockName: ContinueGameBlock
@@ -3073,7 +3048,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 571.6338
     y: 13.975616
-    width: 175
+    width: 186
     height: 40
   itemId: 5
   blockName: ProjectPageButtonBlock
@@ -3083,7 +3058,7 @@ MonoBehaviour:
   - {fileID: 1960128271}
 --- !u!114 &1960128273
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1960128263}
@@ -3110,7 +3085,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1960128274
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1960128263}
@@ -3123,7 +3098,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 572.8536
     y: 67.63413
-    width: 152
+    width: 159
     height: 40
   itemId: 7
   blockName: CreditsButtonBlock
@@ -3203,6 +3178,7 @@ GameObject:
   - 124: {fileID: 2011807839}
   - 81: {fileID: 2011807838}
   - 114: {fileID: 2011807843}
+  - 50: {fileID: 2011807844}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3290,6 +3266,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15ea2fecda07d5648ae230f1f2faa7ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &2011807844
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2011807837}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &2089778183
 GameObject:
   m_ObjectHideFlags: 0
