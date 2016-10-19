@@ -22,7 +22,7 @@ public class ButtonScript : MonoBehaviour {
 	
 	}
 
-	public void OnMouseDown(){
+	public void buttonClicked(){
 		int new_val = m_Script.value + offset;
 		int new_val_total = tm_Script.value - offset;
 		if (new_val <= 9 && new_val >= 0 && new_val_total <= 15 && new_val_total >= 0) {
