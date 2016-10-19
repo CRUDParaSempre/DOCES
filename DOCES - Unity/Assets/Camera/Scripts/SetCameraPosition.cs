@@ -15,7 +15,8 @@ public class SetCameraPosition : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (moving) {
-			if (Vector3.Distance (transform.position, dest) < 1f) {
+			if (Vector3.Distance (transform.position, dest) < .5f) {
+				transform.position = dest;
 				body.velocity = Vector2.zero;
 				moving = false;
 			}
