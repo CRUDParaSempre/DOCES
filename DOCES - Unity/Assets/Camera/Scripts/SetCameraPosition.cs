@@ -5,6 +5,7 @@ public class SetCameraPosition : MonoBehaviour {
 	private bool moving = false;
 	private float moveSpeed;
 	private Vector3 dest;
+	private Vector3 dirControl = new Vector3(1f,1f,1f); // 1 means should increase, -1 means should decrease
 	private Rigidbody2D body;
 
 	// Use this for initialization
@@ -15,7 +16,10 @@ public class SetCameraPosition : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (moving) {
-			if (Vector3.Distance (transform.position, dest) < .5f) {
+			if ( transform.position.x * dirControl.x > dest.x * dirControl.x
+				|| transform.position.y * dirControl.y > dest.y * dirControl.y
+				|| transform.position.z * dirControl.z > dest.z * dirControl.z  ) {
+
 				transform.position = dest;
 				body.velocity = Vector2.zero;
 				moving = false;
@@ -30,8 +34,28 @@ public class SetCameraPosition : MonoBehaviour {
 
 	public void moveCameraTo(Vector3 dest, float duration) {
 		this.dest = dest;
-		body.velocity = (dest - transform.position) / duration ;
+
+		if (dest.x > transform.position.x) {
+			dirControl.x = 1f;
+		} else if (dest.x < transform.position.x) {
+			dirControl.x = -1f;
+		}
+
+		if (dest.y > transform.position.y) {
+			dirControl.y = 1f;
+		} else if (dest.y < transform.position.y) {
+			dirControl.y = -1f;
+		}
+
+		if (dest.z > transform.position.z) {
+			dirControl.z = 1f;
+		} else if (dest.z < transform.position.z) {
+			dirControl.z = -1f;
+		}
+
 		moving = true;
+		body.velocity = (dest - transform.position) / duration ;
+
 	}
 
 	
