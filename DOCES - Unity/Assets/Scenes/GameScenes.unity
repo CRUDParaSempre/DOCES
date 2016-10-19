@@ -447,6 +447,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 200458976}
   - 212: {fileID: 200458977}
+  - 114: {fileID: 200458978}
   m_Layer: 0
   m_Name: frascoO
   m_TagString: Untagged
@@ -499,6 +500,29 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &200458978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 200458975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bbfdffbc62499142b81c6ae275abb88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 0
+  habilidade0: {fileID: 21300000, guid: 0b3724a67dd24410a95300c42b2dfb15, type: 3}
+  habilidade1: {fileID: 21300002, guid: 0b3724a67dd24410a95300c42b2dfb15, type: 3}
+  habilidade2: {fileID: 21300004, guid: 0b3724a67dd24410a95300c42b2dfb15, type: 3}
+  habilidade3: {fileID: 21300006, guid: 0b3724a67dd24410a95300c42b2dfb15, type: 3}
+  habilidade4: {fileID: 21300008, guid: 0b3724a67dd24410a95300c42b2dfb15, type: 3}
+  habilidade5: {fileID: 21300010, guid: 0b3724a67dd24410a95300c42b2dfb15, type: 3}
+  habilidade6: {fileID: 21300012, guid: 0b3724a67dd24410a95300c42b2dfb15, type: 3}
+  habilidade7: {fileID: 21300014, guid: 0b3724a67dd24410a95300c42b2dfb15, type: 3}
+  habilidade8: {fileID: 21300016, guid: 0b3724a67dd24410a95300c42b2dfb15, type: 3}
+  habilidade9: {fileID: 21300018, guid: 0b3724a67dd24410a95300c42b2dfb15, type: 3}
+  frasco: {fileID: 200458977}
 --- !u!1 &225594346
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,6 +723,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 257961466}
   - 212: {fileID: 257961467}
+  - 114: {fileID: 257961468}
   m_Layer: 0
   m_Name: frascoT
   m_TagString: Untagged
@@ -749,6 +774,35 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &257961468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 257961465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acdaa1b380b5d544298ba703f19f4f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 15
+  habilidade0: {fileID: 21300000, guid: be8c78d22c77b43b99d44008b6b1eec3, type: 3}
+  habilidade1: {fileID: 21300002, guid: be8c78d22c77b43b99d44008b6b1eec3, type: 3}
+  habilidade2: {fileID: 21300004, guid: be8c78d22c77b43b99d44008b6b1eec3, type: 3}
+  habilidade3: {fileID: 21300006, guid: be8c78d22c77b43b99d44008b6b1eec3, type: 3}
+  habilidade4: {fileID: 21300008, guid: be8c78d22c77b43b99d44008b6b1eec3, type: 3}
+  habilidade5: {fileID: 21300010, guid: be8c78d22c77b43b99d44008b6b1eec3, type: 3}
+  habilidade6: {fileID: 21300012, guid: be8c78d22c77b43b99d44008b6b1eec3, type: 3}
+  habilidade7: {fileID: 21300014, guid: be8c78d22c77b43b99d44008b6b1eec3, type: 3}
+  habilidade8: {fileID: 21300016, guid: be8c78d22c77b43b99d44008b6b1eec3, type: 3}
+  habilidade9: {fileID: 21300018, guid: be8c78d22c77b43b99d44008b6b1eec3, type: 3}
+  habilidade10: {fileID: 21300020, guid: be8c78d22c77b43b99d44008b6b1eec3, type: 3}
+  habilidade11: {fileID: 21300022, guid: be8c78d22c77b43b99d44008b6b1eec3, type: 3}
+  habilidade12: {fileID: 21300024, guid: be8c78d22c77b43b99d44008b6b1eec3, type: 3}
+  habilidade13: {fileID: 21300026, guid: be8c78d22c77b43b99d44008b6b1eec3, type: 3}
+  habilidade14: {fileID: 21300028, guid: be8c78d22c77b43b99d44008b6b1eec3, type: 3}
+  habilidade15: {fileID: 21300030, guid: be8c78d22c77b43b99d44008b6b1eec3, type: 3}
+  frasco: {fileID: 257961467}
 --- !u!1 &259052867
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,6 +949,65 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &348560144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 348560145}
+  - 212: {fileID: 348560146}
+  m_Layer: 0
+  m_Name: "bot\xE3oPronto"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &348560145
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 348560144}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9, y: 7, z: 0}
+  m_LocalScale: {x: 0.45929864, y: 0.45929864, z: 0.45929864}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 2128635977}
+  m_RootOrder: 0
+--- !u!212 &348560146
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 348560144}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_ReflectionProbeUsage: 0
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 629268113
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 14f950509e4a23c4e941ce259f902866, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1 &395558027
 GameObject:
   m_ObjectHideFlags: 1
@@ -922,7 +1035,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1960128264}
+  selectedFlowchart: {fileID: 1173192956}
 --- !u!4 &395558029
 Transform:
   m_ObjectHideFlags: 1
@@ -1039,6 +1152,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 569133887}
   - 212: {fileID: 569133888}
+  - 114: {fileID: 569133893}
+  - 61: {fileID: 569133892}
+  - 95: {fileID: 569133891}
+  - 114: {fileID: 569133890}
+  - 114: {fileID: 569133889}
   m_Layer: 0
   m_Name: "bot\xE3oMenos"
   m_TagString: Untagged
@@ -1089,6 +1207,85 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &569133889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 569133886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4aaf82cf342771488e829306da61233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: -1
+  m_Transform: {fileID: 1979076291}
+  tm_Transform: {fileID: 257961466}
+--- !u!114 &569133890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 569133886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc4523b01767ab44b6611b39ca48d91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flowchart: {fileID: 1173192956}
+  blockName: BlockMenosFrascoC
+  buttonSprites:
+  - {fileID: 21300000, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
+  - {fileID: 21300000, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
+  - {fileID: 21300002, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
+  changeSpriteWhileClick: 1
+  selectedSound: {fileID: 0}
+  clickSound: {fileID: 0}
+--- !u!95 &569133891
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 569133886}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!61 &569133892
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 569133886}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0.00024414062}
+  serializedVersion: 2
+  m_Size: {x: 0.79999995, y: 0.74000007}
+--- !u!114 &569133893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 569133886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc03961113fa349c09cb06ef2911013d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickEnabled: 1
+  hoverCursor: {fileID: 0}
+  useEventSystem: 0
 --- !u!1 &597845480
 GameObject:
   m_ObjectHideFlags: 0
@@ -2289,7 +2486,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2128635977}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!212 &939847070
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2388,6 +2585,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 958901206}
   - 212: {fileID: 958901207}
+  - 114: {fileID: 958901212}
+  - 61: {fileID: 958901211}
+  - 95: {fileID: 958901210}
+  - 114: {fileID: 958901209}
+  - 114: {fileID: 958901208}
   m_Layer: 0
   m_Name: "bot\xE3oMais"
   m_TagString: Untagged
@@ -2438,6 +2640,85 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &958901208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 958901205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4aaf82cf342771488e829306da61233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 1
+  m_Transform: {fileID: 1062696993}
+  tm_Transform: {fileID: 257961466}
+--- !u!114 &958901209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 958901205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc4523b01767ab44b6611b39ca48d91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flowchart: {fileID: 1173192956}
+  blockName: BlockMaisFrascoL
+  buttonSprites:
+  - {fileID: 21300000, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
+  - {fileID: 21300000, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
+  - {fileID: 21300002, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
+  changeSpriteWhileClick: 1
+  selectedSound: {fileID: 0}
+  clickSound: {fileID: 0}
+--- !u!95 &958901210
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 958901205}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!61 &958901211
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 958901205}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0.00024414062}
+  serializedVersion: 2
+  m_Size: {x: 0.79999995, y: 0.74000007}
+--- !u!114 &958901212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 958901205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc03961113fa349c09cb06ef2911013d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickEnabled: 1
+  hoverCursor: {fileID: 0}
+  useEventSystem: 0
 --- !u!1 &959016665
 GameObject:
   m_ObjectHideFlags: 0
@@ -2469,7 +2750,7 @@ Transform:
   - {fileID: 1913075523}
   - {fileID: 821010000}
   m_Father: {fileID: 2128635977}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &973131589
 GameObject:
   m_ObjectHideFlags: 0
@@ -2556,6 +2837,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1062696993}
   - 212: {fileID: 1062696994}
+  - 114: {fileID: 1062696995}
   m_Layer: 0
   m_Name: frascoL
   m_TagString: Untagged
@@ -2608,6 +2890,29 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1062696995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1062696992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bbfdffbc62499142b81c6ae275abb88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 0
+  habilidade0: {fileID: 21300000, guid: 231d2ecaab0ff4af7821c5e430064b49, type: 3}
+  habilidade1: {fileID: 21300002, guid: 231d2ecaab0ff4af7821c5e430064b49, type: 3}
+  habilidade2: {fileID: 21300004, guid: 231d2ecaab0ff4af7821c5e430064b49, type: 3}
+  habilidade3: {fileID: 21300006, guid: 231d2ecaab0ff4af7821c5e430064b49, type: 3}
+  habilidade4: {fileID: 21300008, guid: 231d2ecaab0ff4af7821c5e430064b49, type: 3}
+  habilidade5: {fileID: 21300010, guid: 231d2ecaab0ff4af7821c5e430064b49, type: 3}
+  habilidade6: {fileID: 21300012, guid: 231d2ecaab0ff4af7821c5e430064b49, type: 3}
+  habilidade7: {fileID: 21300014, guid: 231d2ecaab0ff4af7821c5e430064b49, type: 3}
+  habilidade8: {fileID: 21300016, guid: 231d2ecaab0ff4af7821c5e430064b49, type: 3}
+  habilidade9: {fileID: 21300018, guid: 231d2ecaab0ff4af7821c5e430064b49, type: 3}
+  frasco: {fileID: 1062696994}
 --- !u!1 &1084372290
 GameObject:
   m_ObjectHideFlags: 0
@@ -2667,6 +2972,385 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1173192955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 142980, guid: 5e7fbc8d4eb714b279eeeef2262c1e1a, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1173192958}
+  - 114: {fileID: 1173192956}
+  - 114: {fileID: 1173192961}
+  - 114: {fileID: 1173192960}
+  - 114: {fileID: 1173192959}
+  - 114: {fileID: 1173192957}
+  - 114: {fileID: 1173192964}
+  - 114: {fileID: 1173192963}
+  - 114: {fileID: 1173192962}
+  - 114: {fileID: 1173192965}
+  - 114: {fileID: 1173192967}
+  - 114: {fileID: 1173192966}
+  - 114: {fileID: 1173192969}
+  - 114: {fileID: 1173192968}
+  m_Layer: 0
+  m_Name: Flowchart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1173192956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11430050, guid: 5e7fbc8d4eb714b279eeeef2262c1e1a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  scrollPos: {x: 330.8048, y: 28.70728}
+  variablesScrollPos: {x: 0, y: 0}
+  variablesExpanded: 1
+  blockViewHeight: 207
+  zoom: 0.8200002
+  scrollViewRect:
+    serializedVersion: 2
+    x: -434.46338
+    y: -387.19513
+    width: 1972.4634
+    height: 1081.4146
+  selectedBlock: {fileID: 1173192966}
+  selectedCommands:
+  - {fileID: 1173192968}
+  variables: []
+  description: 
+  stepPause: 0
+  colorCommands: 1
+  hideComponents: 1
+  saveSelection: 1
+  localizationId: 
+  showLineNumbers: 0
+  hideCommands: []
+  luaEnvironment: {fileID: 0}
+  luaBindingName: flowchart
+--- !u!114 &1173192957
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 3
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 958901205}
+  targetComponentAssemblyName: ButtonScript, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ButtonScript
+  targetMethod: buttonClicked
+  targetMethodText: 'buttonClicked (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!4 &1173192958
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 467082, guid: 5e7fbc8d4eb714b279eeeef2262c1e1a, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -23, y: -600, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 2128635977}
+  m_RootOrder: 0
+--- !u!114 &1173192959
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 198.46341
+    y: 96.902435
+    width: 149
+    height: 40
+  itemId: 2
+  blockName: BlockMaisFrascoL
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1173192957}
+--- !u!114 &1173192960
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 2090953009}
+  targetComponentAssemblyName: ButtonScript, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ButtonScript
+  targetMethod: buttonClicked
+  targetMethodText: 'buttonClicked (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173192961
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 178.9512
+    y: 18.853668
+    width: 160
+    height: 40
+  itemId: 0
+  blockName: BlockMenosFrascoL
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1173192960}
+--- !u!114 &1173192962
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 204.56096
+    y: 244.46341
+    width: 152
+    height: 40
+  itemId: 6
+  blockName: BlockMaisFrascoO
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1173192965}
+--- !u!114 &1173192963
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 5
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 2022748502}
+  targetComponentAssemblyName: ButtonScript, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ButtonScript
+  targetMethod: buttonClicked
+  targetMethodText: 'buttonClicked (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173192964
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 175.29272
+    y: 176.17068
+    width: 163
+    height: 40
+  itemId: 4
+  blockName: BlockMenosFrascoO
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1173192963}
+--- !u!114 &1173192965
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 7
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 2095961234}
+  targetComponentAssemblyName: ButtonScript, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ButtonScript
+  targetMethod: buttonClicked
+  targetMethodText: 'buttonClicked (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173192966
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: -11.292671
+    y: 99.34146
+    width: 152
+    height: 40
+  itemId: 9
+  blockName: BlockMaisFrascoC
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1173192968}
+--- !u!114 &1173192967
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: -34.463394
+    y: 28.60978
+    width: 163
+    height: 40
+  itemId: 8
+  blockName: BlockMenosFrascoC
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 1173192969}
+--- !u!114 &1173192968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 11
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 1223800390}
+  targetComponentAssemblyName: ButtonScript, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ButtonScript
+  targetMethod: buttonClicked
+  targetMethodText: 'buttonClicked (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173192969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 10
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 569133886}
+  targetComponentAssemblyName: ButtonScript, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ButtonScript
+  targetMethod: buttonClicked
+  targetMethodText: 'buttonClicked (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!1 &1185932373
 GameObject:
   m_ObjectHideFlags: 0
@@ -2704,6 +3388,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 1223800391}
   - 212: {fileID: 1223800392}
+  - 114: {fileID: 1223800397}
+  - 61: {fileID: 1223800396}
+  - 95: {fileID: 1223800395}
+  - 114: {fileID: 1223800394}
+  - 114: {fileID: 1223800393}
   m_Layer: 0
   m_Name: "bot\xE3oMais"
   m_TagString: Untagged
@@ -2754,6 +3443,85 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1223800393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1223800390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4aaf82cf342771488e829306da61233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 1
+  m_Transform: {fileID: 1979076291}
+  tm_Transform: {fileID: 257961466}
+--- !u!114 &1223800394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1223800390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc4523b01767ab44b6611b39ca48d91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flowchart: {fileID: 1173192956}
+  blockName: BlockMaisFrascoC
+  buttonSprites:
+  - {fileID: 21300000, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
+  - {fileID: 21300000, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
+  - {fileID: 21300002, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
+  changeSpriteWhileClick: 1
+  selectedSound: {fileID: 0}
+  clickSound: {fileID: 0}
+--- !u!95 &1223800395
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1223800390}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!61 &1223800396
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1223800390}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.0000038146973, y: 0.00024414062}
+  serializedVersion: 2
+  m_Size: {x: 0.79999995, y: 0.74000007}
+--- !u!114 &1223800397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1223800390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc03961113fa349c09cb06ef2911013d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickEnabled: 1
+  hoverCursor: {fileID: 0}
+  useEventSystem: 0
 --- !u!1 &1239477906
 GameObject:
   m_ObjectHideFlags: 0
@@ -4036,7 +4804,7 @@ Transform:
   - {fileID: 2099296461}
   - {fileID: 2018110987}
   m_Father: {fileID: 2128635977}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &1640797936
 GameObject:
   m_ObjectHideFlags: 0
@@ -4790,7 +5558,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2128635977}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!212 &1802492786
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6149,6 +6917,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1979076291}
   - 212: {fileID: 1979076292}
+  - 114: {fileID: 1979076293}
   m_Layer: 0
   m_Name: frascoC
   m_TagString: Untagged
@@ -6201,6 +6970,29 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1979076293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1979076290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bbfdffbc62499142b81c6ae275abb88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 0
+  habilidade0: {fileID: 21300000, guid: 169abdbd6fdb54db5b657e136ad1b469, type: 3}
+  habilidade1: {fileID: 21300002, guid: 169abdbd6fdb54db5b657e136ad1b469, type: 3}
+  habilidade2: {fileID: 21300004, guid: 169abdbd6fdb54db5b657e136ad1b469, type: 3}
+  habilidade3: {fileID: 21300006, guid: 169abdbd6fdb54db5b657e136ad1b469, type: 3}
+  habilidade4: {fileID: 21300008, guid: 169abdbd6fdb54db5b657e136ad1b469, type: 3}
+  habilidade5: {fileID: 21300010, guid: 169abdbd6fdb54db5b657e136ad1b469, type: 3}
+  habilidade6: {fileID: 21300012, guid: 169abdbd6fdb54db5b657e136ad1b469, type: 3}
+  habilidade7: {fileID: 21300014, guid: 169abdbd6fdb54db5b657e136ad1b469, type: 3}
+  habilidade8: {fileID: 21300016, guid: 169abdbd6fdb54db5b657e136ad1b469, type: 3}
+  habilidade9: {fileID: 21300018, guid: 169abdbd6fdb54db5b657e136ad1b469, type: 3}
+  frasco: {fileID: 1979076292}
 --- !u!1 &2000414934 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 121852, guid: efe0d16fc5efe39419e439a6729d392a, type: 2}
@@ -6250,7 +7042,7 @@ Transform:
   m_Children:
   - {fileID: 1752181791}
   m_Father: {fileID: 2128635977}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &2002997921
 GameObject:
   m_ObjectHideFlags: 0
@@ -6511,6 +7303,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 2022748503}
   - 212: {fileID: 2022748504}
+  - 114: {fileID: 2022748509}
+  - 61: {fileID: 2022748508}
+  - 95: {fileID: 2022748507}
+  - 114: {fileID: 2022748506}
+  - 114: {fileID: 2022748505}
   m_Layer: 0
   m_Name: "bot\xE3oMenos"
   m_TagString: Untagged
@@ -6561,6 +7358,85 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &2022748505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2022748502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4aaf82cf342771488e829306da61233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: -1
+  m_Transform: {fileID: 200458976}
+  tm_Transform: {fileID: 257961466}
+--- !u!114 &2022748506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2022748502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc4523b01767ab44b6611b39ca48d91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flowchart: {fileID: 1173192956}
+  blockName: BlockMenosFrascoO
+  buttonSprites:
+  - {fileID: 21300000, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
+  - {fileID: 21300000, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
+  - {fileID: 21300002, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
+  changeSpriteWhileClick: 1
+  selectedSound: {fileID: 0}
+  clickSound: {fileID: 0}
+--- !u!95 &2022748507
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2022748502}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!61 &2022748508
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2022748502}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0.00024414062}
+  serializedVersion: 2
+  m_Size: {x: 0.79999995, y: 0.74000007}
+--- !u!114 &2022748509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2022748502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc03961113fa349c09cb06ef2911013d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickEnabled: 1
+  hoverCursor: {fileID: 0}
+  useEventSystem: 0
 --- !u!1 &2089778183
 GameObject:
   m_ObjectHideFlags: 0
@@ -6603,6 +7479,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 2090953010}
   - 212: {fileID: 2090953011}
+  - 114: {fileID: 2090953016}
+  - 61: {fileID: 2090953015}
+  - 95: {fileID: 2090953014}
+  - 114: {fileID: 2090953013}
+  - 114: {fileID: 2090953012}
   m_Layer: 0
   m_Name: "bot\xE3oMenos"
   m_TagString: Untagged
@@ -6653,6 +7534,85 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &2090953012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090953009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4aaf82cf342771488e829306da61233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: -1
+  m_Transform: {fileID: 1062696993}
+  tm_Transform: {fileID: 257961466}
+--- !u!114 &2090953013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090953009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc4523b01767ab44b6611b39ca48d91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flowchart: {fileID: 1173192956}
+  blockName: BlockMenosFrascoL
+  buttonSprites:
+  - {fileID: 21300000, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
+  - {fileID: 21300000, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
+  - {fileID: 21300002, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
+  changeSpriteWhileClick: 1
+  selectedSound: {fileID: 0}
+  clickSound: {fileID: 0}
+--- !u!95 &2090953014
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090953009}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!61 &2090953015
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090953009}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.0000038146973, y: 0.00024414062}
+  serializedVersion: 2
+  m_Size: {x: 0.79999995, y: 0.74000007}
+--- !u!114 &2090953016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090953009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc03961113fa349c09cb06ef2911013d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickEnabled: 1
+  hoverCursor: {fileID: 0}
+  useEventSystem: 0
 --- !u!1 &2095961234
 GameObject:
   m_ObjectHideFlags: 0
@@ -6662,6 +7622,11 @@ GameObject:
   m_Component:
   - 4: {fileID: 2095961235}
   - 212: {fileID: 2095961236}
+  - 114: {fileID: 2095961241}
+  - 61: {fileID: 2095961240}
+  - 95: {fileID: 2095961239}
+  - 114: {fileID: 2095961238}
+  - 114: {fileID: 2095961237}
   m_Layer: 0
   m_Name: "bot\xE3oMais"
   m_TagString: Untagged
@@ -6712,6 +7677,85 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &2095961237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2095961234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4aaf82cf342771488e829306da61233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 1
+  m_Transform: {fileID: 200458976}
+  tm_Transform: {fileID: 257961466}
+--- !u!114 &2095961238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2095961234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fc4523b01767ab44b6611b39ca48d91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flowchart: {fileID: 1173192956}
+  blockName: BlockMaisFrascoO
+  buttonSprites:
+  - {fileID: 21300000, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
+  - {fileID: 21300000, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
+  - {fileID: 21300002, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
+  changeSpriteWhileClick: 1
+  selectedSound: {fileID: 0}
+  clickSound: {fileID: 0}
+--- !u!95 &2095961239
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2095961234}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!61 &2095961240
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2095961234}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.0000038146973, y: 0.00024414062}
+  serializedVersion: 2
+  m_Size: {x: 0.79999995, y: 0.74000007}
+--- !u!114 &2095961241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2095961234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc03961113fa349c09cb06ef2911013d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickEnabled: 1
+  hoverCursor: {fileID: 0}
+  useEventSystem: 0
 --- !u!1 &2099296460
 GameObject:
   m_ObjectHideFlags: 0
@@ -6831,7 +7875,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1596117853}
+  - {fileID: 1173192958}
+  - {fileID: 348560145}
   - {fileID: 939847069}
   - {fileID: 1802492785}
   - {fileID: 959016666}
