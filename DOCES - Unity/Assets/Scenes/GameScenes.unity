@@ -3982,16 +3982,16 @@ GameObject:
   - 114: {fileID: 967225600}
   - 114: {fileID: 967225601}
   - 114: {fileID: 967225602}
-  - 114: {fileID: 967225610}
-  - 114: {fileID: 967225606}
-  - 114: {fileID: 967225607}
-  - 114: {fileID: 967225608}
-  - 114: {fileID: 967225609}
-  - 114: {fileID: 967225605}
   - 114: {fileID: 967225614}
   - 114: {fileID: 967225613}
   - 114: {fileID: 967225612}
   - 114: {fileID: 967225611}
+  - 114: {fileID: 967225610}
+  - 114: {fileID: 967225609}
+  - 114: {fileID: 967225608}
+  - 114: {fileID: 967225607}
+  - 114: {fileID: 967225606}
+  - 114: {fileID: 967225605}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -4012,7 +4012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -81.66788, y: -3.452942}
+  scrollPos: {x: -63.85965, y: 140.38263}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 0
   blockViewHeight: 400
@@ -4023,9 +4023,9 @@ MonoBehaviour:
     y: -463.13586
     width: 1952.8837
     height: 1172.3928
-  selectedBlock: {fileID: 967225537}
+  selectedBlock: {fileID: 967225572}
   selectedCommands:
-  - {fileID: 967225611}
+  - {fileID: 967225604}
   variables:
   - {fileID: 967225535}
   - {fileID: 967225571}
@@ -4084,7 +4084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 588.9422
+    x: 590.3121
     y: 85.18307
     width: 201
     height: 40
@@ -4096,14 +4096,14 @@ MonoBehaviour:
   - {fileID: 967225592}
   - {fileID: 967225585}
   - {fileID: 967225584}
-  - {fileID: 967225591}
-  - {fileID: 967225583}
-  - {fileID: 967225582}
-  - {fileID: 967225605}
   - {fileID: 967225614}
   - {fileID: 967225613}
   - {fileID: 967225612}
   - {fileID: 967225611}
+  - {fileID: 967225610}
+  - {fileID: 967225591}
+  - {fileID: 967225583}
+  - {fileID: 967225582}
   - {fileID: 967225586}
   - {fileID: 967225581}
   - {fileID: 967225580}
@@ -4854,12 +4854,12 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 967225604}
-  - {fileID: 967225603}
-  - {fileID: 967225610}
   - {fileID: 967225609}
   - {fileID: 967225608}
   - {fileID: 967225607}
   - {fileID: 967225606}
+  - {fileID: 967225605}
+  - {fileID: 967225603}
   - {fileID: 967225602}
   - {fileID: 967225601}
   - {fileID: 967225600}
@@ -5615,10 +5615,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 68
+  itemId: 78
   errorMessage: 
   indentLevel: 1
-  targetObject: {fileID: 61142596}
+  targetObject: {fileID: 188986573}
   targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
@@ -5631,7 +5631,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       typeFullname: System.Boolean
       intValue: 0
-      boolValue: 0
+      boolValue: 1
       floatValue: 0
       stringValue: 
       colorValue: {r: 0, g: 0, b: 0, a: 0}
@@ -5659,10 +5659,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 64
+  itemId: 77
   errorMessage: 
   indentLevel: 1
-  targetObject: {fileID: 188986573}
+  targetObject: {fileID: 861520909}
   targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
@@ -5703,10 +5703,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 65
+  itemId: 76
   errorMessage: 
   indentLevel: 1
-  targetObject: {fileID: 861520909}
+  targetObject: {fileID: 1350292596}
   targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
@@ -5747,10 +5747,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 66
+  itemId: 75
   errorMessage: 
   indentLevel: 1
-  targetObject: {fileID: 1350292596}
+  targetObject: {fileID: 225594346}
   targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
@@ -5791,10 +5791,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 67
+  itemId: 74
   errorMessage: 
   indentLevel: 1
-  targetObject: {fileID: 225594346}
+  targetObject: {fileID: 61142596}
   targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
@@ -5835,10 +5835,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 61
+  itemId: 73
   errorMessage: 
   indentLevel: 1
-  targetObject: {fileID: 61142596}
+  targetObject: {fileID: 188986573}
   targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
@@ -5851,7 +5851,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       typeFullname: System.Boolean
       intValue: 0
-      boolValue: 1
+      boolValue: 0
       floatValue: 0
       stringValue: 
       colorValue: {r: 0, g: 0, b: 0, a: 0}
@@ -5882,7 +5882,7 @@ MonoBehaviour:
   itemId: 72
   errorMessage: 
   indentLevel: 1
-  targetObject: {fileID: 188986573}
+  targetObject: {fileID: 861520909}
   targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
@@ -5926,7 +5926,7 @@ MonoBehaviour:
   itemId: 71
   errorMessage: 
   indentLevel: 1
-  targetObject: {fileID: 861520909}
+  targetObject: {fileID: 1350292596}
   targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
@@ -5970,7 +5970,7 @@ MonoBehaviour:
   itemId: 70
   errorMessage: 
   indentLevel: 1
-  targetObject: {fileID: 1350292596}
+  targetObject: {fileID: 225594346}
   targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
@@ -6014,7 +6014,7 @@ MonoBehaviour:
   itemId: 69
   errorMessage: 
   indentLevel: 1
-  targetObject: {fileID: 225594346}
+  targetObject: {fileID: 61142596}
   targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
