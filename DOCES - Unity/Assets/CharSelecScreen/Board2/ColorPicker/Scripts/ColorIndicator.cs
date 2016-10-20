@@ -12,7 +12,7 @@ public class ColorIndicator : MonoBehaviour {
 	void ApplyColor ()
 	{
 		GetComponent<Renderer>().sharedMaterial.SetColor ("_Color", color.ToColor());
-		transform.parent.BroadcastMessage("OnColorChange", color, SendMessageOptions.DontRequireReceiver);
+		transform.parent.parent.parent.BroadcastMessage("OnColorChange", color, SendMessageOptions.DontRequireReceiver);
 	}
 
 	void SetHue(float hue)

@@ -7,7 +7,7 @@ public class Draggable : MonoBehaviour
 	public Transform thumb;	
 	bool dragging;
 
-	void FixedUpdate()
+	void Update()
 	{
 		if (Input.GetMouseButtonDown(0)) {
 			dragging = false;
