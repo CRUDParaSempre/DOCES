@@ -18,7 +18,7 @@ public class ArrowShoesScript : MonoBehaviour {
 
 	}
 
-	public void OnMouseDown() {
+	public void clickedArrow() {
 		int new_val = s_Script.value + offset;
 		s_Script.value = new_val;
 	}
