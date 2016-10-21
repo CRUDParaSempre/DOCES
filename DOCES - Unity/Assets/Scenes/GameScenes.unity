@@ -181,6 +181,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 59201876}
   - 212: {fileID: 59201877}
+  - 114: {fileID: 59201878}
   m_Layer: 0
   m_Name: olhos
   m_TagString: Untagged
@@ -195,7 +196,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 59201875}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.597, y: -0.264, z: 0}
+  m_LocalPosition: {x: -0.505, y: -0.167, z: 0}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -226,11 +227,22 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1873353263
-  m_SortingOrder: 4
+  m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: e2ae0c21968935542bfe2094b7275146, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &59201878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 59201875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c254ac90bd1d4dd41a7a4f5d9ddb56c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &61142596
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,7 +252,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 61142597}
   - 212: {fileID: 61142598}
-  - 114: {fileID: 61142599}
+  - 114: {fileID: 61142600}
   m_Layer: 0
   m_Name: "cabe\xE7aH"
   m_TagString: Untagged
@@ -288,10 +300,10 @@ SpriteRenderer:
   m_SortingLayerID: 1873353263
   m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 64fa08c550abca0489fcd0199924ae9c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9294118, g: 0.7607844, b: 0.5647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!114 &61142599
+--- !u!114 &61142600
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -598,6 +610,7 @@ GameObject:
   - 212: {fileID: 177175217}
   - 114: {fileID: 177175216}
   - 114: {fileID: 177175215}
+  - 114: {fileID: 177175218}
   m_Layer: 0
   m_Name: "pernas_cal\xE7as"
   m_TagString: Untagged
@@ -677,9 +690,20 @@ SpriteRenderer:
   m_SortingLayerID: 1873353263
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 54c67cc161a0a4449841d8e25013c7ec, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.21009947, g: 0.23543125, b: 0.49264705, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &177175218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 177175213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c254ac90bd1d4dd41a7a4f5d9ddb56c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &188986573
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,7 +762,7 @@ SpriteRenderer:
   m_SortingLayerID: 1873353263
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 50d7497bf4e47f745843f5b2f7a7f901, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.53676474, g: 0.019733984, b: 0.019733984, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!114 &188986576
@@ -917,7 +941,7 @@ SpriteRenderer:
   m_SortingLayerID: 1873353263
   m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: b60c3fd61708d1e498158106c2cb69ac, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9294118, g: 0.7607844, b: 0.5647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!114 &225594349
@@ -1379,7 +1403,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1873353263
-  m_SortingOrder: 4
+  m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: ad200b1bbdb32124b8326f36f22041fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1443,7 +1467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 141515389}
+  selectedFlowchart: {fileID: 967225534}
 --- !u!4 &395558029
 Transform:
   m_ObjectHideFlags: 1
@@ -1816,6 +1840,7 @@ MonoBehaviour:
   flowchart: {fileID: 1173192956}
   blockName: BlockMenosFrascoC
   buttonSprites:
+  - {fileID: 21300000, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
   - {fileID: 21300000, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
   - {fileID: 21300000, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
   - {fileID: 21300002, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
@@ -2334,6 +2359,7 @@ MonoBehaviour:
   blockName: 
   buttonSprites:
   - {fileID: 21300000, guid: ea1100fb37c804127a09871ae82d44b1, type: 3}
+  - {fileID: 21300000, guid: ea1100fb37c804127a09871ae82d44b1, type: 3}
   - {fileID: 21300002, guid: ea1100fb37c804127a09871ae82d44b1, type: 3}
   - {fileID: 21300000, guid: ea1100fb37c804127a09871ae82d44b1, type: 3}
   changeSpriteWhileClick: 1
@@ -2393,15 +2419,15 @@ GameObject:
   m_Component:
   - 4: {fileID: 647320731}
   - 212: {fileID: 647320734}
-  - 114: {fileID: 647320733}
   - 114: {fileID: 647320732}
+  - 114: {fileID: 647320733}
   m_Layer: 0
   m_Name: tronco_blusa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &647320731
 Transform:
   m_ObjectHideFlags: 0
@@ -2999,6 +3025,7 @@ MonoBehaviour:
   blockName: 
   buttonSprites:
   - {fileID: 21300000, guid: a4a266d6d5d7b4b96937f29bcfbb0981, type: 3}
+  - {fileID: 21300000, guid: a4a266d6d5d7b4b96937f29bcfbb0981, type: 3}
   - {fileID: 21300002, guid: a4a266d6d5d7b4b96937f29bcfbb0981, type: 3}
   - {fileID: 21300000, guid: a4a266d6d5d7b4b96937f29bcfbb0981, type: 3}
   changeSpriteWhileClick: 1
@@ -3079,7 +3106,7 @@ Transform:
   m_GameObject: {fileID: 763357070}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9, y: 7, z: 0}
-  m_LocalScale: {x: 0.4592986, y: 0.4592986, z: 0.4592986}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2128635977}
@@ -3259,7 +3286,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 763357070}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 9107429a1260f954d9909509bb4fd5d9, type: 2}
   m_CullingMode: 0
@@ -3420,6 +3447,7 @@ MonoBehaviour:
   flowchart: {fileID: 0}
   blockName: 
   buttonSprites:
+  - {fileID: 21300000, guid: 3965fa9853db0430c82d4865bce79419, type: 3}
   - {fileID: 21300000, guid: 3965fa9853db0430c82d4865bce79419, type: 3}
   - {fileID: 21300002, guid: 3965fa9853db0430c82d4865bce79419, type: 3}
   - {fileID: 21300000, guid: 3965fa9853db0430c82d4865bce79419, type: 3}
@@ -3622,6 +3650,7 @@ MonoBehaviour:
   blockName: 
   buttonSprites:
   - {fileID: 21300000, guid: 3de76a76ae6dc47328442bda7aff163f, type: 3}
+  - {fileID: 21300000, guid: 3de76a76ae6dc47328442bda7aff163f, type: 3}
   - {fileID: 21300002, guid: 3de76a76ae6dc47328442bda7aff163f, type: 3}
   - {fileID: 21300000, guid: 3de76a76ae6dc47328442bda7aff163f, type: 3}
   changeSpriteWhileClick: 1
@@ -3681,6 +3710,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 861520910}
   - 212: {fileID: 861520911}
+  - 114: {fileID: 861520912}
   m_Layer: 0
   m_Name: pernas
   m_TagString: Untagged
@@ -3728,9 +3758,20 @@ SpriteRenderer:
   m_SortingLayerID: 1873353263
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 54c67cc161a0a4449841d8e25013c7ec, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9294118, g: 0.7607844, b: 0.5647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &861520912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 861520909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c254ac90bd1d4dd41a7a4f5d9ddb56c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &867865020
 GameObject:
   m_ObjectHideFlags: 0
@@ -4171,7 +4212,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1873353263
-  m_SortingOrder: 4
+  m_SortingOrder: 7
   m_Sprite: {fileID: 21300000, guid: c42941512b8fdcb438eb75050794ed9c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4206,7 +4247,7 @@ Transform:
   m_GameObject: {fileID: 906390438}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9, y: 7, z: 0}
-  m_LocalScale: {x: 0.4592986, y: 0.4592986, z: 0.4592986}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1562098810}
@@ -4386,7 +4427,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 906390438}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 9107429a1260f954d9909509bb4fd5d9, type: 2}
   m_CullingMode: 0
@@ -4701,6 +4742,7 @@ MonoBehaviour:
   buttonSprites:
   - {fileID: 21300000, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
   - {fileID: 21300000, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
+  - {fileID: 21300000, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
   - {fileID: 21300002, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
   changeSpriteWhileClick: 1
   selectedSound: {fileID: 0}
@@ -4870,6 +4912,35 @@ GameObject:
   - 114: {fileID: 967225607}
   - 114: {fileID: 967225606}
   - 114: {fileID: 967225605}
+  - 114: {fileID: 967225624}
+  - 114: {fileID: 967225623}
+  - 114: {fileID: 967225622}
+  - 114: {fileID: 967225621}
+  - 114: {fileID: 967225620}
+  - 114: {fileID: 967225619}
+  - 114: {fileID: 967225618}
+  - 114: {fileID: 967225617}
+  - 114: {fileID: 967225616}
+  - 114: {fileID: 967225615}
+  - 114: {fileID: 967225625}
+  - 114: {fileID: 967225631}
+  - 114: {fileID: 967225630}
+  - 114: {fileID: 967225629}
+  - 114: {fileID: 967225628}
+  - 114: {fileID: 967225627}
+  - 114: {fileID: 967225626}
+  - 114: {fileID: 967225643}
+  - 114: {fileID: 967225642}
+  - 114: {fileID: 967225641}
+  - 114: {fileID: 967225640}
+  - 114: {fileID: 967225639}
+  - 114: {fileID: 967225637}
+  - 114: {fileID: 967225635}
+  - 114: {fileID: 967225633}
+  - 114: {fileID: 967225638}
+  - 114: {fileID: 967225636}
+  - 114: {fileID: 967225634}
+  - 114: {fileID: 967225632}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -4890,20 +4961,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -63.85965, y: 140.38263}
+  scrollPos: {x: 89.20749, y: 107.327225}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 0
   blockViewHeight: 400
-  zoom: 0.73000026
+  zoom: 0.46000046
   scrollViewRect:
     serializedVersion: 2
     x: -496.11975
     y: -463.13586
     width: 1952.8837
     height: 1172.3928
-  selectedBlock: {fileID: 967225572}
+  selectedBlock: {fileID: 967225625}
   selectedCommands:
-  - {fileID: 967225604}
+  - {fileID: 967225626}
   variables:
   - {fileID: 967225535}
   - {fileID: 967225571}
@@ -4972,6 +5043,7 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 967225592}
+  - {fileID: 967225643}
   - {fileID: 967225585}
   - {fileID: 967225584}
   - {fileID: 967225614}
@@ -4979,21 +5051,37 @@ MonoBehaviour:
   - {fileID: 967225612}
   - {fileID: 967225611}
   - {fileID: 967225610}
+  - {fileID: 967225642}
   - {fileID: 967225591}
+  - {fileID: 967225641}
   - {fileID: 967225583}
   - {fileID: 967225582}
+  - {fileID: 967225624}
+  - {fileID: 967225640}
   - {fileID: 967225586}
+  - {fileID: 967225639}
   - {fileID: 967225581}
   - {fileID: 967225580}
+  - {fileID: 967225623}
+  - {fileID: 967225638}
   - {fileID: 967225587}
+  - {fileID: 967225637}
   - {fileID: 967225579}
   - {fileID: 967225578}
+  - {fileID: 967225622}
+  - {fileID: 967225636}
   - {fileID: 967225588}
+  - {fileID: 967225635}
   - {fileID: 967225577}
   - {fileID: 967225576}
+  - {fileID: 967225621}
+  - {fileID: 967225634}
   - {fileID: 967225589}
+  - {fileID: 967225633}
   - {fileID: 967225575}
   - {fileID: 967225574}
+  - {fileID: 967225620}
+  - {fileID: 967225632}
   - {fileID: 967225590}
   - {fileID: 967225562}
   - {fileID: 967225597}
@@ -5722,8 +5810,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 825.2421
-    y: 83.648285
+    x: 823.0682
+    y: 85.82219
     width: 225
     height: 40
   itemId: 50
@@ -5738,10 +5826,15 @@ MonoBehaviour:
   - {fileID: 967225606}
   - {fileID: 967225605}
   - {fileID: 967225603}
+  - {fileID: 967225619}
   - {fileID: 967225602}
+  - {fileID: 967225618}
   - {fileID: 967225601}
+  - {fileID: 967225617}
   - {fileID: 967225600}
+  - {fileID: 967225616}
   - {fileID: 967225598}
+  - {fileID: 967225615}
   - {fileID: 967225599}
 --- !u!114 &967225573
 MonoBehaviour:
@@ -5774,7 +5867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 49
   errorMessage: 
-  indentLevel: 1
+  indentLevel: 2
   _targetGameObject:
     gameObjectRef: {fileID: 0}
     gameObjectVal: {fileID: 1335517158}
@@ -5795,7 +5888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 48
   errorMessage: 
-  indentLevel: 1
+  indentLevel: 2
   _targetGameObject:
     gameObjectRef: {fileID: 0}
     gameObjectVal: {fileID: 1408293275}
@@ -5816,7 +5909,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 47
   errorMessage: 
-  indentLevel: 1
+  indentLevel: 2
   _targetGameObject:
     gameObjectRef: {fileID: 0}
     gameObjectVal: {fileID: 713095416}
@@ -5837,7 +5930,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 46
   errorMessage: 
-  indentLevel: 1
+  indentLevel: 2
   _targetGameObject:
     gameObjectRef: {fileID: 0}
     gameObjectVal: {fileID: 259052867}
@@ -5858,7 +5951,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 45
   errorMessage: 
-  indentLevel: 1
+  indentLevel: 2
   _targetGameObject:
     gameObjectRef: {fileID: 0}
     gameObjectVal: {fileID: 1626458071}
@@ -5879,7 +5972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 44
   errorMessage: 
-  indentLevel: 1
+  indentLevel: 2
   _targetGameObject:
     gameObjectRef: {fileID: 0}
     gameObjectVal: {fileID: 1084372290}
@@ -5900,7 +5993,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 43
   errorMessage: 
-  indentLevel: 1
+  indentLevel: 2
   _targetGameObject:
     gameObjectRef: {fileID: 0}
     gameObjectVal: {fileID: 1648409461}
@@ -5921,7 +6014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 42
   errorMessage: 
-  indentLevel: 1
+  indentLevel: 2
   _targetGameObject:
     gameObjectRef: {fileID: 0}
     gameObjectVal: {fileID: 1760209584}
@@ -5942,7 +6035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 41
   errorMessage: 
-  indentLevel: 1
+  indentLevel: 2
   _targetGameObject:
     gameObjectRef: {fileID: 0}
     gameObjectVal: {fileID: 1669392788}
@@ -5963,7 +6056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 40
   errorMessage: 
-  indentLevel: 1
+  indentLevel: 2
   _targetGameObject:
     gameObjectRef: {fileID: 0}
     gameObjectVal: {fileID: 1520040247}
@@ -5984,7 +6077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 39
   errorMessage: 
-  indentLevel: 1
+  indentLevel: 2
   _targetGameObject:
     gameObjectRef: {fileID: 0}
     gameObjectVal: {fileID: 1049426828}
@@ -6005,7 +6098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 38
   errorMessage: 
-  indentLevel: 1
+  indentLevel: 2
   _targetGameObject:
     gameObjectRef: {fileID: 0}
     gameObjectVal: {fileID: 26437184}
@@ -6496,7 +6589,7 @@ MonoBehaviour:
   itemId: 78
   errorMessage: 
   indentLevel: 1
-  targetObject: {fileID: 188986573}
+  targetObject: {fileID: 1612021572}
   targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
@@ -6715,8 +6808,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 73
   errorMessage: 
-  indentLevel: 1
-  targetObject: {fileID: 188986573}
+  indentLevel: 2
+  targetObject: {fileID: 1612021572}
   targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
@@ -6759,7 +6852,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 72
   errorMessage: 
-  indentLevel: 1
+  indentLevel: 2
   targetObject: {fileID: 861520909}
   targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
@@ -6803,7 +6896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 71
   errorMessage: 
-  indentLevel: 1
+  indentLevel: 2
   targetObject: {fileID: 1350292596}
   targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
@@ -6847,7 +6940,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 70
   errorMessage: 
-  indentLevel: 1
+  indentLevel: 2
   targetObject: {fileID: 225594346}
   targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
@@ -6891,7 +6984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 69
   errorMessage: 
-  indentLevel: 1
+  indentLevel: 2
   targetObject: {fileID: 61142596}
   targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
@@ -6922,6 +7015,957 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
+--- !u!114 &967225615
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 88
+  errorMessage: 
+  indentLevel: 1
+  targetObject: {fileID: 188986573}
+  targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ChangeSpriteColor
+  targetMethod: isAbleToChangeColor
+  targetMethodText: 'isAbleToChangeColor (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 1
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &967225616
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 87
+  errorMessage: 
+  indentLevel: 1
+  targetObject: {fileID: 177175213}
+  targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ChangeSpriteColor
+  targetMethod: isAbleToChangeColor
+  targetMethodText: 'isAbleToChangeColor (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 1
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &967225617
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 86
+  errorMessage: 
+  indentLevel: 1
+  targetObject: {fileID: 647320730}
+  targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ChangeSpriteColor
+  targetMethod: isAbleToChangeColor
+  targetMethodText: 'isAbleToChangeColor (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 1
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &967225618
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 85
+  errorMessage: 
+  indentLevel: 1
+  targetObject: {fileID: 59201875}
+  targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ChangeSpriteColor
+  targetMethod: isAbleToChangeColor
+  targetMethodText: 'isAbleToChangeColor (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 1
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &967225619
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 84
+  errorMessage: 
+  indentLevel: 1
+  targetObject: {fileID: 1239014613}
+  targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ChangeSpriteColor
+  targetMethod: isAbleToChangeColor
+  targetMethodText: 'isAbleToChangeColor (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 1
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &967225620
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 83
+  errorMessage: 
+  indentLevel: 2
+  targetObject: {fileID: 188986573}
+  targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ChangeSpriteColor
+  targetMethod: isAbleToChangeColor
+  targetMethodText: 'isAbleToChangeColor (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &967225621
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 82
+  errorMessage: 
+  indentLevel: 2
+  targetObject: {fileID: 177175213}
+  targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ChangeSpriteColor
+  targetMethod: isAbleToChangeColor
+  targetMethodText: 'isAbleToChangeColor (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &967225622
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 81
+  errorMessage: 
+  indentLevel: 2
+  targetObject: {fileID: 647320730}
+  targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ChangeSpriteColor
+  targetMethod: isAbleToChangeColor
+  targetMethodText: 'isAbleToChangeColor (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &967225623
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 80
+  errorMessage: 
+  indentLevel: 2
+  targetObject: {fileID: 59201875}
+  targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ChangeSpriteColor
+  targetMethod: isAbleToChangeColor
+  targetMethodText: 'isAbleToChangeColor (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &967225624
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 79
+  errorMessage: 
+  indentLevel: 2
+  targetObject: {fileID: 1239014613}
+  targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ChangeSpriteColor
+  targetMethod: isAbleToChangeColor
+  targetMethodText: 'isAbleToChangeColor (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &967225625
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 241.22702
+    y: -59.50113
+    width: 120
+    height: 40
+  itemId: 89
+  blockName: New Block
+  description: 
+  eventHandler: {fileID: 967225631}
+  commandList:
+  - {fileID: 967225630}
+  - {fileID: 967225629}
+  - {fileID: 967225628}
+  - {fileID: 967225627}
+  - {fileID: 967225626}
+--- !u!114 &967225626
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 94
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 1612021572}
+  targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ChangeSpriteColor
+  targetMethod: isAbleToChangeColor
+  targetMethodText: 'isAbleToChangeColor (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 1
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &967225627
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 93
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 861520909}
+  targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ChangeSpriteColor
+  targetMethod: isAbleToChangeColor
+  targetMethodText: 'isAbleToChangeColor (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 1
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &967225628
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 92
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 1350292596}
+  targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ChangeSpriteColor
+  targetMethod: isAbleToChangeColor
+  targetMethodText: 'isAbleToChangeColor (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 1
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &967225629
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 91
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 225594346}
+  targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ChangeSpriteColor
+  targetMethod: isAbleToChangeColor
+  targetMethodText: 'isAbleToChangeColor (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 1
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &967225630
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 90
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 61142596}
+  targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ChangeSpriteColor
+  targetMethod: isAbleToChangeColor
+  targetMethodText: 'isAbleToChangeColor (Boolean): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 1
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &967225631
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff5d850a887844fe87ae7d366d3ab5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 967225625}
+--- !u!114 &967225632
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 106
+  errorMessage: 
+  indentLevel: 1
+--- !u!114 &967225633
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 102
+  errorMessage: 
+  indentLevel: 1
+  compareOperator: 1
+  variable: {fileID: 967225535}
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 5
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+--- !u!114 &967225634
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 105
+  errorMessage: 
+  indentLevel: 1
+--- !u!114 &967225635
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 101
+  errorMessage: 
+  indentLevel: 1
+  compareOperator: 1
+  variable: {fileID: 967225535}
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 4
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+--- !u!114 &967225636
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 104
+  errorMessage: 
+  indentLevel: 1
+--- !u!114 &967225637
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 100
+  errorMessage: 
+  indentLevel: 1
+  compareOperator: 1
+  variable: {fileID: 967225535}
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 3
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+--- !u!114 &967225638
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 103
+  errorMessage: 
+  indentLevel: 1
+--- !u!114 &967225639
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 99
+  errorMessage: 
+  indentLevel: 1
+  compareOperator: 1
+  variable: {fileID: 967225535}
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 2
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+--- !u!114 &967225640
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 98
+  errorMessage: 
+  indentLevel: 1
+--- !u!114 &967225641
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 97
+  errorMessage: 
+  indentLevel: 1
+  compareOperator: 1
+  variable: {fileID: 967225535}
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 1
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+--- !u!114 &967225642
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 96
+  errorMessage: 
+  indentLevel: 1
+--- !u!114 &967225643
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 967225533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 95
+  errorMessage: 
+  indentLevel: 1
+  compareOperator: 1
+  variable: {fileID: 967225535}
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
 --- !u!1 &973131589
 GameObject:
   m_ObjectHideFlags: 0
@@ -7325,11 +8369,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 330.8048, y: 28.70728}
+  scrollPos: {x: 1002.6795, y: -891.60474}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 207
-  zoom: 0.8200002
+  zoom: 0.64000034
   scrollViewRect:
     serializedVersion: 2
     x: -680.8048
@@ -7931,6 +8975,7 @@ MonoBehaviour:
   buttonSprites:
   - {fileID: 21300000, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
   - {fileID: 21300000, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
+  - {fileID: 21300000, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
   - {fileID: 21300002, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
   changeSpriteWhileClick: 1
   selectedSound: {fileID: 0}
@@ -7989,15 +9034,15 @@ GameObject:
   m_Component:
   - 4: {fileID: 1239014614}
   - 212: {fileID: 1239014617}
-  - 114: {fileID: 1239014616}
   - 114: {fileID: 1239014615}
+  - 114: {fileID: 1239014616}
   m_Layer: 0
   m_Name: "cabe\xE7a_cabelo"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1239014614
 Transform:
   m_ObjectHideFlags: 0
@@ -8706,6 +9751,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1350292597}
   - 212: {fileID: 1350292598}
+  - 114: {fileID: 1350292599}
   m_Layer: 0
   m_Name: tronco
   m_TagString: Untagged
@@ -8753,9 +9799,20 @@ SpriteRenderer:
   m_SortingLayerID: 1873353263
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 52729003131bdc148929ef25f8f8c6ed, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9294118, g: 0.7607844, b: 0.5647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1350292599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1350292596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c254ac90bd1d4dd41a7a4f5d9ddb56c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1353535793
 GameObject:
   m_ObjectHideFlags: 0
@@ -9029,6 +10086,7 @@ MonoBehaviour:
   flowchart: {fileID: 0}
   blockName: 
   buttonSprites:
+  - {fileID: 21300000, guid: 22ad2ac26d169416dbba9711e3b9cfb6, type: 3}
   - {fileID: 21300000, guid: 22ad2ac26d169416dbba9711e3b9cfb6, type: 3}
   - {fileID: 21300002, guid: 22ad2ac26d169416dbba9711e3b9cfb6, type: 3}
   - {fileID: 21300000, guid: 22ad2ac26d169416dbba9711e3b9cfb6, type: 3}
@@ -9529,6 +10587,7 @@ MonoBehaviour:
   blockName: 
   buttonSprites:
   - {fileID: 21300000, guid: a7802595ee6ae4b86ba3e475d14cbedf, type: 3}
+  - {fileID: 21300000, guid: a7802595ee6ae4b86ba3e475d14cbedf, type: 3}
   - {fileID: 21300002, guid: a7802595ee6ae4b86ba3e475d14cbedf, type: 3}
   - {fileID: 21300000, guid: a7802595ee6ae4b86ba3e475d14cbedf, type: 3}
   changeSpriteWhileClick: 1
@@ -9588,6 +10647,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1612021573}
   - 212: {fileID: 1612021574}
+  - 114: {fileID: 1612021575}
   m_Layer: 0
   m_Name: "p\xE9s"
   m_TagString: Untagged
@@ -9635,9 +10695,20 @@ SpriteRenderer:
   m_SortingLayerID: 1873353263
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 50d7497bf4e47f745843f5b2f7a7f901, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9294118, g: 0.7607844, b: 0.5647059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1612021575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1612021572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c254ac90bd1d4dd41a7a4f5d9ddb56c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1621172062
 GameObject:
   m_ObjectHideFlags: 0
@@ -9729,6 +10800,7 @@ MonoBehaviour:
   flowchart: {fileID: 0}
   blockName: 
   buttonSprites:
+  - {fileID: 21300000, guid: 724dbfcca4b104321a322cd8aaec7db1, type: 3}
   - {fileID: 21300000, guid: 724dbfcca4b104321a322cd8aaec7db1, type: 3}
   - {fileID: 21300002, guid: 724dbfcca4b104321a322cd8aaec7db1, type: 3}
   - {fileID: 21300000, guid: 724dbfcca4b104321a322cd8aaec7db1, type: 3}
@@ -11927,6 +12999,7 @@ MonoBehaviour:
   blockName: 
   buttonSprites:
   - {fileID: 21300000, guid: 85797bf23b2874aaa8a7087bfc40ac00, type: 3}
+  - {fileID: 21300000, guid: 85797bf23b2874aaa8a7087bfc40ac00, type: 3}
   - {fileID: 21300002, guid: 85797bf23b2874aaa8a7087bfc40ac00, type: 3}
   - {fileID: 21300000, guid: 85797bf23b2874aaa8a7087bfc40ac00, type: 3}
   changeSpriteWhileClick: 1
@@ -13241,6 +14314,7 @@ MonoBehaviour:
   buttonSprites:
   - {fileID: 21300000, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
   - {fileID: 21300000, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
+  - {fileID: 21300000, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
   - {fileID: 21300002, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
   changeSpriteWhileClick: 1
   selectedSound: {fileID: 0}
@@ -13563,6 +14637,7 @@ MonoBehaviour:
   buttonSprites:
   - {fileID: 21300000, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
   - {fileID: 21300000, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
+  - {fileID: 21300000, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
   - {fileID: 21300002, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
   changeSpriteWhileClick: 1
   selectedSound: {fileID: 0}
@@ -13704,6 +14779,7 @@ MonoBehaviour:
   flowchart: {fileID: 1173192956}
   blockName: BlockMaisFrascoO
   buttonSprites:
+  - {fileID: 21300000, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
   - {fileID: 21300000, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
   - {fileID: 21300000, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
   - {fileID: 21300002, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
