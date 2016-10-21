@@ -18,7 +18,7 @@ public class ArrowHairScript : MonoBehaviour {
 
 	}
 
-	public void OnMouseDown() {
+	public void clickedArrow() {
 		int new_val = h_Script.value + offset;
 		h_Script.value = new_val;
 	}
