@@ -18,7 +18,7 @@ public class ArrowTopScript : MonoBehaviour {
 
 	}
 
-	public void OnMouseDown() {
+	public void clickedArrow() {
 		int new_val = t_Script.value + offset;
 		t_Script.value = new_val;
 	}
