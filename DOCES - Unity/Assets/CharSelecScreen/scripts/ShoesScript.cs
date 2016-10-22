@@ -20,11 +20,11 @@ public class ShoesScript : MonoBehaviour {
 	void Update () {
 		if (value % 4 == 0) {
 			rend.sprite = sapato0;
-		} else if (value % 4 == 1) {
+		} else if (value % 4 == 1 || value % 4 == -1) {
 			rend.sprite = sapato1;
-		} else if (value % 4 == 2) {
+		} else if (value % 4 == 2 || value % 4 == -2) {
 			rend.sprite = sapato2;
-		} else if (value % 4 == 3) {
+		} else if (value % 4 == 3 || value % 4 == -3) {
 			rend.sprite = sapato3;
 		} 
 	}
