@@ -24,19 +24,19 @@ public class BottomScript : MonoBehaviour {
 	void Update () {
 		if (value % 8 == 0) {
 			rend.sprite = calça0;
-		} else if (value % 8 == 1) {
+		} else if (value % 8 == 1 || value % 8 == -1) {
 			rend.sprite = calça1;
-		} else if (value % 8 == 2) {
+		} else if (value % 8 == 2 || value % 8 == -2) {
 			rend.sprite = calça2;
-		} else if (value % 8 == 3) {
+		} else if (value % 8 == 3 || value % 8 == -3) {
 			rend.sprite = calça3;
-		} else if (value % 8 == 4) {
+		} else if (value % 8 == 4 || value % 8 == -4) {
 			rend.sprite = calça4;
-		} else if (value % 8 == 5) {
+		} else if (value % 8 == 5 || value % 8 == -5) {
 			rend.sprite = calça5;
-		} else if (value % 8 == 6) {
+		} else if (value % 8 == 6 || value % 8 == -6) {
 			rend.sprite = calça6;
-		} else if (value % 8 == 7) {
+		} else if (value % 8 == 7 || value % 8 == -7) {
 			rend.sprite = calça7;
 		} 
 	}

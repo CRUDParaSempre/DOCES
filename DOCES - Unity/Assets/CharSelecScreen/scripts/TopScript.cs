@@ -27,23 +27,23 @@ public class TopScript : MonoBehaviour {
 	void Update () {
 		if (value % 10 == 0) {
 			rend.sprite = blusa0;
-		} else if (value % 10 == 1) {
+		} else if (value % 10 == 1 || value % 10 == -1) {
 			rend.sprite = blusa1;
-		} else if (value % 10 == 2) {
+		} else if (value % 10 == 2 || value % 10 == -2) {
 			rend.sprite = blusa2;
-		} else if (value % 10 == 3) {
+		} else if (value % 10 == 3 || value % 10 == -3) {
 			rend.sprite = blusa3;
-		} else if (value % 10 == 4) {
+		} else if (value % 10 == 4 || value % 10 == -4) {
 			rend.sprite = blusa4;
-		} else if (value % 10 == 5) {
+		} else if (value % 10 == 5 || value % 10 == -5) {
 			rend.sprite = blusa5;
-		} else if (value % 10 == 6) {
+		} else if (value % 10 == 6 || value % 10 == -6) {
 			rend.sprite = blusa6;
-		} else if (value % 10 == 7) {
+		} else if (value % 10 == 7 || value % 10 == -7) {
 			rend.sprite = blusa7;
-		} else if (value % 10 == 8) {
+		} else if (value % 10 == 8 || value % 10 == -8) {
 			rend.sprite = blusa8;
-		} else if (value % 10 == 9) {
+		} else if (value % 10 == 9 || value % 10 == -9) {
 			rend.sprite = blusa9;
 		} 
 	}

@@ -22,15 +22,15 @@ public class LogoScript : MonoBehaviour {
 	void Update () {
 		if (value % 6 == 0) {
 			rend.sprite = logo0;
-		} else if (value % 6 == 1) {
+		} else if (value % 6 == 1 || value % 6 == -1) {
 			rend.sprite = logo1;
-		} else if (value % 6 == 2) {
+		} else if (value % 6 == 2 || value % 6 == -2) {
 			rend.sprite = logo2;
-		} else if (value % 6 == 3) {
+		} else if (value % 6 == 3 || value % 6 == -3) {
 			rend.sprite = logo3;
-		} else if (value % 6 == 4) {
+		} else if (value % 6 == 4 || value % 6 == -4) {
 			rend.sprite = logo4;
-		} else if (value % 6 == 5) {
+		} else if (value % 6 == 5 || value % 6 == -5) {
 			rend.sprite = logo5;
 		} 
 	}
