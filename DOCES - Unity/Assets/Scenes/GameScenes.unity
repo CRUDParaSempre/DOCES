@@ -3212,7 +3212,7 @@ MonoBehaviour:
   - {fileID: 21300002, guid: ea1100fb37c804127a09871ae82d44b1, type: 3}
   - {fileID: 21300000, guid: ea1100fb37c804127a09871ae82d44b1, type: 3}
   changeSpriteWhileClick: 1
-  selectedSound: {fileID: 0}
+  selectedSound: {fileID: 1601973337}
   clickSound: {fileID: 0}
 --- !u!95 &623569788
 Animator:
@@ -3888,7 +3888,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a4a266d6d5d7b4b96937f29bcfbb0981, type: 3}
   changeSpriteWhileClick: 1
   selectedSound: {fileID: 0}
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 1876781081}
 --- !u!95 &763304927
 Animator:
   serializedVersion: 3
@@ -4311,7 +4311,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3965fa9853db0430c82d4865bce79419, type: 3}
   changeSpriteWhileClick: 1
   selectedSound: {fileID: 0}
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 1601973337}
 --- !u!95 &778010745
 Animator:
   serializedVersion: 3
@@ -4513,7 +4513,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3de76a76ae6dc47328442bda7aff163f, type: 3}
   changeSpriteWhileClick: 1
   selectedSound: {fileID: 0}
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 1601973337}
 --- !u!95 &850864444
 Animator:
   serializedVersion: 3
@@ -11516,7 +11516,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 22ad2ac26d169416dbba9711e3b9cfb6, type: 3}
   changeSpriteWhileClick: 1
   selectedSound: {fileID: 0}
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 1601973337}
 --- !u!95 &1518640085
 Animator:
   serializedVersion: 3
@@ -11933,6 +11933,7 @@ GameObject:
   - 95: {fileID: 1601973334}
   - 114: {fileID: 1601973333}
   - 114: {fileID: 1601973332}
+  - 82: {fileID: 1601973337}
   m_Layer: 0
   m_Name: setinhaCabeloD_0
   m_TagString: Untagged
@@ -12016,7 +12017,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a7802595ee6ae4b86ba3e475d14cbedf, type: 3}
   changeSpriteWhileClick: 1
   selectedSound: {fileID: 0}
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 1601973337}
 --- !u!95 &1601973334
 Animator:
   serializedVersion: 3
@@ -12062,6 +12063,80 @@ MonoBehaviour:
   clickEnabled: 1
   hoverCursor: {fileID: 0}
   useEventSystem: 0
+--- !u!82 &1601973337
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1601973329}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4e5936d2a2b877740bc6125901913b71, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1612021572
 GameObject:
   m_ObjectHideFlags: 0
@@ -12230,7 +12305,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 724dbfcca4b104321a322cd8aaec7db1, type: 3}
   changeSpriteWhileClick: 1
   selectedSound: {fileID: 0}
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 1601973337}
 --- !u!95 &1621172067
 Animator:
   serializedVersion: 3
@@ -12878,6 +12953,7 @@ GameObject:
   - 95: {fileID: 1755879169}
   - 114: {fileID: 1755879168}
   - 114: {fileID: 1755879167}
+  - 82: {fileID: 1755879172}
   m_Layer: 0
   m_Name: setinhaLogo_E
   m_TagString: Untagged
@@ -12955,13 +13031,13 @@ MonoBehaviour:
   flowchart: {fileID: 141515389}
   blockName: setaLogoE
   buttonSprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 155ec0c71178c884d93d26a562d63663, type: 3}
+  - {fileID: 21300000, guid: 155ec0c71178c884d93d26a562d63663, type: 3}
+  - {fileID: 21300002, guid: 155ec0c71178c884d93d26a562d63663, type: 3}
+  - {fileID: 21300000, guid: 155ec0c71178c884d93d26a562d63663, type: 3}
   changeSpriteWhileClick: 1
-  selectedSound: {fileID: 0}
-  clickSound: {fileID: 0}
+  selectedSound: {fileID: 1755879172}
+  clickSound: {fileID: 1755879172}
 --- !u!95 &1755879169
 Animator:
   serializedVersion: 3
@@ -13007,6 +13083,80 @@ MonoBehaviour:
   clickEnabled: 1
   hoverCursor: {fileID: 0}
   useEventSystem: 0
+--- !u!82 &1755879172
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1755879164}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4e5936d2a2b877740bc6125901913b71, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1760209584
 GameObject:
   m_ObjectHideFlags: 0
@@ -14481,6 +14631,7 @@ GameObject:
   - 95: {fileID: 1876781078}
   - 114: {fileID: 1876781077}
   - 114: {fileID: 1876781076}
+  - 82: {fileID: 1876781081}
   m_Layer: 0
   m_Name: setinhaLogo_D
   m_TagString: Untagged
@@ -14563,8 +14714,8 @@ MonoBehaviour:
   - {fileID: 21300002, guid: 4d9bff4eab7ff924d8cafa92731b6efe, type: 3}
   - {fileID: 21300000, guid: 4d9bff4eab7ff924d8cafa92731b6efe, type: 3}
   changeSpriteWhileClick: 1
-  selectedSound: {fileID: 0}
-  clickSound: {fileID: 0}
+  selectedSound: {fileID: 1876781081}
+  clickSound: {fileID: 1876781081}
 --- !u!95 &1876781078
 Animator:
   serializedVersion: 3
@@ -14610,6 +14761,80 @@ MonoBehaviour:
   clickEnabled: 1
   hoverCursor: {fileID: 0}
   useEventSystem: 0
+--- !u!82 &1876781081
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1876781073}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4e5936d2a2b877740bc6125901913b71, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1903364333
 GameObject:
   m_ObjectHideFlags: 0
@@ -14707,7 +14932,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 85797bf23b2874aaa8a7087bfc40ac00, type: 3}
   changeSpriteWhileClick: 1
   selectedSound: {fileID: 0}
-  clickSound: {fileID: 0}
+  clickSound: {fileID: 1601973337}
 --- !u!95 &1903364338
 Animator:
   serializedVersion: 3
