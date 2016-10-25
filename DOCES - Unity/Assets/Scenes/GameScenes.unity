@@ -1260,7 +1260,7 @@ MonoBehaviour:
     height: 928
   selectedBlock: {fileID: 141515391}
   selectedCommands:
-  - {fileID: 141515400}
+  - {fileID: 141515401}
   variables:
   - {fileID: 141515399}
   description: 
@@ -1350,7 +1350,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 63.90721
     y: 71.03092
-    width: 191
+    width: 200
     height: 40
   itemId: 0
   blockName: botaoProntoEmpresaBlock
@@ -1557,7 +1557,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &141515401
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 141515388}
@@ -14535,7 +14535,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1633696123}
   - 212: {fileID: 1633696124}
-  - 114: {fileID: 1633696125}
   m_Layer: 0
   m_Name: Logo
   m_TagString: Untagged
@@ -14550,7 +14549,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1633696122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.43, y: -7, z: 0}
+  m_LocalPosition: {x: -9.43, y: -6.5, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -14586,17 +14585,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!114 &1633696125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1633696122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d1231a657ac5fb47b4abcff2dd3de1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1640797936
 GameObject:
   m_ObjectHideFlags: 0
@@ -16668,7 +16656,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1836618749}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.49, y: -7, z: 0}
+  m_LocalPosition: {x: -9.49, y: -6.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
