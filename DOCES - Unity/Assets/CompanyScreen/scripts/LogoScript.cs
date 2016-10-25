@@ -3,7 +3,8 @@ using System.Collections;
 
 public class LogoScript : MonoBehaviour {
 
-	public int value;
+	[SerializeField] private int _value = 0;
+	[SerializeField] private int _length = 0;
 	public Sprite logo0;
 	public Sprite logo1;
 	public Sprite logo2;
@@ -13,6 +14,16 @@ public class LogoScript : MonoBehaviour {
 	private SpriteRenderer rend;
 	public SpriteRenderer logo;
 
+	public int value {
+		set;
+		get;
+	}
+
+	public int length {
+		set;
+		get;
+	}
+
 	// Use this for initialization
 	void Start () {
 		rend = logo.GetComponent<SpriteRenderer> ();
@@ -20,18 +31,32 @@ public class LogoScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (value % 6 == 0) {
+		if (_value % 6 == 0) {
 			rend.sprite = logo0;
-		} else if (value % 6 == 1 || value % 6 == -1) {
+		} else if (_value % 6 == 1 || _value % 6 == -1) {
 			rend.sprite = logo1;
-		} else if (value % 6 == 2 || value % 6 == -2) {
+		} else if (_value % 6 == 2 || _value % 6 == -2) {
 			rend.sprite = logo2;
-		} else if (value % 6 == 3 || value % 6 == -3) {
+		} else if (_value % 6 == 3 || _value % 6 == -3) {
 			rend.sprite = logo3;
-		} else if (value % 6 == 4 || value % 6 == -4) {
+		} else if (_value % 6 == 4 || _value % 6 == -4) {
 			rend.sprite = logo4;
-		} else if (value % 6 == 5 || value % 6 == -5) {
+		} else if (_value % 6 == 5 || _value % 6 == -5) {
 			rend.sprite = logo5;
 		} 
+	}
+
+	public void Increment (){
+		int new_val = (_value + 1 + _length) % _length;
+		_value = new_val;
+	}
+
+	public void Decrement (){
+		int new_val = (_value + 1 + _length) % _length;
+		_value = new_val;
+	}
+
+	public int getLogoId (){
+		return _value;
 	}
 }
