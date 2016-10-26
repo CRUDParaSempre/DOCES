@@ -1,0 +1,195 @@
+fileFormatVersion: 2
+guid: 41665bba8a951274c8d8077d598059b9
+timeCreated: 1477517020
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: botaoFuncionarios_0
+    21300002: botaoFuncionarios_1
+    21300004: botaoFuncionarios_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 220
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: botaoFuncionarios_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 821
+        width: 322
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 142, y: -152}
+        - {x: 152, y: -141}
+        - {x: 152, y: -140}
+        - {x: 156, y: -136}
+        - {x: 160, y: -127}
+        - {x: 161, y: -124}
+        - {x: 161, y: 122}
+        - {x: 160, y: 127}
+        - {x: 156, y: 136}
+        - {x: 154, y: 138}
+        - {x: 152, y: 142}
+        - {x: 141, y: 152}
+        - {x: 138, y: 155}
+        - {x: 127, y: 160}
+        - {x: 125, y: 160}
+        - {x: 123, y: 161}
+        - {x: -122, y: 161}
+        - {x: -127, y: 160}
+        - {x: -138, y: 155}
+        - {x: -155, y: 138}
+        - {x: -160, y: 127}
+        - {x: -160, y: 125}
+        - {x: -161, y: 123}
+        - {x: -161, y: -122}
+        - {x: -160, y: -127}
+        - {x: -155, y: -138}
+        - {x: -141, y: -152}
+        - {x: -140, y: -152}
+        - {x: -136, y: -156}
+        - {x: -127, y: -160}
+        - {x: -125, y: -160}
+        - {x: -123, y: -161}
+        - {x: 122, y: -161}
+        - {x: 127, y: -160}
+        - {x: 136, y: -156}
+    - name: botaoFuncionarios_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 410
+        width: 323
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 155.5, y: -137.5}
+        - {x: 160.5, y: -126.5}
+        - {x: 161.5, y: -120.5}
+        - {x: 161.5, y: 123.5}
+        - {x: 159.5, y: 128.5}
+        - {x: 156.5, y: 135.5}
+        - {x: 152.5, y: 141.5}
+        - {x: 140.5, y: 152.5}
+        - {x: 135.5, y: 156.5}
+        - {x: 128.5, y: 159.5}
+        - {x: 122.5, y: 161.5}
+        - {x: -119.5, y: 161.5}
+        - {x: -125.5, y: 160.5}
+        - {x: -136.5, y: 155.5}
+        - {x: -142.5, y: 150.5}
+        - {x: -150.5, y: 142.5}
+        - {x: -155.5, y: 136.5}
+        - {x: -160.5, y: 125.5}
+        - {x: -161.5, y: 119.5}
+        - {x: -161.5, y: -122.5}
+        - {x: -158.5, y: -128.5}
+        - {x: -158.5, y: -130.5}
+        - {x: -155.5, y: -134.5}
+        - {x: -154.5, y: -138.5}
+        - {x: -141.5, y: -151.5}
+        - {x: -135.5, y: -156.5}
+        - {x: -128.5, y: -159.5}
+        - {x: -122.5, y: -161.5}
+        - {x: 120.5, y: -161.5}
+        - {x: 126.5, y: -160.5}
+        - {x: 137.5, y: -155.5}
+    - name: botaoFuncionarios_2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 322
+        height: 322
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 144, y: -150}
+        - {x: 150, y: -144}
+        - {x: 154, y: -139}
+        - {x: 156, y: -137}
+        - {x: 160, y: -128}
+        - {x: 161, y: -125}
+        - {x: 161, y: 124}
+        - {x: 159, y: 128}
+        - {x: 159, y: 130}
+        - {x: 157, y: 135}
+        - {x: 153, y: 140}
+        - {x: 141, y: 152}
+        - {x: 136, y: 156}
+        - {x: 127, y: 160}
+        - {x: 121, y: 161}
+        - {x: -123, y: 161}
+        - {x: -126, y: 160}
+        - {x: -137, y: 155}
+        - {x: -139, y: 153}
+        - {x: -144, y: 149}
+        - {x: -149, y: 144}
+        - {x: -153, y: 139}
+        - {x: -155, y: 137}
+        - {x: -160, y: 126}
+        - {x: -161, y: 120}
+        - {x: -161, y: -121}
+        - {x: -159, y: -129}
+        - {x: -156, y: -136}
+        - {x: -151, y: -141}
+        - {x: -151, y: -142}
+        - {x: -138, y: -155}
+        - {x: -125, y: -161}
+        - {x: 125, y: -161}
+        - {x: 128, y: -160}
+        - {x: 137, y: -156}
+        - {x: 139, y: -154}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
