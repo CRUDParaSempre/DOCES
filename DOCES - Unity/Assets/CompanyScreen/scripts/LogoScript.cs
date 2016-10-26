@@ -4,7 +4,7 @@ using System.Collections;
 public class LogoScript : MonoBehaviour {
 
 	[SerializeField] private int _value = 0;
-	[SerializeField] private int _length = 0;
+	[SerializeField] private int _length = 21;
 	public Sprite logo0;
 	public Sprite logo1;
 	public Sprite logo2;

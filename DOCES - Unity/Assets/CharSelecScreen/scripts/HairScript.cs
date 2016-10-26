@@ -3,7 +3,8 @@ using System.Collections;
 
 public class HairScript : MonoBehaviour {
 
-	public int value;
+	[SerializeField] private int _value = 0;
+	[SerializeField] private int _length = 21;
 	public Sprite cabelo0;
 	public Sprite cabelo1;
 	public Sprite cabelo2;
@@ -29,55 +30,69 @@ public class HairScript : MonoBehaviour {
 	private SpriteRenderer rend;
 	public SpriteRenderer cabelo;
 
+	public int value { 
+		set{ _value = value; }
+		get{ return _value; }
+	}
+	public int length { 
+		set{ _length = length; }
+		get{ return _length; }
+	}
+
 	// Use this for initialization
 	void Start () {
 		rend = cabelo.GetComponent<SpriteRenderer> ();
+		_length = 21;
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if (value % 21 == 0) {
+		if (value % length == 0) {
 			rend.sprite = cabelo0;
-		} else if (value % 21 == 1 || value % 21 == -1) {
+		} else if (value % length == 1 || value % length == -1) {
 			rend.sprite = cabelo1;
-		} else if (value % 21 == 2 || value % 21 == -2) {
+		} else if (value % length == 2 || value % length == -2) {
 			rend.sprite = cabelo2;
-		} else if (value % 21 == 3 || value % 21 == -3) {
+		} else if (value % length == 3 || value % length == -3) {
 			rend.sprite = cabelo3;
-		} else if (value % 21 == 4 || value % 21 == -4) {
+		} else if (value % length == 4 || value % length == -4) {
 			rend.sprite = cabelo4;
-		} else if (value % 21 == 5 || value % 21 == -5) {
+		} else if (value % length == 5 || value % length == -5) {
 			rend.sprite = cabelo5;
-		} else if (value % 21 == 6 || value % 21 == -6) {
+		} else if (value % length == 6 || value % length == -6) {
 			rend.sprite = cabelo6;
-		} else if (value % 21 == 7 || value % 21 == -7) {
+		} else if (value % length == 7 || value % length == -7) {
 			rend.sprite = cabelo7;
-		} else if (value % 21 == 8 || value % 21 == -8) {
+		} else if (value % length == 8 || value % length == -8) {
 			rend.sprite = cabelo8;
-		} else if (value % 21 == 9 || value % 21 == -9) {
+		} else if (value % length == 9 || value % length == -9) {
 			rend.sprite = cabelo9;
-		} else if (value % 21 == 10 || value % 21 == -10) {
+		} else if (value % length == 10 || value % length == -10) {
 			rend.sprite = cabelo10;
-		} else if (value % 21 == 11 || value % 21 == -11) {
+		} else if (value % length == 11 || value % length == -11) {
 			rend.sprite = cabelo11;
-		} else if (value % 21 == 12 || value % 21 == -12) {
+		} else if (value % length == 12 || value % length == -12) {
 			rend.sprite = cabelo12;
-		} else if (value % 21 == 13 || value % 21 == -13) {
+		} else if (value % length == 13 || value % length == -13) {
 			rend.sprite = cabelo13;
-		} else if (value % 21 == 14 || value % 21 == -14) {
+		} else if (value % length == 14 || value % length == -14) {
 			rend.sprite = cabelo14;
-		} else if (value % 21 == 15 || value % 21 == -15) {
+		} else if (value % length == 15 || value % length == -15) {
 			rend.sprite = cabelo15;
-		} else if (value % 21 == 16 || value % 21 == -16) {
+		} else if (value % length == 16 || value % length == -16) {
 			rend.sprite = cabelo16;
-		} else if (value % 21 == 17 || value % 21 == -17) {
+		} else if (value % length == 17 || value % length == -17) {
 			rend.sprite = cabelo17;
-		} else if (value % 21 == 18 || value % 21 == -18) {
+		} else if (value % length == 18 || value % length == -18) {
 			rend.sprite = cabelo18;
-		} else if (value % 21 == 19 || value % 21 == -19) {
+		} else if (value % length == 19 || value % length == -19) {
 			rend.sprite = cabelo19;
-		} else if (value % 21 == 20 || value % 21 == -20) {
+		} else if (value % length == 20 || value % length == -20) {
 			rend.sprite = cabelo20;
 		} 
+	}
+
+	public int getHairId (){
+		return value;
 	}
 }
