@@ -3,7 +3,8 @@ using System.Collections;
 
 public class BottomScript : MonoBehaviour {
 
-	public int value;
+	[SerializeField] private int _value = 0;
+	[SerializeField] private int _length = 8;
 	public Sprite calça0;
 	public Sprite calça1;
 	public Sprite calça2;
@@ -14,6 +15,16 @@ public class BottomScript : MonoBehaviour {
 	public Sprite calça7;
 	private SpriteRenderer rend;
 	public SpriteRenderer calça;
+
+	public int value {
+		get { return _value; }
+		set { _value = value; }
+	}
+
+	public int length {
+		get { return _length; }
+		set { _length = length; }
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -39,5 +50,9 @@ public class BottomScript : MonoBehaviour {
 		} else if (value % 8 == 7 || value % 8 == -7) {
 			rend.sprite = calça7;
 		} 
+	}
+
+	public int getPantsId (){
+		return value;
 	}
 }
