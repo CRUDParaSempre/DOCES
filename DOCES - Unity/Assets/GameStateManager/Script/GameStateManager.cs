@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+
+
 
 public class GameStateManager : MonoBehaviour {
 	private string _playerName;
@@ -13,6 +16,12 @@ public class GameStateManager : MonoBehaviour {
 	private int _frascoO;
 	private int _frascoL;
 	private int _frascoC;
+
+	public enum Colorable {
+		Skin, Eyes, Hair, Shirt, Pants, Shoes
+	}
+
+	private List<Color> _colorIds = new List<Color> (){Color.white,Color.white,Color.white,Color.white,Color.white,Color.white}; //0 = skin, 1 = eyes, 2 = hair, 3 = shirt, 4 = pants, 5 = shoes
 
 	public string playerName {
 		set; get;
@@ -88,5 +97,39 @@ public class GameStateManager : MonoBehaviour {
 	public void setFrascoC (int frascoC){
 		Debug.Log ("Salvando Frasco C " + frascoC);
 		_frascoC = frascoC;
+	}
+
+	public void addItemColor(Colorable item, Color c) {
+		_colorIds [colorableToId (item)] = c;
+	}
+
+	public Color getItemColor (Colorable item) {
+		return _colorIds [colorableToId (item)];
+	}
+
+	private int colorableToId(Colorable c) {
+		if (c == Colorable.Skin) {
+			return 0;
+		
+		} else if (c == Colorable.Eyes) {
+			return 1;
+
+		} else if (c == Colorable.Hair) {
+			return 2;
+
+		} else if (c == Colorable.Shirt) {
+			return 3;
+		
+		} else if (c == Colorable.Pants) {
+			return 4;
+
+		} else if (c == Colorable.Shoes) {
+			return 5;
+
+		}
+
+		Debug.LogError ("GameStateManager: colorable not found");
+
+		return -1;
 	}
 }
