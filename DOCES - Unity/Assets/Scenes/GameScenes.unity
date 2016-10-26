@@ -12076,6 +12076,24 @@ GameObject:
   - 114: {fileID: 1173192995}
   - 114: {fileID: 1173192994}
   - 114: {fileID: 1173192993}
+  - 114: {fileID: 1173193005}
+  - 114: {fileID: 1173193004}
+  - 114: {fileID: 1173193003}
+  - 114: {fileID: 1173193002}
+  - 114: {fileID: 1173193001}
+  - 114: {fileID: 1173193000}
+  - 114: {fileID: 1173193011}
+  - 114: {fileID: 1173193010}
+  - 114: {fileID: 1173193009}
+  - 114: {fileID: 1173192999}
+  - 114: {fileID: 1173193008}
+  - 114: {fileID: 1173193007}
+  - 114: {fileID: 1173193006}
+  - 114: {fileID: 1173193012}
+  - 114: {fileID: 1173193013}
+  - 114: {fileID: 1173193014}
+  - 114: {fileID: 1173193015}
+  - 114: {fileID: 1173193016}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -12096,11 +12114,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 152.87192, y: 8.841461}
+  scrollPos: {x: 33.61885, y: 5.069229}
   variablesScrollPos: {x: 0, y: 0}
-  variablesExpanded: 1
+  variablesExpanded: 0
   blockViewHeight: 570
-  zoom: 1
+  zoom: 0.8800001
   scrollViewRect:
     serializedVersion: 2
     x: -680.8048
@@ -12109,7 +12127,7 @@ MonoBehaviour:
     height: 1083.9023
   selectedBlock: {fileID: 1173192971}
   selectedCommands:
-  - {fileID: 1173192993}
+  - {fileID: 1173193012}
   variables:
   - {fileID: 1173192975}
   - {fileID: 1173192978}
@@ -12119,6 +12137,12 @@ MonoBehaviour:
   - {fileID: 1173192989}
   - {fileID: 1173192988}
   - {fileID: 1173192987}
+  - {fileID: 1173193004}
+  - {fileID: 1173193003}
+  - {fileID: 1173193002}
+  - {fileID: 1173193001}
+  - {fileID: 1173193000}
+  - {fileID: 1173192999}
   description: 
   stepPause: 0
   colorCommands: 1
@@ -12184,7 +12208,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 198.46341
     y: 96.902435
-    width: 144
+    width: 149
     height: 40
   itemId: 2
   blockName: BlockMaisFrascoL
@@ -12234,7 +12258,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 178.9512
     y: 18.853668
-    width: 155
+    width: 160
     height: 40
   itemId: 0
   blockName: BlockMenosFrascoL
@@ -12257,7 +12281,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 389.56097
     y: 101.46341
-    width: 147
+    width: 152
     height: 40
   itemId: 6
   blockName: BlockMaisFrascoO
@@ -12307,7 +12331,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 383.29272
     y: 24.170685
-    width: 158
+    width: 163
     height: 40
   itemId: 4
   blockName: BlockMenosFrascoO
@@ -12357,7 +12381,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -11.292671
     y: 99.34146
-    width: 146
+    width: 152
     height: 40
   itemId: 9
   blockName: BlockMaisFrascoC
@@ -12380,7 +12404,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -34.463394
     y: 28.60978
-    width: 157
+    width: 163
     height: 40
   itemId: 8
   blockName: BlockMenosFrascoC
@@ -12518,7 +12542,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 601.21954
     y: 28.82927
-    width: 145
+    width: 150
     height: 40
   itemId: 12
   blockName: botaoProntoBlock
@@ -12545,6 +12569,18 @@ MonoBehaviour:
   - {fileID: 1173192995}
   - {fileID: 1173192994}
   - {fileID: 1173192993}
+  - {fileID: 1173193011}
+  - {fileID: 1173193010}
+  - {fileID: 1173193009}
+  - {fileID: 1173193008}
+  - {fileID: 1173193007}
+  - {fileID: 1173193006}
+  - {fileID: 1173193005}
+  - {fileID: 1173193016}
+  - {fileID: 1173193015}
+  - {fileID: 1173193014}
+  - {fileID: 1173193013}
+  - {fileID: 1173193012}
 --- !u!114 &1173192972
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -13003,7 +13039,7 @@ MonoBehaviour:
   value: 0
 --- !u!114 &1173192991
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173192955}
@@ -13047,7 +13083,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1173192992
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173192955}
@@ -13074,7 +13110,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1173192993
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173192955}
@@ -13118,7 +13154,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1173192994
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173192955}
@@ -13145,7 +13181,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1173192995
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173192955}
@@ -13189,7 +13225,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1173192996
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173192955}
@@ -13216,7 +13252,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1173192997
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173192955}
@@ -13260,7 +13296,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1173192998
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173192955}
@@ -13283,6 +13319,618 @@ MonoBehaviour:
   saveReturnValue: 1
   returnValueVariableKey: FrascoC
   returnValueType: System.Int32
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173192999
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5b85dd356214c4c92b08ec04d89927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: eyesColor
+  value: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &1173193000
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5b85dd356214c4c92b08ec04d89927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: shoesColor
+  value: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &1173193001
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5b85dd356214c4c92b08ec04d89927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: pantsColor
+  value: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &1173193002
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5b85dd356214c4c92b08ec04d89927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: shirtColor
+  value: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &1173193003
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5b85dd356214c4c92b08ec04d89927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: hairColor
+  value: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &1173193004
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5b85dd356214c4c92b08ec04d89927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: skinColor
+  value: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &1173193005
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 33
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 264415013}
+  targetComponentAssemblyName: GameStateManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: GameStateManager
+  targetMethod: addItemColor
+  targetMethodText: 'addItemColor (Colorable, Color): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: GameStateManager+Colorable, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      typeFullname: GameStateManager+Colorable
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: UnityEngine.Color, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      typeFullname: UnityEngine.Color
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: skinColor
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173193006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 39
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 188986573}
+  targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ChangeSpriteColor
+  targetMethod: getColor
+  targetMethodText: 'getColor (): Color'
+  methodParameters: []
+  saveReturnValue: 1
+  returnValueVariableKey: shoesColor
+  returnValueType: UnityEngine.Color
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173193007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 38
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 177175213}
+  targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ChangeSpriteColor
+  targetMethod: getColor
+  targetMethodText: 'getColor (): Color'
+  methodParameters: []
+  saveReturnValue: 1
+  returnValueVariableKey: pantsColor
+  returnValueType: UnityEngine.Color
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173193008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 37
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 647320730}
+  targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ChangeSpriteColor
+  targetMethod: getColor
+  targetMethodText: 'getColor (): Color'
+  methodParameters: []
+  saveReturnValue: 1
+  returnValueVariableKey: shirtColor
+  returnValueType: UnityEngine.Color
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173193009
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 36
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 59201875}
+  targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ChangeSpriteColor
+  targetMethod: getColor
+  targetMethodText: 'getColor (): Color'
+  methodParameters: []
+  saveReturnValue: 1
+  returnValueVariableKey: eyesColor
+  returnValueType: UnityEngine.Color
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173193010
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 35
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 1239014613}
+  targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ChangeSpriteColor
+  targetMethod: getColor
+  targetMethodText: 'getColor (): Color'
+  methodParameters: []
+  saveReturnValue: 1
+  returnValueVariableKey: hairColor
+  returnValueType: UnityEngine.Color
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173193011
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 34
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 861520909}
+  targetComponentAssemblyName: ChangeSpriteColor, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ChangeSpriteColor
+  targetMethod: getColor
+  targetMethodText: 'getColor (): Color'
+  methodParameters: []
+  saveReturnValue: 1
+  returnValueVariableKey: skinColor
+  returnValueType: UnityEngine.Color
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173193012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 40
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 264415013}
+  targetComponentAssemblyName: GameStateManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: GameStateManager
+  targetMethod: addItemColor
+  targetMethodText: 'addItemColor (Colorable, Color): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: GameStateManager+Colorable, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      typeFullname: GameStateManager+Colorable
+      intValue: 5
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: UnityEngine.Color, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      typeFullname: UnityEngine.Color
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: shoesColor
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173193013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 41
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 264415013}
+  targetComponentAssemblyName: GameStateManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: GameStateManager
+  targetMethod: addItemColor
+  targetMethodText: 'addItemColor (Colorable, Color): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: GameStateManager+Colorable, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      typeFullname: GameStateManager+Colorable
+      intValue: 4
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: UnityEngine.Color, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      typeFullname: UnityEngine.Color
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: pantsColor
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173193014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 42
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 264415013}
+  targetComponentAssemblyName: GameStateManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: GameStateManager
+  targetMethod: addItemColor
+  targetMethodText: 'addItemColor (Colorable, Color): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: GameStateManager+Colorable, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      typeFullname: GameStateManager+Colorable
+      intValue: 3
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: UnityEngine.Color, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      typeFullname: UnityEngine.Color
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: shirtColor
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173193015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 43
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 264415013}
+  targetComponentAssemblyName: GameStateManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: GameStateManager
+  targetMethod: addItemColor
+  targetMethodText: 'addItemColor (Colorable, Color): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: GameStateManager+Colorable, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      typeFullname: GameStateManager+Colorable
+      intValue: 2
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: UnityEngine.Color, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      typeFullname: UnityEngine.Color
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: hairColor
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173193016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 44
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 264415013}
+  targetComponentAssemblyName: GameStateManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: GameStateManager
+  targetMethod: addItemColor
+  targetMethodText: 'addItemColor (Colorable, Color): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: GameStateManager+Colorable, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      typeFullname: GameStateManager+Colorable
+      intValue: 1
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: UnityEngine.Color, UnityEngine, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      typeFullname: UnityEngine.Color
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: eyesColor
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
   showInherited: 0
   callMode: 0
 --- !u!1 &1185932373

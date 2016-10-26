@@ -24,4 +24,8 @@ public class ChangeSpriteColor : MonoBehaviour {
 	public void isAbleToChangeColor(bool value) {
 		_canChangeColor = value;
 	}
+
+	public Color getColor() {
+		return renderer.color;
+	}
 }
