@@ -3,7 +3,7 @@ using System.Collections;
 
 public class TotalMeterScript : MonoBehaviour {
 
-	public int value;
+	[SerializeField] private int _value = 15;
 	public Sprite habilidade0;
 	public Sprite habilidade1;
 	public Sprite habilidade2;
@@ -22,6 +22,11 @@ public class TotalMeterScript : MonoBehaviour {
 	public Sprite habilidade15;
 	private SpriteRenderer rend;
 	public SpriteRenderer frasco;
+
+	public int value { 
+		set { _value = value; } 
+		get { return _value; }
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -63,5 +68,9 @@ public class TotalMeterScript : MonoBehaviour {
 		} else if (value == 15) {
 			rend.sprite = habilidade15;
 		} 
+	}
+
+	public int getValue (){
+		return value;
 	}
 }
