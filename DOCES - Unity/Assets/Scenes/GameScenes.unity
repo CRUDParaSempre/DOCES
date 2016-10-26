@@ -1927,7 +1927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bbfdffbc62499142b81c6ae275abb88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
+  _value: 0
   habilidade0: {fileID: 21300000, guid: 0b3724a67dd24410a95300c42b2dfb15, type: 3}
   habilidade1: {fileID: 21300002, guid: 0b3724a67dd24410a95300c42b2dfb15, type: 3}
   habilidade2: {fileID: 21300004, guid: 0b3724a67dd24410a95300c42b2dfb15, type: 3}
@@ -2319,7 +2319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acdaa1b380b5d544298ba703f19f4f90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 15
+  _value: 15
   habilidade0: {fileID: 21300000, guid: be8c78d22c77b43b99d44008b6b1eec3, type: 3}
   habilidade1: {fileID: 21300002, guid: be8c78d22c77b43b99d44008b6b1eec3, type: 3}
   habilidade2: {fileID: 21300004, guid: be8c78d22c77b43b99d44008b6b1eec3, type: 3}
@@ -10827,7 +10827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bbfdffbc62499142b81c6ae275abb88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
+  _value: 0
   habilidade0: {fileID: 21300000, guid: 231d2ecaab0ff4af7821c5e430064b49, type: 3}
   habilidade1: {fileID: 21300002, guid: 231d2ecaab0ff4af7821c5e430064b49, type: 3}
   habilidade2: {fileID: 21300004, guid: 231d2ecaab0ff4af7821c5e430064b49, type: 3}
@@ -11565,6 +11565,18 @@ GameObject:
   - 114: {fileID: 1173192983}
   - 114: {fileID: 1173192986}
   - 114: {fileID: 1173192985}
+  - 114: {fileID: 1173192990}
+  - 114: {fileID: 1173192989}
+  - 114: {fileID: 1173192988}
+  - 114: {fileID: 1173192987}
+  - 114: {fileID: 1173192992}
+  - 114: {fileID: 1173192991}
+  - 114: {fileID: 1173192998}
+  - 114: {fileID: 1173192997}
+  - 114: {fileID: 1173192996}
+  - 114: {fileID: 1173192995}
+  - 114: {fileID: 1173192994}
+  - 114: {fileID: 1173192993}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -11588,7 +11600,7 @@ MonoBehaviour:
   scrollPos: {x: 152.87192, y: 8.841461}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 313
+  blockViewHeight: 570
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -11598,12 +11610,16 @@ MonoBehaviour:
     height: 1083.9023
   selectedBlock: {fileID: 1173192971}
   selectedCommands:
-  - {fileID: 1173192985}
+  - {fileID: 1173192993}
   variables:
   - {fileID: 1173192975}
   - {fileID: 1173192978}
   - {fileID: 1173192982}
   - {fileID: 1173192981}
+  - {fileID: 1173192990}
+  - {fileID: 1173192989}
+  - {fileID: 1173192988}
+  - {fileID: 1173192987}
   description: 
   stepPause: 0
   colorCommands: 1
@@ -11740,8 +11756,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 204.56096
-    y: 244.46341
+    x: 389.56097
+    y: 101.46341
     width: 147
     height: 40
   itemId: 6
@@ -11790,8 +11806,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 175.29272
-    y: 176.17068
+    x: 383.29272
+    y: 24.170685
     width: 158
     height: 40
   itemId: 4
@@ -12001,8 +12017,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 408.21954
-    y: 129.82927
+    x: 601.21954
+    y: 28.82927
     width: 145
     height: 40
   itemId: 12
@@ -12022,6 +12038,14 @@ MonoBehaviour:
   - {fileID: 1173192983}
   - {fileID: 1173192986}
   - {fileID: 1173192985}
+  - {fileID: 1173192992}
+  - {fileID: 1173192991}
+  - {fileID: 1173192998}
+  - {fileID: 1173192997}
+  - {fileID: 1173192996}
+  - {fileID: 1173192995}
+  - {fileID: 1173192994}
+  - {fileID: 1173192993}
 --- !u!114 &1173192972
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -12353,7 +12377,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1173192985
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173192955}
@@ -12419,6 +12443,346 @@ MonoBehaviour:
   methodParameters: []
   saveReturnValue: 1
   returnValueVariableKey: ShirtsId
+  returnValueType: System.Int32
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173192987
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: FrascoT
+  value: 0
+--- !u!114 &1173192988
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: FrascoO
+  value: 0
+--- !u!114 &1173192989
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: FrascoL
+  value: 0
+--- !u!114 &1173192990
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: FrascoC
+  value: 0
+--- !u!114 &1173192991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 26
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 264415013}
+  targetComponentAssemblyName: GameStateManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: GameStateManager
+  targetMethod: setFrascoL
+  targetMethodText: 'setFrascoL (Int32): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: FrascoL
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173192992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 25
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 1062696992}
+  targetComponentAssemblyName: MeterScript, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: MeterScript
+  targetMethod: getValue
+  targetMethodText: 'getValue (): Int32'
+  methodParameters: []
+  saveReturnValue: 1
+  returnValueVariableKey: FrascoL
+  returnValueType: System.Int32
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173192993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 32
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 264415013}
+  targetComponentAssemblyName: GameStateManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: GameStateManager
+  targetMethod: setFrascoT
+  targetMethodText: 'setFrascoT (Int32): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: FrascoT
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173192994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 31
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 257961465}
+  targetComponentAssemblyName: TotalMeterScript, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: TotalMeterScript
+  targetMethod: getValue
+  targetMethodText: 'getValue (): Int32'
+  methodParameters: []
+  saveReturnValue: 1
+  returnValueVariableKey: FrascoT
+  returnValueType: System.Int32
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173192995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 30
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 264415013}
+  targetComponentAssemblyName: GameStateManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: GameStateManager
+  targetMethod: setFrascoO
+  targetMethodText: 'setFrascoO (Int32): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: FrascoO
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173192996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 29
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 200458975}
+  targetComponentAssemblyName: MeterScript, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: MeterScript
+  targetMethod: getValue
+  targetMethodText: 'getValue (): Int32'
+  methodParameters: []
+  saveReturnValue: 1
+  returnValueVariableKey: FrascoO
+  returnValueType: System.Int32
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173192997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 28
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 264415013}
+  targetComponentAssemblyName: GameStateManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: GameStateManager
+  targetMethod: setFrascoC
+  targetMethodText: 'setFrascoC (Int32): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: FrascoC
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173192998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 27
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 1979076290}
+  targetComponentAssemblyName: MeterScript, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: MeterScript
+  targetMethod: getValue
+  targetMethodText: 'getValue (): Int32'
+  methodParameters: []
+  saveReturnValue: 1
+  returnValueVariableKey: FrascoC
   returnValueType: System.Int32
   showInherited: 0
   callMode: 0
@@ -18366,7 +18730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bbfdffbc62499142b81c6ae275abb88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
+  _value: 0
   habilidade0: {fileID: 21300000, guid: 169abdbd6fdb54db5b657e136ad1b469, type: 3}
   habilidade1: {fileID: 21300002, guid: 169abdbd6fdb54db5b657e136ad1b469, type: 3}
   habilidade2: {fileID: 21300004, guid: 169abdbd6fdb54db5b657e136ad1b469, type: 3}
