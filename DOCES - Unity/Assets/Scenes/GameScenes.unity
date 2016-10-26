@@ -1350,7 +1350,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 63.90721
     y: 71.03092
-    width: 200
+    width: 191
     height: 40
   itemId: 0
   blockName: botaoProntoEmpresaBlock
@@ -1701,7 +1701,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dbd262ad1581cd4db20c663d44d9b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
+  _value: 0
+  _length: 8
   "cal\xE7a0": {fileID: 21300000, guid: 551a913a346f2be4b9293fb9ea0af054, type: 3}
   "cal\xE7a1": {fileID: 21300000, guid: e82482773fb7f0c438ada3297a594a62, type: 3}
   "cal\xE7a2": {fileID: 21300000, guid: 1bb822715cd0fe34eb0739cff8ac1300, type: 3}
@@ -1846,7 +1847,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2ace1568cd0c3a49bfc3eaa32b485ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
+  _value: 0
+  _length: 4
   sapato0: {fileID: 21300000, guid: 38c0449904b69524ab6391327831a34c, type: 3}
   sapato1: {fileID: 21300000, guid: d5517694259e2c74b935a44f1df9ab4a, type: 3}
   sapato2: {fileID: 21300000, guid: 53ce523f3c65a0f4ea0c58d3c13fe6e6, type: 3}
@@ -2611,7 +2613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 141515389}
+  selectedFlowchart: {fileID: 1173192956}
 --- !u!4 &395558029
 Transform:
   m_ObjectHideFlags: 1
@@ -4121,7 +4123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bf726b2b72199c4ebebf28df97cd2d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
+  _value: 0
+  _length: 10
   blusa0: {fileID: 21300000, guid: cb6754df46cba57479f4a0415e3f7e5e, type: 3}
   blusa1: {fileID: 21300000, guid: d3af221b627eb154b9e8f77ff81119a8, type: 3}
   blusa2: {fileID: 21300000, guid: a5cade9f369868e4ebb9b4b56dcb5b5a, type: 3}
@@ -5115,6 +5118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: -1
   h_Transform: {fileID: 1239014614}
+  h_Script: {fileID: 1239014615}
 --- !u!114 &763304926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5974,8 +5978,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: -100.87192
-    y: 46.15854
-    width: 121
+    y: 47.15854
+    width: 120
     height: 40
   itemId: 1
   blockName: setaCabeloE
@@ -5998,7 +6002,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -103.87192
     y: -29.841461
-    width: 123
+    width: 120
     height: 40
   itemId: 0
   blockName: setaCabeloD
@@ -6025,8 +6029,8 @@ MonoBehaviour:
     PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: ArrowTopScript
-  targetMethod: clickedArrow
-  targetMethodText: 'clickedArrow (): Void'
+  targetMethod: Decrement
+  targetMethodText: 'Decrement (): Void'
   methodParameters: []
   saveReturnValue: 0
   returnValueVariableKey: 
@@ -6075,8 +6079,8 @@ MonoBehaviour:
     PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: ArrowTopScript
-  targetMethod: clickedArrow
-  targetMethodText: 'clickedArrow (): Void'
+  targetMethod: Increment
+  targetMethodText: 'Increment (): Void'
   methodParameters: []
   saveReturnValue: 0
   returnValueVariableKey: 
@@ -6102,8 +6106,8 @@ MonoBehaviour:
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: ArrowHairScript
-  targetMethod: clickedArrow
-  targetMethodText: 'clickedArrow (): Void'
+  targetMethod: Decrement
+  targetMethodText: 'Decrement (): Void'
   methodParameters: []
   saveReturnValue: 0
   returnValueVariableKey: 
@@ -6129,8 +6133,8 @@ MonoBehaviour:
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: ArrowHairScript
-  targetMethod: clickedArrow
-  targetMethodText: 'clickedArrow (): Void'
+  targetMethod: Increment
+  targetMethodText: 'Increment (): Void'
   methodParameters: []
   saveReturnValue: 0
   returnValueVariableKey: 
@@ -6156,8 +6160,8 @@ MonoBehaviour:
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: ArrowBottomScript
-  targetMethod: clickedArrow
-  targetMethodText: 'clickedArrow (): Void'
+  targetMethod: Decrement
+  targetMethodText: 'Decrement (): Void'
   methodParameters: []
   saveReturnValue: 0
   returnValueVariableKey: 
@@ -6183,8 +6187,8 @@ MonoBehaviour:
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: ArrowBottomScript
-  targetMethod: clickedArrow
-  targetMethodText: 'clickedArrow (): Void'
+  targetMethod: Increment
+  targetMethodText: 'Increment (): Void'
   methodParameters: []
   saveReturnValue: 0
   returnValueVariableKey: 
@@ -6210,8 +6214,8 @@ MonoBehaviour:
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: ArrowShoesScript
-  targetMethod: clickedArrow
-  targetMethodText: 'clickedArrow (): Void'
+  targetMethod: Decrement
+  targetMethodText: 'Decrement (): Void'
   methodParameters: []
   saveReturnValue: 0
   returnValueVariableKey: 
@@ -6237,8 +6241,8 @@ MonoBehaviour:
     Culture=neutral, PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: ArrowShoesScript
-  targetMethod: clickedArrow
-  targetMethodText: 'clickedArrow (): Void'
+  targetMethod: Increment
+  targetMethodText: 'Increment (): Void'
   methodParameters: []
   saveReturnValue: 0
   returnValueVariableKey: 
@@ -6260,7 +6264,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -436.87192
     y: 45.15854
-    width: 123
+    width: 120
     height: 40
   itemId: 7
   blockName: SetaSapatoE
@@ -6283,7 +6287,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -443.87192
     y: -35.84146
-    width: 125
+    width: 120
     height: 40
   itemId: 6
   blockName: SetaSapatoD
@@ -6306,7 +6310,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -261.87192
     y: 41.15854
-    width: 124
+    width: 120
     height: 40
   itemId: 5
   blockName: SetaBottomE
@@ -6329,7 +6333,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -266.87192
     y: -27.841461
-    width: 126
+    width: 120
     height: 40
   itemId: 4
   blockName: SetaBottomD
@@ -11549,6 +11553,18 @@ GameObject:
   - 114: {fileID: 1173192972}
   - 114: {fileID: 1173192973}
   - 114: {fileID: 1173192974}
+  - 114: {fileID: 1173192977}
+  - 114: {fileID: 1173192975}
+  - 114: {fileID: 1173192976}
+  - 114: {fileID: 1173192980}
+  - 114: {fileID: 1173192978}
+  - 114: {fileID: 1173192979}
+  - 114: {fileID: 1173192982}
+  - 114: {fileID: 1173192981}
+  - 114: {fileID: 1173192984}
+  - 114: {fileID: 1173192983}
+  - 114: {fileID: 1173192986}
+  - 114: {fileID: 1173192985}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -11572,7 +11588,7 @@ MonoBehaviour:
   scrollPos: {x: 152.87192, y: 8.841461}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 207
+  blockViewHeight: 313
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -11582,8 +11598,12 @@ MonoBehaviour:
     height: 1083.9023
   selectedBlock: {fileID: 1173192971}
   selectedCommands:
-  - {fileID: 1173192970}
-  variables: []
+  - {fileID: 1173192985}
+  variables:
+  - {fileID: 1173192975}
+  - {fileID: 1173192978}
+  - {fileID: 1173192982}
+  - {fileID: 1173192981}
   description: 
   stepPause: 0
   colorCommands: 1
@@ -11649,7 +11669,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 198.46341
     y: 96.902435
-    width: 149
+    width: 144
     height: 40
   itemId: 2
   blockName: BlockMaisFrascoL
@@ -11699,7 +11719,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 178.9512
     y: 18.853668
-    width: 160
+    width: 155
     height: 40
   itemId: 0
   blockName: BlockMenosFrascoL
@@ -11722,7 +11742,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 204.56096
     y: 244.46341
-    width: 152
+    width: 147
     height: 40
   itemId: 6
   blockName: BlockMaisFrascoO
@@ -11772,7 +11792,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 175.29272
     y: 176.17068
-    width: 163
+    width: 158
     height: 40
   itemId: 4
   blockName: BlockMenosFrascoO
@@ -11822,7 +11842,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -11.292671
     y: 99.34146
-    width: 152
+    width: 146
     height: 40
   itemId: 9
   blockName: BlockMaisFrascoC
@@ -11845,7 +11865,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -34.463394
     y: 28.60978
-    width: 163
+    width: 157
     height: 40
   itemId: 8
   blockName: BlockMenosFrascoC
@@ -11983,7 +12003,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 408.21954
     y: 129.82927
-    width: 150
+    width: 145
     height: 40
   itemId: 12
   blockName: botaoProntoBlock
@@ -11994,6 +12014,14 @@ MonoBehaviour:
   - {fileID: 1173192972}
   - {fileID: 1173192974}
   - {fileID: 1173192973}
+  - {fileID: 1173192977}
+  - {fileID: 1173192976}
+  - {fileID: 1173192980}
+  - {fileID: 1173192979}
+  - {fileID: 1173192984}
+  - {fileID: 1173192983}
+  - {fileID: 1173192986}
+  - {fileID: 1173192985}
 --- !u!114 &1173192972
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -12054,6 +12082,346 @@ MonoBehaviour:
     floatRef: {fileID: 0}
     floatVal: 0.5
   durationOLD: 0
+--- !u!114 &1173192975
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: HairId
+  value: 0
+--- !u!114 &1173192976
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 18
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 264415013}
+  targetComponentAssemblyName: GameStateManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: GameStateManager
+  targetMethod: setHairId
+  targetMethodText: 'setHairId (Int32): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: HairId
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173192977
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 17
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 1239014613}
+  targetComponentAssemblyName: HairScript, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: HairScript
+  targetMethod: getHairId
+  targetMethodText: 'getHairId (): Int32'
+  methodParameters: []
+  saveReturnValue: 1
+  returnValueVariableKey: HairId
+  returnValueType: System.Int32
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173192978
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: PantsId
+  value: 0
+--- !u!114 &1173192979
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 20
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 264415013}
+  targetComponentAssemblyName: GameStateManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: GameStateManager
+  targetMethod: setPantsId
+  targetMethodText: 'setPantsId (Int32): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: PantsId
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173192980
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 19
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 177175213}
+  targetComponentAssemblyName: BottomScript, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: BottomScript
+  targetMethod: getPantsId
+  targetMethodText: 'getPantsId (): Int32'
+  methodParameters: []
+  saveReturnValue: 1
+  returnValueVariableKey: PantsId
+  returnValueType: System.Int32
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173192981
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: ShirtsId
+  value: 0
+--- !u!114 &1173192982
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb91b566ceda411bad1e9d3c3243ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: ShoesId
+  value: 0
+--- !u!114 &1173192983
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 22
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 264415013}
+  targetComponentAssemblyName: GameStateManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: GameStateManager
+  targetMethod: setShoesId
+  targetMethodText: 'setShoesId (Int32): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: ShoesId
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173192984
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 21
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 188986573}
+  targetComponentAssemblyName: ShoesScript, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ShoesScript
+  targetMethod: getShoesId
+  targetMethodText: 'getShoesId (): Int32'
+  methodParameters: []
+  saveReturnValue: 1
+  returnValueVariableKey: ShoesId
+  returnValueType: System.Int32
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173192985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 24
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 264415013}
+  targetComponentAssemblyName: GameStateManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: GameStateManager
+  targetMethod: setShirtId
+  targetMethodText: 'setShirtId (Int32): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: ShirtsId
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173192986
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 23
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 647320730}
+  targetComponentAssemblyName: TopScript, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: TopScript
+  targetMethod: getShirtsId
+  targetMethodText: 'getShirtsId (): Int32'
+  methodParameters: []
+  saveReturnValue: 1
+  returnValueVariableKey: ShirtsId
+  returnValueType: System.Int32
+  showInherited: 0
+  callMode: 0
 --- !u!1 &1185932373
 GameObject:
   m_ObjectHideFlags: 0
@@ -12275,7 +12643,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5c886f9fe22aa4c893f3040e49c934, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
+  _value: 0
+  _length: 21
   cabelo0: {fileID: 21300000, guid: f81fc162bc7f7004493b651c3d5363c7, type: 3}
   cabelo1: {fileID: 21300000, guid: 2d07edb0ea5dc4f4badd9a4544f3a648, type: 3}
   cabelo2: {fileID: 21300000, guid: e86fef94413dd654e84940a9c00aab8d, type: 3}
@@ -13990,6 +14359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: 1
   h_Transform: {fileID: 1239014614}
+  h_Script: {fileID: 1239014615}
 --- !u!114 &1601973333
 MonoBehaviour:
   m_ObjectHideFlags: 0

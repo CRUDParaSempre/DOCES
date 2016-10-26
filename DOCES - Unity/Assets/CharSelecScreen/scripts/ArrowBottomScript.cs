@@ -18,6 +18,18 @@ public class ArrowBottomScript : MonoBehaviour {
 
 	}
 
+	public void Increment (){
+		int new_val = (b_Script.value + offset + b_Script.length) % b_Script.length;
+		b_Script.value = new_val;
+
+	}
+
+	public void Decrement (){
+		// offset = -1
+		int new_val = (b_Script.value + offset + b_Script.length) % b_Script.length;
+		b_Script.value = new_val;
+	}
+
 	public void clickedArrow() {
 		int new_val = b_Script.value + offset;
 		b_Script.value = new_val;
