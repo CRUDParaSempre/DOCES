@@ -59,6 +59,10 @@ public class GameStateManager : MonoBehaviour {
 		_logoId = logoId;
 	}
 
+	public int getLogoId (){
+		return _logoId;
+	}
+
 	public void setHairId (int hairId){
 		Debug.Log ("Salvando hair Id " + hairId);
 		_hairId = hairId;

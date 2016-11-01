@@ -31,6 +31,10 @@ public class LogoScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		GameObject obj = GameObject.Find("GameStateManager");
+      	GameStateManager gsm = obj.GetComponent<GameStateManager>();
+      	gsm.setLogoId(_value % 6);
+      	
 		if (_value % 6 == 0) {
 			rend.sprite = logo0;
 		} else if (_value % 6 == 1 || _value % 6 == -1) {
