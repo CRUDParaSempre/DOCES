@@ -270,6 +270,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 35929990}
+  - 82: {fileID: 35929991}
   m_Layer: 0
   m_Name: HelpScene
   m_TagString: Untagged
@@ -290,6 +291,80 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1579762233}
   m_RootOrder: 6
+--- !u!82 &35929991
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 35929989}
+  m_Enabled: 0
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &52934670
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,6 +1361,8 @@ GameObject:
   - 114: {fileID: 141515400}
   - 114: {fileID: 141515399}
   - 114: {fileID: 141515401}
+  - 114: {fileID: 141515402}
+  - 114: {fileID: 141515403}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1319,7 +1396,7 @@ MonoBehaviour:
     height: 928
   selectedBlock: {fileID: 141515391}
   selectedCommands:
-  - {fileID: 141515401}
+  - {fileID: 141515403}
   variables:
   - {fileID: 141515399}
   description: 
@@ -1421,6 +1498,8 @@ MonoBehaviour:
   - {fileID: 141515394}
   - {fileID: 141515400}
   - {fileID: 141515401}
+  - {fileID: 141515402}
+  - {fileID: 141515403}
 --- !u!114 &141515392
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1658,6 +1737,52 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
+--- !u!114 &141515402
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141515388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc30c92f7ffe3d746ac76cd528d616e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 10
+  errorMessage: 
+  indentLevel: 0
+  control: 3
+  _audioSource:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 157735725}
+  startVolume: 1
+  endVolume: 1
+  fadeDuration: 0
+  waitUntilFinished: 0
+  audioSourceOLD: {fileID: 0}
+--- !u!114 &141515403
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141515388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc30c92f7ffe3d746ac76cd528d616e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 11
+  errorMessage: 
+  indentLevel: 0
+  control: 1
+  _audioSource:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 1687240620}
+  startVolume: 1
+  endVolume: 1
+  fadeDuration: 0
+  waitUntilFinished: 0
+  audioSourceOLD: {fileID: 0}
 --- !u!1 &151850032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1776,6 +1901,109 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &157735723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 157735724}
+  - 82: {fileID: 157735725}
+  m_Layer: 0
+  m_Name: BgMusic2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &157735724
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 157735723}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -23, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 2128635977}
+  m_RootOrder: 8
+--- !u!82 &157735725
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 157735723}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e3498b49830e78f4cb46d829c2298c51, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &177175213
 GameObject:
   m_ObjectHideFlags: 0
@@ -2192,7 +2420,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 65.73418
     y: 69.73418
-    width: 169
+    width: 163
     height: 40
   itemId: 0
   blockName: DropdownMenuBlock
@@ -3255,7 +3483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 204518556}
+  selectedFlowchart: {fileID: 1108696592}
 --- !u!4 &395558029
 Transform:
   m_ObjectHideFlags: 1
@@ -3572,7 +3800,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 74
     y: 69
-    width: 135
+    width: 131
     height: 40
   itemId: 0
   blockName: ReturnToHome
@@ -3582,6 +3810,9 @@ MonoBehaviour:
   - {fileID: 1108696590}
   - {fileID: 1108696591}
   - {fileID: 1108696593}
+  - {fileID: 1108696594}
+  - {fileID: 1108696595}
+  - {fileID: 1108696596}
 --- !u!1 &478318896
 GameObject:
   m_ObjectHideFlags: 0
@@ -3794,6 +4025,8 @@ MonoBehaviour:
   flowchart: {fileID: 1173192956}
   blockName: BlockMenosFrascoC
   buttonSprites:
+  - {fileID: 21300000, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
+  - {fileID: 21300000, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -4680,6 +4913,7 @@ GameObject:
   - 95: {fileID: 623569788}
   - 114: {fileID: 623569787}
   - 114: {fileID: 623569786}
+  - 82: {fileID: 623569791}
   m_Layer: 0
   m_Name: setinhaTopE_0
   m_TagString: Untagged
@@ -4759,6 +4993,9 @@ MonoBehaviour:
   buttonSprites:
   - {fileID: 21300000, guid: ea1100fb37c804127a09871ae82d44b1, type: 3}
   - {fileID: 21300000, guid: ea1100fb37c804127a09871ae82d44b1, type: 3}
+  - {fileID: 21300000, guid: ea1100fb37c804127a09871ae82d44b1, type: 3}
+  - {fileID: 21300000, guid: ea1100fb37c804127a09871ae82d44b1, type: 3}
+  - {fileID: 21300000, guid: ea1100fb37c804127a09871ae82d44b1, type: 3}
   - {fileID: 21300002, guid: ea1100fb37c804127a09871ae82d44b1, type: 3}
   - {fileID: 21300000, guid: ea1100fb37c804127a09871ae82d44b1, type: 3}
   changeSpriteWhileClick: 1
@@ -4809,6 +5046,80 @@ MonoBehaviour:
   clickEnabled: 1
   hoverCursor: {fileID: 0}
   useEventSystem: 0
+--- !u!82 &623569791
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 623569783}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &638988013
 GameObject:
   m_ObjectHideFlags: 0
@@ -5657,7 +5968,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 736614087}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13, y: 7, z: 11}
+  m_LocalPosition: {x: -13, y: 6.994, z: 11}
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -6033,6 +6344,9 @@ MonoBehaviour:
   flowchart: {fileID: 862217450}
   blockName: setaCabeloE
   buttonSprites:
+  - {fileID: 21300000, guid: a4a266d6d5d7b4b96937f29bcfbb0981, type: 3}
+  - {fileID: 21300000, guid: a4a266d6d5d7b4b96937f29bcfbb0981, type: 3}
+  - {fileID: 21300000, guid: a4a266d6d5d7b4b96937f29bcfbb0981, type: 3}
   - {fileID: 21300000, guid: a4a266d6d5d7b4b96937f29bcfbb0981, type: 3}
   - {fileID: 21300000, guid: a4a266d6d5d7b4b96937f29bcfbb0981, type: 3}
   - {fileID: 21300002, guid: a4a266d6d5d7b4b96937f29bcfbb0981, type: 3}
@@ -6458,6 +6772,9 @@ MonoBehaviour:
   buttonSprites:
   - {fileID: 21300000, guid: 3965fa9853db0430c82d4865bce79419, type: 3}
   - {fileID: 21300000, guid: 3965fa9853db0430c82d4865bce79419, type: 3}
+  - {fileID: 21300000, guid: 3965fa9853db0430c82d4865bce79419, type: 3}
+  - {fileID: 21300000, guid: 3965fa9853db0430c82d4865bce79419, type: 3}
+  - {fileID: 21300000, guid: 3965fa9853db0430c82d4865bce79419, type: 3}
   - {fileID: 21300002, guid: 3965fa9853db0430c82d4865bce79419, type: 3}
   - {fileID: 21300000, guid: 3965fa9853db0430c82d4865bce79419, type: 3}
   changeSpriteWhileClick: 1
@@ -6717,6 +7034,9 @@ MonoBehaviour:
   flowchart: {fileID: 862217450}
   blockName: SetaBottomE
   buttonSprites:
+  - {fileID: 21300000, guid: 3de76a76ae6dc47328442bda7aff163f, type: 3}
+  - {fileID: 21300000, guid: 3de76a76ae6dc47328442bda7aff163f, type: 3}
+  - {fileID: 21300000, guid: 3de76a76ae6dc47328442bda7aff163f, type: 3}
   - {fileID: 21300000, guid: 3de76a76ae6dc47328442bda7aff163f, type: 3}
   - {fileID: 21300000, guid: 3de76a76ae6dc47328442bda7aff163f, type: 3}
   - {fileID: 21300002, guid: 3de76a76ae6dc47328442bda7aff163f, type: 3}
@@ -8362,6 +8682,8 @@ MonoBehaviour:
   flowchart: {fileID: 1173192956}
   blockName: BlockMaisFrascoL
   buttonSprites:
+  - {fileID: 21300000, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
+  - {fileID: 21300000, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -12030,6 +12352,9 @@ GameObject:
   - 114: {fileID: 1108696590}
   - 114: {fileID: 1108696591}
   - 114: {fileID: 1108696593}
+  - 114: {fileID: 1108696594}
+  - 114: {fileID: 1108696595}
+  - 114: {fileID: 1108696596}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -12115,7 +12440,7 @@ MonoBehaviour:
   scrollPos: {x: 0, y: 0}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 400
+  blockViewHeight: 404
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -12157,6 +12482,75 @@ MonoBehaviour:
     booleanRef: {fileID: 0}
     booleanVal: 0
   targetGameObjectOLD: {fileID: 0}
+--- !u!114 &1108696594
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1108696588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc30c92f7ffe3d746ac76cd528d616e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 5
+  errorMessage: 
+  indentLevel: 0
+  control: 1
+  _audioSource:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 228875076}
+  startVolume: 1
+  endVolume: 1
+  fadeDuration: 0.1
+  waitUntilFinished: 0
+  audioSourceOLD: {fileID: 0}
+--- !u!114 &1108696595
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1108696588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc30c92f7ffe3d746ac76cd528d616e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 6
+  errorMessage: 
+  indentLevel: 0
+  control: 3
+  _audioSource:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 157735725}
+  startVolume: 1
+  endVolume: 1
+  fadeDuration: 0
+  waitUntilFinished: 0
+  audioSourceOLD: {fileID: 0}
+--- !u!114 &1108696596
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1108696588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc30c92f7ffe3d746ac76cd528d616e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 7
+  errorMessage: 
+  indentLevel: 0
+  control: 3
+  _audioSource:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 1687240620}
+  startVolume: 1
+  endVolume: 1
+  fadeDuration: 0
+  waitUntilFinished: 0
+  audioSourceOLD: {fileID: 0}
 --- !u!1 &1125214659
 GameObject:
   m_ObjectHideFlags: 0
@@ -12769,7 +13163,7 @@ MonoBehaviour:
   scrollPos: {x: 33.61885, y: 5.069229}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 0
-  blockViewHeight: 570
+  blockViewHeight: 519
   zoom: 0.8800001
   scrollViewRect:
     serializedVersion: 2
@@ -12778,8 +13172,7 @@ MonoBehaviour:
     width: 2218.8047
     height: 1083.9023
   selectedBlock: {fileID: 1173192971}
-  selectedCommands:
-  - {fileID: 1173193012}
+  selectedCommands: []
   variables:
   - {fileID: 1173192975}
   - {fileID: 1173192978}
@@ -12860,7 +13253,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 198.46341
     y: 96.902435
-    width: 149
+    width: 144
     height: 40
   itemId: 2
   blockName: BlockMaisFrascoL
@@ -12910,7 +13303,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 178.9512
     y: 18.853668
-    width: 160
+    width: 155
     height: 40
   itemId: 0
   blockName: BlockMenosFrascoL
@@ -12933,7 +13326,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 389.56097
     y: 101.46341
-    width: 152
+    width: 147
     height: 40
   itemId: 6
   blockName: BlockMaisFrascoO
@@ -12983,7 +13376,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 383.29272
     y: 24.170685
-    width: 163
+    width: 158
     height: 40
   itemId: 4
   blockName: BlockMenosFrascoO
@@ -13033,7 +13426,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -11.292671
     y: 99.34146
-    width: 152
+    width: 146
     height: 40
   itemId: 9
   blockName: BlockMaisFrascoC
@@ -13056,7 +13449,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -34.463394
     y: 28.60978
-    width: 163
+    width: 157
     height: 40
   itemId: 8
   blockName: BlockMenosFrascoC
@@ -13194,7 +13587,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 601.21954
     y: 28.82927
-    width: 150
+    width: 145
     height: 40
   itemId: 12
   blockName: botaoProntoBlock
@@ -14120,7 +14513,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1173193006
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173192955}
@@ -14147,7 +14540,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1173193007
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173192955}
@@ -14174,7 +14567,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1173193008
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173192955}
@@ -14282,7 +14675,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1173193012
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173192955}
@@ -14343,7 +14736,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1173193013
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173192955}
@@ -14404,7 +14797,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1173193014
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173192955}
@@ -14465,7 +14858,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1173193015
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173192955}
@@ -14526,7 +14919,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1173193016
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1173192955}
@@ -14620,6 +15013,7 @@ Transform:
   - {fileID: 1017101199}
   - {fileID: 1276633228}
   - {fileID: 433786789}
+  - {fileID: 1687240619}
   m_Father: {fileID: 1579762233}
   m_RootOrder: 3
 --- !u!1 &1219631247
@@ -14743,6 +15137,8 @@ MonoBehaviour:
   flowchart: {fileID: 1173192956}
   blockName: BlockMaisFrascoC
   buttonSprites:
+  - {fileID: 21300000, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
+  - {fileID: 21300000, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -16666,6 +17062,9 @@ MonoBehaviour:
   buttonSprites:
   - {fileID: 21300000, guid: 22ad2ac26d169416dbba9711e3b9cfb6, type: 3}
   - {fileID: 21300000, guid: 22ad2ac26d169416dbba9711e3b9cfb6, type: 3}
+  - {fileID: 21300000, guid: 22ad2ac26d169416dbba9711e3b9cfb6, type: 3}
+  - {fileID: 21300000, guid: 22ad2ac26d169416dbba9711e3b9cfb6, type: 3}
+  - {fileID: 21300000, guid: 22ad2ac26d169416dbba9711e3b9cfb6, type: 3}
   - {fileID: 21300002, guid: 22ad2ac26d169416dbba9711e3b9cfb6, type: 3}
   - {fileID: 21300000, guid: 22ad2ac26d169416dbba9711e3b9cfb6, type: 3}
   changeSpriteWhileClick: 1
@@ -17357,6 +17756,9 @@ MonoBehaviour:
   buttonSprites:
   - {fileID: 21300000, guid: a7802595ee6ae4b86ba3e475d14cbedf, type: 3}
   - {fileID: 21300000, guid: a7802595ee6ae4b86ba3e475d14cbedf, type: 3}
+  - {fileID: 21300000, guid: a7802595ee6ae4b86ba3e475d14cbedf, type: 3}
+  - {fileID: 21300000, guid: a7802595ee6ae4b86ba3e475d14cbedf, type: 3}
+  - {fileID: 21300000, guid: a7802595ee6ae4b86ba3e475d14cbedf, type: 3}
   - {fileID: 21300002, guid: a7802595ee6ae4b86ba3e475d14cbedf, type: 3}
   - {fileID: 21300000, guid: a7802595ee6ae4b86ba3e475d14cbedf, type: 3}
   changeSpriteWhileClick: 1
@@ -17750,6 +18152,9 @@ MonoBehaviour:
   flowchart: {fileID: 862217450}
   blockName: SetaSapatoE
   buttonSprites:
+  - {fileID: 21300000, guid: 724dbfcca4b104321a322cd8aaec7db1, type: 3}
+  - {fileID: 21300000, guid: 724dbfcca4b104321a322cd8aaec7db1, type: 3}
+  - {fileID: 21300000, guid: 724dbfcca4b104321a322cd8aaec7db1, type: 3}
   - {fileID: 21300000, guid: 724dbfcca4b104321a322cd8aaec7db1, type: 3}
   - {fileID: 21300000, guid: 724dbfcca4b104321a322cd8aaec7db1, type: 3}
   - {fileID: 21300002, guid: 724dbfcca4b104321a322cd8aaec7db1, type: 3}
@@ -18526,6 +18931,109 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1687240618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1687240619}
+  - 82: {fileID: 1687240620}
+  m_Layer: 0
+  m_Name: BgMusic3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1687240619
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1687240618}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -69, y: -600, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1185932374}
+  m_RootOrder: 9
+--- !u!82 &1687240620
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1687240618}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f2038db5d1917470cad88e6cbab7247e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.64
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0.69
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1699841132
 GameObject:
   m_ObjectHideFlags: 0
@@ -18770,6 +19278,9 @@ MonoBehaviour:
   flowchart: {fileID: 141515389}
   blockName: setaLogoE
   buttonSprites:
+  - {fileID: 21300000, guid: 155ec0c71178c884d93d26a562d63663, type: 3}
+  - {fileID: 21300000, guid: 155ec0c71178c884d93d26a562d63663, type: 3}
+  - {fileID: 21300000, guid: 155ec0c71178c884d93d26a562d63663, type: 3}
   - {fileID: 21300000, guid: 155ec0c71178c884d93d26a562d63663, type: 3}
   - {fileID: 21300000, guid: 155ec0c71178c884d93d26a562d63663, type: 3}
   - {fileID: 21300002, guid: 155ec0c71178c884d93d26a562d63663, type: 3}
@@ -20627,6 +21138,9 @@ MonoBehaviour:
   buttonSprites:
   - {fileID: 21300000, guid: 4d9bff4eab7ff924d8cafa92731b6efe, type: 3}
   - {fileID: 21300000, guid: 4d9bff4eab7ff924d8cafa92731b6efe, type: 3}
+  - {fileID: 21300000, guid: 4d9bff4eab7ff924d8cafa92731b6efe, type: 3}
+  - {fileID: 21300000, guid: 4d9bff4eab7ff924d8cafa92731b6efe, type: 3}
+  - {fileID: 21300000, guid: 4d9bff4eab7ff924d8cafa92731b6efe, type: 3}
   - {fileID: 21300002, guid: 4d9bff4eab7ff924d8cafa92731b6efe, type: 3}
   - {fileID: 21300000, guid: 4d9bff4eab7ff924d8cafa92731b6efe, type: 3}
   changeSpriteWhileClick: 1
@@ -20906,6 +21420,9 @@ MonoBehaviour:
   buttonSprites:
   - {fileID: 21300000, guid: 85797bf23b2874aaa8a7087bfc40ac00, type: 3}
   - {fileID: 21300000, guid: 85797bf23b2874aaa8a7087bfc40ac00, type: 3}
+  - {fileID: 21300000, guid: 85797bf23b2874aaa8a7087bfc40ac00, type: 3}
+  - {fileID: 21300000, guid: 85797bf23b2874aaa8a7087bfc40ac00, type: 3}
+  - {fileID: 21300000, guid: 85797bf23b2874aaa8a7087bfc40ac00, type: 3}
   - {fileID: 21300002, guid: 85797bf23b2874aaa8a7087bfc40ac00, type: 3}
   - {fileID: 21300000, guid: 85797bf23b2874aaa8a7087bfc40ac00, type: 3}
   changeSpriteWhileClick: 1
@@ -21127,6 +21644,8 @@ GameObject:
   - 114: {fileID: 1960128273}
   - 114: {fileID: 1960128276}
   - 114: {fileID: 1960128275}
+  - 114: {fileID: 1960128277}
+  - 114: {fileID: 1960128278}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -21147,11 +21666,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -128.9512, y: 31.146332}
+  scrollPos: {x: -335.03027, y: 36.378044}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 207
-  zoom: 0.8200002
+  zoom: 0.99099946
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -21160,7 +21679,7 @@ MonoBehaviour:
     height: 963.1951
   selectedBlock: {fileID: 1960128266}
   selectedCommands:
-  - {fileID: 1960128265}
+  - {fileID: 1960128277}
   variables: []
   description: 
   stepPause: 0
@@ -21248,7 +21767,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 332.9268
     y: 15.243912
-    width: 139
+    width: 130
     height: 40
   itemId: 0
   blockName: NewGameBlock
@@ -21258,6 +21777,8 @@ MonoBehaviour:
   - {fileID: 1960128265}
   - {fileID: 1960128276}
   - {fileID: 1960128275}
+  - {fileID: 1960128277}
+  - {fileID: 1960128278}
 --- !u!114 &1960128267
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -21313,7 +21834,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 335
     y: 76
-    width: 136
+    width: 128
     height: 40
   itemId: 2
   blockName: ExitGameBlock
@@ -21336,7 +21857,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 323
     y: 134
-    width: 166
+    width: 157
     height: 40
   itemId: 4
   blockName: ContinueGameBlock
@@ -21385,7 +21906,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 571.6338
     y: 13.975616
-    width: 186
+    width: 175
     height: 40
   itemId: 5
   blockName: ProjectPageButtonBlock
@@ -21435,7 +21956,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 572.8536
     y: 67.63413
-    width: 159
+    width: 152
     height: 40
   itemId: 7
   blockName: CreditsButtonBlock
@@ -21482,6 +22003,52 @@ MonoBehaviour:
     floatRef: {fileID: 0}
     floatVal: 0.5
   durationOLD: 0
+--- !u!114 &1960128277
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1960128263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc30c92f7ffe3d746ac76cd528d616e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 11
+  errorMessage: 
+  indentLevel: 0
+  control: 3
+  _audioSource:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 228875076}
+  startVolume: 1
+  endVolume: 1
+  fadeDuration: 0.5
+  waitUntilFinished: 0
+  audioSourceOLD: {fileID: 0}
+--- !u!114 &1960128278
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1960128263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc30c92f7ffe3d746ac76cd528d616e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 12
+  errorMessage: 
+  indentLevel: 0
+  control: 1
+  _audioSource:
+    audioSourceRef: {fileID: 0}
+    audioSourceVal: {fileID: 157735725}
+  startVolume: 1
+  endVolume: 1
+  fadeDuration: 0
+  waitUntilFinished: 0
+  audioSourceOLD: {fileID: 0}
 --- !u!1 &1962127590
 GameObject:
   m_ObjectHideFlags: 0
@@ -22520,6 +23087,8 @@ MonoBehaviour:
   flowchart: {fileID: 1173192956}
   blockName: BlockMenosFrascoO
   buttonSprites:
+  - {fileID: 21300000, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
+  - {fileID: 21300000, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -22947,6 +23516,8 @@ MonoBehaviour:
   flowchart: {fileID: 1173192956}
   blockName: BlockMenosFrascoL
   buttonSprites:
+  - {fileID: 21300000, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
+  - {fileID: 21300000, guid: fe6d074dd6f8d45179a72f1673b8827c, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -23150,6 +23721,8 @@ MonoBehaviour:
   flowchart: {fileID: 1173192956}
   blockName: BlockMaisFrascoO
   buttonSprites:
+  - {fileID: 21300000, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
+  - {fileID: 21300000, guid: 13fc0e5bf15bc41029056150c378f2a8, type: 3}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -23589,6 +24162,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2128635977}
   - 114: {fileID: 2128635978}
+  - 82: {fileID: 2128635979}
   m_Layer: 0
   m_Name: CharSelectScene
   m_TagString: Untagged
@@ -23615,6 +24189,7 @@ Transform:
   - {fileID: 1630977807}
   - {fileID: 2000816098}
   - {fileID: 2006825146}
+  - {fileID: 157735724}
   m_Father: {fileID: 1579762233}
   m_RootOrder: 1
 --- !u!114 &2128635978
@@ -23680,3 +24255,77 @@ MonoBehaviour:
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
+--- !u!82 &2128635979
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2128635976}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: bdff08439d168bf4aa6e8582506ec11a, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
