@@ -23,7 +23,7 @@
  		GameObject obj = GameObject.Find("GameStateManager");
       	GameStateManager gsm = obj.GetComponent<GameStateManager>();
  		id = gsm.getLogoId();
- 
+ 		
  		if (id == 0) {
  			rend.sprite = logo0;
  		} else if (id == 1 || id == -1) {
