@@ -179,6 +179,7 @@ MonoBehaviour:
   - key: flowchart
     obj: {fileID: 2088062867}
     component: {fileID: 2088062874}
+  showInherited: 0
 --- !u!114 &364295475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -599,6 +600,8 @@ MonoBehaviour:
   localizationId: 
   showLineNumbers: 0
   hideCommands: []
+  luaEnvironment: {fileID: 0}
+  luaBindingName: flowchart
 --- !u!4 &2088062875
 Transform:
   m_ObjectHideFlags: 0

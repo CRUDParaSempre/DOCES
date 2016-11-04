@@ -1,0 +1,121 @@
+fileFormatVersion: 2
+guid: 380804888d8deb7489b655a84a6653f6
+timeCreated: 1477518392
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: botaoFechar_0
+    21300002: botaoFechar_1
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 230
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: botaoFechar_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 2
+        width: 236
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 117, y: -103}
+        - {x: 118, y: -100}
+        - {x: 118, y: 97}
+        - {x: 117, y: 101}
+        - {x: 114, y: 108}
+        - {x: 105, y: 120}
+        - {x: 101, y: 124}
+        - {x: -108, y: 124}
+        - {x: -114, y: 118}
+        - {x: -118, y: 99}
+        - {x: -118, y: -102}
+        - {x: -117, y: -105}
+        - {x: -114, y: -111}
+        - {x: -107, y: -119}
+        - {x: -100, y: -122}
+        - {x: -94, y: -124}
+        - {x: 96, y: -124}
+        - {x: 106, y: -119}
+        - {x: 112, y: -112}
+    - name: botaoFechar_1
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 2
+        width: 236
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 117, y: -103}
+        - {x: 118, y: -100}
+        - {x: 118, y: 97}
+        - {x: 117, y: 101}
+        - {x: 114, y: 108}
+        - {x: 105, y: 120}
+        - {x: 100, y: 124}
+        - {x: -107, y: 124}
+        - {x: -110, y: 121}
+        - {x: -113, y: 116}
+        - {x: -114, y: 113}
+        - {x: -118, y: 99}
+        - {x: -118, y: -102}
+        - {x: -117, y: -105}
+        - {x: -114, y: -111}
+        - {x: -107, y: -119}
+        - {x: -100, y: -122}
+        - {x: -94, y: -124}
+        - {x: 96, y: -124}
+        - {x: 106, y: -119}
+        - {x: 112, y: -112}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

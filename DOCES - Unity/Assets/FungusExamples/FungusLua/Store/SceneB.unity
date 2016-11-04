@@ -244,6 +244,7 @@ MonoBehaviour:
   - key: 
     obj: {fileID: 0}
     component: {fileID: 0}
+  showInherited: 0
 --- !u!114 &857857936
 MonoBehaviour:
   m_ObjectHideFlags: 0
