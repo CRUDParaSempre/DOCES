@@ -3483,7 +3483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 141515389}
+  selectedFlowchart: {fileID: 1960128264}
 --- !u!4 &395558029
 Transform:
   m_ObjectHideFlags: 1
@@ -21667,7 +21667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -208.89499, y: 6.105591}
+  scrollPos: {x: -208.89499, y: 5.096504}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 207
@@ -21678,9 +21678,9 @@ MonoBehaviour:
     y: -387.19513
     width: 1881
     height: 963.1951
-  selectedBlock: {fileID: 1960128266}
+  selectedBlock: {fileID: 1960128274}
   selectedCommands:
-  - {fileID: 1960128278}
+  - {fileID: 1960128273}
   variables: []
   description: 
   stepPause: 0
@@ -21956,7 +21956,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 572.8536
-    y: 67.63413
+    y: 66.625046
     width: 159
     height: 40
   itemId: 7
