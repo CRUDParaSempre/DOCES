@@ -1367,6 +1367,9 @@ GameObject:
   - 114: {fileID: 141515406}
   - 114: {fileID: 141515405}
   - 114: {fileID: 141515407}
+  - 114: {fileID: 141515409}
+  - 114: {fileID: 141515410}
+  - 114: {fileID: 141515411}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1400,7 +1403,7 @@ MonoBehaviour:
     height: 928
   selectedBlock: {fileID: 141515391}
   selectedCommands:
-  - {fileID: 141515407}
+  - {fileID: 141515411}
   variables:
   - {fileID: 141515399}
   description: 
@@ -1488,7 +1491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 62.87628
+    x: 63.907204
     y: 73.09278
     width: 200
     height: 40
@@ -1501,13 +1504,16 @@ MonoBehaviour:
   - {fileID: 141515392}
   - {fileID: 141515402}
   - {fileID: 141515403}
-  - {fileID: 141515394}
   - {fileID: 141515400}
   - {fileID: 141515401}
   - {fileID: 141515404}
   - {fileID: 141515406}
   - {fileID: 141515405}
   - {fileID: 141515407}
+  - {fileID: 141515409}
+  - {fileID: 141515410}
+  - {fileID: 141515411}
+  - {fileID: 141515394}
 --- !u!114 &141515392
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1891,6 +1897,87 @@ MonoBehaviour:
     PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: renderTop
+  targetMethod: Start
+  targetMethodText: 'Start (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &141515409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141515388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 17
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 1699841132}
+  targetComponentAssemblyName: renderSkin, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: renderSkin
+  targetMethod: Start
+  targetMethodText: 'Start (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &141515410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141515388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 18
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 948288906}
+  targetComponentAssemblyName: renderEyes, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: renderEyes
+  targetMethod: Start
+  targetMethodText: 'Start (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &141515411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141515388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 19
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 413689201}
+  targetComponentAssemblyName: renderArms, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: renderArms
   targetMethod: Start
   targetMethodText: 'Start (): Void'
   methodParameters: []
@@ -3699,7 +3786,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 413689202}
   - 212: {fileID: 413689203}
-  - 114: {fileID: 413689204}
+  - 114: {fileID: 413689205}
   m_Layer: 0
   m_Name: "bra\xE7o_blusa"
   m_TagString: Untagged
@@ -3750,7 +3837,7 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!114 &413689204
+--- !u!114 &413689205
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -3758,22 +3845,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 413689201}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bf726b2b72199c4ebebf28df97cd2d6, type: 3}
+  m_Script: {fileID: 11500000, guid: aabd0f4ccc96bd547874174cb228441d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _value: 0
-  _length: 10
-  blusa0: {fileID: 21300000, guid: b7aea1d48f2c629499c87b31d892a76f, type: 3}
-  blusa1: {fileID: 21300000, guid: 18e70f4f739a95f449b1fc1117ce21c6, type: 3}
-  blusa2: {fileID: 21300000, guid: 96b83686dff4ce948a61c0c596c0b0d7, type: 3}
-  blusa3: {fileID: 21300000, guid: 6916c9d05c4148846937870c2caf8129, type: 3}
-  blusa4: {fileID: 21300000, guid: 717a4f258b4b1944692949e3ca50b054, type: 3}
-  blusa5: {fileID: 21300000, guid: bba20ee27e0812a43b4b843db66553e4, type: 3}
-  blusa6: {fileID: 21300000, guid: a7797f18b787c564fbd3d269cc3004c0, type: 3}
-  blusa7: {fileID: 21300000, guid: e62c551c6d730d342bdcfac27b30d543, type: 3}
-  blusa8: {fileID: 21300000, guid: 85359be322090d04da8c86b2b338d620, type: 3}
-  blusa9: {fileID: 21300000, guid: 03c92889edbe7954d91f591b93b186ce, type: 3}
-  blusa: {fileID: 413689203}
+  top0: {fileID: 21300000, guid: b7aea1d48f2c629499c87b31d892a76f, type: 3}
+  top1: {fileID: 21300000, guid: 18e70f4f739a95f449b1fc1117ce21c6, type: 3}
+  top2: {fileID: 21300000, guid: 96b83686dff4ce948a61c0c596c0b0d7, type: 3}
+  top3: {fileID: 21300000, guid: 6916c9d05c4148846937870c2caf8129, type: 3}
+  top4: {fileID: 21300000, guid: 717a4f258b4b1944692949e3ca50b054, type: 3}
+  top5: {fileID: 21300000, guid: bba20ee27e0812a43b4b843db66553e4, type: 3}
+  top6: {fileID: 21300000, guid: a7797f18b787c564fbd3d269cc3004c0, type: 3}
+  top7: {fileID: 21300000, guid: e62c551c6d730d342bdcfac27b30d543, type: 3}
+  top8: {fileID: 21300000, guid: 85359be322090d04da8c86b2b338d620, type: 3}
+  top9: {fileID: 21300000, guid: 03c92889edbe7954d91f591b93b186ce, type: 3}
+  top: {fileID: 413689203}
 --- !u!1 &424292210
 GameObject:
   m_ObjectHideFlags: 0
@@ -8753,6 +8838,7 @@ GameObject:
   - 4: {fileID: 948288907}
   - 212: {fileID: 948288909}
   - 114: {fileID: 948288908}
+  - 114: {fileID: 948288910}
   m_Layer: 0
   m_Name: olhos
   m_TagString: Untagged
@@ -8814,6 +8900,18 @@ SpriteRenderer:
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &948288910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 948288906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2bf7d746bf81a442bdfd55426728c49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eyes: {fileID: 948288909}
 --- !u!1 &958901205
 GameObject:
   m_ObjectHideFlags: 0
@@ -19057,6 +19155,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1699841133}
+  - 114: {fileID: 1699841134}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -19081,6 +19180,22 @@ Transform:
   - {fileID: 1041628917}
   m_Father: {fileID: 1017101199}
   m_RootOrder: 0
+--- !u!114 &1699841134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1699841132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e308ff5a688ae9f489980bb59c6f84b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 671292900}
+  arm: {fileID: 826105356}
+  body: {fileID: 287062891}
+  leg: {fileID: 385380524}
+  feet: {fileID: 1537878856}
 --- !u!1 &1711814628
 GameObject:
   m_ObjectHideFlags: 0
