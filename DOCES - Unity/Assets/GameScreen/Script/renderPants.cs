@@ -4,6 +4,7 @@ using System.Collections;
 public class renderPants : MonoBehaviour {
 
 	private int _pantsId;
+	private Color col;
 	public Sprite bottom1;
 	public Sprite bottom2;
 	public Sprite bottom3;
@@ -21,10 +22,12 @@ public class renderPants : MonoBehaviour {
 		GameObject obj = GameObject.Find("GameStateManager");
 		GameStateManager stateManager = obj.GetComponent<GameStateManager>();
 		_pantsId = stateManager.getPantsId ();
+		col = stateManager.getItemColor (GameStateManager.Colorable.Pants);
 	}
 
 	// Update is called once per frame
-	void Update () {		
+	void Update () {
+		rend.color = col;	
 		if (_pantsId == 0) {
 			rend.sprite = bottom1;
 		} else if (_pantsId == 1 || _pantsId == -1) {

@@ -4,6 +4,7 @@ using System.Collections;
 public class renderTop : MonoBehaviour {
 
 	private int _shirtId;
+	private Color col;
 	public Sprite top0;
 	public Sprite top1;
 	public Sprite top2;
@@ -23,11 +24,12 @@ public class renderTop : MonoBehaviour {
 		GameObject obj = GameObject.Find("GameStateManager");
 		GameStateManager stateManager = obj.GetComponent<GameStateManager>();
 		_shirtId = stateManager.getShirtId ();
+		col = stateManager.getItemColor (GameStateManager.Colorable.Shirt);
 	}
 
 	// Update is called once per frame
 	void Update () {
-		Debug.Log ("shirt " + _shirtId);
+		rend.color = col;
 		if (_shirtId == 0) {
 			rend.sprite = top0;
 		} else if (_shirtId == 1 || _shirtId == -1) {

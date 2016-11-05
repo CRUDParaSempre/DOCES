@@ -4,7 +4,7 @@ using System.Collections;
 public class renderHair : MonoBehaviour {
 
 	private int _hairId;
-
+	private Color col;
 	public Sprite cabelo1;
 	public Sprite cabelo2;
 	public Sprite cabelo3;
@@ -38,11 +38,12 @@ public class renderHair : MonoBehaviour {
 		GameObject obj = GameObject.Find("GameStateManager");
 		GameStateManager stateManager = obj.GetComponent<GameStateManager>();
 		_hairId = stateManager.getHairId ();
+		col = stateManager.getItemColor (GameStateManager.Colorable.Hair);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		rend.color = col;
 		//Debug.Log ("hair " + _hairId);
 		if (_hairId == 0 || _hairId == -0) {
 			rend.sprite = cabelo1;
