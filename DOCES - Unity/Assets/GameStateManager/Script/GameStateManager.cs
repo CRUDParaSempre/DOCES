@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 
 public class GameStateManager : MonoBehaviour {
+
 	private string _playerName;
 	private string _companyName;
 	private int _logoId;
@@ -16,6 +17,7 @@ public class GameStateManager : MonoBehaviour {
 	private int _frascoO;
 	private int _frascoL;
 	private int _frascoC;
+	private int _sexo;
 
 	private static GameStateManager instance;
 
@@ -68,7 +70,7 @@ public class GameStateManager : MonoBehaviour {
 	}
 
 	public void setLogoId (int logoId){
-		Debug.Log ("Salvando logo Id " + logoId);
+		//Debug.Log ("Salvando logo Id " + logoId);
 		_logoId = logoId;
 	}
 
@@ -164,5 +166,16 @@ public class GameStateManager : MonoBehaviour {
 		Debug.LogError ("GameStateManager: colorable not found");
 
 		return -1;
+	}
+
+	public void setSexo (int item){
+		// 0 para mulher
+		// 1 para homem
+		_sexo = item;
+		Debug.Log ("setando sexo para " + _sexo);
+	}
+
+	public int getSexo (int item){
+		return _sexo;
 	}
 }
