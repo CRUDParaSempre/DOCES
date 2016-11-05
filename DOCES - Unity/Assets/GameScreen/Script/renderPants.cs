@@ -16,15 +16,15 @@ public class renderPants : MonoBehaviour {
 	public SpriteRenderer bottom;
 
 	// Use this for initialization
-	void Start () {
+	public void Start () {
 		rend = bottom.GetComponent<SpriteRenderer> ();
-	}
-
-	// Update is called once per frame
-	void Update () {
 		GameObject obj = GameObject.Find("GameStateManager");
 		GameStateManager stateManager = obj.GetComponent<GameStateManager>();
 		_pantsId = stateManager.getHairId ();
+	}
+
+	// Update is called once per frame
+	void Update () {		
 		if (_pantsId == 0) {
 			rend.sprite = bottom1;
 		} else if (_pantsId == 1 || _pantsId == -1) {

@@ -35,13 +35,14 @@ public class renderHair : MonoBehaviour {
 	// Use this for initialization
 	public void Start () {
 		rend = Hair.GetComponent<SpriteRenderer> ();
+		GameObject obj = GameObject.Find("GameStateManager");
+		GameStateManager stateManager = obj.GetComponent<GameStateManager>();
+		_hairId = stateManager.getHairId ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		GameObject obj = GameObject.Find("GameStateManager");
-		GameStateManager stateManager = obj.GetComponent<GameStateManager>();
-		_hairId = stateManager.getHairId ();
+		
 		//Debug.Log ("hair " + _hairId);
 		if (_hairId == 0 || _hairId == -0) {
 			rend.sprite = cabelo1;

@@ -14,15 +14,16 @@
  	public SpriteRenderer logo;
  
  	// Use this for initialization
- 	void Start () {
+ 	public void Start () {
  		rend = logo.GetComponent<SpriteRenderer> ();
+		GameObject obj = GameObject.Find("GameStateManager");
+		GameStateManager gsm = obj.GetComponent<GameStateManager>();
+		id = gsm.getLogoId();
  	}
  	
  	// Update is called once per frame
  	void Update () {
- 		GameObject obj = GameObject.Find("GameStateManager");
-      	GameStateManager gsm = obj.GetComponent<GameStateManager>();
- 		id = gsm.getLogoId();
+ 		
  		
  		if (id == 0) {
  			rend.sprite = logo0;
