@@ -20,7 +20,7 @@ public class renderPants : MonoBehaviour {
 		rend = bottom.GetComponent<SpriteRenderer> ();
 		GameObject obj = GameObject.Find("GameStateManager");
 		GameStateManager stateManager = obj.GetComponent<GameStateManager>();
-		_pantsId = stateManager.getHairId ();
+		_pantsId = stateManager.getPantsId ();
 	}
 
 	// Update is called once per frame
