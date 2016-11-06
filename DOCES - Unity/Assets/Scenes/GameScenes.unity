@@ -1530,6 +1530,7 @@ GameObject:
   - 114: {fileID: 141515403}
   - 114: {fileID: 141515405}
   - 114: {fileID: 141515404}
+  - 114: {fileID: 141515406}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1562,7 +1563,8 @@ MonoBehaviour:
     width: 1180
     height: 928
   selectedBlock: {fileID: 141515391}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 141515406}
   variables:
   - {fileID: 141515399}
   description: 
@@ -1659,15 +1661,16 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
-  - {fileID: 141515390}
   - {fileID: 141515392}
-  - {fileID: 141515402}
-  - {fileID: 141515403}
   - {fileID: 141515400}
   - {fileID: 141515401}
   - {fileID: 141515405}
   - {fileID: 141515404}
+  - {fileID: 141515390}
+  - {fileID: 141515402}
+  - {fileID: 141515403}
   - {fileID: 141515394}
+  - {fileID: 141515406}
 --- !u!114 &141515392
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1953,7 +1956,7 @@ MonoBehaviour:
   audioSourceOLD: {fileID: 0}
 --- !u!114 &141515404
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 141515388}
@@ -1980,7 +1983,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &141515405
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 141515388}
@@ -2005,6 +2008,27 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
+--- !u!114 &141515406
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141515388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 16
+  errorMessage: 
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 765224450}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  targetGameObjectOLD: {fileID: 0}
 --- !u!1 &151850032
 GameObject:
   m_ObjectHideFlags: 0
@@ -2721,7 +2745,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 65.73418
     y: 69.73418
-    width: 163
+    width: 169
     height: 40
   itemId: 0
   blockName: DropdownMenuBlock
@@ -3762,7 +3786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 52934671}
+  selectedFlowchart: {fileID: 141515389}
 --- !u!4 &395558029
 Transform:
   m_ObjectHideFlags: 1
@@ -4095,6 +4119,7 @@ MonoBehaviour:
   - {fileID: 1108696590}
   - {fileID: 1108696591}
   - {fileID: 1108696593}
+  - {fileID: 1108696597}
   - {fileID: 1108696594}
   - {fileID: 1108696595}
   - {fileID: 1108696596}
@@ -12847,6 +12872,7 @@ GameObject:
   - 114: {fileID: 1108696594}
   - 114: {fileID: 1108696595}
   - 114: {fileID: 1108696596}
+  - 114: {fileID: 1108696597}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -12942,7 +12968,7 @@ MonoBehaviour:
     height: 859
   selectedBlock: {fileID: 439733858}
   selectedCommands:
-  - {fileID: 1108696590}
+  - {fileID: 1108696597}
   variables: []
   description: 
   stepPause: 0
@@ -13044,6 +13070,27 @@ MonoBehaviour:
   fadeDuration: 0
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
+--- !u!114 &1108696597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1108696588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 8
+  errorMessage: 
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 765224450}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  targetGameObjectOLD: {fileID: 0}
 --- !u!1 &1125214659
 GameObject:
   m_ObjectHideFlags: 0
@@ -23080,7 +23127,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2011807837}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 69, y: 600, z: -10}
+  m_LocalPosition: {x: 0, y: 600, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
