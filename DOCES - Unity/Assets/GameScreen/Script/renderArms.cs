@@ -30,7 +30,6 @@ public class renderArms : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		rend.color = col;
-		//Debug.Log ("col " + col);
 		if (_shirtId == 0) {
 			rend.sprite = top0;
 		} else if (_shirtId == 1 || _shirtId == -1) {

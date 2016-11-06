@@ -175,7 +175,7 @@ public class GameStateManager : MonoBehaviour {
 		Debug.Log ("setando sexo para " + _sexo);
 	}
 
-	public int getSexo (int item){
+	public int getSexo (){
 		return _sexo;
 	}
 }
