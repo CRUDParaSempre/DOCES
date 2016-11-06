@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 
 public class GameStateManager : MonoBehaviour {
+
 	private string _playerName;
 	private string _companyName;
 	private int _logoId;
@@ -16,6 +17,20 @@ public class GameStateManager : MonoBehaviour {
 	private int _frascoO;
 	private int _frascoL;
 	private int _frascoC;
+	private int _sexo;
+
+	private static GameStateManager instance;
+
+	private GameStateManager() {}
+
+	public static GameStateManager Instance{
+		get{
+			if (instance == null){
+				instance = new GameStateManager();
+			}
+			return instance;
+		}
+	}
 
 	public enum Colorable {
 		Skin, Eyes, Hair, Shirt, Pants, Shoes
@@ -36,14 +51,14 @@ public class GameStateManager : MonoBehaviour {
 		get;
 	}
 
-	public int hairId { set; get; }
-	public int shirtId { set; get; }
-	public int pantsId { set; get; }
-	public int shoesId { set; get; }
-	public int frascoT { set; get; }
-	public int frascoO { set; get; }
-	public int frascoL { set; get; }
-	public int frascoC { set; get; }
+	//public int hairId { set; get; }
+	//public int shirtId { set; get; }
+	//public int pantsId { set; get; }
+	//public int shoesId { set; get; }
+	//public int frascoT { set; get; }
+	//public int frascoO { set; get; }
+	//public int frascoL { set; get; }
+	//public int frascoC { set; get; }
 
 	// Use this for initialization
 	void Start () {
@@ -55,7 +70,7 @@ public class GameStateManager : MonoBehaviour {
 	}
 
 	public void setLogoId (int logoId){
-		Debug.Log ("Salvando logo Id " + logoId);
+		//Debug.Log ("Salvando logo Id " + logoId);
 		_logoId = logoId;
 	}
 
@@ -68,9 +83,17 @@ public class GameStateManager : MonoBehaviour {
 		_hairId = hairId;
 	}
 
+	public int getHairId(){
+		return _hairId;
+	}
+
 	public void setShirtId (int shirtId){
 		Debug.Log ("Salvando shirt Id " + shirtId);
 		_shirtId = shirtId;
+	}
+
+	public int getShirtId(){
+		return _shirtId;
 	}
 
 	public void setPantsId (int pantsId){
@@ -78,9 +101,17 @@ public class GameStateManager : MonoBehaviour {
 		_pantsId = pantsId;
 	}
 
+	public int getPantsId(){
+		return _pantsId;
+	}
+
 	public void setShoesId (int shoesId){
 		Debug.Log ("Salvando shoes Id " + shoesId);
 		_shoesId = shoesId;
+	}
+
+	public int getShoesId(){
+		return _shoesId;
 	}
 
 	public void setFrascoT (int frascoT){
@@ -135,5 +166,16 @@ public class GameStateManager : MonoBehaviour {
 		Debug.LogError ("GameStateManager: colorable not found");
 
 		return -1;
+	}
+
+	public void setSexo (int item){
+		// 0 para mulher
+		// 1 para homem
+		_sexo = item;
+		Debug.Log ("setando sexo para " + _sexo);
+	}
+
+	public int getSexo (){
+		return _sexo;
 	}
 }

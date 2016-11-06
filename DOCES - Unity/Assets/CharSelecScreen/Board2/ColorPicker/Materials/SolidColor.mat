@@ -27,4 +27,8 @@ Material:
       data:
         first:
           name: _Color
+<<<<<<< HEAD
         second: {r: 0.5387634, g: 0.72471786, b: 0.42384195, a: 1}
+=======
+        second: {r: 1, g: 0, b: 0, a: 1}
+>>>>>>> d1bfb9a203e3a74dcc400b6d2317c9e4ad91929b
