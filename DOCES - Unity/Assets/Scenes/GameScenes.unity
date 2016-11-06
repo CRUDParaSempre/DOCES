@@ -1363,13 +1363,8 @@ GameObject:
   - 114: {fileID: 141515401}
   - 114: {fileID: 141515402}
   - 114: {fileID: 141515403}
-  - 114: {fileID: 141515404}
-  - 114: {fileID: 141515406}
   - 114: {fileID: 141515405}
-  - 114: {fileID: 141515407}
-  - 114: {fileID: 141515409}
-  - 114: {fileID: 141515410}
-  - 114: {fileID: 141515411}
+  - 114: {fileID: 141515404}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1402,8 +1397,7 @@ MonoBehaviour:
     width: 1180
     height: 928
   selectedBlock: {fileID: 141515391}
-  selectedCommands:
-  - {fileID: 141515411}
+  selectedCommands: []
   variables:
   - {fileID: 141515399}
   description: 
@@ -1506,13 +1500,8 @@ MonoBehaviour:
   - {fileID: 141515403}
   - {fileID: 141515400}
   - {fileID: 141515401}
-  - {fileID: 141515404}
-  - {fileID: 141515406}
   - {fileID: 141515405}
-  - {fileID: 141515407}
-  - {fileID: 141515409}
-  - {fileID: 141515410}
-  - {fileID: 141515411}
+  - {fileID: 141515404}
   - {fileID: 141515394}
 --- !u!114 &141515392
 MonoBehaviour:
@@ -1799,7 +1788,7 @@ MonoBehaviour:
   audioSourceOLD: {fileID: 0}
 --- !u!114 &141515404
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 141515388}
@@ -1808,14 +1797,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 12
+  itemId: 15
   errorMessage: 
   indentLevel: 0
-  targetObject: {fileID: 1605420268}
-  targetComponentAssemblyName: renderHair, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+  targetObject: {fileID: 1699841132}
+  targetComponentAssemblyName: renderChar, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: renderHair
+  targetComponentText: renderChar
   targetMethod: Start
   targetMethodText: 'Start (): Void'
   methodParameters: []
@@ -1843,141 +1832,6 @@ MonoBehaviour:
     PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: renderLogo
-  targetMethod: Start
-  targetMethodText: 'Start (): Void'
-  methodParameters: []
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
---- !u!114 &141515406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 141515388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 13
-  errorMessage: 
-  indentLevel: 0
-  targetObject: {fileID: 2098998697}
-  targetComponentAssemblyName: renderPants, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: renderPants
-  targetMethod: Start
-  targetMethodText: 'Start (): Void'
-  methodParameters: []
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
---- !u!114 &141515407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 141515388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 15
-  errorMessage: 
-  indentLevel: 0
-  targetObject: {fileID: 225521162}
-  targetComponentAssemblyName: renderTop, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: renderTop
-  targetMethod: Start
-  targetMethodText: 'Start (): Void'
-  methodParameters: []
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
---- !u!114 &141515409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 141515388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 17
-  errorMessage: 
-  indentLevel: 0
-  targetObject: {fileID: 1699841132}
-  targetComponentAssemblyName: renderSkin, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: renderSkin
-  targetMethod: Start
-  targetMethodText: 'Start (): Void'
-  methodParameters: []
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
---- !u!114 &141515410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 141515388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 18
-  errorMessage: 
-  indentLevel: 0
-  targetObject: {fileID: 948288906}
-  targetComponentAssemblyName: renderEyes, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: renderEyes
-  targetMethod: Start
-  targetMethodText: 'Start (): Void'
-  methodParameters: []
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
---- !u!114 &141515411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 141515388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 19
-  errorMessage: 
-  indentLevel: 0
-  targetObject: {fileID: 413689201}
-  targetComponentAssemblyName: renderArms, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: renderArms
   targetMethod: Start
   targetMethodText: 'Start (): Void'
   methodParameters: []
@@ -2728,7 +2582,6 @@ GameObject:
   - 4: {fileID: 225521163}
   - 212: {fileID: 225521166}
   - 114: {fileID: 225521164}
-  - 114: {fileID: 225521165}
   m_Layer: 0
   m_Name: tronco_blusa
   m_TagString: Untagged
@@ -2760,28 +2613,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c254ac90bd1d4dd41a7a4f5d9ddb56c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &225521165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 225521162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 680fdffd24fc0cd46ac8f6fd86f855a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  top0: {fileID: 21300000, guid: 50a6706c659dafb4cbda2ce38f593c76, type: 3}
-  top1: {fileID: 21300000, guid: f8efd36d8c6ffa14ca09b3e339e6949f, type: 3}
-  top2: {fileID: 21300000, guid: 7485c94dcefce1242ae805b125a45070, type: 3}
-  top3: {fileID: 21300000, guid: ef7c82034b9f2454fb9eea9cd8e26d16, type: 3}
-  top4: {fileID: 21300000, guid: 047b2471bc38f2046ac7be47a34f641d, type: 3}
-  top5: {fileID: 21300000, guid: 4b1636ae4f4faf54d84c224e8d5c7422, type: 3}
-  top6: {fileID: 21300000, guid: 43a3964622edf6a4cbf87843744f745b, type: 3}
-  top7: {fileID: 21300000, guid: 9f3e48756533a9b4aa40d044c7da4a20, type: 3}
-  top8: {fileID: 21300000, guid: 237e4dc950b47a7479a3adf139d380f8, type: 3}
-  top9: {fileID: 21300000, guid: 053f964a738e2524fafc0dc374e1fc42, type: 3}
-  top: {fileID: 225521166}
 --- !u!212 &225521166
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3786,7 +3617,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 413689202}
   - 212: {fileID: 413689203}
-  - 114: {fileID: 413689205}
   m_Layer: 0
   m_Name: "bra\xE7o_blusa"
   m_TagString: Untagged
@@ -3837,28 +3667,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!114 &413689205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 413689201}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aabd0f4ccc96bd547874174cb228441d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  top0: {fileID: 21300000, guid: b7aea1d48f2c629499c87b31d892a76f, type: 3}
-  top1: {fileID: 21300000, guid: 18e70f4f739a95f449b1fc1117ce21c6, type: 3}
-  top2: {fileID: 21300000, guid: 96b83686dff4ce948a61c0c596c0b0d7, type: 3}
-  top3: {fileID: 21300000, guid: 6916c9d05c4148846937870c2caf8129, type: 3}
-  top4: {fileID: 21300000, guid: 717a4f258b4b1944692949e3ca50b054, type: 3}
-  top5: {fileID: 21300000, guid: bba20ee27e0812a43b4b843db66553e4, type: 3}
-  top6: {fileID: 21300000, guid: a7797f18b787c564fbd3d269cc3004c0, type: 3}
-  top7: {fileID: 21300000, guid: e62c551c6d730d342bdcfac27b30d543, type: 3}
-  top8: {fileID: 21300000, guid: 85359be322090d04da8c86b2b338d620, type: 3}
-  top9: {fileID: 21300000, guid: 03c92889edbe7954d91f591b93b186ce, type: 3}
-  top: {fileID: 413689203}
 --- !u!1 &424292210
 GameObject:
   m_ObjectHideFlags: 0
@@ -8838,7 +8646,6 @@ GameObject:
   - 4: {fileID: 948288907}
   - 212: {fileID: 948288909}
   - 114: {fileID: 948288908}
-  - 114: {fileID: 948288910}
   m_Layer: 0
   m_Name: olhos
   m_TagString: Untagged
@@ -8900,18 +8707,6 @@ SpriteRenderer:
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!114 &948288910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 948288906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2bf7d746bf81a442bdfd55426728c49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eyes: {fileID: 948288909}
 --- !u!1 &958901205
 GameObject:
   m_ObjectHideFlags: 0
@@ -15536,7 +15331,7 @@ MonoBehaviour:
   cabelo4: {fileID: 21300000, guid: 8be70eb61c1afdf4ba13fa54779615b9, type: 3}
   cabelo5: {fileID: 21300000, guid: 3585f58a95b356440b3c19d674cdd9ae, type: 3}
   cabelo6: {fileID: 21300000, guid: a882773f65872ac41b27b14cf8ce3fbc, type: 3}
-  cabelo7: {fileID: 21300000, guid: 45eca64424451ae41acfe52e20124977, type: 3}
+  cabelo7: {fileID: 21300000, guid: 8516e1de2ab17f4449e242c62318e42f, type: 3}
   cabelo8: {fileID: 21300000, guid: ffa463e66f5a21749b69e077bba6b5af, type: 3}
   cabelo9: {fileID: 21300000, guid: ba464b10ffb254b4da460b3c4e3c5d28, type: 3}
   cabelo10: {fileID: 21300000, guid: 23b7174e73003254aba3a82a29411876, type: 3}
@@ -16020,7 +15815,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1278701182}
   - 212: {fileID: 1278701183}
-  - 114: {fileID: 1278701184}
   m_Layer: 0
   m_Name: boca
   m_TagString: Untagged
@@ -16071,20 +15865,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!114 &1278701184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1278701181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d19ab265e8582f44ab605883e9b809d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouthF: {fileID: 21300000, guid: c42941512b8fdcb438eb75050794ed9c, type: 3}
-  mouthM: {fileID: 21300000, guid: ad200b1bbdb32124b8326f36f22041fa, type: 3}
-  mouth: {fileID: 1278701183}
 --- !u!1 &1278837647
 GameObject:
   m_ObjectHideFlags: 0
@@ -16349,7 +16129,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1315224943}
   - 212: {fileID: 1315224946}
-  - 114: {fileID: 1315224945}
   - 114: {fileID: 1315224944}
   m_Layer: 0
   m_Name: "p\xE9s_sapato"
@@ -16382,24 +16161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c254ac90bd1d4dd41a7a4f5d9ddb56c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1315224945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1315224942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2ace1568cd0c3a49bfc3eaa32b485ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _value: 0
-  _length: 4
-  sapato0: {fileID: 21300000, guid: 38c0449904b69524ab6391327831a34c, type: 3}
-  sapato1: {fileID: 21300000, guid: d5517694259e2c74b935a44f1df9ab4a, type: 3}
-  sapato2: {fileID: 21300000, guid: 53ce523f3c65a0f4ea0c58d3c13fe6e6, type: 3}
-  sapato3: {fileID: 21300000, guid: 1b74aff6b9744504fad1278adf00245e, type: 3}
-  sapato: {fileID: 1315224946}
 --- !u!212 &1315224946
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18023,7 +17784,6 @@ GameObject:
   - 4: {fileID: 1605420269}
   - 212: {fileID: 1605420272}
   - 114: {fileID: 1605420270}
-  - 114: {fileID: 1605420273}
   m_Layer: 0
   m_Name: "cabe\xE7a_cabelo"
   m_TagString: Untagged
@@ -18085,39 +17845,6 @@ SpriteRenderer:
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!114 &1605420273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1605420268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a689be7c9909c8e40bb7b980cad38076, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cabelo1: {fileID: 21300000, guid: f81fc162bc7f7004493b651c3d5363c7, type: 3}
-  cabelo2: {fileID: 21300000, guid: 2d07edb0ea5dc4f4badd9a4544f3a648, type: 3}
-  cabelo3: {fileID: 21300000, guid: e86fef94413dd654e84940a9c00aab8d, type: 3}
-  cabelo4: {fileID: 21300000, guid: e38b0d76611a5694fa5bdd10349f4102, type: 3}
-  cabelo5: {fileID: 21300000, guid: 8be70eb61c1afdf4ba13fa54779615b9, type: 3}
-  cabelo6: {fileID: 21300000, guid: 3585f58a95b356440b3c19d674cdd9ae, type: 3}
-  cabelo7: {fileID: 21300000, guid: a882773f65872ac41b27b14cf8ce3fbc, type: 3}
-  cabelo8: {fileID: 21300000, guid: 45eca64424451ae41acfe52e20124977, type: 3}
-  cabelo9: {fileID: 21300000, guid: ffa463e66f5a21749b69e077bba6b5af, type: 3}
-  cabelo10: {fileID: 21300000, guid: ba464b10ffb254b4da460b3c4e3c5d28, type: 3}
-  cabelo11: {fileID: 21300000, guid: 23b7174e73003254aba3a82a29411876, type: 3}
-  cabelo12: {fileID: 21300000, guid: bc5a1463645f6a84aa239ad923229c13, type: 3}
-  cabelo13: {fileID: 21300000, guid: 224cb6c770c50e24c84088c68e79f3e9, type: 3}
-  cabelo14: {fileID: 21300000, guid: 88ec1b65443fd3847b4665c562a0dd53, type: 3}
-  cabelo15: {fileID: 21300000, guid: 36118ee28868b11498f02e984d746f21, type: 3}
-  cabelo16: {fileID: 21300000, guid: 967c340b607280947914dc16dd0a5941, type: 3}
-  cabelo17: {fileID: 21300000, guid: 6fbcd04fa1274c24e93c5eebe3b75bea, type: 3}
-  cabelo18: {fileID: 21300000, guid: b7ca5a1d02a9776438dd6e167cbd5c19, type: 3}
-  cabelo19: {fileID: 21300000, guid: 01e7c8d4b4187794791a6a62a0d92a5e, type: 3}
-  cabelo20: {fileID: 21300000, guid: b380dae0f4134874fa56342161b777e0, type: 3}
-  cabelo21: {fileID: 21300000, guid: d5fc0d27a1e3ab146912710c35335d09, type: 3}
-  Hair: {fileID: 1605420272}
 --- !u!1 &1612021572
 GameObject:
   m_ObjectHideFlags: 0
@@ -19170,7 +18897,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1699841133}
-  - 114: {fileID: 1699841134}
+  - 114: {fileID: 1699841135}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -19195,7 +18922,7 @@ Transform:
   - {fileID: 1041628917}
   m_Father: {fileID: 1017101199}
   m_RootOrder: 0
---- !u!114 &1699841134
+--- !u!114 &1699841135
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -19203,11 +18930,79 @@ MonoBehaviour:
   m_GameObject: {fileID: 1699841132}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e308ff5a688ae9f489980bb59c6f84b3, type: 3}
+  m_Script: {fileID: 11500000, guid: 26667f13348c8634191abf2c50761e89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hairs:
+  - {fileID: 21300000, guid: f81fc162bc7f7004493b651c3d5363c7, type: 3}
+  - {fileID: 21300000, guid: 2d07edb0ea5dc4f4badd9a4544f3a648, type: 3}
+  - {fileID: 21300000, guid: e86fef94413dd654e84940a9c00aab8d, type: 3}
+  - {fileID: 21300000, guid: e38b0d76611a5694fa5bdd10349f4102, type: 3}
+  - {fileID: 21300000, guid: 8be70eb61c1afdf4ba13fa54779615b9, type: 3}
+  - {fileID: 21300000, guid: 3585f58a95b356440b3c19d674cdd9ae, type: 3}
+  - {fileID: 21300000, guid: a882773f65872ac41b27b14cf8ce3fbc, type: 3}
+  - {fileID: 21300000, guid: 8516e1de2ab17f4449e242c62318e42f, type: 3}
+  - {fileID: 21300000, guid: ffa463e66f5a21749b69e077bba6b5af, type: 3}
+  - {fileID: 21300000, guid: ba464b10ffb254b4da460b3c4e3c5d28, type: 3}
+  - {fileID: 21300000, guid: 23b7174e73003254aba3a82a29411876, type: 3}
+  - {fileID: 21300000, guid: bc5a1463645f6a84aa239ad923229c13, type: 3}
+  - {fileID: 21300000, guid: 224cb6c770c50e24c84088c68e79f3e9, type: 3}
+  - {fileID: 21300000, guid: 88ec1b65443fd3847b4665c562a0dd53, type: 3}
+  - {fileID: 21300000, guid: 36118ee28868b11498f02e984d746f21, type: 3}
+  - {fileID: 21300000, guid: 967c340b607280947914dc16dd0a5941, type: 3}
+  - {fileID: 21300000, guid: 6fbcd04fa1274c24e93c5eebe3b75bea, type: 3}
+  - {fileID: 21300000, guid: b7ca5a1d02a9776438dd6e167cbd5c19, type: 3}
+  - {fileID: 21300000, guid: 01e7c8d4b4187794791a6a62a0d92a5e, type: 3}
+  - {fileID: 21300000, guid: b380dae0f4134874fa56342161b777e0, type: 3}
+  - {fileID: 21300000, guid: d5fc0d27a1e3ab146912710c35335d09, type: 3}
+  hair: {fileID: 1605420272}
+  tops:
+  - {fileID: 21300000, guid: 50a6706c659dafb4cbda2ce38f593c76, type: 3}
+  - {fileID: 21300000, guid: f8efd36d8c6ffa14ca09b3e339e6949f, type: 3}
+  - {fileID: 21300000, guid: 7485c94dcefce1242ae805b125a45070, type: 3}
+  - {fileID: 21300000, guid: ef7c82034b9f2454fb9eea9cd8e26d16, type: 3}
+  - {fileID: 21300000, guid: 047b2471bc38f2046ac7be47a34f641d, type: 3}
+  - {fileID: 21300000, guid: 4b1636ae4f4faf54d84c224e8d5c7422, type: 3}
+  - {fileID: 21300000, guid: 43a3964622edf6a4cbf87843744f745b, type: 3}
+  - {fileID: 21300000, guid: 9f3e48756533a9b4aa40d044c7da4a20, type: 3}
+  - {fileID: 21300000, guid: 237e4dc950b47a7479a3adf139d380f8, type: 3}
+  - {fileID: 21300000, guid: 03114840773f28248bc27071375ff361, type: 3}
+  top: {fileID: 225521166}
+  arms:
+  - {fileID: 21300000, guid: b7aea1d48f2c629499c87b31d892a76f, type: 3}
+  - {fileID: 21300000, guid: 18e70f4f739a95f449b1fc1117ce21c6, type: 3}
+  - {fileID: 21300000, guid: 96b83686dff4ce948a61c0c596c0b0d7, type: 3}
+  - {fileID: 21300000, guid: 6916c9d05c4148846937870c2caf8129, type: 3}
+  - {fileID: 21300000, guid: 717a4f258b4b1944692949e3ca50b054, type: 3}
+  - {fileID: 21300000, guid: bba20ee27e0812a43b4b843db66553e4, type: 3}
+  - {fileID: 21300000, guid: a7797f18b787c564fbd3d269cc3004c0, type: 3}
+  - {fileID: 21300000, guid: e62c551c6d730d342bdcfac27b30d543, type: 3}
+  - {fileID: 21300000, guid: 85359be322090d04da8c86b2b338d620, type: 3}
+  - {fileID: 21300000, guid: 03c92889edbe7954d91f591b93b186ce, type: 3}
+  arm: {fileID: 413689203}
+  bottoms:
+  - {fileID: 21300000, guid: 551a913a346f2be4b9293fb9ea0af054, type: 3}
+  - {fileID: 21300000, guid: e82482773fb7f0c438ada3297a594a62, type: 3}
+  - {fileID: 21300000, guid: 1bb822715cd0fe34eb0739cff8ac1300, type: 3}
+  - {fileID: 21300000, guid: 571bf0aa5542e5449b104d76d27c3f81, type: 3}
+  - {fileID: 21300000, guid: 8c11fcc6e1205f14c84af8c5be6a6df4, type: 3}
+  - {fileID: 21300000, guid: 0ff57e580185d69489eed9f8ed27e5c7, type: 3}
+  - {fileID: 21300000, guid: 7f189f39c09286e40b326a6251bb9990, type: 3}
+  - {fileID: 21300000, guid: 82d198afaf4ee424ca5d465d0c751444, type: 3}
+  bottom: {fileID: 2098998702}
+  shoes:
+  - {fileID: 21300000, guid: 38c0449904b69524ab6391327831a34c, type: 3}
+  - {fileID: 21300000, guid: d5517694259e2c74b935a44f1df9ab4a, type: 3}
+  - {fileID: 21300000, guid: 53ce523f3c65a0f4ea0c58d3c13fe6e6, type: 3}
+  - {fileID: 21300000, guid: 1b74aff6b9744504fad1278adf00245e, type: 3}
+  shoe: {fileID: 1315224946}
+  mouthes:
+  - {fileID: 21300000, guid: c42941512b8fdcb438eb75050794ed9c, type: 3}
+  - {fileID: 21300000, guid: ad200b1bbdb32124b8326f36f22041fa, type: 3}
+  mouth: {fileID: 1278701183}
+  eyes: {fileID: 948288909}
   head: {fileID: 671292900}
-  arm: {fileID: 826105356}
+  armskin: {fileID: 826105356}
   body: {fileID: 287062891}
   leg: {fileID: 385380524}
   feet: {fileID: 1537878856}
@@ -23902,7 +23697,6 @@ GameObject:
   - 212: {fileID: 2098998702}
   - 114: {fileID: 2098998701}
   - 114: {fileID: 2098998699}
-  - 114: {fileID: 2098998700}
   m_Layer: 0
   m_Name: "pernas_cal\xE7as"
   m_TagString: Untagged
@@ -23934,26 +23728,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c254ac90bd1d4dd41a7a4f5d9ddb56c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2098998700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2098998697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee6e1cd766463944a95e8b5f4513b4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bottom1: {fileID: 21300000, guid: 551a913a346f2be4b9293fb9ea0af054, type: 3}
-  bottom2: {fileID: 21300000, guid: e82482773fb7f0c438ada3297a594a62, type: 3}
-  bottom3: {fileID: 21300000, guid: 1bb822715cd0fe34eb0739cff8ac1300, type: 3}
-  bottom4: {fileID: 21300000, guid: 571bf0aa5542e5449b104d76d27c3f81, type: 3}
-  bottom5: {fileID: 21300000, guid: 8c11fcc6e1205f14c84af8c5be6a6df4, type: 3}
-  bottom6: {fileID: 21300000, guid: 0ff57e580185d69489eed9f8ed27e5c7, type: 3}
-  bottom7: {fileID: 21300000, guid: 7f189f39c09286e40b326a6251bb9990, type: 3}
-  bottom8: {fileID: 21300000, guid: 82d198afaf4ee424ca5d465d0c751444, type: 3}
-  bottom: {fileID: 2098998702}
 --- !u!114 &2098998701
 MonoBehaviour:
   m_ObjectHideFlags: 0
