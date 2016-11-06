@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿//Criado por Guilherme B Revisado por Marcelo Gomes
+
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-//Criado por Guilherme B
 public class renderChar : MonoBehaviour {
 	private int _hairId;
 	private Color haircol;
@@ -53,39 +54,36 @@ public class renderChar : MonoBehaviour {
 	public SpriteRenderer feet;
 
 	// Use this for initialization
-	public void Start () {		
-		GameObject obj = GameObject.Find("GameStateManager");
-		GameStateManager stateManager = obj.GetComponent<GameStateManager>();
-
+	public void Start () {
 		hairrend = hair.GetComponent<SpriteRenderer> ();
-		_hairId = stateManager.getHairId ();
-		haircol = stateManager.getItemColor (GameStateManager.Colorable.Hair);
+		_hairId = GameStateManager.Instance.hairId;
+		haircol = GameStateManager.Instance.getItemColor (GameStateManager.Colorable.Hair);
 
 		toprend = top.GetComponent<SpriteRenderer> ();
-		_shirtId = stateManager.getShirtId ();
-		topcol = stateManager.getItemColor (GameStateManager.Colorable.Shirt);
+		_shirtId = GameStateManager.Instance.shirtId;
+		topcol = GameStateManager.Instance.getItemColor (GameStateManager.Colorable.Shirt);
 		armrend = arm.GetComponent<SpriteRenderer> ();
 
 		bottomrend = bottom.GetComponent<SpriteRenderer> ();
-		_pantsId = stateManager.getPantsId ();
-		bottomcol = stateManager.getItemColor (GameStateManager.Colorable.Pants);
+		_pantsId = GameStateManager.Instance.pantsId;
+		bottomcol = GameStateManager.Instance.getItemColor (GameStateManager.Colorable.Pants);
 
 		shoerend = shoe.GetComponent<SpriteRenderer> ();
-		_shoesId = stateManager.getShoesId ();
-		shoecol = stateManager.getItemColor (GameStateManager.Colorable.Shoes);
+		_shoesId = GameStateManager.Instance.shoesId;
+		shoecol = GameStateManager.Instance.getItemColor (GameStateManager.Colorable.Shoes);
 
 		mouthrend = mouth.GetComponent<SpriteRenderer> ();
-		_sexo = stateManager.getSexo ();
+		_sexo = GameStateManager.Instance.gender;
 
 		eyerend = eyes.GetComponent<SpriteRenderer> ();
-		eyecol = stateManager.getItemColor (GameStateManager.Colorable.Eyes);
+		eyecol = GameStateManager.Instance.getItemColor (GameStateManager.Colorable.Eyes);
 
 		rendhead = head.GetComponent<SpriteRenderer> ();
 		rendarmskin = armskin.GetComponent<SpriteRenderer> ();
 		rendbody = body.GetComponent<SpriteRenderer> ();
 		rendleg = leg.GetComponent<SpriteRenderer> ();
 		rendfeet = feet.GetComponent<SpriteRenderer> ();
-		skincol = stateManager.getItemColor (GameStateManager.Colorable.Skin);
+		skincol = GameStateManager.Instance.getItemColor (GameStateManager.Colorable.Skin);
 
 		hairrend.color = haircol;
 		hairrend.sprite = hairs [_hairId];
