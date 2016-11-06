@@ -19,13 +19,8 @@
 		GameObject obj = GameObject.Find("GameStateManager");
 		GameStateManager gsm = obj.GetComponent<GameStateManager>();
 		id = gsm.getLogoId();
- 	}
- 	
- 	// Update is called once per frame
- 	void Update () {
- 		
- 		
- 		if (id == 0) {
+
+		if (id == 0) {
  			rend.sprite = logo0;
  		} else if (id == 1 || id == -1) {
  			rend.sprite = logo1;
@@ -38,6 +33,11 @@
  		} else if (id == 5 || id == -5) {
  			rend.sprite = logo5;
  		}
+ 	}
+ 	
+ 	// Update is called once per frame
+ 	void Update () {
+
  	
  	}
  }
