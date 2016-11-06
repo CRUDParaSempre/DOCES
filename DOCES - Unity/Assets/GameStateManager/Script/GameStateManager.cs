@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿//Created by Marcelo Gomes  (06/11/16) | Revised by: ?
+
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
