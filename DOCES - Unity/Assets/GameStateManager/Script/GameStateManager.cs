@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 
 
 public class GameStateManager : MonoBehaviour {
+	private static GameStateManager instance;
 
 	private string _playerName = null;
 	private string _companyName = null;
@@ -18,9 +20,23 @@ public class GameStateManager : MonoBehaviour {
 	private int _frascoL = 0;
 	private int _frascoC = 0;
 	private int _gender = 0;
+	private List<Color> _colorIds = new List<Color> (){Color.white,Color.white,Color.white,Color.white,Color.white,Color.white}; //0 = skin, 1 = eyes, 2 = hair, 3 = shirt, 4 = pants, 5 = shoes
 
-	private static GameStateManager instance;
 
+	[SerializeField] private float timeSpeed = 1f;
+	private int _currentWeek = 0 ;
+	public int currentWeek {
+		get { return _currentWeek; }
+	}
+
+	public Text weekUI;
+	public Text monthYearUI;
+
+
+	public enum Colorable {
+		Skin, Eyes, Hair, Shirt, Pants, Shoes
+	}
+		
 	private GameStateManager() {}
 
 	public static GameStateManager Instance{
@@ -31,13 +47,7 @@ public class GameStateManager : MonoBehaviour {
 			return instance;
 		}
 	}
-
-	public enum Colorable {
-		Skin, Eyes, Hair, Shirt, Pants, Shoes
-	}
-
-	private List<Color> _colorIds = new List<Color> (){Color.white,Color.white,Color.white,Color.white,Color.white,Color.white}; //0 = skin, 1 = eyes, 2 = hair, 3 = shirt, 4 = pants, 5 = shoes
-
+		
 	public string playerName {
 		set; get;
 	}
@@ -213,5 +223,48 @@ public class GameStateManager : MonoBehaviour {
 
 	public int getGender (){
 		return gender;
+	}
+
+	public void advanceTimeBy ( int weeks ) {
+		_currentWeek += (int)(Mathf.Round((weeks * timeSpeed)));
+		weekToDate ();
+	}
+
+	private void weekToDate () {
+		weekUI.text = "Semana " + (((_currentWeek + 4) % 4) + 1).ToString();
+		monthYearUI.text = monthIdToString((((_currentWeek/4) + 12) % 12) + 1) + " / Ano " + (((_currentWeek) / 48) + 1).ToString();
+	}
+
+	private string monthIdToString ( int id ) {
+		if( id >= 1 && id < 13) {
+			if(id == 1) {
+				return "Janeiro";
+			} else if (id == 2 ) {
+				return "Fevereiro";
+			} else if (id == 3 ) {
+				return "Março";
+			} else if (id == 4 ) {
+				return "Abril";
+			} else if (id == 5 ) {
+				return "Maio";
+			} else if (id == 6 ) {
+				return "Junho";
+			} else if (id == 7 ) {
+				return "Julho";
+			} else if (id == 8 ) {
+				return "Agosto";
+			} else if (id == 9 ) {
+				return "Setembro";
+			} else if (id == 10 ) {
+				return "Outubro";
+			} else if (id == 11 ) {
+				return "Novembro";
+			} else if (id == 12 ) {
+				return "Dezembro";
+			}
+		}
+
+		Debug.LogError("Invalid month id!");
+		return null;
 	}
 }
