@@ -6,18 +6,18 @@ using System.Collections.Generic;
 
 public class GameStateManager : MonoBehaviour {
 
-	private string _playerName;
-	private string _companyName;
-	private int _logoId;
-	private int _hairId;
-	private int _shirtId;
-	private int _shoesId;
-	private int _pantsId;
-	private int _frascoT;
-	private int _frascoO;
-	private int _frascoL;
-	private int _frascoC;
-	private int _sexo;
+	private string _playerName = null;
+	private string _companyName = null;
+	private int _logoId = 0;
+	private int _hairId = 0;
+	private int _shirtId = 0;
+	private int _shoesId = 0;
+	private int _pantsId = 0;
+	private int _frascoT = 0;
+	private int _frascoO = 0;
+	private int _frascoL = 0;
+	private int _frascoC = 0;
+	private int _gender = 0;
 
 	private static GameStateManager instance;
 
@@ -26,7 +26,7 @@ public class GameStateManager : MonoBehaviour {
 	public static GameStateManager Instance{
 		get{
 			if (instance == null){
-				instance = new GameStateManager();
+				instance = (GameObject.Find("Managers").GetComponentInChildren<GameStateManager>());
 			}
 			return instance;
 		}
@@ -51,14 +51,50 @@ public class GameStateManager : MonoBehaviour {
 		get;
 	}
 
-	//public int hairId { set; get; }
-	//public int shirtId { set; get; }
-	//public int pantsId { set; get; }
-	//public int shoesId { set; get; }
-	//public int frascoT { set; get; }
-	//public int frascoO { set; get; }
-	//public int frascoL { set; get; }
-	//public int frascoC { set; get; }
+	public int hairId { 
+		set{ _hairId = value; }
+		get{ return _hairId; }
+	}
+
+	public int shirtId { 
+		set{ _shirtId = value; }
+		get{ return _shirtId; }
+	}
+
+	public int pantsId { 
+		set{ _pantsId = value; }
+		get{ return _pantsId; }
+	}
+
+	public int shoesId { 
+		set{ _shoesId = value; }
+		get{ return _shoesId; }
+	}
+
+	public int frascoT { 
+		set{ _frascoT = value; }
+		get{ return _frascoT; }
+	}
+
+	public int frascoO { 
+		set{ _frascoO = value; }
+		get{ return _frascoO; }
+	}
+
+	public int frascoL { 
+		set{ _frascoL = value; }
+		get{ return _frascoL; }
+	}
+
+	public int frascoC { 
+		set{ _frascoC = value; }
+		get{ return _frascoC; }
+	}
+
+	public int gender { 
+		set{ _gender = value; }
+		get{ return _gender; }
+	} 
 
 	// Use this for initialization
 	void Start () {
@@ -71,7 +107,7 @@ public class GameStateManager : MonoBehaviour {
 
 	public void setLogoId (int logoId){
 		//Debug.Log ("Salvando logo Id " + logoId);
-		_logoId = logoId;
+		this._logoId = logoId;
 	}
 
 	public int getLogoId (){
@@ -80,7 +116,7 @@ public class GameStateManager : MonoBehaviour {
 
 	public void setHairId (int hairId){
 		Debug.Log ("Salvando hair Id " + hairId);
-		_hairId = hairId;
+		this._hairId = hairId;
 	}
 
 	public int getHairId(){
@@ -89,7 +125,7 @@ public class GameStateManager : MonoBehaviour {
 
 	public void setShirtId (int shirtId){
 		Debug.Log ("Salvando shirt Id " + shirtId);
-		_shirtId = shirtId;
+		this._shirtId = shirtId;
 	}
 
 	public int getShirtId(){
@@ -98,7 +134,7 @@ public class GameStateManager : MonoBehaviour {
 
 	public void setPantsId (int pantsId){
 		Debug.Log ("Salvando pants Id " + pantsId);
-		_pantsId = pantsId;
+		this._pantsId = pantsId;
 	}
 
 	public int getPantsId(){
@@ -107,7 +143,7 @@ public class GameStateManager : MonoBehaviour {
 
 	public void setShoesId (int shoesId){
 		Debug.Log ("Salvando shoes Id " + shoesId);
-		_shoesId = shoesId;
+		this._shoesId = shoesId;
 	}
 
 	public int getShoesId(){
@@ -116,22 +152,22 @@ public class GameStateManager : MonoBehaviour {
 
 	public void setFrascoT (int frascoT){
 		Debug.Log ("Salvando Frasco T " + frascoT);
-		_frascoT = frascoT;
+		this._frascoT = frascoT;
 	}
 
 	public void setFrascoL (int frascoL){
 		Debug.Log ("Salvando Frasco L " + frascoL);
-		_frascoL = frascoL;
+		this._frascoL = frascoL;
 	}
 
 	public void setFrascoO (int frascoO){
 		Debug.Log ("Salvando Frasco O " + frascoO);
-		_frascoO = frascoO;
+		this._frascoO = frascoO;
 	}
 
 	public void setFrascoC (int frascoC){
 		Debug.Log ("Salvando Frasco C " + frascoC);
-		_frascoC = frascoC;
+		this._frascoC = frascoC;
 	}
 
 	public void addItemColor(Colorable item, Color c) {
@@ -168,14 +204,14 @@ public class GameStateManager : MonoBehaviour {
 		return -1;
 	}
 
-	public void setSexo (int item){
+	public void setGender (int item){
 		// 0 para mulher
 		// 1 para homem
-		_sexo = item;
-		Debug.Log ("setando sexo para " + _sexo);
+		this._gender = item;
+		Debug.Log ("setando sexo para " + _gender);
 	}
 
-	public int getSexo (){
-		return _sexo;
+	public int getGender (){
+		return gender;
 	}
 }
