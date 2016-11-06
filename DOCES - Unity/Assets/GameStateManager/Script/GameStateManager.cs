@@ -10,8 +10,8 @@ using UnityEngine.UI;
 public class GameStateManager : MonoBehaviour {
 	private static GameStateManager instance;
 
-	private string _playerName = null;
-	private string _companyName = null;
+	private string _playerName = "";
+	private string _companyName = "";
 	private int _logoId = 0;
 	private int _hairId = 0;
 	private int _shirtId = 0;
