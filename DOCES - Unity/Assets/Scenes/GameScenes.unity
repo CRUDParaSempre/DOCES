@@ -4415,7 +4415,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0838c8743cdcba44ca54418a7c5546fa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 49494de33ef92244ea0499222702b305, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -4622,9 +4622,9 @@ MonoBehaviour:
   flowchart: {fileID: 553102998}
   blockName: OkButtonBlock
   buttonSprites:
-  - {fileID: 21300000, guid: 0838c8743cdcba44ca54418a7c5546fa, type: 3}
-  - {fileID: 21300002, guid: 0838c8743cdcba44ca54418a7c5546fa, type: 3}
-  - {fileID: 21300004, guid: 0838c8743cdcba44ca54418a7c5546fa, type: 3}
+  - {fileID: 21300000, guid: 49494de33ef92244ea0499222702b305, type: 3}
+  - {fileID: 21300002, guid: 49494de33ef92244ea0499222702b305, type: 3}
+  - {fileID: 21300004, guid: 49494de33ef92244ea0499222702b305, type: 3}
   changeSpriteWhileClick: 1
   selectedSound: {fileID: 478250352}
   clickSound: {fileID: 478250351}
@@ -21619,7 +21619,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1946770157
   m_SortingOrder: 23
-  m_Sprite: {fileID: 21300000, guid: 709742b2ec3f3334abe0c36727463d26, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2b2a5e20b7a3a6a42b0bf829b3b101cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
