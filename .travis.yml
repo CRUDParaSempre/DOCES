@@ -5,6 +5,8 @@ rvm:
 
 before_install: 
 - chmod +x ./Testes/instalador.sh
+- sudo apt-get -qq update
+- sudo apt-get install -y lib32gcc1 lib32stdc++6 libc6-i386 npm
 
 before_script: 
 - chmod +x ./Testes/compilador.sh
