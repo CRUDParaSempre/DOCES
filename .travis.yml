@@ -2,6 +2,14 @@ language: csharp
 sudo: required
 rvm:
 - 2.1.2
+
+before_install: 
+- chmod +x ./Testes/instalador.sh
+
+before_script: 
+- chmod +x ./Testes/compilador.sh
+
+
 install:
 - ./Testes/instalador.sh
 script:
