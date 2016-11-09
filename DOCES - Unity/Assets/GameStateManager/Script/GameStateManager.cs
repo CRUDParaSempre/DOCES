@@ -51,11 +51,13 @@ public class GameStateManager : MonoBehaviour {
 	}
 		
 	public string playerName {
-		set; get;
+		set { Debug.Log ("Salvando nome para " + value); _playerName = value;} 
+		get { return _playerName; }
 	}
 
 	public string companyName {
-		set; get;
+		set { Debug.Log ("Salvando nome da empresa para " + value); _companyName = value; }
+		get { return _companyName; }
 	}
 
 	public int logoId {
@@ -268,5 +270,27 @@ public class GameStateManager : MonoBehaviour {
 
 		Debug.LogError("Invalid month id!");
 		return null;
+	}
+
+	public string getPlayerName(){
+		return _playerName;
+	}
+
+	public string getCompanyName(){
+		return _companyName;
+	}
+
+	public bool validatePlayerName(){
+		if (_playerName.Length == 0)
+			return false;
+		else
+			return true;
+	}
+
+	public bool validateCompanyName(){
+		if (_companyName.Length == 0)
+			return false;
+		else
+			return true;
 	}
 }
