@@ -1736,6 +1736,12 @@ GameObject:
   - 114: {fileID: 141515405}
   - 114: {fileID: 141515404}
   - 114: {fileID: 141515406}
+  - 114: {fileID: 141515408}
+  - 114: {fileID: 141515410}
+  - 114: {fileID: 141515409}
+  - 114: {fileID: 141515412}
+  - 114: {fileID: 141515407}
+  - 114: {fileID: 141515411}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -1759,8 +1765,8 @@ MonoBehaviour:
   scrollPos: {x: 0, y: 0}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 260
-  zoom: 0.97
+  blockViewHeight: 470
+  zoom: 0.95000005
   scrollViewRect:
     serializedVersion: 2
     x: -350
@@ -1769,9 +1775,10 @@ MonoBehaviour:
     height: 928
   selectedBlock: {fileID: 141515391}
   selectedCommands:
-  - {fileID: 141515406}
+  - {fileID: 141515401}
   variables:
   - {fileID: 141515399}
+  - {fileID: 141515407}
   description: 
   stepPause: 0
   colorCommands: 1
@@ -1795,7 +1802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   errorMessage: 
-  indentLevel: 0
+  indentLevel: 1
   targetObject: {fileID: 2011807837}
   targetComponentAssemblyName: SetCameraPosition, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
@@ -1858,14 +1865,18 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 63.907204
-    y: 73.09278
-    width: 200
+    y: 74.14541
+    width: 191
     height: 40
   itemId: 0
   blockName: botaoProntoEmpresaBlock
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 141515412}
+  - {fileID: 141515408}
+  - {fileID: 141515411}
+  - {fileID: 141515410}
   - {fileID: 141515392}
   - {fileID: 141515400}
   - {fileID: 141515401}
@@ -1876,6 +1887,7 @@ MonoBehaviour:
   - {fileID: 141515403}
   - {fileID: 141515394}
   - {fileID: 141515406}
+  - {fileID: 141515409}
 --- !u!114 &141515392
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -1889,7 +1901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 3
   errorMessage: 
-  indentLevel: 0
+  indentLevel: 1
   _targetGameObject:
     gameObjectRef: {fileID: 0}
     gameObjectVal: {fileID: 438772506}
@@ -1923,7 +1935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   errorMessage: 
-  indentLevel: 0
+  indentLevel: 1
   _duration:
     floatRef: {fileID: 0}
     floatVal: 0.5
@@ -2055,7 +2067,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 8
   errorMessage: 
-  indentLevel: 0
+  indentLevel: 1
   targetObject: {fileID: 1670622824}
   targetComponentAssemblyName: LogoScript, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
@@ -2082,7 +2094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 9
   errorMessage: 
-  indentLevel: 0
+  indentLevel: 1
   targetObject: {fileID: 264415013}
   targetComponentAssemblyName: GameStateManager, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
@@ -2126,7 +2138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 10
   errorMessage: 
-  indentLevel: 0
+  indentLevel: 1
   control: 3
   _audioSource:
     audioSourceRef: {fileID: 0}
@@ -2149,7 +2161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 11
   errorMessage: 
-  indentLevel: 0
+  indentLevel: 1
   control: 1
   _audioSource:
     audioSourceRef: {fileID: 0}
@@ -2172,7 +2184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 15
   errorMessage: 
-  indentLevel: 0
+  indentLevel: 1
   targetObject: {fileID: 1699841132}
   targetComponentAssemblyName: renderChar, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
@@ -2199,7 +2211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 14
   errorMessage: 
-  indentLevel: 0
+  indentLevel: 1
   targetObject: {fileID: 1633696122}
   targetComponentAssemblyName: renderLogo, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
@@ -2226,7 +2238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 16
   errorMessage: 
-  indentLevel: 0
+  indentLevel: 1
   _targetGameObject:
     gameObjectRef: {fileID: 0}
     gameObjectVal: {fileID: 765224450}
@@ -2234,6 +2246,147 @@ MonoBehaviour:
     booleanRef: {fileID: 0}
     booleanVal: 1
   targetGameObjectOLD: {fileID: 0}
+--- !u!114 &141515407
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141515388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: validCompanyName
+  value: 0
+--- !u!114 &141515408
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141515388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c5622b8a80845c980954170295f292, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 17
+  errorMessage: 
+  indentLevel: 0
+  compareOperator: 0
+  variable: {fileID: 141515407}
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+--- !u!114 &141515409
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141515388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cb9773f2ca04e2bbf7a68ccfc23267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 19
+  errorMessage: 
+  indentLevel: 0
+--- !u!114 &141515410
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141515388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fa968f01a7f9496bb50e13dfe16760d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 18
+  errorMessage: 
+  indentLevel: 0
+--- !u!114 &141515411
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141515388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 49
+  errorMessage: 
+  indentLevel: 1
+  targetObject: {fileID: 133153654}
+  targetComponentAssemblyName: WarningManager, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: WarningManager
+  targetMethod: showWarning
+  targetMethodText: 'showWarning (String): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: "D\xEA um nome para a sua empresa"
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &141515412
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141515388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 20
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 264415013}
+  targetComponentAssemblyName: GameStateManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: GameStateManager
+  targetMethod: validateCompanyName
+  targetMethodText: 'validateCompanyName (): Boolean'
+  methodParameters: []
+  saveReturnValue: 1
+  returnValueVariableKey: validCompanyName
+  returnValueType: System.Boolean
+  showInherited: 0
+  callMode: 0
 --- !u!1 &151850032
 GameObject:
   m_ObjectHideFlags: 0
@@ -4225,7 +4378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1173192956}
+  selectedFlowchart: {fileID: 141515389}
 --- !u!4 &395558029
 Transform:
   m_ObjectHideFlags: 1
@@ -14817,6 +14970,10 @@ GameObject:
   - 114: {fileID: 1173193019}
   - 114: {fileID: 1173193018}
   - 114: {fileID: 1173193017}
+  - 114: {fileID: 1173193021}
+  - 114: {fileID: 1173193024}
+  - 114: {fileID: 1173193022}
+  - 114: {fileID: 1173193023}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -14840,8 +14997,8 @@ MonoBehaviour:
   scrollPos: {x: 121.11885, y: 48.251007}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 0
-  blockViewHeight: 519
-  zoom: 0.8800001
+  blockViewHeight: 463
+  zoom: 0.8
   scrollViewRect:
     serializedVersion: 2
     x: -680.8048
@@ -14850,7 +15007,7 @@ MonoBehaviour:
     height: 1083.9023
   selectedBlock: {fileID: 1173192971}
   selectedCommands:
-  - {fileID: 1173193017}
+  - {fileID: 1173193020}
   variables:
   - {fileID: 1173192975}
   - {fileID: 1173192978}
@@ -14866,6 +15023,7 @@ MonoBehaviour:
   - {fileID: 1173193001}
   - {fileID: 1173193000}
   - {fileID: 1173192999}
+  - {fileID: 1173193022}
   description: 
   stepPause: 0
   colorCommands: 1
@@ -14931,7 +15089,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 198.46341
     y: 96.902435
-    width: 149
+    width: 144
     height: 40
   itemId: 2
   blockName: BlockMaisFrascoL
@@ -14981,7 +15139,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 178.9512
     y: 18.853668
-    width: 160
+    width: 155
     height: 40
   itemId: 0
   blockName: BlockMenosFrascoL
@@ -15004,7 +15162,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 389.56097
     y: 101.46341
-    width: 152
+    width: 147
     height: 40
   itemId: 6
   blockName: BlockMaisFrascoO
@@ -15054,7 +15212,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 383.29272
     y: 24.170685
-    width: 163
+    width: 158
     height: 40
   itemId: 4
   blockName: BlockMenosFrascoO
@@ -15104,7 +15262,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -11.292671
     y: 99.34146
-    width: 152
+    width: 146
     height: 40
   itemId: 9
   blockName: BlockMaisFrascoC
@@ -15127,7 +15285,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -34.463394
     y: 28.60978
-    width: 163
+    width: 157
     height: 40
   itemId: 8
   blockName: BlockMenosFrascoC
@@ -15265,7 +15423,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 601.21954
     y: 28.82927
-    width: 150
+    width: 145
     height: 40
   itemId: 12
   blockName: botaoProntoBlock
@@ -15273,7 +15431,12 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1173192994}
+  - {fileID: 1173193021}
   - {fileID: 1173193020}
+  - {fileID: 1173193017}
+  - {fileID: 1173193024}
+  - {fileID: 1173193023}
+  - {fileID: 1173193019}
   - {fileID: 1173192970}
   - {fileID: 1173192972}
   - {fileID: 1173192974}
@@ -15303,10 +15466,8 @@ MonoBehaviour:
   - {fileID: 1173193016}
   - {fileID: 1173193015}
   - {fileID: 1173193014}
-  - {fileID: 1173193013}
   - {fileID: 1173193012}
-  - {fileID: 1173193019}
-  - {fileID: 1173193017}
+  - {fileID: 1173193013}
   - {fileID: 1173193018}
 --- !u!114 &1173192972
 MonoBehaviour:
@@ -16746,8 +16907,121 @@ MonoBehaviour:
   itemId: 45
   errorMessage: 
   indentLevel: 0
+  compareOperator: 1
+  variable: {fileID: 0}
+  booleanData:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  integerData:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  floatData:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  stringData:
+    stringRef: {fileID: 0}
+    stringVal: 
+--- !u!114 &1173193021
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 49
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 264415013}
+  targetComponentAssemblyName: GameStateManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: GameStateManager
+  targetMethod: validatePlayerName
+  targetMethodText: 'validatePlayerName (): Boolean'
+  methodParameters: []
+  saveReturnValue: 1
+  returnValueVariableKey: validName
+  returnValueType: System.Boolean
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173193022
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d02d9822eec54c98afe95bb497211b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scope: 0
+  key: validName
+  value: 0
+--- !u!114 &1173193023
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 51
+  errorMessage: 
+  indentLevel: 1
+  targetObject: {fileID: 133153654}
+  targetComponentAssemblyName: WarningManager, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: WarningManager
+  targetMethod: showWarning
+  targetMethodText: 'showWarning (String): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: "D\xEA um nome para o seu personagem"
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1173193024
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1173192955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c5e8d46183346b59f64b820e71f97f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 50
+  errorMessage: 
+  indentLevel: 0
   compareOperator: 0
-  variable: {fileID: 1173192987}
+  variable: {fileID: 1173193022}
   booleanData:
     booleanRef: {fileID: 0}
     booleanVal: 0
