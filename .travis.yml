@@ -1,0 +1,9 @@
+language: csharp
+osx_image: xcode61
+sudo: required
+rvm:
+- 3.5.3f1
+install:
+- ./Testes/instalador.sh
+script:
+- ./Testes/compilador.sh
