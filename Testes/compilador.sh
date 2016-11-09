@@ -13,9 +13,10 @@ echo "Compilando $project para ambientes webGL"
   -silent-crashes \
   -logFile ${PWD}/unity.log \
   -projectPath "${PWD}/DOCES - Unity" \
-  -buildTarget WebGL "${PWD}/Build"  \
+  -executeMethod WebGLBuilder.build \
   -quit
 
+  #-buildTarget WebGL "${PWD}/Build"  \
   #-buildOSXUniversalPlayer "${PWD}/game.app" \
 
 ls -LR > dados.log
