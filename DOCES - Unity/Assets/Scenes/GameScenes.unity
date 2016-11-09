@@ -96,13 +96,14 @@ GameObject:
   - 223: {fileID: 10994257}
   - 114: {fileID: 10994256}
   - 114: {fileID: 10994255}
+  - 114: {fileID: 10994258}
   m_Layer: 0
   m_Name: Tutorial Message Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &10994254
 RectTransform:
   m_ObjectHideFlags: 0
@@ -183,6 +184,26 @@ Canvas:
   m_SortingLayerID: 1946770157
   m_SortingOrder: 15
   m_TargetDisplay: 0
+--- !u!114 &10994258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 10994253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80a81e3bbd6456546adf5fecd1484724, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upTutorialText: {fileID: 312470443}
+  upTutorialCanvas: {fileID: 1746011413}
+  botTutorialText: {fileID: 832647601}
+  botTutorialCanvas: {fileID: 1839432518}
+  fadeBlocks:
+  - {fileID: 456642383}
+  - {fileID: 1677030573}
+  - {fileID: 1443591071}
+  - {fileID: 992220657}
 --- !u!1 &16509754
 GameObject:
   m_ObjectHideFlags: 0
@@ -3399,11 +3420,11 @@ RectTransform:
   - {fileID: 832647598}
   m_Father: {fileID: 1839432515}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 386, y: 193.31523}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &232941486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3946,10 +3967,10 @@ RectTransform:
   - {fileID: 1189477607}
   m_Father: {fileID: 1186889382}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 193, y: -81.657616}
+  m_SizeDelta: {x: 363, y: 123.31523}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &312470443
 MonoBehaviour:
@@ -3983,9 +4004,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Voc\xEA fez algo errado, seu burro! for maiorzinha ele tem  que amentar
-    o esp\xE7o do trem ne mesmo! medida que a gente cresce o texto o balao e os botoes
-    tem que descer e \xE9 o que esta acontecendo!"
+  m_Text: "Vo\xE7\xEA fez algo errado, seu burro! testando o que acontece quando a
+    gente excede o tamanho muitlo mais que o permitido e vai escrevendo sem da enter
+    so espa\xE7o a coisa vai ficar caotica? eu nao fa\xE7o ideia mas espero que n\xE3o,
+    afinal eu que to fazendo isso"
 --- !u!222 &312470444
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4504,7 +4526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 2079664754}
+  selectedFlowchart: {fileID: 1960128264}
 --- !u!4 &395558029
 Transform:
   m_ObjectHideFlags: 1
@@ -4857,7 +4879,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &456642383
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6894,7 +6916,7 @@ Transform:
   m_RootOrder: 1
 --- !u!114 &654540700
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 654540698}
@@ -6961,7 +6983,7 @@ MonoBehaviour:
     y: -340
     width: 1208
     height: 859
-  selectedBlock: {fileID: 654540700}
+  selectedBlock: {fileID: 654540701}
   selectedCommands: []
   variables: []
   description: 
@@ -8837,10 +8859,10 @@ RectTransform:
   - {fileID: 1325786247}
   m_Father: {fileID: 232941485}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 193, y: -91.657616}
+  m_SizeDelta: {x: 363, y: 123.31523}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &832647599
 MonoBehaviour:
@@ -8905,9 +8927,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Voc\xEA fez algo errado, seu burro! for maiorzinha ele tem  que amentar
-    o esp\xE7o do trem ne mesmo! medida que a gente cresce o texto o balao e os botoes
-    tem que descer e \xE9 o que esta acontecendo!"
+  m_Text: "Vo\xE7\xEA fez algo errado, seu burro! testando o que acontece quando a
+    gente excede o tamanho muitlo mais que o permitido e vai escrevendo sem da enter
+    so espa\xE7o a coisa vai ficar caotica? eu nao fa\xE7o ideia mas espero que n\xE3o,
+    afinal eu que to fazendo isso"
 --- !u!222 &832647602
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14049,7 +14072,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &992220657
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15439,7 +15462,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 198.46341
     y: 96.902435
-    width: 144
+    width: 149
     height: 40
   itemId: 2
   blockName: BlockMaisFrascoL
@@ -15489,7 +15512,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 178.9512
     y: 18.853668
-    width: 155
+    width: 160
     height: 40
   itemId: 0
   blockName: BlockMenosFrascoL
@@ -15512,7 +15535,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 389.56097
     y: 101.46341
-    width: 147
+    width: 152
     height: 40
   itemId: 6
   blockName: BlockMaisFrascoO
@@ -15562,7 +15585,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 383.29272
     y: 24.170685
-    width: 158
+    width: 163
     height: 40
   itemId: 4
   blockName: BlockMenosFrascoO
@@ -15612,7 +15635,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -11.292671
     y: 99.34146
-    width: 146
+    width: 152
     height: 40
   itemId: 9
   blockName: BlockMaisFrascoC
@@ -15635,7 +15658,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -34.463394
     y: 28.60978
-    width: 157
+    width: 163
     height: 40
   itemId: 8
   blockName: BlockMenosFrascoC
@@ -15773,7 +15796,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 601.21954
     y: 28.82927
-    width: 145
+    width: 150
     height: 40
   itemId: 12
   blockName: botaoProntoBlock
@@ -17458,11 +17481,11 @@ RectTransform:
   - {fileID: 312470442}
   m_Father: {fileID: 1746011410}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0.000015258789, y: 0}
+  m_SizeDelta: {x: 386, y: 193.31523}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1186889383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20134,7 +20157,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1443591071
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22270,7 +22293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1677030573
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22618,7 +22641,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1746011410
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22634,10 +22657,10 @@ RectTransform:
   - {fileID: 2079664751}
   m_Father: {fileID: 10994254}
   m_RootOrder: 4
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 34, y: 323.4997}
-  m_SizeDelta: {x: -638, y: -595}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 351, y: -273}
+  m_SizeDelta: {x: 435, y: 139}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1746011411
 MonoBehaviour:
@@ -24735,13 +24758,15 @@ GameObject:
   - 223: {fileID: 1839432518}
   - 114: {fileID: 1839432517}
   - 114: {fileID: 1839432516}
+  - 114: {fileID: 1839432520}
+  - 114: {fileID: 1839432519}
   m_Layer: 0
   m_Name: Tutorial Message Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1839432515
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24757,10 +24782,10 @@ RectTransform:
   - {fileID: 654540699}
   m_Father: {fileID: 10994254}
   m_RootOrder: 5
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 34.00007, y: -66.191864}
-  m_SizeDelta: {x: -638, y: -595}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 376.1, y: -532.2}
+  m_SizeDelta: {x: 432.4, y: 114.3}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1839432516
 MonoBehaviour:
@@ -24818,6 +24843,37 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1839432519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1839432514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1741964061, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 2
+  m_VerticalFit: 2
+--- !u!114 &1839432520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1839432514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1679637790, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 0
+  m_MinWidth: 432.4
+  m_MinHeight: 114.3
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
 --- !u!1 &1841984236
 GameObject:
   m_ObjectHideFlags: 0
@@ -25523,6 +25579,7 @@ GameObject:
   - 114: {fileID: 1960128275}
   - 114: {fileID: 1960128277}
   - 114: {fileID: 1960128278}
+  - 114: {fileID: 1960128279}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -25554,9 +25611,9 @@ MonoBehaviour:
     y: -387.19513
     width: 1881
     height: 963.1951
-  selectedBlock: {fileID: 1960128274}
+  selectedBlock: {fileID: 1960128270}
   selectedCommands:
-  - {fileID: 1960128273}
+  - {fileID: 1960128279}
   variables: []
   description: 
   stepPause: 0
@@ -25732,7 +25789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 323
+    x: 324.0091
     y: 134
     width: 166
     height: 40
@@ -25740,7 +25797,8 @@ MonoBehaviour:
   blockName: ContinueGameBlock
   description: 
   eventHandler: {fileID: 0}
-  commandList: []
+  commandList:
+  - {fileID: 1960128279}
 --- !u!114 &1960128271
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -25926,6 +25984,154 @@ MonoBehaviour:
   fadeDuration: 0.5
   waitUntilFinished: 0
   audioSourceOLD: {fileID: 0}
+--- !u!114 &1960128279
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1960128263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 13
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 10994253}
+  targetComponentAssemblyName: TutorialManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: TutorialManager
+  targetMethod: showTutorialAtPosition
+  targetMethodText: 'showTutorialAtPosition (String, Single, Single, Single, Single,
+    Boolean, Single): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: "testando essa baga\xE7a aqui porque eu ja fiz essa merda mas tenho
+        que fazer denovo!"
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Single, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Single
+      intValue: 0
+      boolValue: 0
+      floatValue: 100
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Single, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Single
+      intValue: 0
+      boolValue: 0
+      floatValue: 100
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Single, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Single
+      intValue: 0
+      boolValue: 0
+      floatValue: 300
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Single, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Single
+      intValue: 0
+      boolValue: 0
+      floatValue: 400
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Boolean
+      intValue: 0
+      boolValue: 1
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  - objValue:
+      typeAssemblyname: System.Single, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Single
+      intValue: 0
+      boolValue: 0
+      floatValue: 0.5
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!1 &1962127590
 GameObject:
   m_ObjectHideFlags: 0
