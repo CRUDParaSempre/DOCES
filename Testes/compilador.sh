@@ -2,6 +2,19 @@
 
 # Compilando Unity para Windows
 
+
+echo "==================== LS DOCES"
+ls ${PWD}
+echo "==================== LS DOCES Unity"
+ls ${PWD}/"DOCES - Unity"
+echo "==================== LS Builds"
+ls ${PWD}/"DOCES - Unity"/Builds/
+echo "==================== LS Build.*"
+ls ${PWD}/"DOCES - Unity"/Builds/*/*
+echo "==================== TEMP"
+ls ${PWD}/"DOCES - Unity"/Temp/
+
+
 project="DOCES - Unity"
 
 echo "Compilando $project para ambientes webGL"

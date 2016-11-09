@@ -10,22 +10,30 @@ echo ''
 echo "=============  Comprimindo arquivos gerados ================="
 echo ''
 echo ''
-ls ${PWD} -lah
-ls ${PWD}/Build/ -lah
-ls ${PWD}/Build/Web -lah
-tar -zcf web_build.tar ${PWD}/Build/Web
+echo "==================== LS DOCES"
+ls ${PWD}
+echo "==================== LS DOCES Unity"
+ls ${PWD}/"DOCES - Unity"
+echo "==================== LS Builds"
+ls ${PWD}/"DOCES - Unity"/Builds/
+echo "==================== LS Build.*"
+ls ${PWD}/"DOCES - Unity"/Builds/*/*
+echo "==================== TEMP"
+ls ${PWD}/"DOCES - Unity"/Temp/
 
-echo ''
-echo ''
-echo "=============  Enviando arquivo comprimido para servidor ================"
-echo ''
-echo ''
+# tar -zcf web_build.tar ${PWD}/Build/Web
 
-ftp -n $HOST <<END_SCRIPT
-quote USER $USER
-quote PASS $PASSWD
-cd $REMOTEPATH
-put web_build.tar
-quit
-END_SCRIPT
-exit 0
+# echo ''
+# echo ''
+# echo "=============  Enviando arquivo comprimido para servidor ================"
+# echo ''
+# echo ''
+
+# ftp -n $HOST <<END_SCRIPT
+# quote USER $USER
+# quote PASS $PASSWD
+# cd $REMOTEPATH
+# put web_build.tar
+# quit
+# END_SCRIPT
+# exit 0
