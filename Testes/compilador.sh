@@ -10,8 +10,8 @@ echo "Compilando $project para ambientes Windows"
   -nographics \
   -silent-crashes \
   -logFile ${PWD}/unity.log \
-  -projectPath ${PWD} \
-  -buildWindowsPlayer "${PWD}/Build/windows/aplicacao.exe" \
+  -projectPath "${PWD}/DOCES - Unity" \
+  -buildWindowsPlayer "${PWD}/aplicacao.exe" \
   -quit
 
 
