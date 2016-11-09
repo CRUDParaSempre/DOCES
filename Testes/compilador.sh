@@ -11,8 +11,10 @@ echo "Compilando $project para ambientes OS X"
   -silent-crashes \
   -logFile ${PWD}/unity.log \
   -projectPath "${PWD}/DOCES - Unity" \
-  -buildOSXUniversalPlayer "${PWD}/game.app"
+  -buildTarget WebGL "${PWD}/Build/Web"  \
   -quit
+
+  #-buildOSXUniversalPlayer "${PWD}/game.app" \
 
 
 echo 'Logs do processo de compilacao'

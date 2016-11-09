@@ -15,4 +15,5 @@ before_script:
 install:
 - ./Testes/instalador.sh
 script:
+- travis_wait 30 mvn install
 - ./Testes/compilador.sh
