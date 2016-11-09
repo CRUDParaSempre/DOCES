@@ -4531,7 +4531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1960128264}
+  selectedFlowchart: {fileID: 1173192956}
 --- !u!4 &395558029
 Transform:
   m_ObjectHideFlags: 1
@@ -9263,7 +9263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 688.87195, y: 133.84146}
+  scrollPos: {x: 594.87195, y: 138.84146}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 207
@@ -9274,9 +9274,8 @@ MonoBehaviour:
     y: -538.84143
     width: 2388.8718
     height: 1233.0609
-  selectedBlock: {fileID: 862217455}
-  selectedCommands:
-  - {fileID: 862217454}
+  selectedBlock: {fileID: 0}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -11038,20 +11037,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 89.20749, y: 107.327225}
+  scrollPos: {x: -125.65811, y: 92.03574}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 0
   blockViewHeight: 400
-  zoom: 0.46000046
+  zoom: 0.9100001
   scrollViewRect:
     serializedVersion: 2
     x: -496.11975
     y: -463.13586
     width: 1952.8837
     height: 1172.3928
-  selectedBlock: {fileID: 967225625}
-  selectedCommands:
-  - {fileID: 967225626}
+  selectedBlock: {fileID: 0}
+  selectedCommands: []
   variables:
   - {fileID: 967225535}
   - {fileID: 967225571}
@@ -15434,7 +15432,7 @@ MonoBehaviour:
   scrollPos: {x: 121.11885, y: 48.251007}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 0
-  blockViewHeight: 463
+  blockViewHeight: 379
   zoom: 0.8
   scrollViewRect:
     serializedVersion: 2
@@ -15443,8 +15441,7 @@ MonoBehaviour:
     width: 2218.8047
     height: 1083.9023
   selectedBlock: {fileID: 1173192971}
-  selectedCommands:
-  - {fileID: 1173193020}
+  selectedCommands: []
   variables:
   - {fileID: 1173192975}
   - {fileID: 1173192978}
@@ -15881,10 +15878,10 @@ MonoBehaviour:
   - {fileID: 1173192977}
   - {fileID: 1173192976}
   - {fileID: 1173192980}
-  - {fileID: 1173192979}
   - {fileID: 1173192984}
   - {fileID: 1173192983}
   - {fileID: 1173192986}
+  - {fileID: 1173192979}
   - {fileID: 1173192985}
   - {fileID: 1173192992}
   - {fileID: 1173192991}
@@ -17345,7 +17342,7 @@ MonoBehaviour:
   errorMessage: 
   indentLevel: 0
   compareOperator: 1
-  variable: {fileID: 0}
+  variable: {fileID: 1173192987}
   booleanData:
     booleanRef: {fileID: 0}
     booleanVal: 0
