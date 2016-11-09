@@ -1,19 +1,19 @@
-#! /bin/sh
+#!/bin/sh
 
 # Compilando Unity para Windows
 
 project="DOCES - Unity"
 
 echo "Compilando $project para ambientes Windows"
-/Applications/Unity/Unity.app/Contents/MacOS/Unity \
+/opt/Unity/Editor/Unity \
   -batchmode \
   -nographics \
   -silent-crashes \
-  -logFile $(pwd)/unity.log \
-  -projectPath $(pwd) \
-  -buildWindowsPlayer "$(pwd)/Build/windows/aplicacao.exe" \
+  -logFile ${PWD}/unity.log \
+  -projectPath ${PWD} \
+  -buildWindowsPlayer "${PWD}/Build/windows/aplicacao.exe" \
   -quit
 
 
 echo 'Logs do processo de compilacao'
-cat $(pwd)/unity.log
+cat ${PWD}/unity.log
