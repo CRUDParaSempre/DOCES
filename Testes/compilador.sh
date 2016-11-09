@@ -11,7 +11,7 @@ echo "Compilando $project para ambientes Windows"
   -silent-crashes \
   -logFile ${PWD}/unity.log \
   -projectPath "${PWD}/DOCES - Unity" \
-  -buildWindowsPlayer "${PWD}/aplicacao.exe" \
+  -buildOSXUniversalPlayer "${PWD}/game.app"
   -quit
 
 
