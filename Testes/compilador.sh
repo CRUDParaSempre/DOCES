@@ -4,7 +4,7 @@
 
 project="DOCES - Unity"
 
-echo "Compilando $project para ambientes OS X"
+echo "Compilando $project para ambientes webGL"
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
   -nographics \
