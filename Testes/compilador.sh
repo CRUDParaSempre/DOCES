@@ -5,7 +5,7 @@
 project="DOCES - Unity"
 
 echo "Compilando $project para ambientes Windows"
-/opt/Unity/Editor/Unity \
+/Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
   -nographics \
   -silent-crashes \

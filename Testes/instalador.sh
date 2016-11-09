@@ -4,9 +4,10 @@
 
 #Link Temporario 
 
-echo 'Baixando Unity de from http://download.unity3d.com/download_unity/960ebf59018a/MacEditorInstaller/Unity-5.3.5f1.pkg'
+echo 'Baixando Unity de http://download.unity3d.com/download_unity/960ebf59018a/MacEditorInstaller/Unity-5.3.5f1.pkg'
 
-wget http://download.unity3d.com/download_unity/linux/unity-editor-5.3.5f1+20160525_amd64.deb -O file.deb
+curl -o "Unity.pkg" "http://download.unity3d.com/download_unity/960ebf59018a/MacEditorInstaller/Unity-5.3.5f1.pkg?_ga=1.92322139.717821165.1475358332"
 
-echo 'Instalando a unity versao 3.5.5f1'
-sudo dpkg -i file.deb
+echo 'Instalando a Unity versao 3.5.5f1'
+sudo installer -dumplog -package Unity.pkg -target /
+
