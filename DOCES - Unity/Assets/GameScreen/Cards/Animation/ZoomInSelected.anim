@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: ZoomIn
+  m_Name: ZoomInSelected
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -38,11 +38,11 @@ AnimationClip:
       - time: 0
         value: {x: 0.7, y: 0.7, z: 0.7}
         inSlope: {x: 0.8, y: 0.8, z: 0.8}
-        outSlope: {x: -0.11743934, y: -0.33890778, z: 0.27866524}
+        outSlope: {x: -0.6980806, y: -0.73001856, z: -0.6843924}
         tangentMode: 0
       - time: 1
         value: {x: 1.5, y: 1.5, z: 1.5}
-        inSlope: {x: -0.48933285, y: -0.32015806, z: -0.5898802}
+        inSlope: {x: -1.3003354, y: -1.2547119, z: -1.283226}
         outSlope: {x: 0.8, y: 0.8, z: 0.8}
         tangentMode: 0
       m_PreInfinity: 2
@@ -50,6 +50,26 @@ AnimationClip:
       m_RotationOrder: 4
     path: 
   m_FloatCurves:
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1
+        value: 0.5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: Card Cover
+    classID: 114
+    script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -844,6 +864,12 @@ AnimationClip:
       classID: 4
       customType: 14
       isPPtrCurve: 0
+    - path: 3251954883
+      attribute: 304273561
+      script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+      classID: 114
+      customType: 0
+      isPPtrCurve: 0
     - path: 419736718
       attribute: 38095219
       script: {fileID: 0}
@@ -878,11 +904,11 @@ AnimationClip:
       - time: 0
         value: 0.7
         inSlope: 0.8
-        outSlope: -0.11743934
+        outSlope: -0.6980806
         tangentMode: 1
       - time: 1
         value: 1.5
-        inSlope: -0.48933285
+        inSlope: -1.3003354
         outSlope: 0.8
         tangentMode: 1
       m_PreInfinity: 2
@@ -898,11 +924,11 @@ AnimationClip:
       - time: 0
         value: 0.7
         inSlope: 0.8
-        outSlope: -0.33890778
+        outSlope: -0.73001856
         tangentMode: 1
       - time: 1
         value: 1.5
-        inSlope: -0.32015806
+        inSlope: -1.2547119
         outSlope: 0.8
         tangentMode: 1
       m_PreInfinity: 2
@@ -918,11 +944,11 @@ AnimationClip:
       - time: 0
         value: 0.7
         inSlope: 0.8
-        outSlope: 0.27866524
+        outSlope: -0.6843924
         tangentMode: 1
       - time: 1
         value: 1.5
-        inSlope: -0.5898802
+        inSlope: -1.283226
         outSlope: 0.8
         tangentMode: 1
       m_PreInfinity: 2
@@ -932,6 +958,26 @@ AnimationClip:
     path: 
     classID: 224
     script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0.5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      - time: 1
+        value: 0.5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_Color.a
+    path: Card Cover
+    classID: 114
+    script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   - curve:
       serializedVersion: 2
       m_Curve:
