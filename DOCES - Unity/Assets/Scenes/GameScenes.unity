@@ -26162,7 +26162,7 @@ MonoBehaviour:
   cardBack: {fileID: 21338427}
   clicksToSelect: 2
   clicksToZoom: 1
-  clickInterval: 0.5
+  clickInterval: 0.3
 --- !u!1001 &1814880806
 Prefab:
   m_ObjectHideFlags: 0

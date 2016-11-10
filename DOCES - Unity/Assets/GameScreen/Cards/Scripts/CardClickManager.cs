@@ -44,8 +44,10 @@ public class CardClickManager : MonoBehaviour {
 
 			} else if (isMouseOver && isClickable) {
 				if (Time.time - lastClickTime > clickInterval) {
+					Debug.Log ("Primeiro Click: " + Time.time);
 					clicksCount = 1;
 				} else { 
+					Debug.Log ("Segundo Click: " + Time.time);
 					clicksCount++;
 				}
 
@@ -54,7 +56,7 @@ public class CardClickManager : MonoBehaviour {
 			}
 		}
 
-		if (Time.time - lastClickTime > clickInterval) {
+		if (clicksCount == MAXCLICKS || Time.time - lastClickTime > clickInterval - Time.deltaTime) {
 			if (clicksCount == clicksToSelect && cardState == CardState.Activated) {
 				Debug.Log ("Time: " + Time.time + " " + clicksCount + " " + cardState );
 				selectCard ();
