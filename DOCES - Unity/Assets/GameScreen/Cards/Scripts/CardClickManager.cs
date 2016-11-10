@@ -1,9 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Collider2D))]
 [RequireComponent(typeof(Animator))]
 public class CardClickManager : MonoBehaviour {
+	[SerializeField] private Sprite activatedSprite;
+	[SerializeField] private Image cardBack;
+	private bool spriteUpdated = false;
+	private RectTransform rt;
+
 	[SerializeField] private int clicksToSelect = 2;
 	[SerializeField] private int clicksToZoom = 1;
 	[SerializeField] private float clickInterval = 0.1f;
@@ -20,12 +26,17 @@ public class CardClickManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		rt = GetComponent<RectTransform> ();
 		anim = GetComponent<Animator> ();
 		anim.SetBool ("activated", false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if( !spriteUpdated && cardState == CardState.Activated && Mathf.Abs(rt.localRotation.eulerAngles.y - 90f) < 10f ) {
+			cardBack.sprite = activatedSprite;
+			spriteUpdated = true;
+		}
 
 		if (Input.GetMouseButtonDown (0)) {
 			if ((cardState == CardState.Zoomed || cardState == CardState.SelectedAndZoomed)) {
