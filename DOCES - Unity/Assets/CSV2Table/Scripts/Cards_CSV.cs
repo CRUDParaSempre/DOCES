@@ -11,18 +11,17 @@ public class Cards_CSV : MonoBehaviour
 	void Start()
 	{
 		Load(file);
-		Debug.Log (Find_Nome_da_carta("Atributos").Nome_da_carta);
 	}
 
 	public class Row
 	{
-		public string Nome_da_carta;
-		public string Tipo_da_Carta;
-		public string Descrição;
-		public string Tamanho_da_descrição;
-		public string Lógica;
+		public string CardName;
+		public string CardType;
+		public string Description;
+		public string DescriptionSize;
+		public string Logic;
 		public string Criatividade;
-		public string Organização;
+		public string Organization;
 		public string Golpinhos;
 		public string Efeito;
 
@@ -48,13 +47,13 @@ public class Cards_CSV : MonoBehaviour
 		for(int i = 1 ; i < grid.Length ; i++)
 		{
 			Row row = new Row();
-			row.Nome_da_carta = grid[i][0];
-			row.Tipo_da_Carta = grid[i][1];
-			row.Descrição = grid[i][2];
-			row.Tamanho_da_descrição = grid[i][3];
-			row.Lógica = grid[i][4];
+			row.CardName = grid[i][0];
+			row.CardType = grid[i][1];
+			row.Description = grid[i][2];
+			row.DescriptionSize = grid[i][3];
+			row.Logic = grid[i][4];
 			row.Criatividade = grid[i][5];
-			row.Organização = grid[i][6];
+			row.Organization = grid[i][6];
 			row.Golpinhos = grid[i][7];
 			row.Efeito = grid[i][8];
 
@@ -75,45 +74,45 @@ public class Cards_CSV : MonoBehaviour
 		return rowList[i];
 	}
 
-	public Row Find_Nome_da_carta(string find)
+	public Row Find_CardName(string find)
 	{
-		return rowList.Find(x => x.Nome_da_carta == find);
+		return rowList.Find(x => x.CardName == find);
 	}
-	public List<Row> FindAll_Nome_da_carta(string find)
+	public List<Row> FindAll_CardName(string find)
 	{
-		return rowList.FindAll(x => x.Nome_da_carta == find);
+		return rowList.FindAll(x => x.CardName == find);
 	}
-	public Row Find_Tipo_da_Carta(string find)
+	public Row Find_CardType(string find)
 	{
-		return rowList.Find(x => x.Tipo_da_Carta == find);
+		return rowList.Find(x => x.CardType == find);
 	}
-	public List<Row> FindAll_Tipo_da_Carta(string find)
+	public List<Row> FindAll_CardType(string find)
 	{
-		return rowList.FindAll(x => x.Tipo_da_Carta == find);
+		return rowList.FindAll(x => x.CardType == find);
 	}
-	public Row Find_Descrição(string find)
+	public Row Find_Description(string find)
 	{
-		return rowList.Find(x => x.Descrição == find);
+		return rowList.Find(x => x.Description == find);
 	}
-	public List<Row> FindAll_Descrição(string find)
+	public List<Row> FindAll_Description(string find)
 	{
-		return rowList.FindAll(x => x.Descrição == find);
+		return rowList.FindAll(x => x.Description == find);
 	}
-	public Row Find_Tamanho_da_descrição(string find)
+	public Row Find_DescriptionSize(string find)
 	{
-		return rowList.Find(x => x.Tamanho_da_descrição == find);
+		return rowList.Find(x => x.DescriptionSize == find);
 	}
-	public List<Row> FindAll_Tamanho_da_descrição(string find)
+	public List<Row> FindAll_DescriptionSize(string find)
 	{
-		return rowList.FindAll(x => x.Tamanho_da_descrição == find);
+		return rowList.FindAll(x => x.DescriptionSize == find);
 	}
-	public Row Find_Lógica(string find)
+	public Row Find_Logic(string find)
 	{
-		return rowList.Find(x => x.Lógica == find);
+		return rowList.Find(x => x.Logic == find);
 	}
-	public List<Row> FindAll_Lógica(string find)
+	public List<Row> FindAll_Logic(string find)
 	{
-		return rowList.FindAll(x => x.Lógica == find);
+		return rowList.FindAll(x => x.Logic == find);
 	}
 	public Row Find_Criatividade(string find)
 	{
@@ -123,13 +122,13 @@ public class Cards_CSV : MonoBehaviour
 	{
 		return rowList.FindAll(x => x.Criatividade == find);
 	}
-	public Row Find_Organização(string find)
+	public Row Find_Organization(string find)
 	{
-		return rowList.Find(x => x.Organização == find);
+		return rowList.Find(x => x.Organization == find);
 	}
-	public List<Row> FindAll_Organização(string find)
+	public List<Row> FindAll_Organization(string find)
 	{
-		return rowList.FindAll(x => x.Organização == find);
+		return rowList.FindAll(x => x.Organization == find);
 	}
 	public Row Find_Golpinhos(string find)
 	{
@@ -147,5 +146,51 @@ public class Cards_CSV : MonoBehaviour
 	{
 		return rowList.FindAll(x => x.Efeito == find);
 	}
+
+
+
+	public string getName(string cardType, int id){
+
+		return FindAll_CardType(cardType)[id].CardName;
+	
+	}
+
+	public string getDescription(string cardType, int id){
+
+		return FindAll_CardType(cardType)[id].Description;
+
+	}
+
+	public string getBonus(string cardType, int id){
+
+		return FindAll_CardType(cardType)[id].Efeito;
+
+	}
+
+	public string getCreativity(string cardType, int id){
+
+		return FindAll_CardType(cardType)[id].Criatividade;
+
+	}
+
+	public string getLogic(string cardType, int id){
+
+		return FindAll_CardType(cardType)[id].Logic;
+
+	}
+
+	public string getOrganization(string cardType, int id){
+
+		return FindAll_CardType(cardType)[id].Organization;
+
+	}
+
+	public string getMoney(string cardType, int id){
+
+		return FindAll_CardType(cardType)[id].Golpinhos;
+
+	}
+
+
 
 }

@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-public class getName : MonoBehaviour {
+public class getCreativity : MonoBehaviour {
 
-	public Text cardName;
+	public Text cardCreativity;
 	public Cards_CSV cardTable;
 	public int id;
 
@@ -13,14 +13,13 @@ public class getName : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		cardName = GetComponent<Text> ();
-		cardName.text = cardTable.getName ("Requisitos", id);
-		Debug.Log (cardName.text);
-	
+		cardCreativity = GetComponent<Text> ();
+		cardCreativity.text = cardTable.getCreativity ("Requisitos", id);
+		Debug.Log (cardCreativity.text);
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 }
