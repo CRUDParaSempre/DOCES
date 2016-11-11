@@ -21,15 +21,16 @@ REMOTEPATH='jogo'
 # END_SCRIPT
 
 echo '================ Zipando arquivo ==================='
-tar -zcf game.tar ${PWD}/'DOCES - Unity'/WEBGLRODA
+name=$(date +'game_%Y%m%d%H%M%S')
+tar -zcf $name ${PWD}/'DOCES - Unity'/WEBGLRODA
 
-echo '================ Enviando arquivo game.tar ==================='
+echo "================ Enviando arquivo $name ==================="
 
  ftp -n $HOST <<END_SCRIPT
  quote USER $USER
  quote PASS $PASSWD
  cd $REMOTEPATH
- put game.tar
+ put $name
  quit
  END_SCRIPT
 
