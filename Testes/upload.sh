@@ -28,14 +28,15 @@ ls -la $name
 
 echo "================ Enviando arquivo $name ==================="
 
- ftp -n $HOST <<END_SCRIPT
- quote USER $USER
- quote PASS $PASSWD
- cd $REMOTEPATH
- put $name
- quit
- END_SCRIPT
+ time curl -F "uploadedfile=@${name}" http://homepages.dcc.ufmg.br/~juniocezar/games/minhaempresa/builds/uploads.php
 
-echo '================ Enviado arquivo game.tar ==================='
+# ftp -n $HOST <<END_SCRIPT
+# quote USER $USER
+# quote PASS $PASSWD
+# cd $REMOTEPATH
+# put $name
+# quit
+# END_SCRIPT
+
 
  exit 0
