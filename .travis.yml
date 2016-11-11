@@ -17,4 +17,4 @@ install:
 - ./Testes/instalador.sh
 script:
 - travis_wait 50 ./Testes/compilador.sh
-- travis_wait 20 ./Testes/upload.sh
+- travis_wait 50 ./Testes/upload.sh

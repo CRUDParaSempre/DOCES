@@ -3,6 +3,6 @@ using UnityEditor;
 class WebGLBuilder {
     static void build() {
         string[] scenes = {"Assets/Scenes/GameScenes.unity"};
-        BuildPipeline.BuildPlayer(scenes, "WebGL-Dist", BuildTarget.WebGL, BuildOptions.None);
+        BuildPipeline.BuildPlayer(scenes, "WEBGLRODA", BuildTarget.WebGL, BuildOptions.None);
     }
 }
