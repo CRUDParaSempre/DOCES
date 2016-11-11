@@ -21,7 +21,7 @@ REMOTEPATH='jogo'
 # END_SCRIPT
 
 echo '================ Zipando arquivo ==================='
-name=$(date +'game_%Y%m%d%H%M%S')
+name=$(date +'game_%Y%m%d%H%M%S.tar')
 tar -zcf $name ${PWD}/'DOCES - Unity'/WEBGLRODA
 
 echo "================ Enviando arquivo $name ==================="
