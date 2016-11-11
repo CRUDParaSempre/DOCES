@@ -4,11 +4,14 @@ using UnityEngine.UI;
 
 [RequireComponent(typeof(Collider2D))]
 [RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Canvas))]
 public class CardClickManager : MonoBehaviour {
 	[SerializeField] private Sprite activatedSprite;
 	[SerializeField] private Image cardBack;
 	private bool spriteUpdated = false;
 	private RectTransform rt;
+
+	private Canvas can;
 
 	[SerializeField] private int clicksToSelect = 2;
 	[SerializeField] private int clicksToZoom = 1;
@@ -28,6 +31,7 @@ public class CardClickManager : MonoBehaviour {
 	void Start () {
 		rt = GetComponent<RectTransform> ();
 		anim = GetComponent<Animator> ();
+		can = GetComponent<Canvas> ();
 		anim.SetBool ("activated", false);
 	}
 	
@@ -41,6 +45,8 @@ public class CardClickManager : MonoBehaviour {
 		if (Input.GetMouseButtonDown (0)) {
 			if ((cardState == CardState.Zoomed || cardState == CardState.SelectedAndZoomed)) {
 				zoomOutCard ();
+				can.sortingOrder = 18; //ARRUMAR O TEMPO DO ZOOM!
+
 
 			} else if (isMouseOver && isClickable) {
 				if (Time.time - lastClickTime > clickInterval) {
@@ -69,6 +75,7 @@ public class CardClickManager : MonoBehaviour {
 
 			} else if (clicksCount == clicksToZoom && (cardState == CardState.Activated || cardState == CardState.Selected)) {
 				Debug.Log ("Time: " + Time.time + " " + clicksCount + " " + cardState );
+				can.sortingOrder = 19;
 				zoomInCard ();
 				clicksCount = 0;
 			}
@@ -89,6 +96,7 @@ public class CardClickManager : MonoBehaviour {
 
 	void zoomInCard() {
 		if (cardState == CardState.Activated) {
+
 			cardState = CardState.Zoomed;
 
 		} else if (cardState == CardState.Selected) {
