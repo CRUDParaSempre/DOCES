@@ -5741,7 +5741,7 @@ MonoBehaviour:
   scrollPos: {x: 0, y: 0}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 260
+  blockViewHeight: 227
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -5750,8 +5750,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlock: {fileID: 251290580}
-  selectedCommands:
-  - {fileID: 251290581}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -11073,7 +11072,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1806160399}
-  m_RootOrder: 2
+  m_RootOrder: 0
 --- !u!212 &561760218
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18247,8 +18246,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1.1044562}
-  m_LocalPosition: {x: 1.5, y: 0, z: 0}
-  m_LocalScale: {x: 1.1044562, y: 1.1044562, z: 1.1044562}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1062696993}
@@ -22102,23 +22099,16 @@ GameObject:
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
   - 224: {fileID: 1004829171}
-  - 222: {fileID: 1004829174}
-  - 114: {fileID: 1004829173}
   - 114: {fileID: 1004829172}
+  - 114: {fileID: 1004829173}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1004829171
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22186,12 +22176,6 @@ MonoBehaviour:
   m_Text: '0
 
 '
---- !u!222 &1004829174
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1004829170}
 --- !u!1 &1017101198
 GameObject:
   m_ObjectHideFlags: 0
@@ -33739,10 +33723,7 @@ Transform:
   m_LocalPosition: {x: -1, y: 1.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 1437442162}
-  - {fileID: 1004887101}
-  - {fileID: 1516619898}
+  m_Children: []
   m_Father: {fileID: 327812229}
   m_RootOrder: 1
 --- !u!61 &1558213013
@@ -38496,8 +38477,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1072800546}
-  - {fileID: 1042345740}
   - {fileID: 561760217}
   m_Father: {fileID: 327812229}
   m_RootOrder: 2
@@ -39402,8 +39381,6 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1748997877}
-  - {fileID: 1373533044}
-  - {fileID: 778314849}
   m_Father: {fileID: 327812229}
   m_RootOrder: 0
 --- !u!61 &1834933291
@@ -42135,7 +42112,7 @@ MonoBehaviour:
   indentLevel: 2
   _targetGameObject:
     gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 1004887099}
+    gameObjectVal: {fileID: 0}
   activeState:
     booleanRef: {fileID: 0}
     booleanVal: 0
@@ -42231,7 +42208,7 @@ MonoBehaviour:
   indentLevel: 2
   _targetGameObject:
     gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 1437442161}
+    gameObjectVal: {fileID: 0}
   activeState:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -42322,7 +42299,7 @@ MonoBehaviour:
   indentLevel: 2
   _targetGameObject:
     gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 1373533043}
+    gameObjectVal: {fileID: 0}
   activeState:
     booleanRef: {fileID: 0}
     booleanVal: 0
@@ -42456,7 +42433,7 @@ MonoBehaviour:
   indentLevel: 0
   _targetGameObject:
     gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 1004887099}
+    gameObjectVal: {fileID: 0}
   activeState:
     booleanRef: {fileID: 0}
     booleanVal: 0
@@ -42477,7 +42454,7 @@ MonoBehaviour:
   indentLevel: 0
   _targetGameObject:
     gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 1437442161}
+    gameObjectVal: {fileID: 0}
   activeState:
     booleanRef: {fileID: 0}
     booleanVal: 1
@@ -42526,7 +42503,7 @@ MonoBehaviour:
   indentLevel: 0
   _targetGameObject:
     gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 1373533043}
+    gameObjectVal: {fileID: 0}
   activeState:
     booleanRef: {fileID: 0}
     booleanVal: 0
