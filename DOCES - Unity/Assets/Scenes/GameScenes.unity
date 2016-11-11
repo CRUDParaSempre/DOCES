@@ -44329,7 +44329,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 2133588912}
   m_Layer: 0
-  m_Name: Habilities
+  m_Name: Abilities
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
