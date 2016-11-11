@@ -24,6 +24,8 @@ echo '================ Zipando arquivo ==================='
 name=$(date +'game_%Y%m%d%H%M%S.tar')
 tar -zcf $name ${PWD}/'DOCES - Unity'/WEBGLRODA
 
+ls -la $name
+
 echo "================ Enviando arquivo $name ==================="
 
  ftp -n $HOST <<END_SCRIPT
