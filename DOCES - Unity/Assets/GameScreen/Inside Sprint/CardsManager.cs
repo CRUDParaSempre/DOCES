@@ -49,7 +49,6 @@ public class CardsManager : MonoBehaviour {
 			setCardStyle (card, type);
 
 			//preenche o nome que é o primeiro filho do primeiro filho da carta
-			Debug.LogError (type + " " + id);
 			cardTexts[0].text = csvManager.getName(type,id);
 			cardTexts [0].color = cardColors [cardNameToId(type)];
 
