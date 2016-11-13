@@ -8,8 +8,8 @@ using UnityEngine.UI;
 public class GameStateManager : MonoBehaviour {
 	private static GameStateManager instance;
 
-	private string _playerName = "";
-	private string _companyName = "";
+	[SerializeField] private string _playerName = "";
+	[SerializeField] private string _companyName = "";
 	private int _logoId = 0;
 	private int _hairId = 0;
 	private int _shirtId = 0;
@@ -20,14 +20,20 @@ public class GameStateManager : MonoBehaviour {
 	private int _frascoL = 0;
 	private int _frascoC = 0;
 	private int _gender = 0;
+	[SerializeField] private int _projectDeadline = 0;
 	private List<Color> _colorIds = new List<Color> (){Color.white,Color.white,Color.white,Color.white,Color.white,Color.white}; //0 = skin, 1 = eyes, 2 = hair, 3 = shirt, 4 = pants, 5 = shoes
 	[SerializeField] private CardsManager cardsManager;
 
 
 	[SerializeField] private float timeSpeed = 1f;
-	private int _currentWeek = 0 ;
+	[SerializeField] private int _currentWeek = 0 ;
 	public int currentWeek {
 		get { return _currentWeek; }
+	}
+
+	public int projectDeadline {
+		set { _projectDeadline = value; }
+		get { return _projectDeadline; }
 	}
 
 	public Text weekUI;
@@ -50,12 +56,12 @@ public class GameStateManager : MonoBehaviour {
 	}
 		
 	public string playerName {
-		set { Debug.Log ("Salvando nome para " + value); _playerName = value;} 
+		set { _playerName = value;} 
 		get { return _playerName; }
 	}
 
 	public string companyName {
-		set { Debug.Log ("Salvando nome da empresa para " + value); _companyName = value; }
+		set { _companyName = value; }
 		get { return _companyName; }
 	}
 
@@ -128,7 +134,7 @@ public class GameStateManager : MonoBehaviour {
 	}
 
 	public void setHairId (int hairId){
-		Debug.Log ("Salvando hair Id " + hairId);
+		//Debug.Log ("Salvando hair Id " + hairId);
 		this._hairId = hairId;
 	}
 
@@ -137,7 +143,7 @@ public class GameStateManager : MonoBehaviour {
 	}
 
 	public void setShirtId (int shirtId){
-		Debug.Log ("Salvando shirt Id " + shirtId);
+		//Debug.Log ("Salvando shirt Id " + shirtId);
 		this._shirtId = shirtId;
 	}
 
@@ -146,7 +152,7 @@ public class GameStateManager : MonoBehaviour {
 	}
 
 	public void setPantsId (int pantsId){
-		Debug.Log ("Salvando pants Id " + pantsId);
+//		Debug.Log ("Salvando pants Id " + pantsId);
 		this._pantsId = pantsId;
 	}
 
@@ -155,7 +161,7 @@ public class GameStateManager : MonoBehaviour {
 	}
 
 	public void setShoesId (int shoesId){
-		Debug.Log ("Salvando shoes Id " + shoesId);
+//		Debug.Log ("Salvando shoes Id " + shoesId);
 		this._shoesId = shoesId;
 	}
 
@@ -164,22 +170,22 @@ public class GameStateManager : MonoBehaviour {
 	}
 
 	public void setFrascoT (int frascoT){
-		Debug.Log ("Salvando Frasco T " + frascoT);
+//		Debug.Log ("Salvando Frasco T " + frascoT);
 		this._frascoT = frascoT;
 	}
 
 	public void setFrascoL (int frascoL){
-		Debug.Log ("Salvando Frasco L " + frascoL);
+//		Debug.Log ("Salvando Frasco L " + frascoL);
 		this._frascoL = frascoL;
 	}
 
 	public void setFrascoO (int frascoO){
-		Debug.Log ("Salvando Frasco O " + frascoO);
+//		Debug.Log ("Salvando Frasco O " + frascoO);
 		this._frascoO = frascoO;
 	}
 
 	public void setFrascoC (int frascoC){
-		Debug.Log ("Salvando Frasco C " + frascoC);
+//		Debug.Log ("Salvando Frasco C " + frascoC);
 		this._frascoC = frascoC;
 	}
 
@@ -221,7 +227,7 @@ public class GameStateManager : MonoBehaviour {
 		// 0 para mulher
 		// 1 para homem
 		this._gender = item;
-		Debug.Log ("setando sexo para " + _gender);
+//		Debug.Log ("setando sexo para " + _gender);
 	}
 
 	public int getGender (){
