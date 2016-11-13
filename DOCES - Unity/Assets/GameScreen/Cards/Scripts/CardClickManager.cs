@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class CardClickManager : MonoBehaviour {
 	[SerializeField] private Sprite activatedSprite;
 	[SerializeField] private Image cardBack;
+	[SerializeField] private float activateTime;
 	private bool spriteUpdated = false;
 	private RectTransform rt;
 
@@ -29,11 +30,12 @@ public class CardClickManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		cardState = CardState.NotActivated;
 		rt = GetComponent<RectTransform> ();
 		anim = GetComponent<Animator> ();
 		can = GetComponent<Canvas> ();
-		anim.SetBool ("activated", false);
 	}
+
 	
 	// Update is called once per frame
 	void Update () {
@@ -45,7 +47,7 @@ public class CardClickManager : MonoBehaviour {
 		if (Input.GetMouseButtonDown (0)) {
 			if ((cardState == CardState.Zoomed || cardState == CardState.SelectedAndZoomed)) {
 				zoomOutCard ();
-				can.sortingOrder = 18; //ARRUMAR O TEMPO DO ZOOM!
+//				can.sortingOrder = 18; //ARRUMAR O TEMPO DO ZOOM!
 
 
 			} else if (isMouseOver && isClickable) {
@@ -75,11 +77,12 @@ public class CardClickManager : MonoBehaviour {
 
 			} else if (clicksCount == clicksToZoom && (cardState == CardState.Activated || cardState == CardState.Selected)) {
 				Debug.Log ("Time: " + Time.time + " " + clicksCount + " " + cardState );
-				can.sortingOrder = 19;
+//				can.sortingOrder = 19;
 				zoomInCard ();
 				clicksCount = 0;
 			}
 		}
+
 	}
 
 	void selectCard() {
@@ -95,6 +98,7 @@ public class CardClickManager : MonoBehaviour {
 	}
 
 	void zoomInCard() {
+		GetComponent<RectTransform> ().SetAsLastSibling ();
 		if (cardState == CardState.Activated) {
 
 			cardState = CardState.Zoomed;
@@ -129,5 +133,9 @@ public class CardClickManager : MonoBehaviour {
 
 	void OnMouseExit() {
 		isMouseOver = false;
+	}
+
+	public void setFrontSprite(Sprite front) {
+		activatedSprite = front;
 	}
 }

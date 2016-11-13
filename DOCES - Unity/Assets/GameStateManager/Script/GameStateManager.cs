@@ -23,6 +23,7 @@ public class GameStateManager : MonoBehaviour {
 	private int _frascoC = 0;
 	private int _gender = 0;
 	private List<Color> _colorIds = new List<Color> (){Color.white,Color.white,Color.white,Color.white,Color.white,Color.white}; //0 = skin, 1 = eyes, 2 = hair, 3 = shirt, 4 = pants, 5 = shoes
+	[SerializeField] private CardsManager cardsManager;
 
 
 	[SerializeField] private float timeSpeed = 1f;
@@ -292,5 +293,9 @@ public class GameStateManager : MonoBehaviour {
 			return false;
 		else
 			return true;
+	}
+
+	public void fillCards() {
+		cardsManager.fillCards ();
 	}
 }

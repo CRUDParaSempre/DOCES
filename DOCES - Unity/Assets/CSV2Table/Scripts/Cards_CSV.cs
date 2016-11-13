@@ -18,7 +18,6 @@ public class Cards_CSV : MonoBehaviour
 		public string CardName;
 		public string CardType;
 		public string Description;
-		public string DescriptionSize;
 		public string Logic;
 		public string Criatividade;
 		public string Organization;
@@ -50,12 +49,11 @@ public class Cards_CSV : MonoBehaviour
 			row.CardName = grid[i][0];
 			row.CardType = grid[i][1];
 			row.Description = grid[i][2];
-			row.DescriptionSize = grid[i][3];
-			row.Logic = grid[i][4];
-			row.Criatividade = grid[i][5];
-			row.Organization = grid[i][6];
-			row.Golpinhos = grid[i][7];
-			row.Efeito = grid[i][8];
+			row.Logic = grid[i][3];
+			row.Criatividade = grid[i][4];
+			row.Organization = grid[i][5];
+			row.Golpinhos = grid[i][6];
+			row.Efeito = grid[i][7];
 
 			rowList.Add(row);
 		}
@@ -98,14 +96,7 @@ public class Cards_CSV : MonoBehaviour
 	{
 		return rowList.FindAll(x => x.Description == find);
 	}
-	public Row Find_DescriptionSize(string find)
-	{
-		return rowList.Find(x => x.DescriptionSize == find);
-	}
-	public List<Row> FindAll_DescriptionSize(string find)
-	{
-		return rowList.FindAll(x => x.DescriptionSize == find);
-	}
+
 	public Row Find_Logic(string find)
 	{
 		return rowList.Find(x => x.Logic == find);
@@ -150,7 +141,6 @@ public class Cards_CSV : MonoBehaviour
 
 
 	public string getName(string cardType, int id){
-
 		return FindAll_CardType(cardType)[id].CardName;
 	
 	}
