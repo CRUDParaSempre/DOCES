@@ -245,6 +245,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 471876}
+  - 114: {fileID: 11432670}
   m_Layer: 0
   m_Name: employee2
   m_TagString: Untagged
@@ -504,6 +505,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 466192}
   m_RootOrder: 3
+--- !u!114 &11432670
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 188982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acfbbeccecbd94c4e91fd616b614a651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21201094
 SpriteRenderer:
   m_ObjectHideFlags: 1

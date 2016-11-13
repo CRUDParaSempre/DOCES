@@ -163,7 +163,7 @@ public class TutorialManager : MonoBehaviour {
 
 	public void testTutorialDialogue() {
 		List<string> l = new List<string> ();
-		l.Add ("Cara se voce apertar nesse botao de continuar jogo você vai carregar seu jogo salvo! É isso, tenho mais nada pra falar não!");
+		l.Add ("Olá, "+GameStateManager.Instance.playerName+". Vamos aprender a gerenciar sua empresa: "+GameStateManager.Instance.companyName);
 		l.Add ("Mas como eu preciso testar essa bagaça eu vou echer de texto aqui");
 		l.Add ("askjdb aishd loash díhsadlusgaoç hoshy 12ye71 2e7 1os8yd a9s7dp ausgdçausdg aosy 192 ety1u gskkdjgasild tas");
 		l.Add ("vlw fera!");
