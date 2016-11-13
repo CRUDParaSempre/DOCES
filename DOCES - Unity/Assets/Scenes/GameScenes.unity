@@ -5491,6 +5491,7 @@ GameObject:
   - 114: {fileID: 251290600}
   - 114: {fileID: 251290603}
   - 114: {fileID: 251290602}
+  - 114: {fileID: 251290612}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -5514,7 +5515,7 @@ MonoBehaviour:
   scrollPos: {x: 154, y: 31}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 260
+  blockViewHeight: 227
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -5559,6 +5560,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 251290583}
   commandList:
+  - {fileID: 251290612}
   - {fileID: 251290603}
   - {fileID: 251290602}
   - {fileID: 251290585}
@@ -6054,6 +6056,33 @@ MonoBehaviour:
     floatRef: {fileID: 0}
     floatVal: 1
   durationOLD: 0
+--- !u!114 &251290612
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 251290577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 34
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 1613213453}
+  targetComponentAssemblyName: CardsManager, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: CardsManager
+  targetMethod: fillCards
+  targetMethodText: 'fillCards (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!1 &252015648
 GameObject:
   m_ObjectHideFlags: 0
@@ -31896,7 +31925,6 @@ GameObject:
   - 114: {fileID: 1541461023}
   - 114: {fileID: 1541461025}
   - 114: {fileID: 1541461020}
-  - 114: {fileID: 1541461028}
   m_Layer: 0
   m_Name: FlowchartDoor
   m_TagString: Untagged
@@ -31920,7 +31948,7 @@ MonoBehaviour:
   scrollPos: {x: -67, y: -12}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 254
+  blockViewHeight: 227
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -31929,8 +31957,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlock: {fileID: 1541461022}
-  selectedCommands:
-  - {fileID: 1541461028}
+  selectedCommands: []
   variables:
   - {fileID: 1541461019}
   description: 
@@ -32005,8 +32032,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 68
-    y: 69
+    x: 69
+    y: 70
     width: 146
     height: 40
   itemId: 0
@@ -32015,7 +32042,6 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 1541461027}
-  - {fileID: 1541461028}
   - {fileID: 1541461025}
   - {fileID: 1541461026}
   - {fileID: 1541461020}
@@ -32126,33 +32152,6 @@ MonoBehaviour:
   stringData:
     stringRef: {fileID: 0}
     stringVal: 
---- !u!114 &1541461028
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1541461017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 9
-  errorMessage: 
-  indentLevel: 1
-  targetObject: {fileID: 264415013}
-  targetComponentAssemblyName: GameStateManager, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: GameStateManager
-  targetMethod: fillCards
-  targetMethodText: 'fillCards (): Void'
-  methodParameters: []
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
 --- !u!1 &1545223658
 GameObject:
   m_ObjectHideFlags: 0

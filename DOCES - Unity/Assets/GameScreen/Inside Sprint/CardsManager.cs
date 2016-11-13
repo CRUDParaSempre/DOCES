@@ -15,12 +15,11 @@ public class CardsManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rt = GetComponent<RectTransform> ();
-	
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 
 	public void fillCards() {
@@ -50,6 +49,7 @@ public class CardsManager : MonoBehaviour {
 			setCardStyle (card, type);
 
 			//preenche o nome que é o primeiro filho do primeiro filho da carta
+			Debug.LogError (type + " " + id);
 			cardTexts[0].text = csvManager.getName(type,id);
 			cardTexts [0].color = cardColors [cardNameToId(type)];
 
@@ -63,7 +63,7 @@ public class CardsManager : MonoBehaviour {
 	}
 
 	private string randomizeType() {
-		return "Desenvolvimento";
+		return "Testes";
 	}
 
 	private int randomizeId () {

@@ -5,8 +5,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-
-
 public class GameStateManager : MonoBehaviour {
 	private static GameStateManager instance;
 
@@ -113,7 +111,7 @@ public class GameStateManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		
 	}
 	
 	// Update is called once per frame
@@ -295,7 +293,6 @@ public class GameStateManager : MonoBehaviour {
 			return true;
 	}
 
-	public void fillCards() {
-		cardsManager.fillCards ();
+
 	}
-}
+
