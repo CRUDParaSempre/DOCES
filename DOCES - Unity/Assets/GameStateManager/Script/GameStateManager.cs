@@ -4,31 +4,66 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
-
-
+using Fungus;
 
 public class GameStateManager : MonoBehaviour {
 	private static GameStateManager instance;
 
-	private string _playerName = "";
-	private string _companyName = "";
+	public enum GameState { Menu, Selection, GameClient, GameOffice, GameQuiz, GameCards, ProjectResults }
+	[SerializeField]private GameState _gameState = GameState.Menu;
+	public GameState gameState {
+		get { return _gameState; }
+	}
+
+	private int _credibility = 10;
+	public int credibility {
+		get { return _credibility; }
+	}
+
+	[SerializeField] private Flowchart cameraFlowchart;
+	[SerializeField] private string shakeScreenBlock;
+
+	private int weeksWithoutClient = 0;
+	private int clientWeek = 0;
+	public string tempClient;
+	[SerializeField] private GameObject sprintCanvas;
+	[SerializeField] private string _playerName = "";
+	[SerializeField] private string _companyName = "";
 	private int _logoId = 0;
 	private int _hairId = 0;
 	private int _shirtId = 0;
 	private int _shoesId = 0;
 	private int _pantsId = 0;
 	private int _frascoT = 0;
-	private int _frascoO = 0;
-	private int _frascoL = 0;
-	private int _frascoC = 0;
-	private int _gender = 0;
-	private List<Color> _colorIds = new List<Color> (){Color.white,Color.white,Color.white,Color.white,Color.white,Color.white}; //0 = skin, 1 = eyes, 2 = hair, 3 = shirt, 4 = pants, 5 = shoes
+	[SerializeField] private int _frascoO = 0;
+	[SerializeField] private int _frascoL = 0;
+	[SerializeField] private int _frascoC = 0;
+	[SerializeField] private int _bonusCre = 0;
+	[SerializeField] private int _bonusLog = 0;
+	[SerializeField] private int _bonusOrg = 0;
 
+	private int _gender = 0;
+	private int _golpinhos = 0;
+	[SerializeField] private int _projectDeadline = 0;
+	private List<Color> _colorIds = new List<Color> (){Color.white,Color.white,Color.white,Color.white,Color.white,Color.white}; //0 = skin, 1 = eyes, 2 = hair, 3 = shirt, 4 = pants, 5 = shoes
+	[SerializeField] private CardsManager cardsManager;
+
+	[SerializeField] private List<int> _projectScores;
+	public List<int> projectScores {
+		get { return _projectScores; }
+	}
 
 	[SerializeField] private float timeSpeed = 1f;
-	private int _currentWeek = 0 ;
+	[SerializeField] private float timePerWeek = 60f;
+	private float lastWeekAdvance = 0f;
+	[SerializeField] private int _currentWeek = 0 ;
 	public int currentWeek {
 		get { return _currentWeek; }
+	}
+
+	public int projectDeadline {
+		set { _projectDeadline = value; }
+		get { return _projectDeadline; }
 	}
 
 	public Text weekUI;
@@ -51,12 +86,12 @@ public class GameStateManager : MonoBehaviour {
 	}
 		
 	public string playerName {
-		set { Debug.Log ("Salvando nome para " + value); _playerName = value;} 
+		set { _playerName = value;} 
 		get { return _playerName; }
 	}
 
 	public string companyName {
-		set { Debug.Log ("Salvando nome da empresa para " + value); _companyName = value; }
+		set { _companyName = value; }
 		get { return _companyName; }
 	}
 
@@ -95,14 +130,45 @@ public class GameStateManager : MonoBehaviour {
 		get{ return _frascoO; }
 	}
 
+	public int bonusCre { 
+		set{ _bonusCre= value; }
+		get{ return _bonusCre; }
+	}
+
+	public int bonusLog { 
+		set{ _bonusLog = value; }
+		get{ return _bonusLog; }
+	}
+
+	public int bonusOrg { 
+		set{ _bonusOrg= value; }
+		get{ return _bonusOrg; }
+	}
+
+	public int organization { 
+		get{ return _frascoO + _bonusOrg; }
+	}
+
 	public int frascoL { 
 		set{ _frascoL = value; }
 		get{ return _frascoL; }
 	}
 
+	public int logic { 
+		get{ return _frascoL + _bonusLog; }
+	}
+
 	public int frascoC { 
 		set{ _frascoC = value; }
 		get{ return _frascoC; }
+	}
+
+	public int creativity { 
+		get{ return _frascoC + _bonusCre; }
+	}
+
+	public int golpinhos { 
+		get{ return _golpinhos; }
 	}
 
 	public int gender { 
@@ -112,11 +178,25 @@ public class GameStateManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (gameState == GameState.GameOffice) { 
+			if (canCreateClient ()) {
+				newClient ();
+			}
+
+		} else if (gameState == GameState.GameClient && currentWeek > clientWeek) {
+			removeClientProposal ();
+		}
+
+		if(gameState == GameState.GameOffice || gameState == GameState.GameClient) {
+			if(Time.time - lastWeekAdvance > timePerWeek) {
+				advanceTimeBy (1);
+			}
+		}
 	}
 
 	public void setLogoId (int logoId){
@@ -129,7 +209,7 @@ public class GameStateManager : MonoBehaviour {
 	}
 
 	public void setHairId (int hairId){
-		Debug.Log ("Salvando hair Id " + hairId);
+		//Debug.Log ("Salvando hair Id " + hairId);
 		this._hairId = hairId;
 	}
 
@@ -138,7 +218,7 @@ public class GameStateManager : MonoBehaviour {
 	}
 
 	public void setShirtId (int shirtId){
-		Debug.Log ("Salvando shirt Id " + shirtId);
+		//Debug.Log ("Salvando shirt Id " + shirtId);
 		this._shirtId = shirtId;
 	}
 
@@ -147,7 +227,7 @@ public class GameStateManager : MonoBehaviour {
 	}
 
 	public void setPantsId (int pantsId){
-		Debug.Log ("Salvando pants Id " + pantsId);
+//		Debug.Log ("Salvando pants Id " + pantsId);
 		this._pantsId = pantsId;
 	}
 
@@ -156,7 +236,7 @@ public class GameStateManager : MonoBehaviour {
 	}
 
 	public void setShoesId (int shoesId){
-		Debug.Log ("Salvando shoes Id " + shoesId);
+//		Debug.Log ("Salvando shoes Id " + shoesId);
 		this._shoesId = shoesId;
 	}
 
@@ -165,22 +245,22 @@ public class GameStateManager : MonoBehaviour {
 	}
 
 	public void setFrascoT (int frascoT){
-		Debug.Log ("Salvando Frasco T " + frascoT);
+//		Debug.Log ("Salvando Frasco T " + frascoT);
 		this._frascoT = frascoT;
 	}
 
 	public void setFrascoL (int frascoL){
-		Debug.Log ("Salvando Frasco L " + frascoL);
+//		Debug.Log ("Salvando Frasco L " + frascoL);
 		this._frascoL = frascoL;
 	}
 
 	public void setFrascoO (int frascoO){
-		Debug.Log ("Salvando Frasco O " + frascoO);
+//		Debug.Log ("Salvando Frasco O " + frascoO);
 		this._frascoO = frascoO;
 	}
 
 	public void setFrascoC (int frascoC){
-		Debug.Log ("Salvando Frasco C " + frascoC);
+//		Debug.Log ("Salvando Frasco C " + frascoC);
 		this._frascoC = frascoC;
 	}
 
@@ -222,7 +302,7 @@ public class GameStateManager : MonoBehaviour {
 		// 0 para mulher
 		// 1 para homem
 		this._gender = item;
-		Debug.Log ("setando sexo para " + _gender);
+//		Debug.Log ("setando sexo para " + _gender);
 	}
 
 	public int getGender (){
@@ -231,7 +311,12 @@ public class GameStateManager : MonoBehaviour {
 
 	public void advanceTimeBy ( int weeks ) {
 		_currentWeek += (int)(Mathf.Round((weeks * timeSpeed)));
+		lastWeekAdvance = Time.time;
 		weekToDate ();
+
+		if(gameState == GameState.GameOffice || gameState == GameState.GameClient) {
+			weeksWithoutClient++;
+		}
 	}
 
 	private void weekToDate () {
@@ -293,4 +378,109 @@ public class GameStateManager : MonoBehaviour {
 		else
 			return true;
 	}
+
+	public void startSprint() {
+		if (gameState == GameState.GameQuiz) {
+			_gameState = GameState.GameCards;
+			sprintCanvas.SetActive (true);
+		}
+	}
+
+	//oferece novo cliente para o player
+	private void newClient() {
+		_gameState = GameState.GameClient;
+		cameraFlowchart.ExecuteBlock (shakeScreenBlock);
+
+		tempClient = "Ola sou um novo cliente!";
+		clientWeek = currentWeek;
+	}
+
+	//verifica se é possivel criar um novo cliente para o player
+	private bool canCreateClient() {
+		float chanceOfClient = (Mathf.Min((weeksWithoutClient * 10f) + credibility, 100f))/ 100f;
+		float rand = Random.value;
+			
+			
+		if(gameState == GameState.GameOffice && rand < chanceOfClient ) {
+			return true;
+		}
+
+		return false;
+	}
+
+	public void removeClientProposal () {
+		_gameState = GameState.GameOffice;
+		tempClient = "";
+	}
+
+	public void startGame() {
+		_gameState = GameState.GameOffice;
+		lastWeekAdvance = Time.time;
+		_currentWeek = 1;
+	}
+
+	public void setGameState(GameState state) {
+		Debug.Log ("Estado atual: " + _gameState + " Proximo estado: " + state );
+		if (_gameState == GameState.Menu && state == GameState.Selection) {
+			_gameState = state;
+		
+		} else if((_gameState == GameState.Selection && state == GameState.Menu) || (_gameState == GameState.Selection && state == GameState.GameOffice)  ) {
+			_gameState = state;
+
+		} else if((_gameState == GameState.GameOffice && state == GameState.Menu) || (_gameState == GameState.GameOffice && state == GameState.GameClient)  ) {
+			_gameState = state;
+
+		} else if((_gameState == GameState.GameClient && state == GameState.Menu) || (_gameState == GameState.GameClient && state == GameState.GameOffice) || (_gameState == GameState.GameClient && state == GameState.GameQuiz)  ) {
+			_gameState = state;
+
+		} else if((_gameState == GameState.GameQuiz && state == GameState.Menu) || (_gameState == GameState.GameQuiz && state == GameState.GameCards) ) {
+			_gameState = state;
+
+		} else if((_gameState == GameState.GameCards && state == GameState.Menu) || (_gameState == GameState.GameCards && state == GameState.ProjectResults) || (_gameState == GameState.GameCards && state == GameState.GameQuiz) ) {
+			_gameState = state;
+
+		} else if((_gameState == GameState.ProjectResults && state == GameState.Menu) || (_gameState == GameState.ProjectResults && state == GameState.GameOffice) ) {
+			_gameState = state;
+
+		}
+	}
+
+	public void addProjectScores(List<int> scores) {
+		for (int i = 0; i < scores.Count; i++) {
+			_projectScores [i] += scores [i];
+		}
+	}
+
+	public void addProjectScores(int score, int id) {
+		Debug.Log ("Adding " + score + " points to " + id);
+		_projectScores [id] += score;
+	}
+
+	public void addProjectScores(int score, string id) {
+		int intId = 0;
+
+		if (id.ToLower ().CompareTo ("requisitos") == 0) {
+			intId = 0;
+		} else if (id.ToLower ().CompareTo ("análise") == 0) {
+			intId = 1;
+		} else if (id.ToLower ().CompareTo ("desenho") == 0) {
+			intId = 2;
+		} else if (id.ToLower ().CompareTo ("desenvolvimento") == 0) {
+			intId = 3;
+		} else if (id.ToLower ().CompareTo ("testes") == 0) {
+			intId = 4;
+		} else {
+			Debug.LogError ("ID do score( " + id + " ) é inválido!");
+		}
+
+		addProjectScores(score,intId);
+	}
 }
+
+
+//gameoffice
+// cri = 5, org = 5, log = 5, gol = 100
+//gamequizz (cri + 1 , log + 1 , org + 0, gol + 10)
+//gamecards (cri = 6, log = 6, org = 5, gol = 110) [nao gastou golpinhos]
+//gamequiz (cri=log-org=gol=0)
+//gamecards (cri = 5, log = 5, org = 5, gol = 100

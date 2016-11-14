@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Collider2D))]
@@ -8,8 +9,28 @@ using UnityEngine.UI;
 public class CardClickManager : MonoBehaviour {
 	[SerializeField] private Sprite activatedSprite;
 	[SerializeField] private Image cardBack;
+	[SerializeField] private float activateTime;
+	[SerializeField] private AbilitiesManager abiManager;
+	[SerializeField] private WarningManager warning;
 	private bool spriteUpdated = false;
 	private RectTransform rt;
+	private List<int> _costs;
+	public List<int> costs {
+		set{ _costs = value; }
+		get{ return _costs; }
+	}
+
+	private int _bonusValue;
+	public int bonusValue {
+		set{ _bonusValue= value; }
+		get{ return _bonusValue; }
+	}
+
+	private string _type;
+	public string type {
+		set{ _type = value; }
+		get{ return _type; }
+	}
 
 	private Canvas can;
 
@@ -22,38 +43,42 @@ public class CardClickManager : MonoBehaviour {
 	private bool isMouseOver = false;
 	private bool isClickable = false;
 
-	private enum CardState { NotActivated, Activated, Zoomed, Selected, SelectedAndZoomed }
-	private CardState cardState = CardState.NotActivated; //0 = not activated, 1 = activated, 2 = zoomed, 3 = selected, 4 = Selected and Zoomed
+	public enum CardState { NotActivated, Activated, Zoomed, Selected, SelectedAndZoomed }
+	private CardState _cardState= CardState.NotActivated; //0 = not activated, 1 = activated, 2 = zoomed, 3 = selected, 4 = Selected and Zoomed
+	public CardState cardState {
+		get { return _cardState; }
+	}
 
 	private Animator anim;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
+		_cardState= CardState.NotActivated;
 		rt = GetComponent<RectTransform> ();
 		anim = GetComponent<Animator> ();
 		can = GetComponent<Canvas> ();
-		anim.SetBool ("activated", false);
 	}
+
 	
 	// Update is called once per frame
 	void Update () {
-		if( !spriteUpdated && cardState == CardState.Activated && Mathf.Abs(rt.localRotation.eulerAngles.y - 90f) < 10f ) {
+		if( !spriteUpdated && _cardState== CardState.Activated && Mathf.Abs(rt.localRotation.eulerAngles.y - 90f) < 10f ) {
 			cardBack.sprite = activatedSprite;
 			spriteUpdated = true;
 		}
 
 		if (Input.GetMouseButtonDown (0)) {
-			if ((cardState == CardState.Zoomed || cardState == CardState.SelectedAndZoomed)) {
+			if ((_cardState== CardState.Zoomed || _cardState== CardState.SelectedAndZoomed)) {
 				zoomOutCard ();
-				can.sortingOrder = 18; //ARRUMAR O TEMPO DO ZOOM!
+//				can.sortingOrder = 18; //ARRUMAR O TEMPO DO ZOOM!
 
 
 			} else if (isMouseOver && isClickable) {
 				if (Time.time - lastClickTime > clickInterval) {
-					Debug.Log ("Primeiro Click: " + Time.time);
+//					Debug.Log ("Primeiro Click: " + Time.time);
 					clicksCount = 1;
 				} else { 
-					Debug.Log ("Segundo Click: " + Time.time);
+//					Debug.Log ("Segundo Click: " + Time.time);
 					clicksCount++;
 				}
 
@@ -63,55 +88,66 @@ public class CardClickManager : MonoBehaviour {
 		}
 
 		if (clicksCount == MAXCLICKS || Time.time - lastClickTime > clickInterval - Time.deltaTime) {
-			if (clicksCount == clicksToSelect && cardState == CardState.Activated) {
-				Debug.Log ("Time: " + Time.time + " " + clicksCount + " " + cardState );
-				selectCard ();
-				clicksCount = 0;
+			if (clicksCount == clicksToSelect && _cardState== CardState.Activated) {
+				if (abiManager.canSelectCard (_costs)) {
+//				Debug.Log ("Time: " + Time.time + " " + clicksCount + " " + _cardState);
+					selectCard ();
+					clicksCount = 0;
+				} else {
+					warning.showWarning ("Você não tem pontos suficientes para escolher esta carta!");
+					clicksCount = 0;
+				}
 
-			} else if (clicksCount == clicksToSelect && cardState == CardState.Selected) {
-				Debug.Log ("Time: " + Time.time + " " + clicksCount + " " + cardState );
+			} else if (clicksCount == clicksToSelect && _cardState== CardState.Selected) {
+//				Debug.Log ("Time: " + Time.time + " " + clicksCount + " " + _cardState);
 				deselectCard ();
 				clicksCount = 0;
 
-			} else if (clicksCount == clicksToZoom && (cardState == CardState.Activated || cardState == CardState.Selected)) {
-				Debug.Log ("Time: " + Time.time + " " + clicksCount + " " + cardState );
-				can.sortingOrder = 19;
+			} else if (clicksCount == clicksToZoom && (_cardState== CardState.Activated || _cardState== CardState.Selected)) {
+//				Debug.Log ("Time: " + Time.time + " " + clicksCount + " " + _cardState);
+//				can.sortingOrder = 19;
 				zoomInCard ();
 				clicksCount = 0;
 			}
 		}
+
 	}
 
 	void selectCard() {
-		cardState = CardState.Selected;
+		abiManager.cardSelected (_costs);
+
+		_cardState= CardState.Selected;
 
 		anim.SetBool ("selected", true);
 	}
 
 	void deselectCard() {
-		cardState = CardState.Activated;
+		abiManager.cardDeselected (_costs);
+
+		_cardState= CardState.Activated;
 
 		anim.SetBool ("selected", false);
 	}
 
 	void zoomInCard() {
-		if (cardState == CardState.Activated) {
+		GetComponent<RectTransform> ().SetAsLastSibling ();
+		if (_cardState== CardState.Activated) {
 
-			cardState = CardState.Zoomed;
+			_cardState= CardState.Zoomed;
 
-		} else if (cardState == CardState.Selected) {
-			cardState = CardState.SelectedAndZoomed;
+		} else if (_cardState== CardState.Selected) {
+			_cardState= CardState.SelectedAndZoomed;
 		}
 
 		anim.SetBool ("zoomIn", true);
 	}
 
 	void zoomOutCard() {
-		if (cardState == CardState.Zoomed) {
-			cardState = CardState.Activated;
+		if (_cardState== CardState.Zoomed) {
+			_cardState= CardState.Activated;
 
-		} else if (cardState == CardState.SelectedAndZoomed) {
-			cardState = CardState.Selected;
+		} else if (_cardState== CardState.SelectedAndZoomed) {
+			_cardState= CardState.Selected;
 		}
 
 		anim.SetBool ("zoomIn", false);
@@ -120,7 +156,7 @@ public class CardClickManager : MonoBehaviour {
 	public void activateCard() {
 		anim.SetBool ("activated", true);
 		isClickable = true;
-		cardState = CardState.Activated;
+		_cardState= CardState.Activated;
 	}
 
 	void OnMouseEnter() {
@@ -129,5 +165,44 @@ public class CardClickManager : MonoBehaviour {
 
 	void OnMouseExit() {
 		isMouseOver = false;
+	}
+
+	public void setFrontSprite(Sprite front) {
+		activatedSprite = front;
+	}
+
+	public void resetCard() {
+		//desativar os componentes da frente
+		Transform cardBackground = GetComponent<RectTransform>().GetChild(0);
+
+		foreach( Transform t in cardBackground) {
+			t.gameObject.SetActive (false);
+		}
+
+		//deseleciona
+		GameObject cardCover = GetComponent<RectTransform> ().GetChild (1).gameObject;
+
+		Image i = cardCover.GetComponent<Image> ();
+		Color c = new Color ();
+
+		c.a = 0f;
+		c.b = 1f;
+		c.g = 1f;
+		c.r = 1f;
+
+		i.color = c;
+
+		//restora as variáveis para o padrão
+		anim.SetBool("activated", false);
+		anim.SetBool ("zoomIn", false);
+		anim.SetBool("selected", false);
+		_cardState= CardState.NotActivated;
+		spriteUpdated = false;
+		rt.localRotation = Quaternion.Euler(new Vector3(0f,0f,0f));
+		rt.localScale = new Vector3(.7f,.7f,.7f);
+	}
+
+	public void OnDisable() {
+		resetCard ();
 	}
 }

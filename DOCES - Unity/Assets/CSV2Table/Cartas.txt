@@ -1,54 +1,54 @@
-﻿Nome da carta,Tipo da Carta,Descrição,Tamanho da descrição,Lógica,Criatividade,Organização,Golpinhos,Efeito
-Análise Estrutural,Análise,Analisar as classes e casos de uso que representam os conceitos do produto desejado,83,2,0,0,0,5
-Atributos,Análise,Definir operações e atributos necessárias para cumprir as responsabilidades dos casos de uso,92,3,2,1,0,3
-Cartões CRC,Análise,Utilizar cartões CRC para lançar propostas de classes, que serão usadas nos casos de uso,88,2,4,2,0,8
-Casos de Uso,Análise,Com as operações de cada classe definidas, fazer a realização dos casos de uso,78,3,1,3,0,5
-Classes I,Análise,Definir os agrupamentos de elementos de um modelo e formar grupos de classes com um tema comum,94,3,0,1,0,2
-Classes II,Análise,Definir os estereótipos, usados para denotar especializações significativas de classes,86,2,0,1,0,1
-Comportamental I,Análise,Validar e determinar possíveis dificuldades de implementação dos requisitos ,76,3,1,0,0,5
-Comportamental II,Análise,Determinar como colaborações entre objetos realizam o comportamento especificado pelos casos de uso,99,2,0,0,0,1
-Oficinas JAD I,Análise,Criar oficinas JAD com a participação de usuários sem treinamento prévio,72,1,0,2,0,1
-Oficinas JAD II,Análise,Oferecer um treinamento técnico sobre análise para os usuários participarem das JADs,84,0,0,5,500,5
-Revisão I,Análise,Pedir para o analista realizar uma revisão técnica formal, utilizando um roteiro de revisão,91,3,2,4,0,8
-Revisão II,Análise,Contratar um analista de software para criar um roteiro de revisão técnica,74,0,0,0,1000,9
-Arquitetura I,Desenho,Formular um modelo arquitetural do sistema definindo estruturas e mecanismos genéricos,86,2,1,3,0,1
-Arquitetura II,Desenho,Formular um modelo arquitetural equilibrado do sistema e sua organização fundamental,84,3,2,5,0,5
-Arquitetura III,Desenho,Contratar consultoria para formular a arquitetura do sistema, criando um modelo arquitetural,92,0,0,0,3000,10
-Desempenho,Desenho,Representar o atendimento aos requisitos não funcionais do produto,66,0,0,3,0,3
-Lógica,Desenho,Definir os componentes internos do sistema e como eles realizam o comportamento observável,91,1,1,2,0,4
-Modelo de Desenho,Desenho,Definir um modelo de solução, detalhando as estruturas de implementação,71,2,1,1,0,5
-UML I,Desenho,Fazer um diagrama UML para representar a organização do produto que será entregue,81,2,0,3,0,1
-UML II,Desenho,Oferecer cursos sobre a linguagem UML para os funcionários da empresa,69,0,0,0,2500,5
-Usabilidade I,Desenho,Pedir para os estagiários realizarem métricas de usabilidade no produto utilizando seus amigos como usuários,108,2,0,1,0,1
-Usabilidade II,Desenho,Pedir para os desenhistas realizarem métricas para estudos de usabilidade,73,4,3,3,0,8
-Arte I,Desenvolvimento,Criar a interface de usuário utilizando o famoso software Paint,63,2,4,3,0,3
-Arte II,Desenvolvimento,Contratar um designer gráfico para criar todo a identidade visual do produto,76,0,0,0,1500,8
-Documentação I,Desenvolvimento,Deixar os estagiários por conta de toda a documentação do produto,65,1,1,1,0,1
-Documentação II,Desenvolvimento,Deixar os documentadores técnicos responsáveis por toda a documentação do produto,81,3,4,4,0,5
-Documentação III,Desenvolvimento,Contratar um equipe de documentação técnica para escrever toda a documentação do produto,88,0,0,0,3500,10
-Freelancer I,Desenvolvimento,Contratar seu priminho, o Ancelmo, para implementar uma funcionalidade do projeto,84,0,0,0,50,1
-Freelancer II,Desenvolvimento,Contratar um universitário para implementar uma funcionalidade do projeto,73,0,0,0,1000,5
-Freelancer III,Desenvolvimento,Contratar um profissional capacitado para implementar um funcionalidade do projeto,82,0,0,0,2000,8
-Freelancer IV,Desenvolvimento,Contratar o Biel, vulgo mito da programção, para implementar uma funcionalidade do projeto.,91,2,0,0,8000,10
-YAGNI,Desenvolvimento,Utilizar a estratégia YAGNI para fazer a implementação do código dirigida por testes,84,5,0,0,0,5
-Casos de Uso,Requisitos,Produzir diagramas de casos de uso para identificar os requisitos do produto,77,4,1,4,0,6
-Escopo I,Requisitos,Definir o escopo do projeto com o corpo técnico da empresa,59,4,2,5,0,5
-Escopo II,Requisitos,Contratar consultoria para realizar uma avaliação da definição do escopo do projeto,84,0,0,0,4000,8
-Reunião I,Requisitos,Pedir ao estágiário para contatar o cliente a fim de definir o contexto do produto,83,1,0,1,0,1
-Reunião II,Requisitos,Marcar uma reunião informal com a equipe e o cliente para definir o contexto do produto,88,2,0,2,0,2
-Reunião III,Requisitos,Contratar uma empresa para organizar a reunião com o cliente para definir o contexto do produto,96,0,0,0,2000,7
-Reunião IV,Requisitos,Utilizar técnicas de JAD para conduzir reuniões sobre o levantament e negociação dos requisitos,95,5,2,5,0,9
-Validação I,Requisitos,Deixar que um estagiário valide e avalie o documento de requisitos,67,2,0,1,0,1
-Validação II,Requisitos,Contratar um analista de requisitos para realizar a validação dos requisitos do software,88,0,0,0,2000,7
-Viabilidade I,Requisitos,Criar um relatório de viabilidade fazendo uma estimativa factível de software,77,4,0,2,0,6
-Viabilidade II,Requisitos,Contratar consultoria para realizar um estudo de viabilidade econômica e financeira para o produto,98,0,0,0,5000,10
-Caça às Falhas I,Testes,Compilar o projeto Se o compilador aceitou, o cliente também aceita!,69,0,1,0,0,1
-Caça às Falhas II,Testes,Colocar o estagiário para procurar falhas. Agora ele tem um objetivo, além de fazer café,89,1,1,0,0,3
-Caça às Falhas III,Testes,Contratar uma equipe de testadores para detectar falhas que escaparam das revisões,83,0,0,0,5000,10
-Inspecionar I,Testes,Avisar a equipe de desenvolvimento que cada funcionário deve inspecionar seu proprio trabalho,93,0,0,1,0,1
-Inspecionar II,Testes,Atribuir a cada membro da equipe um trabalho de alguém para ser inspecionado,76,1,1,1,0,3
-Inspecionar III,Testes,Criar o quadro da inspeção: cada funcionário deve inspecionar no mínimo duas tarefas de outra pessoa,100,1,2,3,0,5
-Inspecionar IV,Testes,Estabelecer o time da inspeção. A equipe será treinada a fim de se tornarem os gurus da inspeção,97,5,1,5,0,10
-Testes I,Testes,A equipe de teste executa testes manuais,41,4,0,0,0,1
-Testes II,Testes,A equipe de teste executa testes automatizados,46,0,0,3,0,2
-Testes III,Testes,A equipe de teste executa testes de regressão,45,5,0,5,0,5
+﻿Nome da carta,Tipo da Carta,Descrição,Lógica,Criatividade,Organização,Golpinhos,Efeito
+Arte I,Desenvolvimento,"Criar a interface de usuário utilizando o famoso software Paint",2,4,3,0,3
+Arte II,Desenvolvimento,"Contratar um designer gráfico para criar todo a identidade visual do produto",0,0,0,1500,8
+Freelancer I,Desenvolvimento,"Contratar seu priminho, o Ancelmão, para implementar uma funcionalidade do projeto",0,0,0,50,1
+Freelancer II,Desenvolvimento,"Contratar um universitário para implementar uma funcionalidade do projeto",0,0,0,1000,5
+Freelancer III,Desenvolvimento,"Contratar um profissional capacitado para implementar um funcionalidade do projeto",0,0,0,2000,8
+Freelancer IV,Desenvolvimento,"Contratar o Biel, vulgo mito da programção, para implementar uma funcionalidade do projeto",2,0,0,8000,10
+YAGNI,Desenvolvimento,"Utilizar a estratégia YAGNI para fazer a implementação do código dirigida por testes",5,0,0,0,5
+Documentação I,Desenvolvimento,"Deixar os estagiários por conta de toda a documentação do produto",1,1,1,0,1
+Documentação II,Desenvolvimento,"Deixar os documentadores técnicos responsáveis por toda a documentação do produto",3,4,4,0,5
+Documentação III,Desenvolvimento,"Contratar um equipe de documentação técnica para escrever toda a documentação do produto",0,0,0,3500,10
+Escopo I,Requisitos,"Definir o escopo do projeto com o corpo técnico da empresa",4,2,5,0,5
+Escopo II,Requisitos,"Contratar consultoria para realizar uma avaliação da definição do escopo do projeto",0,0,0,4000,8
+Casos de Uso,Requisitos,"Produzir diagramas de casos de uso para identificar os requisitos do produto",4,1,4,0,6
+Reunião I,Requisitos,"Pedir ao estágiário para contatar o cliente a fim de definir o contexto do produto",1,0,1,0,1
+Reunião II,Requisitos,"Marcar uma reunião informal com a equipe e o cliente para definir o contexto do produto",2,0,2,0,2
+Reunião III,Requisitos,"Contratar uma empresa para organizar a reunião com o cliente para definir o contexto do produto",0,0,0,2000,7
+Reunião IV,Requisitos,"Utilizar técnicas de JAD para conduzir reuniões sobre o levantament e negociação dos requisitos",5,2,5,0,9
+Viabilidade I,Requisitos,"Criar um relatório de viabilidade fazendo uma estimativa factível de software",4,0,2,0,6
+Viabilidade II,Requisitos,"Contratar consultoria para realizar um estudo de viabilidade econômica e financeira para o produto",0,0,0,5000,10
+Validação II,Requisitos,"Contratar um analista de requisitos para realizar a validação dos requisitos do software",0,0,0,2000,7
+Validação I,Requisitos,"Deixar que um estagiário valide e avalie o documento de requisitos",2,0,1,0,1
+UML I,Desenho,"Fazer um diagrama UML para representar a organização do produto que será entregue",2,0,3,0,1
+UML II,Desenho,"Oferecer cursos sobre a linguagem UML para os funcionários da empresa",0,0,0,2500,5
+Desempenho ,Desenho,"Representar o atendimento aos requisitos não funcionais do produto",0,0,3,0,3
+Lógica,Desenho,"Definir os componentes internos do sistema e como eles realizam o comportamento observável",1,1,2,0,4
+Modelo de Desenho,Desenho,"Definir um modelo de solução, detalhando as estruturas de implementação",2,1,1,0,5
+Arquitetura I,Desenho,"Formular um modelo arquitetural do sistema definindo estruturas e mecanismos genéricos",2,1,3,0,1
+Arquitetura II,Desenho,"Formular um modelo arquitetural equilibrado do sistema e sua organização fundamental",3,2,5,0,5
+Arquitetura III,Desenho,"Contratar consultoria para formular a arquitetura do sistema, criando um modelo arquitetural",0,0,0,3000,10
+Usabilidade I,Desenho,"Pedir para os estagiários realizarem métricas de usabilidade no produto utilizando seus amigos como usuários",2,0,1,0,1
+Usabilidade II,Desenho,"Pedir para os desenhistas realizarem métricas para estudos de usabilidade",4,3,3,0,8
+Análise Estrutural,Análise,"Analisar as classes e casos de uso que representam os conceitos do produto desejado",2,0,0,0,5
+Atributos,Análise,"Definir operações e atributos necessárias para cumprir as responsabilidades dos casos de uso",3,2,1,0,3
+Classes I,Análise,"Definir os agrupamentos de elementos de um modelo e formar grupos de classes com um tema comum",3,0,1,0,2
+Classes II,Análise,"Definir os estereótipos, usados para denotar especializações significativas de classes",2,0,1,0,1
+Comportamental I,Análise,"Validar e determinar possíveis dificuldades de implementação dos requisitos",3,1,0,0,5
+Comportamental II,Análise,"Determinar como colaborações entre objetos realizam o comportamento especificado pelos casos de uso",2,0,0,0,1
+Cartões CRC,Análise,"Utilizar cartões CRC para lançar propostas de classes, que serão usadas nos casos de uso",2,4,2,0,8
+Casos de Uso,Análise,"Com as operações de cada classe definidas, fazer a realização dos casos de uso",3,1,3,0,5
+Revisão II,Análise,"Contratar um analista de software para criar um roteiro de revisão técnica",0,0,0,1000,9
+Revisão I,Análise,"Pedir para o analista realizar uma revisão técnica formal, utilizando um roteiro de revisão",3,2,4,0,8
+Oficinas JAD I,Análise,"Criar oficinas JAD com a participação de usuários sem treinamento prévio",1,0,2,0,1
+Oficinas JAD II,Análise,"Oferecer um treinamento técnico sobre análise para os usuários participarem das JADs",0,0,5,500,5
+Inspecionar I,Testes,"Avisar a equipe de desenvolvimento que cada funcionário deve inspecionar seu proprio trabalho",0,0,1,0,1
+Inspecionar II,Testes,"Atribuir a cada membro da equipe um trabalho de alguém para ser inspecionado",1,1,1,0,3
+Inspecionar III,Testes,"Criar o quadro da inspeção: cada funcionário deve inspecionar no mínimo duas tarefas de outra pessoa",1,2,3,0,5
+Inspecionar IV,Testes,"Estabelecer o time da inspeção. A equipe será treinada a fim de se tornarem os gurus da inspeção",5,1,5,0,10
+Falhas I,Testes,"Compilar o projeto. Se o compilador aceitou, o cliente também aceita",0,1,0,0,1
+Falhas II,Testes,"Colocar o estagiário para procurar falhas. Agora ele tem um objetivo, além de fazer café",1,1,0,0,3
+Falhas III,Testes,"Contratar uma equipe de testadores para detectar falhas que escaparam das revisões",0,0,0,5000,10
+Testes I,Testes,"A equipe de teste executa testes manuais",4,0,0,0,1
+Testes II,Testes,"A equipe de teste executa testes automatizados",0,0,3,0,2
+Testes III,Testes,"A equipe de teste executa testes de regressão",5,0,5,0,5

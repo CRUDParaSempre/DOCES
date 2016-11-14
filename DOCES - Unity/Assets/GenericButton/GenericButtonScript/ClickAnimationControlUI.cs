@@ -23,6 +23,10 @@ public class ClickAnimationControlUI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		
+	}
+
+	void Awake() {
 		anim = GetComponent<Animator> ();
 		rend = GetComponent<Image> ();
 	}
@@ -115,6 +119,14 @@ public class ClickAnimationControlUI : MonoBehaviour {
 
 		if (changeSpriteWhileClick) {
 			rend.sprite = buttonSprites [0];
+		}
+	}
+
+	public void OnEnable() {
+		if (GetComponent<Collider2D> ().OverlapPoint (Input.mousePosition)) {
+			OnMouseEnter ();
+		} else {
+			OnMouseExit ();
 		}
 	}
 }

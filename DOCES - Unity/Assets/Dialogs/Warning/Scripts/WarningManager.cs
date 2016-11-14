@@ -23,7 +23,7 @@ public class WarningManager : MonoBehaviour {
 
 	public void showWarningAtPosition(string text, float x, float y) {
 		this.gameObject.SetActive (true);
-		movableCanvas.GetComponent<RectTransform> ().position = new Vector3 (x,y,0f);
+		movableCanvas.GetComponent<RectTransform> ().localPosition = new Vector3 (x,y,0f);
 		descriptionText.text = text;
 	}
 }
