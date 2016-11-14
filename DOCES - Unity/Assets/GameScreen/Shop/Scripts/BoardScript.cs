@@ -5,8 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class BoardScript : MonoBehaviour {
-	public SpriteRenderer notebook_base;
-	public SpriteRenderer notebook_topo;
+	public SpriteRenderer notebook;
 	public SpriteRenderer mesa;
 	public SpriteRenderer cadeira;
 
@@ -29,7 +28,6 @@ public class BoardScript : MonoBehaviour {
 	private int _idx = 0;
 	private int _nb_itens;
 	private int selectedItem;
-	private int old_selected;
 	private int curr_pc_idx = -1;
 	private int curr_cadeira_idx = -1;
 	private int curr_mesa_idx = -1;
@@ -44,23 +42,10 @@ public class BoardScript : MonoBehaviour {
 
 		updateItens ();
 		selectedItem = -1;
-		old_selected = -1;
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		if (selectedItem > -1) {
-			if (selectedItem != old_selected) {
-				if (old_selected > -1) {
-					var old_color = _sprites [old_selected].color;
-					_sprites [old_selected].color = new Color (old_color.r, old_color.g, old_color.b, 1.0f);
-				}
-				var color = _sprites [selectedItem].color;
-				_sprites [selectedItem].color = new Color (color.r, color.g, color.b, 0.5f);
-				old_selected = selectedItem;
-			}
-		}
-	}
+	void Update () {}
 
 	void updateItens(){
 		for(var i = 0; i < 4; ++i){
@@ -78,34 +63,43 @@ public class BoardScript : MonoBehaviour {
 		_idx += 1;
 		_idx = _idx % _nb_itens;
 		updateItens();
-		selectedItem = -1;
-		old_selected = -1;
+		deselectItem ();
 	}
 
 	public void decrementIndex(){
 		_idx -= 1;
 		_idx = _idx % _nb_itens;
 
-		for(var i = 0; i < 4; ++i){
-			var idx = _idx + i;
-			idx = idx % _nb_itens;
-			_sprites [i].sprite = _renderers [idx];
-		}
+		updateItens ();
+		deselectItem ();
 	}
 
 	public void selecionaItem(int index) {
 		selectedItem = index;
+
+		var color = _sprites [selectedItem].color;
+		_sprites [selectedItem].color = new Color (color.r, color.g, color.b, 0.5f);
+	}
+
+	void deselectItem(){
+		var color = _sprites [selectedItem].color;
+		_sprites [selectedItem].color = new Color (color.r, color.g, color.b, 1.0f);
+		selectedItem = -1;
 	}
 
 	public void compraItem(){
+		Debug.Log ("index: " + _idx.ToString ());
 		var index = _idx + selectedItem;
 		var preco = _precos [index];
-		var salario = 1000;
+		var dinheiro = 1000;
 		var tipo = _tipos [index];
-		if(salario - preco > 0){
+		if(dinheiro - preco > 0){
+			Debug.Log ("tem dinheiro");
 			if (tipo == 0) {
 				// pc
+				Debug.Log("tipo 0 - pc");
 				if (curr_pc_idx > -1) {
+					Debug.Log("tipo 0 - pc - if2");
 					var org = _organizacoes [curr_pc_idx];
 					var logi = _logicas [curr_pc_idx];
 					var cri = _criatividades [curr_pc_idx];
@@ -113,13 +107,14 @@ public class BoardScript : MonoBehaviour {
 					gsm.frascoO -= org; 
 					gsm.frascoL -= logi;
 					gsm.frascoC -= cri;
-
-					notebook_base.sprite = _renderers[curr_pc_idx];
 				}
+				notebook.sprite = _renderers[index];
 				curr_pc_idx = index;
 			} else if (tipo == 1) {
 				// cadeira
+				Debug.Log("tipo 1 - cadeira");
 				if (curr_cadeira_idx > -1) {
+					Debug.Log("tipo 1 - cadeira - if2");
 					var org = _organizacoes [curr_cadeira_idx];
 					var logi = _logicas [curr_cadeira_idx];
 					var cri = _criatividades [curr_cadeira_idx];
@@ -127,13 +122,14 @@ public class BoardScript : MonoBehaviour {
 					gsm.frascoO -= org; 
 					gsm.frascoL -= logi;
 					gsm.frascoC -= cri;
-
-					cadeira.sprite = _renderers[curr_cadeira_idx];
 				}
+				cadeira.sprite = _renderers[index];
 				curr_cadeira_idx = index;
 			} else if (tipo == 2) {
 				// mesa
+				Debug.Log("tipo 2 - mesa");
 				if (curr_mesa_idx > -1) {
+					Debug.Log("tipo 2 - mesa - if2");
 					var org = _organizacoes [curr_mesa_idx];
 					var logi = _logicas [curr_mesa_idx];
 					var cri = _criatividades [curr_mesa_idx];
@@ -141,11 +137,11 @@ public class BoardScript : MonoBehaviour {
 					gsm.frascoO -= org; 
 					gsm.frascoL -= logi;
 					gsm.frascoC -= cri;
-
-					mesa.sprite = _renderers [curr_mesa_idx];
 				}
+				mesa.sprite = _renderers [index];
 				curr_mesa_idx = index;
 			}
+			deselectItem ();
 			gsm.frascoO += _organizacoes [index];
 			gsm.frascoL += _logicas [index];
 			gsm.frascoC += _criatividades [index];
