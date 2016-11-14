@@ -51,6 +51,8 @@ public class CardsManager : MonoBehaviour {
 				}
 			}
 
+			card.GetComponent<CardClickManager> ().type = idToCardName (cardTypes [i]);
+
 			int id = randomizeId(idToCardName(cardTypes[i]));
 			setCardStyle (card, idToCardName(cardTypes[i]));
 
@@ -66,12 +68,14 @@ public class CardsManager : MonoBehaviour {
 
 			card.GetComponent<CardClickManager> ().costs = costs;
 
-			cardTexts [1].text = csvManager.getDescription (idToCardName(cardTypes[i]),id);
 			cardTexts [2].text = "+" + csvManager.getBonus(idToCardName(cardTypes[i]),id) + " em " + idToCardName(cardTypes[i]);
-			cardTexts [3].text = csvManager.getCreativity (idToCardName(cardTypes[i]),id);
-			cardTexts [4].text = csvManager.getLogic(idToCardName(cardTypes[i]),id);
-			cardTexts [5].text = csvManager.getOrganization(idToCardName(cardTypes[i]),id);
-			cardTexts [6].text = abreviateMoney(csvManager.getMoney (idToCardName(cardTypes[i]),id));
+			card.GetComponent<CardClickManager> ().bonusValue = int.Parse( csvManager.getBonus (idToCardName (cardTypes [i]), id));
+
+			cardTexts [1].text = csvManager.getDescription (idToCardName(cardTypes[i]),id);
+			cardTexts [3].text = costs[0].ToString();
+			cardTexts [4].text = costs[1].ToString();
+			cardTexts [5].text = costs[2].ToString();
+			cardTexts [6].text = abreviateMoney(costs[3].ToString());
 		}
 	}
 
@@ -233,5 +237,18 @@ public class CardsManager : MonoBehaviour {
 
 		}
 
+	}
+
+	public void distributeProjectScores() {
+		for (int i = 0; i < cards.Count; i++) {
+			GameObject card = cards [i];
+			CardClickManager manager = card.GetComponent<CardClickManager> ();
+
+
+			if (manager.cardState == CardClickManager.CardState.Selected || manager.cardState == CardClickManager.CardState.SelectedAndZoomed	) {
+				Debug.Log ("Card " + i + " " + manager.type);
+				GameStateManager.Instance.addProjectScores (manager.bonusValue,manager.type);
+			}
+		}
 	}
 }

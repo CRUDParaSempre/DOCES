@@ -41,12 +41,17 @@ public class GameStateManager : MonoBehaviour {
 	[SerializeField] private int _bonusCre = 0;
 	[SerializeField] private int _bonusLog = 0;
 	[SerializeField] private int _bonusOrg = 0;
+
 	private int _gender = 0;
 	private int _golpinhos = 0;
 	[SerializeField] private int _projectDeadline = 0;
 	private List<Color> _colorIds = new List<Color> (){Color.white,Color.white,Color.white,Color.white,Color.white,Color.white}; //0 = skin, 1 = eyes, 2 = hair, 3 = shirt, 4 = pants, 5 = shoes
 	[SerializeField] private CardsManager cardsManager;
 
+	[SerializeField] private List<int> _projectScores;
+	public List<int> projectScores {
+		get { return _projectScores; }
+	}
 
 	[SerializeField] private float timeSpeed = 1f;
 	[SerializeField] private float timePerWeek = 60f;
@@ -438,6 +443,37 @@ public class GameStateManager : MonoBehaviour {
 			_gameState = state;
 
 		}
+	}
+
+	public void addProjectScores(List<int> scores) {
+		for (int i = 0; i < scores.Count; i++) {
+			_projectScores [i] += scores [i];
+		}
+	}
+
+	public void addProjectScores(int score, int id) {
+		Debug.Log ("Adding " + score + " points to " + id);
+		_projectScores [id] += score;
+	}
+
+	public void addProjectScores(int score, string id) {
+		int intId = 0;
+
+		if (id.ToLower ().CompareTo ("requisitos") == 0) {
+			intId = 0;
+		} else if (id.ToLower ().CompareTo ("análise") == 0) {
+			intId = 1;
+		} else if (id.ToLower ().CompareTo ("desenho") == 0) {
+			intId = 2;
+		} else if (id.ToLower ().CompareTo ("desenvolvimento") == 0) {
+			intId = 3;
+		} else if (id.ToLower ().CompareTo ("testes") == 0) {
+			intId = 4;
+		} else {
+			Debug.LogError ("ID do score( " + id + " ) é inválido!");
+		}
+
+		addProjectScores(score,intId);
 	}
 }
 
