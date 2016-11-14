@@ -15,7 +15,7 @@ public class OkButtonScript : MonoBehaviour {
 	
 	}
 
-	public void OnMouseDown() {
+	public void clickedButton() {
 		Debug.Log ("botao ok");
 		_boardScript.compraItem ();
 	}
