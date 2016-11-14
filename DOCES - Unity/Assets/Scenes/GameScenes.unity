@@ -671,7 +671,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 08664e1f977d11540b851cebcb0ba69f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4e18dbb2a5444e94885de88441398ddd, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -847,9 +847,9 @@ MonoBehaviour:
   flowchart: {fileID: 925788254}
   blockName: NoButtonBlock
   buttonSprites:
-  - {fileID: 21300000, guid: 08664e1f977d11540b851cebcb0ba69f, type: 3}
-  - {fileID: 21300002, guid: 08664e1f977d11540b851cebcb0ba69f, type: 3}
-  - {fileID: 21300004, guid: 08664e1f977d11540b851cebcb0ba69f, type: 3}
+  - {fileID: 21300000, guid: 4e18dbb2a5444e94885de88441398ddd, type: 3}
+  - {fileID: 21300002, guid: 4e18dbb2a5444e94885de88441398ddd, type: 3}
+  - {fileID: 21300004, guid: 4e18dbb2a5444e94885de88441398ddd, type: 3}
   changeSpriteWhileClick: 1
   selectedSound: {fileID: 23623915}
   clickSound: {fileID: 23623914}
@@ -9399,7 +9399,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 08664e1f977d11540b851cebcb0ba69f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c78a32967f56e6143b01c60cb85c39a0, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -9575,9 +9575,9 @@ MonoBehaviour:
   flowchart: {fileID: 925788254}
   blockName: YesButtonBlock
   buttonSprites:
-  - {fileID: 21300000, guid: 08664e1f977d11540b851cebcb0ba69f, type: 3}
-  - {fileID: 21300002, guid: 08664e1f977d11540b851cebcb0ba69f, type: 3}
-  - {fileID: 21300004, guid: 08664e1f977d11540b851cebcb0ba69f, type: 3}
+  - {fileID: 21300000, guid: c78a32967f56e6143b01c60cb85c39a0, type: 3}
+  - {fileID: 21300002, guid: c78a32967f56e6143b01c60cb85c39a0, type: 3}
+  - {fileID: 21300004, guid: c78a32967f56e6143b01c60cb85c39a0, type: 3}
   changeSpriteWhileClick: 1
   selectedSound: {fileID: 431524545}
   clickSound: {fileID: 431524544}
