@@ -35,10 +35,14 @@ public class GameStateManager : MonoBehaviour {
 	private int _shoesId = 0;
 	private int _pantsId = 0;
 	private int _frascoT = 0;
-	private int _frascoO = 0;
-	private int _frascoL = 0;
-	private int _frascoC = 0;
+	[SerializeField] private int _frascoO = 0;
+	[SerializeField] private int _frascoL = 0;
+	[SerializeField] private int _frascoC = 0;
+	[SerializeField] private int _bonusCre = 0;
+	[SerializeField] private int _bonusLog = 0;
+	[SerializeField] private int _bonusOrg = 0;
 	private int _gender = 0;
+	private int _golpinhos = 0;
 	[SerializeField] private int _projectDeadline = 0;
 	private List<Color> _colorIds = new List<Color> (){Color.white,Color.white,Color.white,Color.white,Color.white,Color.white}; //0 = skin, 1 = eyes, 2 = hair, 3 = shirt, 4 = pants, 5 = shoes
 	[SerializeField] private CardsManager cardsManager;
@@ -121,14 +125,45 @@ public class GameStateManager : MonoBehaviour {
 		get{ return _frascoO; }
 	}
 
+	public int bonusCre { 
+		set{ _bonusCre= value; }
+		get{ return _bonusCre; }
+	}
+
+	public int bonusLog { 
+		set{ _bonusLog = value; }
+		get{ return _bonusLog; }
+	}
+
+	public int bonusOrg { 
+		set{ _bonusOrg= value; }
+		get{ return _bonusOrg; }
+	}
+
+	public int organization { 
+		get{ return _frascoO + _bonusOrg; }
+	}
+
 	public int frascoL { 
 		set{ _frascoL = value; }
 		get{ return _frascoL; }
 	}
 
+	public int logic { 
+		get{ return _frascoL + _bonusLog; }
+	}
+
 	public int frascoC { 
 		set{ _frascoC = value; }
 		get{ return _frascoC; }
+	}
+
+	public int creativity { 
+		get{ return _frascoC + _bonusCre; }
+	}
+
+	public int golpinhos { 
+		get{ return _golpinhos; }
 	}
 
 	public int gender { 
@@ -372,5 +407,44 @@ public class GameStateManager : MonoBehaviour {
 		_gameState = GameState.GameOffice;
 		tempClient = "";
 	}
+
+	public void startGame() {
+		_gameState = GameState.GameOffice;
+		lastWeekAdvance = Time.time;
+		_currentWeek = 1;
+	}
+
+	public void setGameState(GameState state) {
+		Debug.Log ("Estado atual: " + _gameState + " Proximo estado: " + state );
+		if (_gameState == GameState.Menu && state == GameState.Selection) {
+			_gameState = state;
+		
+		} else if((_gameState == GameState.Selection && state == GameState.Menu) || (_gameState == GameState.Selection && state == GameState.GameOffice)  ) {
+			_gameState = state;
+
+		} else if((_gameState == GameState.GameOffice && state == GameState.Menu) || (_gameState == GameState.GameOffice && state == GameState.GameClient)  ) {
+			_gameState = state;
+
+		} else if((_gameState == GameState.GameClient && state == GameState.Menu) || (_gameState == GameState.GameClient && state == GameState.GameOffice) || (_gameState == GameState.GameClient && state == GameState.GameQuiz)  ) {
+			_gameState = state;
+
+		} else if((_gameState == GameState.GameQuiz && state == GameState.Menu) || (_gameState == GameState.GameQuiz && state == GameState.GameCards) ) {
+			_gameState = state;
+
+		} else if((_gameState == GameState.GameCards && state == GameState.Menu) || (_gameState == GameState.GameCards && state == GameState.ProjectResults) || (_gameState == GameState.GameCards && state == GameState.GameQuiz) ) {
+			_gameState = state;
+
+		} else if((_gameState == GameState.ProjectResults && state == GameState.Menu) || (_gameState == GameState.ProjectResults && state == GameState.GameOffice) ) {
+			_gameState = state;
+
+		}
+	}
 }
 
+
+//gameoffice
+// cri = 5, org = 5, log = 5, gol = 100
+//gamequizz (cri + 1 , log + 1 , org + 0, gol + 10)
+//gamecards (cri = 6, log = 6, org = 5, gol = 110) [nao gastou golpinhos]
+//gamequiz (cri=log-org=gol=0)
+//gamecards (cri = 5, log = 5, org = 5, gol = 100

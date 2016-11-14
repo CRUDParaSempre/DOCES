@@ -58,6 +58,14 @@ public class CardsManager : MonoBehaviour {
 			cardTexts[0].text = csvManager.getName(idToCardName(cardTypes[i]),id);
 			cardTexts [0].color = cardColors [cardNameToId(idToCardName(cardTypes[i]))];
 
+			List<int> costs = new List<int> ();
+			costs.Add (int.Parse( csvManager.getCreativity (idToCardName (cardTypes [i]), id)));
+			costs.Add (int.Parse( csvManager.getLogic (idToCardName (cardTypes [i]), id)));
+			costs.Add (int.Parse( csvManager.getOrganization (idToCardName (cardTypes [i]), id)));
+			costs.Add (int.Parse( csvManager.getMoney (idToCardName (cardTypes [i]), id)));
+
+			card.GetComponent<CardClickManager> ().costs = costs;
+
 			cardTexts [1].text = csvManager.getDescription (idToCardName(cardTypes[i]),id);
 			cardTexts [2].text = "+" + csvManager.getBonus(idToCardName(cardTypes[i]),id) + " em " + idToCardName(cardTypes[i]);
 			cardTexts [3].text = csvManager.getCreativity (idToCardName(cardTypes[i]),id);
@@ -98,7 +106,7 @@ public class CardsManager : MonoBehaviour {
 		return 0;
 	}
 
-	private string abreviateMoney(string price) {
+	public static string abreviateMoney(string price) {
 		if (price.Length == 4) {
 			return (price[0].ToString() + "K");
 

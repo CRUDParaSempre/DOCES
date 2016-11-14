@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Collider2D))]
@@ -9,8 +10,15 @@ public class CardClickManager : MonoBehaviour {
 	[SerializeField] private Sprite activatedSprite;
 	[SerializeField] private Image cardBack;
 	[SerializeField] private float activateTime;
+	[SerializeField] private AbilitiesManager abiManager;
+	[SerializeField] private WarningManager warning;
 	private bool spriteUpdated = false;
 	private RectTransform rt;
+	private List<int> _costs;
+	public List<int> costs {
+		set{ _costs = value; }
+		get{ return _costs; }
+	}
 
 	private Canvas can;
 
@@ -52,10 +60,10 @@ public class CardClickManager : MonoBehaviour {
 
 			} else if (isMouseOver && isClickable) {
 				if (Time.time - lastClickTime > clickInterval) {
-					Debug.Log ("Primeiro Click: " + Time.time);
+//					Debug.Log ("Primeiro Click: " + Time.time);
 					clicksCount = 1;
 				} else { 
-					Debug.Log ("Segundo Click: " + Time.time);
+//					Debug.Log ("Segundo Click: " + Time.time);
 					clicksCount++;
 				}
 
@@ -66,17 +74,22 @@ public class CardClickManager : MonoBehaviour {
 
 		if (clicksCount == MAXCLICKS || Time.time - lastClickTime > clickInterval - Time.deltaTime) {
 			if (clicksCount == clicksToSelect && cardState == CardState.Activated) {
-				Debug.Log ("Time: " + Time.time + " " + clicksCount + " " + cardState );
-				selectCard ();
-				clicksCount = 0;
+				if (abiManager.canSelectCard (_costs)) {
+//				Debug.Log ("Time: " + Time.time + " " + clicksCount + " " + cardState );
+					selectCard ();
+					clicksCount = 0;
+				} else {
+					warning.showWarning ("Você não tem pontos suficientes para escolher esta carta!");
+					clicksCount = 0;
+				}
 
 			} else if (clicksCount == clicksToSelect && cardState == CardState.Selected) {
-				Debug.Log ("Time: " + Time.time + " " + clicksCount + " " + cardState );
+//				Debug.Log ("Time: " + Time.time + " " + clicksCount + " " + cardState );
 				deselectCard ();
 				clicksCount = 0;
 
 			} else if (clicksCount == clicksToZoom && (cardState == CardState.Activated || cardState == CardState.Selected)) {
-				Debug.Log ("Time: " + Time.time + " " + clicksCount + " " + cardState );
+//				Debug.Log ("Time: " + Time.time + " " + clicksCount + " " + cardState );
 //				can.sortingOrder = 19;
 				zoomInCard ();
 				clicksCount = 0;
@@ -86,12 +99,16 @@ public class CardClickManager : MonoBehaviour {
 	}
 
 	void selectCard() {
+		abiManager.cardSelected (_costs);
+
 		cardState = CardState.Selected;
 
 		anim.SetBool ("selected", true);
 	}
 
 	void deselectCard() {
+		abiManager.cardDeselected (_costs);
+
 		cardState = CardState.Activated;
 
 		anim.SetBool ("selected", false);
@@ -166,6 +183,7 @@ public class CardClickManager : MonoBehaviour {
 		anim.SetBool("selected", false);
 		cardState = CardState.NotActivated;
 		spriteUpdated = false;
+		rt.localRotation = Quaternion.Euler(new Vector3(0f,0f,0f));
 	}
 
 	public void OnDisable() {
