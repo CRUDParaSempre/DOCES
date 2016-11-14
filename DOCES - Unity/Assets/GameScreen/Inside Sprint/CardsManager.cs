@@ -27,6 +27,7 @@ public class CardsManager : MonoBehaviour {
 
 	public void fillCards() {
 		fillPool ();
+
 		shuffleType (100);
 
 		for(int i=0; i < cards.Count; i++) {
@@ -169,30 +170,29 @@ public class CardsManager : MonoBehaviour {
 		typeChance[0] = (projectPercentage < .4) ? (-10f/4f)*projectPercentage + 1 : 0; //requisitos
 		typeChance[1] = (projectPercentage < .3) ? (projectPercentage*5f/3f + 0.5f) : Mathf.Max((-5f*projectPercentage + 5f/2f), 0f); //análise
 		typeChance[2] = (projectPercentage < .5) ? (projectPercentage*8f/5f + 0.2f) : Mathf.Max((-10f*projectPercentage + 6f), 0f); //desenho
-		typeChance[3] = (projectPercentage < .65) ? Mathf.Max((projectPercentage*4f - 8f/5f), 0f) : (-20f/7f*projectPercentage + 20f/7f); //desenvolvimento
+		typeChance[3] = (projectPercentage < .65) ? Mathf.Max((projectPercentage*4f - 8f/5f), 0f) : (-17f/7f*projectPercentage + 361f/140f); //desenvolvimento
 		typeChance[4] = (projectPercentage < .85) ? Mathf.Max((projectPercentage*20f/7f - 10f/7f), 0f) : 1f; //testes
 
-		Debug.Log (typeChance[0] + " " + typeChance[1] + " " + typeChance[2] + " " + typeChance[3] + " " + typeChance[4]);
 
 		normalizeChances ();
+		Debug.Log (typeChance[0]*100 + "% " + typeChance[1]*100 + "% " + typeChance[2]*100 + "% " + typeChance[3]*100 + "% " + typeChance[4]*100 + "%");
 
 		for (int i = 0; i < typeChance.Count; i++) {	
 			cardCount = 0;
 			for (int j = cardCount; j < Mathf.Floor(typeChance[i]*10); j++){
-
-				cardTypes[j] = i;
+				cardTypes[cardCountTotal] = i;
 				cardCount++;
 				cardCountTotal++;
 			}
 
 		}
 
-		for (int i = cardCountTotal; i < cards.Count; i++){
+		for (int i = cardCountTotal; i < cardTypes.Count; i++){
 			float random = Random.value;
 
-			if (random < typeChance [0]) {
+			if (random >= 0 && random < typeChance [0]) {
 				cardTypes [i] = 0;			
-			} else if (random >= typeChance [0] && random < typeChance[0] + typeChance[1]) {
+			} else if (random >= typeChance [0] && random < typeChance[0] + typeChance[1]) { 
 				cardTypes [i] = 1;			
 			} else if (random >= typeChance[0] + typeChance[1] && random < typeChance[0] + typeChance[1] + typeChance[2]) {
 				cardTypes [i] = 2;			
@@ -200,6 +200,7 @@ public class CardsManager : MonoBehaviour {
 				cardTypes [i] = 3;			
 			} else if (random >= typeChance[0] + typeChance[1] + typeChance[2] + typeChance[3] && random < typeChance[0] + typeChance[1] + typeChance[2] + typeChance[3] + typeChance[4]) {
 				cardTypes [i] = 4;			
+			}else {
 			}
 		}
 	}
@@ -225,5 +226,4 @@ public class CardsManager : MonoBehaviour {
 		}
 
 	}
-
 }

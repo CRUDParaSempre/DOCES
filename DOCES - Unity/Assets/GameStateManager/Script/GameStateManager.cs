@@ -4,10 +4,29 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using Fungus;
 
 public class GameStateManager : MonoBehaviour {
 	private static GameStateManager instance;
 
+	public enum GameState { Menu, Selection, GameClient, GameOffice, GameQuiz, GameCards, ProjectResults }
+	[SerializeField]private GameState _gameState = GameState.Menu;
+	public GameState gameState {
+		get { return _gameState; }
+	}
+
+	private int _credibility = 10;
+	public int credibility {
+		get { return _credibility; }
+	}
+
+	[SerializeField] private Flowchart cameraFlowchart;
+	[SerializeField] private string shakeScreenBlock;
+
+	private int weeksWithoutClient = 0;
+	private int clientWeek = 0;
+	public string tempClient;
+	[SerializeField] private GameObject sprintCanvas;
 	[SerializeField] private string _playerName = "";
 	[SerializeField] private string _companyName = "";
 	private int _logoId = 0;
@@ -26,6 +45,8 @@ public class GameStateManager : MonoBehaviour {
 
 
 	[SerializeField] private float timeSpeed = 1f;
+	[SerializeField] private float timePerWeek = 60f;
+	private float lastWeekAdvance = 0f;
 	[SerializeField] private int _currentWeek = 0 ;
 	public int currentWeek {
 		get { return _currentWeek; }
@@ -122,6 +143,20 @@ public class GameStateManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (gameState == GameState.GameOffice) { 
+			if (canCreateClient ()) {
+				newClient ();
+			}
+
+		} else if (gameState == GameState.GameClient && currentWeek > clientWeek) {
+			removeClientProposal ();
+		}
+
+		if(gameState == GameState.GameOffice || gameState == GameState.GameClient) {
+			if(Time.time - lastWeekAdvance > timePerWeek) {
+				advanceTimeBy (1);
+			}
+		}
 	}
 
 	public void setLogoId (int logoId){
@@ -236,7 +271,12 @@ public class GameStateManager : MonoBehaviour {
 
 	public void advanceTimeBy ( int weeks ) {
 		_currentWeek += (int)(Mathf.Round((weeks * timeSpeed)));
+		lastWeekAdvance = Time.time;
 		weekToDate ();
+
+		if(gameState == GameState.GameOffice || gameState == GameState.GameClient) {
+			weeksWithoutClient++;
+		}
 	}
 
 	private void weekToDate () {
@@ -299,6 +339,38 @@ public class GameStateManager : MonoBehaviour {
 			return true;
 	}
 
-
+	public void startSprint() {
+		if (gameState == GameState.GameQuiz) {
+			_gameState = GameState.GameCards;
+			sprintCanvas.SetActive (true);
+		}
 	}
+
+	//oferece novo cliente para o player
+	private void newClient() {
+		_gameState = GameState.GameClient;
+		cameraFlowchart.ExecuteBlock (shakeScreenBlock);
+
+		tempClient = "Ola sou um novo cliente!";
+		clientWeek = currentWeek;
+	}
+
+	//verifica se é possivel criar um novo cliente para o player
+	private bool canCreateClient() {
+		float chanceOfClient = (Mathf.Min((weeksWithoutClient * 10f) + credibility, 100f))/ 100f;
+		float rand = Random.value;
+			
+			
+		if(gameState == GameState.GameOffice && rand < chanceOfClient ) {
+			return true;
+		}
+
+		return false;
+	}
+
+	public void removeClientProposal () {
+		_gameState = GameState.GameOffice;
+		tempClient = "";
+	}
+}
 

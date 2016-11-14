@@ -29,7 +29,7 @@ public class CardClickManager : MonoBehaviour {
 	private Animator anim;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		cardState = CardState.NotActivated;
 		rt = GetComponent<RectTransform> ();
 		anim = GetComponent<Animator> ();
@@ -137,5 +137,38 @@ public class CardClickManager : MonoBehaviour {
 
 	public void setFrontSprite(Sprite front) {
 		activatedSprite = front;
+	}
+
+	public void resetCard() {
+		//desativar os componentes da frente
+		Transform cardBackground = GetComponent<RectTransform>().GetChild(0);
+
+		foreach( Transform t in cardBackground) {
+			t.gameObject.SetActive (false);
+		}
+
+		//deseleciona
+		GameObject cardCover = GetComponent<RectTransform> ().GetChild (1).gameObject;
+
+		Image i = cardCover.GetComponent<Image> ();
+		Color c = new Color ();
+
+		c.a = 0f;
+		c.b = 1f;
+		c.g = 1f;
+		c.r = 1f;
+
+		i.color = c;
+
+		//restora as variáveis para o padrão
+		anim.SetBool("activated", false);
+		anim.SetBool ("zoomIn", false);
+		anim.SetBool("selected", false);
+		cardState = CardState.NotActivated;
+		spriteUpdated = false;
+	}
+
+	public void OnDisable() {
+		resetCard ();
 	}
 }
