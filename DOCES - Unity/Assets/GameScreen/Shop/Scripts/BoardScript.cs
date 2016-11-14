@@ -30,9 +30,16 @@ public class BoardScript : MonoBehaviour {
 	private int _nb_itens;
 	private int selectedItem;
 	private int old_selected;
+	private int curr_pc_idx = -1;
+	private int curr_cadeira_idx = -1;
+	private int curr_mesa_idx = -1;
+
+	GameStateManager gsm;
 
 	// Use this for initialization
 	void Start () {
+		GameObject obj = GameObject.Find("GameStateManager");
+		gsm = obj.GetComponent<GameStateManager>();
 		_nb_itens = _nomes.Count;
 
 		updateItens ();
@@ -71,6 +78,8 @@ public class BoardScript : MonoBehaviour {
 		_idx += 1;
 		_idx = _idx % _nb_itens;
 		updateItens();
+		selectedItem = -1;
+		old_selected = -1;
 	}
 
 	public void decrementIndex(){
@@ -89,6 +98,57 @@ public class BoardScript : MonoBehaviour {
 	}
 
 	public void compraItem(){
-		// TODO
+		var index = _idx + selectedItem;
+		var preco = _precos [index];
+		var salario = 1000;
+		var tipo = _tipos [index];
+		if(salario - preco > 0){
+			if (tipo == 0) {
+				// pc
+				if (curr_pc_idx > -1) {
+					var org = _organizacoes [curr_pc_idx];
+					var logi = _logicas [curr_pc_idx];
+					var cri = _criatividades [curr_pc_idx];
+
+					gsm.frascoO -= org; 
+					gsm.frascoL -= logi;
+					gsm.frascoC -= cri;
+
+					notebook_base.sprite = _renderers[curr_pc_idx];
+				}
+				curr_pc_idx = index;
+			} else if (tipo == 1) {
+				// cadeira
+				if (curr_cadeira_idx > -1) {
+					var org = _organizacoes [curr_cadeira_idx];
+					var logi = _logicas [curr_cadeira_idx];
+					var cri = _criatividades [curr_cadeira_idx];
+
+					gsm.frascoO -= org; 
+					gsm.frascoL -= logi;
+					gsm.frascoC -= cri;
+
+					cadeira.sprite = _renderers[curr_cadeira_idx];
+				}
+				curr_cadeira_idx = index;
+			} else if (tipo == 2) {
+				// mesa
+				if (curr_mesa_idx > -1) {
+					var org = _organizacoes [curr_mesa_idx];
+					var logi = _logicas [curr_mesa_idx];
+					var cri = _criatividades [curr_mesa_idx];
+
+					gsm.frascoO -= org; 
+					gsm.frascoL -= logi;
+					gsm.frascoC -= cri;
+
+					mesa.sprite = _renderers [curr_mesa_idx];
+				}
+				curr_mesa_idx = index;
+			}
+			gsm.frascoO += _organizacoes [index];
+			gsm.frascoL += _logicas [index];
+			gsm.frascoC += _criatividades [index];
+		}
 	}
 }
