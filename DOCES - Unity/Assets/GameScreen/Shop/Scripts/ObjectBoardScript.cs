@@ -13,7 +13,8 @@ public class ObjectBoardScript : MonoBehaviour {
 	public Text preco3;
 	public Text preco4;
 
-	public List<Sprite> _renderers;
+    public List<Sprite> _renderers;
+    public List<Sprite> _thumbnails;
 	public List<string> _nomes;
 	public List<int> _tipos; 
 	public List<int> _logicas;
@@ -49,7 +50,7 @@ public class ObjectBoardScript : MonoBehaviour {
 		for(var i = 0; i < 4; ++i){
 			var idx = _idx + i;
 			idx = idx % _nb_itens;
-			_sprites [i].sprite = _renderers [idx];
+			_sprites [i].sprite = _thumbnails [idx];
 		}
 		preco1.text = _precos [_idx].ToString();
 		preco2.text = _precos [_idx+1].ToString();
@@ -67,14 +68,12 @@ public class ObjectBoardScript : MonoBehaviour {
 	public void decrementIndex(){
 		_idx -= 1;
 		_idx = _idx % _nb_itens;
-
 		updateItens ();
 		deselectItem ();
 	}
 
 	public void selecionaItem(int index) {
 		selectedItem = index;
-
 		var color = _sprites [selectedItem].color;
 		_sprites [selectedItem].color = new Color (color.r, color.g, color.b, 0.5f);
 	}
@@ -86,18 +85,14 @@ public class ObjectBoardScript : MonoBehaviour {
 	}
 
 	public void compraItem(){
-		Debug.Log ("index: " + _idx.ToString ());
 		var index = _idx + selectedItem;
 		var preco = _precos [index];
 		var dinheiro = 1000;
 		var tipo = _tipos [index];
 		if(dinheiro - preco > 0){
-			Debug.Log ("tem dinheiro");
 			if (tipo == 0) {
 				// pc
-				Debug.Log("tipo 0 - pc");
 				if (curr_pc_idx > -1) {
-					Debug.Log("tipo 0 - pc - if2");
 					var org = _organizacoes [curr_pc_idx];
 					var logi = _logicas [curr_pc_idx];
 					var cri = _criatividades [curr_pc_idx];
@@ -110,9 +105,7 @@ public class ObjectBoardScript : MonoBehaviour {
 				curr_pc_idx = index;
 			} else if (tipo == 1) {
 				// cadeira
-				Debug.Log("tipo 1 - cadeira");
 				if (curr_cadeira_idx > -1) {
-					Debug.Log("tipo 1 - cadeira - if2");
 					var org = _organizacoes [curr_cadeira_idx];
 					var logi = _logicas [curr_cadeira_idx];
 					var cri = _criatividades [curr_cadeira_idx];
@@ -125,9 +118,7 @@ public class ObjectBoardScript : MonoBehaviour {
 				curr_cadeira_idx = index;
 			} else if (tipo == 2) {
 				// mesa
-				Debug.Log("tipo 2 - mesa");
 				if (curr_mesa_idx > -1) {
-					Debug.Log("tipo 2 - mesa - if2");
 					var org = _organizacoes [curr_mesa_idx];
 					var logi = _logicas [curr_mesa_idx];
 					var cri = _criatividades [curr_mesa_idx];

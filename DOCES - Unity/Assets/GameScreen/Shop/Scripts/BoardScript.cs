@@ -49,7 +49,6 @@ public class BoardScript : MonoBehaviour {
 	}
 
 	public void changeToPeople(){
-        Debug.Log("botao pessoas");
 		if (!people) {
 			people = true;
 			peopleScript.enabled = true;
@@ -59,7 +58,6 @@ public class BoardScript : MonoBehaviour {
 	}
 
     public void changeToObjects() {
-        Debug.Log("botao objetos");
         if (people) {
             people = false;
             objectsScript.enabled = true;
