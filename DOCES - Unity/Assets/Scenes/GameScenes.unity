@@ -7108,6 +7108,7 @@ MonoBehaviour:
   timeSpeed: 1
   timePerWeek: 60
   _currentWeek: 0
+  quizCanvas: {fileID: 520911358}
   weekUI: {fileID: 76048145}
   monthYearUI: {fileID: 931092567}
 --- !u!1 &277928687
@@ -43759,12 +43760,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfb731ba65d0ad64eaa3ee0a36cb2893, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 50592564}
+  titleText: {fileID: 50592564}
   descriptionText: {fileID: 1923656832}
   previousButton: {fileID: 659525263}
   nextButton: {fileID: 998845233}
   acceptButton: {fileID: 431524542}
   denyButton: {fileID: 23623912}
+  clientName: 
+  _deadline: 0
+  _payment: 0
+  _difficulty: 
 --- !u!1 &1938672616
 GameObject:
   m_ObjectHideFlags: 0

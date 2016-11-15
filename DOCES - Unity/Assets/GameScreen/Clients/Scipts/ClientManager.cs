@@ -4,12 +4,36 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class ClientManager : MonoBehaviour {
-	[SerializeField] private Text nameText=null;
+	[SerializeField] private Text titleText=null;
 	[SerializeField] private Text descriptionText=null;
 	[SerializeField] private Image previousButton=null;
 	[SerializeField] private Image nextButton=null;
 	[SerializeField] private Image acceptButton=null;
 	[SerializeField] private Image denyButton=null;
+
+	[SerializeField] private string clientName;
+
+	[SerializeField] private int _deadline;
+	public int deadline {
+		get { return _deadline; }
+	}
+
+	[SerializeField] private int _payment;
+	public int payment {
+		get { return _payment ;}
+	}
+
+	[SerializeField] private string _difficulty;
+	public string difficulty {
+		get {  return _difficulty; }
+	}
+
+	[SerializeField] private List<float> difficultyRatio;
+	[SerializeField] private List<int> maxGoals;
+	[SerializeField] private List<int> _goals;
+	public List<int> goals {
+		get {  return _goals; }
+	}
 
 	private List<string> projectTexts = new List<string>();
 	private int index=0;
@@ -28,13 +52,23 @@ public class ClientManager : MonoBehaviour {
 
 	}
 
-	public void showClient(string name, List<string> texts) {
+	public void showClient(string name, List<string> texts, int deadline, int payment, string difficulty) {
 		Vector3 newPos;
 		projectTexts = texts;
 
+		//initialize client stats
+		_payment = payment;
+		_deadline = deadline;
+		_difficulty = difficulty;
+
 		//initialize text
 		descriptionText.text = texts [0];
-		nameText.text = name;
+		this.clientName = name;
+		titleText.text = name;
+
+		//make last page (project information)
+		projectTexts.Add("Cliente: "+ clientName +".\nDificuldade: " + difficulty + ".\nPrazo de entrega: " + deadline + " semanas.\nPagamento: G$ " + moneyToString(payment) );
+
 
 		//make previous tip unavailable
 		previousButton.color = halfTransparent;
@@ -50,11 +84,11 @@ public class ClientManager : MonoBehaviour {
 		this.gameObject.SetActive (true);
 	}
 
-	public void showClient(string name, string text) {
+	public void showClient(string name, string text, int deadline, int payment, string difficulty) {
 		List<string> l = new List<string> ();
 		l.Add (text);
 
-		showClient (name,l);
+		showClient (name,l,deadline,payment,difficulty);
 	}
 
 	public void nextPage() {
@@ -71,6 +105,7 @@ public class ClientManager : MonoBehaviour {
 		//showing last page
 		} else {
 			descriptionText.text = projectTexts [index];
+			titleText.text = "Detalhes do Contrato";
 
 			previousButton.color = opaque;
 			previousButton.gameObject.GetComponent<CircleCollider2D> ().enabled = true;
@@ -90,6 +125,7 @@ public class ClientManager : MonoBehaviour {
 		//is showing last page, need to hide the buttons
 		if( index-- == projectTexts.Count-1 ) {
 			descriptionText.text = projectTexts [index];
+			titleText.text = clientName;
 
 			previousButton.color = opaque;
 			previousButton.gameObject.GetComponent<CircleCollider2D> ().enabled = true;
@@ -117,20 +153,73 @@ public class ClientManager : MonoBehaviour {
 
 	public void testClient() {
 		List<string> l = new List<string> ();
+
+		//description
 		l.Add ("Tenho uma padaria chamada \"Cassetinho Fofo\" em Porto Alegre.");
 		l.Add ("Meus clientes ADORAM TUDO, especialmente o pudim de passas.");
 		l.Add ("Porém, ultimamente, os pudinzinhos andam acabando rápido demais!");
 		l.Add ("Estou desconfiada do meu irmão, o Tonso, que é LOUCO por aqueles pudins de passas.");
-		l.Add ("Produto:\nSoftware de controle de estoque e venda de produtos.\nExigência: Baixa.\nPrazo: 5 semanas.\nPagamento: G$ 2.000,00");
+		l.Add ("Por isso preciso de um software de controle de estoque e venda de produtos, não posso levar mais prejuízo!");
 
-		showClient ("Margeret D'baguette",l);
+
+		//l.Add ("Produto:\nSoftware de controle de estoque e venda de produtos.\nExigência: Baixa.\nPrazo: 5 semanas.\nPagamento: G$ 2.000,00");
+
+		showClient ("Margeret D'baguette",l, 5,2000,"Baixa");
+	}
+
+	private void determineDifficulty() {
+		if (difficulty.ToLower ().CompareTo ("baixa") == 0) {
+			for (int i = 0; i < maxGoals.Count; i++) {
+				_goals [i] = (int)Mathf.Round(maxGoals [i] * difficultyRatio [0]);
+			}
+
+		} else if (difficulty.ToLower ().CompareTo ("média") == 0) {
+			for (int i = 0; i < maxGoals.Count; i++) {
+				_goals [i] = (int)Mathf.Round(maxGoals [i] * difficultyRatio [1]);
+			}
+
+		} else if (difficulty.ToLower ().CompareTo ("alta") == 0) {
+			for (int i = 0; i < maxGoals.Count; i++) {
+				_goals [i] = (int)Mathf.Round(maxGoals [i] * difficultyRatio [2]);
+			}
+
+		} else if (difficulty.ToLower ().CompareTo ("altíssima") == 0) {
+			for (int i = 0; i < maxGoals.Count; i++) {
+				_goals [i] = (int)Mathf.Round(maxGoals [i] * difficultyRatio [3]);
+			}
+
+		}
+	}
+
+	private string moneyToString(int payment) {
+		string parsing = payment.ToString ();
+		string reverseResult = "00,";
+		int count = 0;
+		//3210
+		//2000
+		for (int i = parsing.Length-1 ; i >= 0 ; i--) {
+			if (++count % 3 == 0) {
+				reverseResult += ("." + parsing [i]);
+			} else {
+				reverseResult += parsing [i];
+			}
+		}
+
+		string result = "";
+		for (int i = reverseResult.Length - 1; i >= 0; i--) {
+			result += reverseResult [i];
+		}
+
+		return result;
 	}
 
 	public void acceptClient() {
+		determineDifficulty ();
 
+		GameStateManager.Instance.newClientAccepted(deadline,payment,goals);
 	}
 
-	public void refuseClient() {
+	public void rejectedClient() {
 
 	}
 }
