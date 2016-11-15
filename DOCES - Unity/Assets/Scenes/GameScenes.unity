@@ -18916,7 +18916,7 @@ MonoBehaviour:
   - {fileID: 925788259}
 --- !u!114 &925788257
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 925788250}
@@ -22868,52 +22868,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1 &980399444
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 980399445}
-  - 114: {fileID: 980399446}
-  m_Layer: 0
-  m_Name: Project_csv
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &980399445
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 980399444}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 1185932374}
-  m_RootOrder: 13
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &980399446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 980399444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 908cb27b5feeb0f418f94c53665a56a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  file: {fileID: 4900000, guid: fcae855144ff13d4f8ac1ca8d5484997, type: 3}
 --- !u!1 &990481293
 GameObject:
   m_ObjectHideFlags: 0
@@ -28559,7 +28513,6 @@ Transform:
   - {fileID: 1703276235}
   - {fileID: 962371748}
   - {fileID: 520911359}
-  - {fileID: 980399445}
   - {fileID: 1934179113}
   m_Father: {fileID: 1579762233}
   m_RootOrder: 3
@@ -43792,7 +43745,7 @@ RectTransform:
   - {fileID: 1119850185}
   - {fileID: 925788251}
   m_Father: {fileID: 1185932374}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -43815,7 +43768,6 @@ MonoBehaviour:
   nextButton: {fileID: 998845233}
   acceptButton: {fileID: 431524542}
   denyButton: {fileID: 23623912}
-  projectCSV: {fileID: 980399446}
   clientName: 
   _deadline: 0
   _payment: 0
