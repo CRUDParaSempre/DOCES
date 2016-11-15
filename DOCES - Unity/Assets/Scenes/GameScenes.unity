@@ -351,6 +351,7 @@ GameObject:
   - 114: {fileID: 20776795}
   - 95: {fileID: 20776792}
   - 114: {fileID: 20776791}
+  - 114: {fileID: 20776793}
   m_Layer: 0
   m_Name: DoorButton
   m_TagString: Untagged
@@ -443,6 +444,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &20776793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 20776788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f409ec398bc810241a48d6969c65ff8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &20776795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3296,7 +3308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 549.0464, y: -63.57271}
+  scrollPos: {x: 54.046387, y: 52.42729}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 470
@@ -3307,9 +3319,8 @@ MonoBehaviour:
     y: -350
     width: 1180
     height: 928
-  selectedBlock: {fileID: 141515391}
-  selectedCommands:
-  - {fileID: 141515394}
+  selectedBlock: {fileID: 141515396}
+  selectedCommands: []
   variables:
   - {fileID: 141515399}
   - {fileID: 141515407}
@@ -7090,10 +7101,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameState: 0
+  warning: {fileID: 133153659}
+  tutorial: {fileID: 10994258}
   cameraFlowchart: {fileID: 858236029}
   shakeScreenBlock: ShakeScreen
-  tempClient: 
+  hasClient: 0
+  clientCanvas: {fileID: 1934179109}
   sprintCanvas: {fileID: 1703276234}
+  doorButton: {fileID: 20776788}
   _playerName: 
   _companyName: 
   _frascoO: 0
@@ -7108,7 +7123,7 @@ MonoBehaviour:
   _projectScores: 0000000000000000000000000000000000000000
   _projectGoals: 
   timeSpeed: 1
-  timePerWeek: 60
+  timePerWeek: 10
   _currentWeek: 0
   quizCanvas: {fileID: 520911358}
   weekUI: {fileID: 76048145}
@@ -9020,7 +9035,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 925788254}
+  selectedFlowchart: {fileID: 1541461018}
 --- !u!4 &395558029
 Transform:
   m_ObjectHideFlags: 1
@@ -15610,7 +15625,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 1946770157
-  m_SortingOrder: 10
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!1 &778010740
 GameObject:
@@ -17041,6 +17056,7 @@ GameObject:
   - 114: {fileID: 858236029}
   - 114: {fileID: 858236031}
   - 114: {fileID: 858236030}
+  - 114: {fileID: 858236033}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -17074,7 +17090,7 @@ MonoBehaviour:
     height: 906
   selectedBlock: {fileID: 858236031}
   selectedCommands:
-  - {fileID: 858236030}
+  - {fileID: 858236033}
   variables: []
   description: 
   stepPause: 0
@@ -17126,6 +17142,7 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 0}
   commandList:
+  - {fileID: 858236033}
   - {fileID: 858236030}
 --- !u!4 &858236032
 Transform:
@@ -17140,6 +17157,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2011807842}
   m_RootOrder: 1
+--- !u!114 &858236033
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 858236028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2f6be51b3d7490ba5633ee095d0391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 2
+  errorMessage: 
+  indentLevel: 0
+  soundClip: {fileID: 8300000, guid: 87d51e658cc6c0a488ee3fe4e2b30deb, type: 3}
+  volume: 1
+  waitUntilFinished: 0
 --- !u!1 &861520909
 GameObject:
   m_ObjectHideFlags: 0
@@ -18843,7 +18877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 0, y: 0}
+  scrollPos: {x: -139, y: 38}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -18933,8 +18967,8 @@ MonoBehaviour:
     PublicKeyToken=null
   targetComponentFullname: UnityEngine.Component[]
   targetComponentText: ClientManager
-  targetMethod: refuseClient
-  targetMethodText: 'refuseClient (): Void'
+  targetMethod: rejectedClient
+  targetMethodText: 'rejectedClient (): Void'
   methodParameters: []
   saveReturnValue: 0
   returnValueVariableKey: 
@@ -28534,7 +28568,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1185932374
 Transform:
   m_ObjectHideFlags: 0
@@ -34267,19 +34301,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1541461017}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 1
   errorMessage: 
   indentLevel: 0
-  _targetGameObject:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 1703276234}
-  activeState:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  targetGameObjectOLD: {fileID: 0}
+  targetObject: {fileID: 264415013}
+  targetComponentAssemblyName: GameStateManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: GameStateManager
+  targetMethod: playerReceivedClient
+  targetMethodText: 'playerReceivedClient (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!4 &1541461021
 Transform:
   m_ObjectHideFlags: 0
@@ -36887,13 +36927,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _value: 0
-  _length: 6
-  logo0: {fileID: 21300000, guid: e07eba23daccb9449bb134ad6b41b177, type: 3}
-  logo1: {fileID: 21300000, guid: a688463db2e9adc4a9a1f12f191e153d, type: 3}
-  logo2: {fileID: 21300000, guid: 6948525ff7e78db46a2872d5f13d7e61, type: 3}
-  logo3: {fileID: 21300000, guid: b69a073cc4c88b2458c787b048cf5c20, type: 3}
-  logo4: {fileID: 21300000, guid: 864fc32581575ff49ac7a9c6ba1fde60, type: 3}
-  logo5: {fileID: 21300000, guid: a11b228535f21124f8f2524f9d023e7c, type: 3}
+  logoSprites:
+  - {fileID: 21300000, guid: e07eba23daccb9449bb134ad6b41b177, type: 3}
+  - {fileID: 21300000, guid: a688463db2e9adc4a9a1f12f191e153d, type: 3}
+  - {fileID: 21300000, guid: 6948525ff7e78db46a2872d5f13d7e61, type: 3}
+  - {fileID: 21300000, guid: b69a073cc4c88b2458c787b048cf5c20, type: 3}
+  - {fileID: 21300000, guid: 864fc32581575ff49ac7a9c6ba1fde60, type: 3}
+  - {fileID: 21300000, guid: a11b228535f21124f8f2524f9d023e7c, type: 3}
   logo: {fileID: 1670622826}
 --- !u!1 &1675023845
 GameObject:
@@ -43820,8 +43860,8 @@ MonoBehaviour:
   clientImages:
   - {fileID: 21300000, guid: 7ffc937642734594d9876076f9c653db, type: 3}
   - {fileID: 21300000, guid: 5df8cb9789e771b4abfed70dd36b7de5, type: 3}
-  - {fileID: 21300000, guid: 7ffc937642734594d9876076f9c653db, type: 3}
-  - {fileID: 21300000, guid: 7ffc937642734594d9876076f9c653db, type: 3}
+  - {fileID: 21300000, guid: d699a9df9b30271469c8c135d1b975f8, type: 3}
+  - {fileID: 21300000, guid: f33f7cd5063f2af4c87b8893240f0490, type: 3}
   - {fileID: 21300000, guid: 7ffc937642734594d9876076f9c653db, type: 3}
   - {fileID: 21300000, guid: 7ffc937642734594d9876076f9c653db, type: 3}
   - {fileID: 21300000, guid: 7ffc937642734594d9876076f9c653db, type: 3}

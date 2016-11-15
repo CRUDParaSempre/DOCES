@@ -20,13 +20,18 @@ public class GameStateManager : MonoBehaviour {
 		get { return _credibility; }
 	}
 
+	[SerializeField] private WarningManager warning;
+	[SerializeField] private TutorialManager tutorial;
+
 	[SerializeField] private Flowchart cameraFlowchart;
 	[SerializeField] private string shakeScreenBlock;
 
 	private int weeksWithoutClient = 0;
 	private int clientWeek = 0;
-	public string tempClient;
+	public bool hasClient = false;
+	[SerializeField] private GameObject clientCanvas;
 	[SerializeField] private GameObject sprintCanvas;
+	[SerializeField] private GameObject doorButton;
 	[SerializeField] private string _playerName = "";
 	[SerializeField] private string _companyName = "";
 	private int _logoId = 0;
@@ -198,15 +203,13 @@ public class GameStateManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (gameState == GameState.GameOffice) { 
-			if (canCreateClient ()) {
+			if (hasClient && clientWeek < currentWeek) {
+				removeClientProposal ();
+			
+			} else if (canCreateClient ()) {
 				newClient ();
 			}
 
-		} else if (gameState == GameState.GameClient && currentWeek > clientWeek) {
-			removeClientProposal ();
-		}
-
-		if(gameState == GameState.GameOffice || gameState == GameState.GameClient) {
 			if(Time.time - lastWeekAdvance > timePerWeek) {
 				advanceTimeBy (1);
 			}
@@ -402,11 +405,57 @@ public class GameStateManager : MonoBehaviour {
 
 	//oferece novo cliente para o player
 	private void newClient() {
-		_gameState = GameState.GameClient;
 		cameraFlowchart.ExecuteBlock (shakeScreenBlock);
-
-		tempClient = "Ola sou um novo cliente!";
 		clientWeek = currentWeek;
+		hasClient = true;
+		doorButton.GetComponent<DoorManager> ().activateDoor ();
+
+	}
+
+	public void playerReceivedClient() {
+		if (hasClient) {
+			clientCanvas.SetActive (true);
+		
+		} else {
+			warning.showWarning ("Não há propostas de cliente!");
+		}
+	}
+
+	public string newClientDifficulty {
+		get{
+			List<float> difProbs = new List<float> ();
+			float sum = 0f;
+
+			difProbs.Add (((_credibility < 50) ? (-1f / 50f * _credibility) + 1 : 0f));
+			sum += difProbs [0];
+
+			difProbs.Add (((_credibility < 50) ? (9f / 500f * _credibility) + 1f / 10f : (-9f / 500f * _credibility) + 19f / 10f));
+			sum += difProbs [1];
+
+			difProbs.Add (((_credibility > 50) ? (1f / 50f * _credibility) - 1 : 0f));
+			sum += difProbs [2];
+
+			for (int i = 0; i < difProbs.Count; i++) {
+				difProbs [i] = normalize (sum, difProbs [i]);
+			}
+
+			float random = Random.value;
+
+			if (random >= 0 && random < difProbs [0]) {
+				return "Baixa";			
+			} else if (random >= difProbs [0] && random < difProbs [0] + difProbs [1]) { 
+				return "Média";			
+			} else if (random >= difProbs [0] + difProbs [1] && random < difProbs [0] + difProbs [1] + difProbs [2]) {
+				return "Alta";			
+			}
+
+			Debug.LogError ("Erro ao determinar dificuldade do cliente!");
+			return "Baixa";
+		}
+	}
+
+	private float normalize(float a, float b){
+		return b / a;
 	}
 
 	//verifica se é possivel criar um novo cliente para o player
@@ -415,7 +464,7 @@ public class GameStateManager : MonoBehaviour {
 		float rand = Random.value;
 			
 			
-		if(gameState == GameState.GameOffice && rand < chanceOfClient ) {
+		if(!hasClient && currentWeek > 1 && clientWeek < currentWeek && gameState == GameState.GameOffice && rand < chanceOfClient ) {
 			return true;
 		}
 
@@ -423,14 +472,15 @@ public class GameStateManager : MonoBehaviour {
 	}
 
 	public void removeClientProposal () {
-		_gameState = GameState.GameOffice;
-		tempClient = "";
+		hasClient = false;
+		doorButton.GetComponent<DoorManager> ().desactivateDoor ();
+		weeksWithoutClient = 0;
 	}
 
 	public void startGame() {
 		_gameState = GameState.GameOffice;
 		lastWeekAdvance = Time.time;
-		_currentWeek = 1;
+		_currentWeek = 0;
 	}
 
 	public void setGameState(GameState state) {
@@ -502,12 +552,14 @@ public class GameStateManager : MonoBehaviour {
 		_projectDeadline = deadline + currentWeek;
 		_projectGoals = goals;
 		_projectPayment = payment;
+		removeClientProposal ();
 
 		initializeQuiz ();
 	}
 
 	public void newClientRejected() {
-		_gameState = GameState.GameOffice;
+		removeClientProposal ();
+		setGameState (GameState.GameOffice);
 	}
 }
 

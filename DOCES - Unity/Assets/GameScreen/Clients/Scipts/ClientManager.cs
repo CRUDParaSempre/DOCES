@@ -237,9 +237,8 @@ public class ClientManager : MonoBehaviour {
 	}
 		
 	public void OnEnable(){
-	
-		testClient ();
-	
+		showClient (GameStateManager.Instance.newClientDifficulty);	
+		GameStateManager.Instance.setGameState (GameStateManager.GameState.GameClient);
 	}
 }
 
