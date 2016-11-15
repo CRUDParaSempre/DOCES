@@ -11,26 +11,28 @@ public class ClientManager : MonoBehaviour {
 	[SerializeField] private Image acceptButton=null;
 	[SerializeField] private Image denyButton=null;
 
-	[SerializeField] private string clientName;
+	[SerializeField] private Project_CSV projectCSV = null;
 
-	[SerializeField] private int _deadline;
+	[SerializeField] private string clientName = null;
+
+	[SerializeField] private int _deadline = 0;
 	public int deadline {
 		get { return _deadline; }
 	}
 
-	[SerializeField] private int _payment;
+	[SerializeField] private int _payment = 0;
 	public int payment {
 		get { return _payment ;}
 	}
 
-	[SerializeField] private string _difficulty;
+	[SerializeField] private string _difficulty = null;
 	public string difficulty {
 		get {  return _difficulty; }
 	}
 
-	[SerializeField] private List<float> difficultyRatio;
-	[SerializeField] private List<int> maxGoals;
-	[SerializeField] private List<int> _goals;
+	[SerializeField] private List<float> difficultyRatio = null;
+	[SerializeField] private List<int> maxGoals = null;
+	[SerializeField] private List<int> _goals = null;
 	public List<int> goals {
 		get {  return _goals; }
 	}
@@ -52,19 +54,13 @@ public class ClientManager : MonoBehaviour {
 
 	}
 
-	public void showClient(string name, List<string> texts, int deadline, int payment, string difficulty) {
-		Vector3 newPos;
-		projectTexts = texts;
-
-		//initialize client stats
-		_payment = payment;
-		_deadline = deadline;
-		_difficulty = difficulty;
+	public void showClient(string difficulty) {
+		Debug.Log ("Passei!");
+		randomizeClientByDifficulty (difficulty);
 
 		//initialize text
-		descriptionText.text = texts [0];
-		this.clientName = name;
-		titleText.text = name;
+		descriptionText.text = projectTexts [0];
+		titleText.text = clientName;
 
 		//make last page (project information)
 		projectTexts.Add("Cliente: "+ clientName +".\nDificuldade: " + difficulty + ".\nPrazo de entrega: " + deadline + " semanas.\nPagamento: G$ " + moneyToString(payment) );
@@ -82,13 +78,6 @@ public class ClientManager : MonoBehaviour {
 		denyButton.gameObject.SetActive (false);
 
 		this.gameObject.SetActive (true);
-	}
-
-	public void showClient(string name, string text, int deadline, int payment, string difficulty) {
-		List<string> l = new List<string> ();
-		l.Add (text);
-
-		showClient (name,l,deadline,payment,difficulty);
 	}
 
 	public void nextPage() {
@@ -152,19 +141,8 @@ public class ClientManager : MonoBehaviour {
 	}
 
 	public void testClient() {
-		List<string> l = new List<string> ();
 
-		//description
-		l.Add ("Tenho uma padaria chamada \"Cassetinho Fofo\" em Porto Alegre.");
-		l.Add ("Meus clientes ADORAM TUDO, especialmente o pudim de passas.");
-		l.Add ("Porém, ultimamente, os pudinzinhos andam acabando rápido demais!");
-		l.Add ("Estou desconfiada do meu irmão, o Tonso, que é LOUCO por aqueles pudins de passas.");
-		l.Add ("Por isso preciso de um software de controle de estoque e venda de produtos, não posso levar mais prejuízo!");
-
-
-		//l.Add ("Produto:\nSoftware de controle de estoque e venda de produtos.\nExigência: Baixa.\nPrazo: 5 semanas.\nPagamento: G$ 2.000,00");
-
-		showClient ("Margeret D'baguette",l, 5,2000,"Baixa");
+		showClient ("Baixa");
 	}
 
 	private void determineDifficulty() {
@@ -223,6 +201,24 @@ public class ClientManager : MonoBehaviour {
 	public void rejectedClient() {
 		GameStateManager.Instance.newClientRejected ();
 		this.gameObject.SetActive (false);
+	}
+
+	public void randomizeClientByDifficulty(string difficulty){
+		int random = Random.Range (0,3);
+		List<string> infos = projectCSV.getInfo (difficulty, random);
+
+		clientName = infos [0];
+		projectTexts.Add(infos[1]);
+		projectTexts.Add(infos[2]);
+		_payment = int.Parse (infos [3]);
+		_deadline = int.Parse (infos [4]);
+
+	}
+		
+	public void OnEnable(){
+	
+		testClient ();
+	
 	}
 }
 
