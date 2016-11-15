@@ -2849,7 +2849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 549.0464, y: -63.57271}
+  scrollPos: {x: 54.046387, y: 52.42729}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 470
@@ -2860,9 +2860,8 @@ MonoBehaviour:
     y: -350
     width: 1180
     height: 928
-  selectedBlock: {fileID: 141515391}
-  selectedCommands:
-  - {fileID: 141515394}
+  selectedBlock: {fileID: 141515396}
+  selectedCommands: []
   variables:
   - {fileID: 141515399}
   - {fileID: 141515407}
@@ -8570,7 +8569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1173192956}
+  selectedFlowchart: {fileID: 141515389}
 --- !u!4 &395558029
 Transform:
   m_ObjectHideFlags: 1
@@ -35070,13 +35069,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _value: 0
-  _length: 6
-  logo0: {fileID: 21300000, guid: e07eba23daccb9449bb134ad6b41b177, type: 3}
-  logo1: {fileID: 21300000, guid: a688463db2e9adc4a9a1f12f191e153d, type: 3}
-  logo2: {fileID: 21300000, guid: 6948525ff7e78db46a2872d5f13d7e61, type: 3}
-  logo3: {fileID: 21300000, guid: b69a073cc4c88b2458c787b048cf5c20, type: 3}
-  logo4: {fileID: 21300000, guid: 864fc32581575ff49ac7a9c6ba1fde60, type: 3}
-  logo5: {fileID: 21300000, guid: a11b228535f21124f8f2524f9d023e7c, type: 3}
+  logoSprites:
+  - {fileID: 21300000, guid: e07eba23daccb9449bb134ad6b41b177, type: 3}
+  - {fileID: 21300000, guid: 864fc32581575ff49ac7a9c6ba1fde60, type: 3}
+  - {fileID: 21300000, guid: a11b228535f21124f8f2524f9d023e7c, type: 3}
+  - {fileID: 21300000, guid: b69a073cc4c88b2458c787b048cf5c20, type: 3}
+  - {fileID: 21300000, guid: a688463db2e9adc4a9a1f12f191e153d, type: 3}
+  - {fileID: 21300000, guid: 6948525ff7e78db46a2872d5f13d7e61, type: 3}
   logo: {fileID: 1670622826}
 --- !u!1 &1675023845
 GameObject:
