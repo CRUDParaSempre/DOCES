@@ -8,13 +8,14 @@ public class Project_CSV : MonoBehaviour
 
 	public TextAsset file;
 
-	void Start()
+	void Awake()
 	{
 		Load(file);
 	}
 
 	public class Row
 	{
+		public string SpriteID;
 		public string ClientName;
 		public string Difficulty;
 		public string Description;
@@ -44,12 +45,13 @@ public class Project_CSV : MonoBehaviour
 		for(int i = 1 ; i < grid.Length ; i++)
 		{
 			Row row = new Row();
-			row.ClientName = grid[i][0];
-			row.Difficulty = grid[i][1];
-			row.Description = grid[i][2];
-			row.Abstract = grid[i][3];
-			row.Payment = grid[i][4];
-			row.Deadline = grid[i][5];
+			row.SpriteID = grid [i][0];
+			row.ClientName = grid[i][1];
+			row.Difficulty = grid[i][2];
+			row.Description = grid[i][3];
+			row.Abstract = grid[i][4];
+			row.Payment = grid[i][5];
+			row.Deadline = grid[i][6];
 			rowList.Add(row);
 		}
 		isLoaded = true;
@@ -116,11 +118,21 @@ public class Project_CSV : MonoBehaviour
 		return rowList.FindAll(x => x.Deadline == find);
 	}
 
+	public Row Find_SpriteId(string find)
+	{
+		return rowList.Find(x => x.SpriteID == find);
+	}
+	public List<Row> FindAll_SpriteId(string find)
+	{
+		return rowList.FindAll(x => x.SpriteID == find);
+	}
+
 
 	public List<string> getInfo(string diff, int id){
 
 		List<string> infos = new List<string> ();
 
+		infos.Add (FindAll_Difficulty (diff) [id].SpriteID);
 		infos.Add (FindAll_Difficulty (diff) [id].ClientName);
 		infos.Add (FindAll_Difficulty (diff) [id].Description);
 		infos.Add (FindAll_Difficulty (diff) [id].Abstract);

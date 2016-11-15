@@ -14,6 +14,9 @@ public class ClientManager : MonoBehaviour {
 	[SerializeField] private Project_CSV projectCSV = null;
 
 	[SerializeField] private string clientName = null;
+	[SerializeField] private List<Sprite> clientImages = null;
+	[SerializeField] private Image canvasClientImage = null;
+	private int clientImageID = 0;
 
 	[SerializeField] private int _deadline = 0;
 	public int deadline {
@@ -49,14 +52,20 @@ public class ClientManager : MonoBehaviour {
 
 	}
 
+	void Awake() {
+		
+	}
+
 	// Update is called once per frame
 	void Update () {
 
 	}
 
 	public void showClient(string difficulty) {
-		Debug.Log ("Passei!");
 		randomizeClientByDifficulty (difficulty);
+
+		//initialize client image
+		canvasClientImage.sprite = clientImages[clientImageID];
 
 		//initialize text
 		descriptionText.text = projectTexts [0];
@@ -69,6 +78,10 @@ public class ClientManager : MonoBehaviour {
 		//make previous tip unavailable
 		previousButton.color = halfTransparent;
 		previousButton.gameObject.GetComponent<CircleCollider2D> ().enabled = false;
+
+		//make previous tip available
+		nextButton.color = opaque;
+		nextButton.gameObject.GetComponent<CircleCollider2D> ().enabled = true;
 
 		//hide accept/deny buttons
 		acceptButton.gameObject.GetComponent<CircleCollider2D> ().enabled = false;
@@ -141,7 +154,6 @@ public class ClientManager : MonoBehaviour {
 	}
 
 	public void testClient() {
-
 		showClient ("Baixa");
 	}
 
@@ -176,7 +188,7 @@ public class ClientManager : MonoBehaviour {
 		//3210
 		//2000
 		for (int i = parsing.Length-1 ; i >= 0 ; i--) {
-			if (++count % 3 == 0) {
+			if (count++ % 3 == 0 && i !=parsing.Length-1 ) {
 				reverseResult += ("." + parsing [i]);
 			} else {
 				reverseResult += parsing [i];
@@ -204,14 +216,23 @@ public class ClientManager : MonoBehaviour {
 	}
 
 	public void randomizeClientByDifficulty(string difficulty){
+		projectCSV.Load (projectCSV.file);
+
 		int random = Random.Range (0,3);
 		List<string> infos = projectCSV.getInfo (difficulty, random);
 
-		clientName = infos [0];
-		projectTexts.Add(infos[1]);
+		clientImageID = int.Parse (infos[0]);
+
+		clientName = infos [1];
+
+		projectTexts.Clear ();
 		projectTexts.Add(infos[2]);
-		_payment = int.Parse (infos [3]);
-		_deadline = int.Parse (infos [4]);
+		projectTexts.Add(infos[3]);
+
+		index = 0;
+		_difficulty = difficulty;
+		_payment = int.Parse (infos [4]);
+		_deadline = int.Parse (infos [5]);
 
 	}
 		
