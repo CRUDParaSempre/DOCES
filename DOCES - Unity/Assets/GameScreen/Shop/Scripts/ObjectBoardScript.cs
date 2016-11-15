@@ -41,6 +41,7 @@ public class ObjectBoardScript : MonoBehaviour {
 		_nb_itens = _nomes.Count;
 
 		selectedItem = -1;
+        updateItens();
 	}
 
 	// Update is called once per frame

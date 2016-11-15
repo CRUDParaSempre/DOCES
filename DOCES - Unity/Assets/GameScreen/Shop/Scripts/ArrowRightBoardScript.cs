@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ArrowBoardScript : MonoBehaviour {
+public class ArrowRightBoardScript : MonoBehaviour {
 	public BoardScript _boardScript;
 
 	// Use this for initialization
@@ -15,7 +15,6 @@ public class ArrowBoardScript : MonoBehaviour {
 	}
 
 	public void OnMouseDown() {
-		Debug.Log ("seta clicada");
 		_boardScript.incrementIndex ();
 	}
 }
