@@ -7102,9 +7102,11 @@ MonoBehaviour:
   _bonusCre: 0
   _bonusLog: 0
   _bonusOrg: 0
-  _projectDeadline: 0
   cardsManager: {fileID: 1613213455}
+  _projectPayment: 0
+  _projectDeadline: 0
   _projectScores: 0000000000000000000000000000000000000000
+  _projectGoals: 
   timeSpeed: 1
   timePerWeek: 60
   _currentWeek: 0
@@ -43770,6 +43772,13 @@ MonoBehaviour:
   _deadline: 0
   _payment: 0
   _difficulty: 
+  difficultyRatio:
+  - 0.2
+  - 0.4
+  - 0.7
+  - 0.9
+  maxGoals: 3e000000350000002b0000003800000029000000
+  _goals: 0000000000000000000000000000000000000000
 --- !u!1 &1938672616
 GameObject:
   m_ObjectHideFlags: 0

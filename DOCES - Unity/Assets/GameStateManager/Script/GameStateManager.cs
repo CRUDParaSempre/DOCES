@@ -507,7 +507,7 @@ public class GameStateManager : MonoBehaviour {
 	}
 
 	public void newClientRejected() {
-
+		_gameState = GameState.GameOffice;
 	}
 }
 

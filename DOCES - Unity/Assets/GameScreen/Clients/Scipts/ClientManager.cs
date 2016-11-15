@@ -217,10 +217,12 @@ public class ClientManager : MonoBehaviour {
 		determineDifficulty ();
 
 		GameStateManager.Instance.newClientAccepted(deadline,payment,goals);
+		this.gameObject.SetActive (false);
 	}
 
 	public void rejectedClient() {
-
+		GameStateManager.Instance.newClientRejected ();
+		this.gameObject.SetActive (false);
 	}
 }
 
