@@ -44,27 +44,41 @@ public class GameStateManager : MonoBehaviour {
 
 	private int _gender = 0;
 	private int _golpinhos = 0;
-	[SerializeField] private int _projectDeadline = 0;
+
 	private List<Color> _colorIds = new List<Color> (){Color.white,Color.white,Color.white,Color.white,Color.white,Color.white}; //0 = skin, 1 = eyes, 2 = hair, 3 = shirt, 4 = pants, 5 = shoes
 	[SerializeField] private CardsManager cardsManager;
+
+	[SerializeField] private int _projectPayment = 0;
+	public int projectPayment {
+		get{ return _projectPayment; }
+	}
+
+	[SerializeField] private int _projectDeadline = 0;
+	public int projectDeadline {
+		set { _projectDeadline = value; }
+		get { return _projectDeadline; }
+	}
 
 	[SerializeField] private List<int> _projectScores;
 	public List<int> projectScores {
 		get { return _projectScores; }
 	}
 
+	[SerializeField] private List<int> _projectGoals;
+	public List<int> projectGoals {
+		get { return _projectGoals; }
+	}
+
 	[SerializeField] private float timeSpeed = 1f;
 	[SerializeField] private float timePerWeek = 60f;
 	private float lastWeekAdvance = 0f;
 	[SerializeField] private int _currentWeek = 0 ;
+	[SerializeField] private GameObject quizCanvas;
 	public int currentWeek {
 		get { return _currentWeek; }
 	}
 
-	public int projectDeadline {
-		set { _projectDeadline = value; }
-		get { return _projectDeadline; }
-	}
+
 
 	public Text weekUI;
 	public Text monthYearUI;
@@ -474,6 +488,26 @@ public class GameStateManager : MonoBehaviour {
 		}
 
 		addProjectScores(score,intId);
+	}
+
+	public void initializeQuiz() {
+		setGameState (GameState.GameQuiz);
+
+		if (_gameState == GameState.GameQuiz) {
+			quizCanvas.gameObject.SetActive (true);
+		}
+	}
+
+	public void newClientAccepted(int deadline, int payment, List<int> goals) {
+		_projectDeadline = deadline + currentWeek;
+		_projectGoals = goals;
+		_projectPayment = payment;
+
+		initializeQuiz ();
+	}
+
+	public void newClientRejected() {
+		_gameState = GameState.GameOffice;
 	}
 }
 
