@@ -48,9 +48,9 @@ public class EmployeeBoardScript : MonoBehaviour {
             _sprites[i].sprite = _renderers[idx];
         }
         preco1.text = _precos[_idx].ToString();
-        preco2.text = _precos[_idx + 1].ToString();
-        preco3.text = _precos[_idx + 2].ToString();
-        preco4.text = _precos[_idx + 3].ToString();
+        preco2.text = _precos[(_idx + 1) % _nb_itens].ToString();
+        preco3.text = _precos[(_idx + 2) % _nb_itens].ToString();
+        preco4.text = _precos[(_idx + 3) % _nb_itens].ToString();
     }
 
     public void incrementIndex() {
@@ -62,7 +62,7 @@ public class EmployeeBoardScript : MonoBehaviour {
 
     public void decrementIndex() {
         _idx -= 1;
-        _idx = _idx % _nb_itens;
+        _idx = (_idx % _nb_itens + _nb_itens) % _nb_itens;
         updateItens();
         deselectItem();
     }
