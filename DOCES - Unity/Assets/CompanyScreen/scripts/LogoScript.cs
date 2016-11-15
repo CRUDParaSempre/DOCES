@@ -19,6 +19,7 @@ public class LogoScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rend = logo.GetComponent<SpriteRenderer> ();
+		rend.sprite = logoSprites [_value];
 	}
 
 	// Update is called once per frame
