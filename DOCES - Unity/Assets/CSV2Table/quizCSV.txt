@@ -1,0 +1,76 @@
+ID,Description,Difficulty,Answer
+01/01,"Um engenheiro de software deve resolver questões pertinentes aos outros componentes do sistema ou, no mínimo, encontrar quem as resolva.",Média,Verdadeiro
+01/02,"Na determinação dos requisitos, uma característica especial não-funcional do software (feature) representa os comportamentos que o mesmo deve apresentar diante de certas ações de seus usuários.",Fácil,Falso
+01/03,"As características finais do software devem ser definidas na especificação de requisitos, não havendo espaço para características acidentais.",Fácil,Falso
+01/04,"A gestão de contratos determina como especificar o produto a ser desenvolvido e como serão feitos os procedimentos de aceitação do mesmo.",Média,Verdadeiro
+01/05,"Cada requisito não atendido é considerado um defeito. Sendo assim, os defeitos associados a requisitos implícitos são os mais fáceis de tratar.",Média,Falso
+02/01,"O estado de um objeto é representado pelos valores que seus atributos assumem em um determinado instante, enquanto seu comportamento é representado por operações que o mesmo pode executar.",Fácil,Verdadeiro
+02/02,"Um relacionamento navegável da classe A para a classe B significa que, por meio de um objeto da classe A, é possível obter diretamente objetos relacionados da classe B.",Média,Verdadeiro
+02/03,"Os diagramas de estrutura composta mostram nodos e artefatos de uma configuração e os caminhos de comunicação entre os nodos, representados por associações.",Difícil,Falso
+02/04,"Os diagramas de caso de uso são comumente utilizados para descrever funções completas, podendo ser usados no nível de subsistemas e de classes.",Média,Verdadeiro
+02/05,"Os diagramas de estado não representam transições internas, uma vez que são ações que não mudam efetivamente o estado do programa, análogas às interrupções.",Média,Falso
+03/01,"Nas organizações produtoras de software, o diretor é o dirigente de nível intermediário, responsável por organizar, dirigir, motivar e controlar o trabalho de uma determinada área.",Difícil,Falso
+03/02,"É possível constatar a imaturidade de uma organização quando seus procedimentos e padrões de produção de software são definidos e seguidos de forma burocrática.",Difícil,Verdadeiro
+03/03,"Quando um programa possui um longo tempo de vida, agravam-se os problemas relacionados à escala.",Média,Verdadeiro
+03/04,"A engenharia de software se assemelha muito às outras engenharias, uma vez que o software se baseia em princípios físicos estáveis e geralmente são produzidos em série.",Média,Falso
+03/05,"Ao realizar uma melhoria dos processos de produção de software, é normal descobrir defeitos e inadequações, que devem ser vistos como uma oportunidade de melhoria.",Fácil,Verdadeiro
+04/01,"No nível 3 de maturidade e capacitação do modelo CMMI, o processo de produção é definido e gerido com técnicas quantitativas, visando objetivos quantitativos de qualidade e desempenho.",Difícil,Falso
+04/02,"Uma organização no nível 4 de maturidade e capacitação do modelo CMMI deve focar na redução das causas especiais de variação dos processos, a fim de estabilizá-los quantitativamente.",Média,Verdadeiro
+04/03,"No nível 2 de maturidade e capacitação do modelo CMMI deve ser realizada a gestão de configurações, a fim de estabelecer e manter a integridade dos produtos.",Fácil,Verdadeiro
+04/04,"No nível 5 de maturidade e capacitação do modelo CMMI são selecionadas e implementadas melhorias mensuráveis nos processos e nas tecnologias, tanto incrementais quanto inovadoras.",Média,Verdadeiro
+04/05,"A avaliação oficial do CMMI resulta em uma classificação da empresa e é executada por um avaliados chefe credenciado, pertencente a uma organização parceira do SEI.",Difícil,Falso
+05/01,"O modelo de ciclo de vida codifica-remenda é provavelmente o mais utilizado, por ser pouco arriscado e fácil de gerir.",Difícil,Falso
+05/02,"Processo ágeis consideraram indivíduos e interações em relação a processo e ferramentas, e resposta à mudanças em relação a seguir planos.",Média,Verdadeiro
+05/03,"No processo XP, todo programador pode alterar qualquer código, sempre que necessário, desde que continue passando em todos os testes.",Fácil,Verdadeiro
+05/04,"No Praxis existem disciplinas de gestão do desenho, dos requisitos e dos testes.",Difícil,Falso
+05/05,"No Praxis os casos de uso representam funções do ponto de vista do usuário, medidas em tamanho funcional.",Difícil,Verdadeiro
+06/01,"Um requisito diz respeito a uma condição ou potencialidade necessária no projeto final, a fim de resolver um problema ou atingir um objetivo.",Fácil,Verdadeiro
+06/02,"No processo de prototipagem, os protótipos descartáveis nem sempre precisam ser efetivamente descartados, dependendo da vontade do cliente e dos usuários.",Difícil,Falso
+06/03,"Um conjunto de casos de uso deve descrever a funcionalidade completa do produto, sem lacunas, de modo que cada caso de uso represente uma "fatia" da funcionalidade.",Fácil,Verdadeiro
+06/04,"Requisitos não-funcionais de desempenho podem ser interpretados pelos desenvolvedores da forma mais conveniente para o desenho, uma vez que não impactam na arquitetura do produto.",Difícil,Falso
+06/05,"Um engenheiro de requisitos deve ser proficiente na redação de documentos técnicos, em linguagem acessível aos usuários do software.",Fácil,Verdadeiro
+07/01,"No processo de identificação dos objetos a serem implementadas no software, os substantivos dos casos de uso serão sempre classes, enquanto verbos serão operações e adjetivos serão atributos.,Difícil,Falso
+07/02,"Classes de fronteira coordenam realizações de casos de uso e podem, inclusive, coordenar subfluxos ou fluxos alternativos complexos.",Difícil,Falso
+07/03,"Os atributos que descrevem uma classe equivalem a relacionamentos de composição, onde a classe-alvo é o tipo e o papel é o nome do atributo.",Difícil,Verdadeiro
+07/04,"Em modelos de análise comportamental as operações só podem ser representadas por um método, ainda que existam variantes da operação.",Difícil,Falso
+07/05,"O processo de inspeção da análise visa assegurar que a visão de análise do modelo do problema forneça informação suficiente para a contagem dos pontos de função.",Média,Verdadeiro
+08/01,"Na estratégia YAGNI (You Ain't Gonna Need It) a visão lógica é produzida a posteriori e emerge da implementação, em contraste à estratégia BDUF (Big Design Up Front) onde o desenho tenta resolver tudo antes da implementação.",Fácil,Verdadeiro
+08/02,"Na geração de artefatos do modelo da solução pode ser utilizado o método de engenharia reversa, por meio do qual o modelo gera o esqueleto do código.",Difícil,Falso
+08/03,"No desenho das entidades os relacionamentos geralmente são batizados, uma vez que correspondem a estruturas implementáveis.",Difícil,Falso
+08/04,"No desenho da persistência, objetos persistentes devem deixar de existir após a execução dos programas que os criaram ou atualizaram.",Difícil,Falso
+08/05,"No desenho comportamental interno, métodos de classes especializadas podem reduzir a visibilidade dos métodos que redefinem, preservando o princípio da substitutibilidade.",Difícil,Falso
+09/01,"Testes são mais eficazes que a revisão de código para a remoção de defeitos no software, detectando defeitos que escapam da revisão",Difícil,Falso
+09/02,"Casos de teste não tem como objetivo demonstrar que o programa funciona, e portanto, devem incluir entradas incorretas e procedimentos errados, mas possíveis.",Fácil,Verdadeiro
+09/03,"A partição de equivalência divide o domínio de entrada em categorias de dados. Ao fazer esta análise, podemos retirar testes que se enquadrem na mesma categoria sem o perigo de prejudicar a cobertura dos testes.",Difícil,Verdadeiro
+09/04,"Alguns exemplos de testes não funcionais são testes de desempenho, de análise de valores limite e persistência de dados. ",Difícil,Falso
+09/05,"Testes de regressão tem como objetivo aumentar a cobertura dos testes, ou seja, testar partes do código que ainda não foram testadas anteriormente, e portanto, são fundamentais como testes de aceitação.",Difícil,Falso
+10/01,"A eficiência de um software resulta mais de um bom desenho do que da codificação em si, e portanto, compromissos entre a otimização do tempo ou espaço devem ser resolvidos também pelo desenho.",Fácil,Verdadeiro
+10/02,"Um alto acoplamento entre diferentes módulos demonstra uma melhor interconexão das interfaces de usuário com outros sistemas, e portando, uma maior robustez do software.",Fácil,Falso
+10/03,"A programação em pares é uma das técnicas usadas para a revisão de código, onde o chamado piloto pega o papel de codificação e o chamado navegador confere, avalia e sugere melhorias. Estes papeis são, eventualmente, trocados para uma melhor produtividade",Fácil,Verdadeiro
+10/04,"Testes de unidade são responsabilidade do desenvolvedor do código, e assim como a documentação, pertencem a parte de implementação do software.",Média,Verdadeiro
+10/05,"Na integração contínua, uma das práticas fundamentais do extreme programming, a integração é feita a cada unidade terminada, ou em alguns casos, pode ser feita até diversas vezes por unidade. ",Fácil,Verdadeiro
+11/01,"Garantia de qualidade é um conjunto de ações necessárias para estabelecer um nível adequado de confiança de que um item ou produto está em conformidade com seus requisitos técnicos.",Fácil,Verdadeiro
+11/02,"O objetivo da gestão de qualidade é primariamente garantir a qualidade após o termino do projeto, por meio de análise dos processos executados para ajusta-los. ",Difícil,Falso
+11/03,"Verificação é a confirmação de que um produto refletem corretamente seus requisitos, podendo ser feito por meio de análises estáticas, testes de desenvolvimento e revisões.",Fácil,Verdadeiro
+11/04,"Membros da gestão de qualidade podem ser desenvolvedores no resto do tempo, desde que obrigatoriamente não participem da gestão de qualidade de projetos em que estejam envolvidos.",Fácil,Verdadeiro
+11/05,"Em uma organização madura, a gestão de qualidade deixa de ser importante e a recomendação é alocar recursos em outras áreas, como por exemplo, na engenharia de processos.",Fácil,Falso
+12/01,"De acordo com o PMBoK, ainda que incomuns, projetos sem data de término inicialmente definida estão especificados. Estes projetos diferem em algumas análises que devem ser feita de forma especial, como por exemplo a gestão de custos.",Difícil,Falso
+12/02,"Indicadores de tamanho são medidas da complexidade de um produto e estão relacionadas com o esforço de desenvolvimento.  Um exemplo desses indicadores são os pontos de função, que medem o tamanho físico do software.",Difícil,Falso
+12/03,"Algumas das desvantagens dos pontos de função incluem a dificuldade de serem computados requerendo profissionais treinados e o fato deles, por exemplo, não medirem reutilização de componentes.",Fácil,Verdadeiro
+12/04,"Na gestão do tempo, os benefícios de estimativas corretas são de grande valiosidade para grande parte das organizações, sendo mais importantes que prazos, custos ou flexibilidade.",Difícil,Verdadeiro
+12/05,"Não é papel da gestão de risco delimitar a incerteza em relação ao projeto, mas fazer uma comunicação de riscos.",Difícil,Falso
+13/01,"Uma alteração nos requisitos representa uma alteração no problema, e não somente na solução, e portanto, usualmente são cobradas a parte do escopo original do projeto.",Fácil,Verdadeiro
+13/02,"Uma das principais partes da gestão de alterações se encontrar em ferramentas de "controle de versão" de código, como git, SVN e Perforce.",Média,Verdadeiro
+13/03,"Alterações de requisito são praticamente inevitáveis e podem acontecer durante o desenvolvimento da solução, como por exemplo pela descoberta de defeitos nos requisitos especificados.",Fácil,Verdadeiro
+13/04,"Com um levantamento e análises perfeitos, é esperado que fatores externos não causem alterações.",Fácil,Falso
+13/05,"A manutenção corretiva inclui a correção de problemas na implementação e modificação subsequente em artefatos correlatos.",Média,Verdadeiro
+14/01,"De acordo com o CMMI primeiro necessitamos de uma organização com processos firmemente definidos para somente depois procurar analisar e otimiza estes processos.",Média,Verdadeiro
+14/02,"A engenharia de processos não assume responsabilidades na execução dos projetos em si, e portanto, usualmente são alocados desenvolvedores mais inexperientes para que possam aprender de longe".  ",Média,Falso
+14/03,"Parece que o Thiago não fez essa questão.. Então pode qualquer coisa e ser feliz!",Difícil,-
+14/04,"São sinais de inadequação de processos a deficiência de entendimento e prática dos processos atuais.",Difícil,Falso
+14/05,"Quando temos uma equipe inexperiente ou com variadas experiências, devemos colocar esforços em simplificar os processos para que todos consigam seguir de modo uniforme as recomendações desejadas.",Difícil,Falso
+15/01,"A Engenharia de Sistemas é uma disciplina de mais alto nível do que a Engenharia de Software, entretanto deve ser considerada mesmo que um software for o produto final.",Fácil,Verdadeiro
+15/02,"A engenharia de sistemas é uma atividade usual mesmo quando um software é o produto final.",Difícil,Verdadeiro
+15/03,"O padrão UML é utilizado pois mantém a uniformidade de notação entre ferramentas, embora não modele aspectos estáticos do negócio como relacionamento entre objetos. ",Média,Falso
+15/04,"O administrador de dados é um papel muito especializado na Engenharia de Sistemas. Entre suas responsabilidades se encontram a administração dos subsistemas de persistência e a configuração de hardware e software de bancos de dados.",Média,Verdadeiro
+15/05,"Não é esperado que administradores de sistemas tenham conhecimento específico em programação, somente dos hardwares e softwares utilizados.",Fácil,Falso
