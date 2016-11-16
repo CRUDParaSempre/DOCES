@@ -49293,7 +49293,7 @@ MonoBehaviour:
     y: -350
     width: 1547
     height: 1024
-  selectedBlock: {fileID: 2001343609}
+  selectedBlock: {fileID: 0}
   selectedCommands: []
   variables:
   - {fileID: 2001343582}
@@ -49320,7 +49320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scope: 0
   key: lastButtonClicked
-  value: 1
+  value: 0
 --- !u!114 &2001343583
 MonoBehaviour:
   m_ObjectHideFlags: 2

@@ -22,7 +22,17 @@ public class EmployeeBoardScript : MonoBehaviour {
 
     private int _idx = 0;
     private int _nb_itens;
+
+    // Tem algum item selecionado?
+    private bool selected = false;
+    // Se sim, ele está visivel?
+    private bool isSelectedItemVisible = false;
+    // Indice na janela de 4 itens
+    private int selectedItemWindow;
+    // Indice na lista
     private int selectedItem;
+    // Tamanho da janela
+    private int windowSize = 4;
 
     GameStateManager gsm;
 
@@ -32,7 +42,9 @@ public class EmployeeBoardScript : MonoBehaviour {
         gsm = obj.GetComponent<GameStateManager>();
         _nb_itens = _nomes.Count;
 
-        selectedItem = -1;
+        selectedItemWindow = -1;
+        selectedItem = 0;
+
         for (var i = 0; i < funcionario.Count; ++i) {
             funcionario[i].gameObject.SetActive(false);
         }
@@ -53,34 +65,85 @@ public class EmployeeBoardScript : MonoBehaviour {
         preco4.text = _precos[(_idx + 3) % _nb_itens].ToString();
     }
 
+    public KeyValuePair<bool, int> insideWindow(int index) {
+        for (int i = 0; i < 4; i++) {
+            if (index == ((_idx + i + _nb_itens) % _nb_itens))
+                return new KeyValuePair<bool, int>(true, i);
+        }
+
+        return new KeyValuePair<bool, int>(false, -1);
+    }
+
     public void incrementIndex() {
         _idx += 1;
-        _idx = _idx % _nb_itens;
+        _idx = (_idx + _nb_itens) % _nb_itens;
+
         updateItens();
-        deselectItem();
+
+        if (selected == true && isSelectedItemVisible == true) {
+            deselectItem();
+            selectedItemWindow -= 1;
+            if (selectedItemWindow >= 0) {
+                selecionaItem(selectedItemWindow);
+            } else {
+                isSelectedItemVisible = false;
+                selectedItemWindow = -1;
+            }
+        } else if (isSelectedItemVisible == false && insideWindow(selectedItem).Key) {
+            isSelectedItemVisible = true;
+            selectedItemWindow = insideWindow(selectedItem).Value;
+            selecionaItem(selectedItemWindow);
+        }
     }
 
     public void decrementIndex() {
         _idx -= 1;
-        _idx = (_idx % _nb_itens + _nb_itens) % _nb_itens;
+        _idx = (_idx + _nb_itens) % _nb_itens;
+
         updateItens();
-        deselectItem();
+
+        if (selected == true && isSelectedItemVisible == true) {
+            deselectItem();
+            selectedItemWindow += 1;
+            if (selectedItemWindow < windowSize) {
+                selecionaItem(selectedItemWindow);
+            } else {
+                isSelectedItemVisible = false;
+                selectedItemWindow = -1;
+            }
+        } else if (isSelectedItemVisible == false && insideWindow(selectedItem).Key) {
+            isSelectedItemVisible = true;
+            selectedItemWindow = insideWindow(selectedItem).Value;
+            selecionaItem(selectedItemWindow);
+        }
     }
 
     public void selecionaItem(int index) {
-        selectedItem = index;
-        var color = _sprites[selectedItem].color;
-        _sprites[selectedItem].color = new Color(color.r, color.g, color.b, 0.5f);
+        if (selected == true && index == selectedItemWindow) {
+            deselectItem();
+            selected = false;
+            return;
+        } else if (selected == true && index != selectedItemWindow) {
+            deselectItem();
+        }
+        
+        selected = true;
+        isSelectedItemVisible = true;
+
+        selectedItem = (index + _idx + _nb_itens) % _nb_itens;
+        selectedItemWindow = index;
+        var color = _sprites[selectedItemWindow].color;
+        _sprites[selectedItemWindow].color = new Color(color.r, color.g, color.b, 0.5f);
     }
 
     void deselectItem() {
-        var color = _sprites[selectedItem].color;
-        _sprites[selectedItem].color = new Color(color.r, color.g, color.b, 1.0f);
-        selectedItem = -1;
+        var color = _sprites[selectedItemWindow].color;
+        _sprites[selectedItemWindow].color = new Color(color.r, color.g, color.b, 1.0f);
+        selected = false;
     }
 
     public void compraItem() {
-        var index = _idx + selectedItem;
+        var index = selectedItem;
         var preco = _precos[index];
         var dinheiro = 1000;
         if (dinheiro - preco > 0) {
