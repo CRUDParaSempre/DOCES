@@ -7641,7 +7641,7 @@ MonoBehaviour:
   _projectScores: 0000000000000000000000000000000000000000
   _projectGoals: 
   timeSpeed: 1
-  timePerWeek: 1
+  timePerWeek: 10
   _currentWeek: 0
   quizCanvas: {fileID: 520911358}
   quizQuestions: 0
