@@ -173,8 +173,8 @@ public class CardsManager : MonoBehaviour {
 
 
 	private void fillPool(){
-		float currentWeek = (float)GameStateManager.Instance.currentWeek;
-		float projectDeadline = (float)GameStateManager.Instance.projectDeadline;
+		float currentWeek = (float)GameStateManager.Instance.currentWeek - (float)GameStateManager.Instance.projectStartWeek;
+		float projectDeadline = (float)GameStateManager.Instance.projectDeadline - (float)GameStateManager.Instance.projectStartWeek;
 		float projectPercentage = currentWeek / projectDeadline;
 		int cardCount = 0;
 		int cardCountTotal = 0;

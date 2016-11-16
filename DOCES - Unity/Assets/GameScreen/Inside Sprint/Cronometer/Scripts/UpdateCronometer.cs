@@ -17,8 +17,8 @@ public class UpdateCronometer : MonoBehaviour {
 	}
 
 	public void OnEnable() {
-		currentWeek = GameStateManager.Instance.currentWeek;
-		projectDeadline = GameStateManager.Instance.projectDeadline;
+		currentWeek = GameStateManager.Instance.currentWeek - GameStateManager.Instance.projectStartWeek;
+		projectDeadline = GameStateManager.Instance.projectDeadline - GameStateManager.Instance.projectStartWeek;
 
 		GameObject fillBar = transform.GetChild (2).gameObject;
 		Text text = GetComponentInChildren<Text> ();

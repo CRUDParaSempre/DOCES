@@ -28,6 +28,9 @@ public class GameStateManager : MonoBehaviour {
 
 	private int weeksWithoutClient = 0;
 	private int clientWeek = 0;
+	public int projectStartWeek {
+		get { return clientWeek; }
+	}
 	public bool hasClient = false;
 	[SerializeField] private GameObject clientCanvas;
 	[SerializeField] private GameObject sprintCanvas;
@@ -79,6 +82,7 @@ public class GameStateManager : MonoBehaviour {
 	private float lastWeekAdvance = 0f;
 	[SerializeField] private int _currentWeek = 0 ;
 	[SerializeField] private GameObject quizCanvas;
+	[SerializeField] private int quizQuestions=0;
 	public int currentWeek {
 		get { return _currentWeek; }
 	}
@@ -454,6 +458,39 @@ public class GameStateManager : MonoBehaviour {
 		}
 	}
 
+	public string newQuestionDifficulty {
+		get{
+			List<float> difProbs = new List<float> ();
+			float sum = 0f;
+
+			difProbs.Add ( (-9f / 1000f * _credibility) + 1 );
+			sum += difProbs [0];
+
+			difProbs.Add (.7f);
+			sum += difProbs [1];
+
+			difProbs.Add ( (9f / 1000f * _credibility) + 1f/10f );
+			sum += difProbs [2];
+
+			for (int i = 0; i < difProbs.Count; i++) {
+				difProbs [i] = normalize (sum, difProbs [i]);
+			}
+
+			float random = Random.value;
+
+			if (random >= 0 && random < difProbs [0]) {
+				return "Fácil";			
+			} else if (random >= difProbs [0] && random < difProbs [0] + difProbs [1]) { 
+				return "Média";			
+			} else if (random >= difProbs [0] + difProbs [1] && random < difProbs [0] + difProbs [1] + difProbs [2]) {
+				return "Difícil";			
+			}
+
+			Debug.LogError ("Erro ao determinar dificuldade do cliente!");
+			return "Baixa";
+		}
+	}
+
 	private float normalize(float a, float b){
 		return b / a;
 	}
@@ -543,8 +580,15 @@ public class GameStateManager : MonoBehaviour {
 	public void initializeQuiz() {
 		setGameState (GameState.GameQuiz);
 
+		quizQuestions = Random.Range (1,3);
+//		quizQuestions = 3;
+
+		_bonusCre = 0;
+		_bonusLog = 0;
+		_bonusOrg = 0;
+
 		if (_gameState == GameState.GameQuiz) {
-			quizCanvas.gameObject.SetActive (true);
+			quizCanvas.GetComponent<QuizManager> ().newQuestion ();
 		}
 	}
 
@@ -560,6 +604,48 @@ public class GameStateManager : MonoBehaviour {
 	public void newClientRejected() {
 		removeClientProposal ();
 		setGameState (GameState.GameOffice);
+	}
+
+	public void playerAnswered(List<int> bonus, bool isPlayerRight) {
+		Debug.Log ("Respondi uma pergunta!");
+
+		if (isPlayerRight) {
+			_bonusCre += bonus [0];
+			_bonusLog += bonus [1];
+			_bonusOrg += bonus [2];
+			_golpinhos += bonus [3];
+		}
+
+		//ainda ha questões para perguntar
+		if ( --quizQuestions > 0) {
+			if (_gameState == GameState.GameQuiz) {
+				quizCanvas.GetComponent<QuizManager> ().newQuestion ();
+			}
+
+		//não há mais questoes, mova para o sprint
+		} else {
+			quizCanvas.gameObject.SetActive (false);
+			setGameState (GameState.GameCards);
+
+			if (_gameState == GameState.GameCards) {
+				sprintCanvas.gameObject.SetActive (true);
+
+			} else {
+				Debug.LogError ("Não foi possivel entrar no estado da corrida!");
+			}
+		}
+	}
+
+	public void sprintFinished() {
+
+		//não terminei o projeto
+		if (++_currentWeek < _projectDeadline) {
+			initializeQuiz ();
+
+		//terminei o projeto
+		} else {
+			//inicializar a tela de resultados
+		}
 	}
 }
 
