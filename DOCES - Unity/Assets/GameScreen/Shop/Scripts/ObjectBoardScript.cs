@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System;
 using System.Collections.Generic;
 
 public class ObjectBoardScript : MonoBehaviour {
@@ -45,7 +44,6 @@ public class ObjectBoardScript : MonoBehaviour {
 	private int selectedItem;
 	// Tamanho da janela
 	private int windowSize = 4;
-
 
     GameStateManager gsm;
 
