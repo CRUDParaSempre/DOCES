@@ -29,7 +29,7 @@ ID,Description,Difficulty,Answer
 06/03,"Um conjunto de casos de uso deve descrever a funcionalidade completa do produto, sem lacunas, de modo que cada caso de uso represente uma "fatia" da funcionalidade.",Fácil,Verdadeiro
 06/04,"Requisitos não-funcionais de desempenho podem ser interpretados pelos desenvolvedores da forma mais conveniente para o desenho, uma vez que não impactam na arquitetura do produto.",Difícil,Falso
 06/05,"Um engenheiro de requisitos deve ser proficiente na redação de documentos técnicos, em linguagem acessível aos usuários do software.",Fácil,Verdadeiro
-07/01,"No processo de identificação dos objetos a serem implementadas no software, os substantivos dos casos de uso serão sempre classes, enquanto verbos serão operações e adjetivos serão atributos.,Difícil,Falso
+07/01,"No processo de identificação dos objetos a serem implementadas no software, os substantivos dos casos de uso serão sempre classes, enquanto verbos serão operações e adjetivos serão atributos.",Difícil,Falso
 07/02,"Classes de fronteira coordenam realizações de casos de uso e podem, inclusive, coordenar subfluxos ou fluxos alternativos complexos.",Difícil,Falso
 07/03,"Os atributos que descrevem uma classe equivalem a relacionamentos de composição, onde a classe-alvo é o tipo e o papel é o nome do atributo.",Difícil,Verdadeiro
 07/04,"Em modelos de análise comportamental as operações só podem ser representadas por um método, ainda que existam variantes da operação.",Difícil,Falso
@@ -65,8 +65,7 @@ ID,Description,Difficulty,Answer
 13/04,"Com um levantamento e análises perfeitos, é esperado que fatores externos não causem alterações.",Fácil,Falso
 13/05,"A manutenção corretiva inclui a correção de problemas na implementação e modificação subsequente em artefatos correlatos.",Média,Verdadeiro
 14/01,"De acordo com o CMMI primeiro necessitamos de uma organização com processos firmemente definidos para somente depois procurar analisar e otimiza estes processos.",Média,Verdadeiro
-14/02,"A engenharia de processos não assume responsabilidades na execução dos projetos em si, e portanto, usualmente são alocados desenvolvedores mais inexperientes para que possam aprender de longe".  ",Média,Falso
-14/03,"Parece que o Thiago não fez essa questão.. Então pode qualquer coisa e ser feliz!",Difícil,-
+14/02,"A engenharia de processos não assume responsabilidades na execução dos projetos em si, e portanto, usualmente são alocados desenvolvedores mais inexperientes para que possam aprender de longe.",Média,Falso
 14/04,"São sinais de inadequação de processos a deficiência de entendimento e prática dos processos atuais.",Difícil,Falso
 14/05,"Quando temos uma equipe inexperiente ou com variadas experiências, devemos colocar esforços em simplificar os processos para que todos consigam seguir de modo uniforme as recomendações desejadas.",Difícil,Falso
 15/01,"A Engenharia de Sistemas é uma disciplina de mais alto nível do que a Engenharia de Software, entretanto deve ser considerada mesmo que um software for o produto final.",Fácil,Verdadeiro

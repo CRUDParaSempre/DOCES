@@ -99,12 +99,15 @@ public class Quiz_CSV : MonoBehaviour
 	}
 
 
-	public List<string> getQuestions(string diff, string id){
+	public List<string> getQuestion(string diff){
+		int id = Random.Range (0, FindAll_Difficulty (diff).Count);
+		Debug.Log ("Sorteou a Pergunta " + id + " das " + diff );
 
 		List<string> infos = new List<string> ();
 
-		infos.Add (FindAll_Difficulty (diff) [int.Parse(Find_ID(id).ID)].Description);
-		infos.Add (FindAll_Difficulty (diff) [int.Parse(Find_ID(id).ID)].Answer);
+		infos.Add (FindAll_Difficulty (diff) [id].ID);
+		infos.Add (FindAll_Difficulty (diff) [id].Description);
+		infos.Add (FindAll_Difficulty (diff) [id].Answer);
 
 		return infos;
 
