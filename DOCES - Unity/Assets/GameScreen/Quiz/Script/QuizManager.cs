@@ -56,7 +56,7 @@ public class QuizManager : MonoBehaviour {
 	private void rotateButton(int buttonId) {
 		buttons [buttonId].GetComponent<RectTransform> ().Rotate (0f, rotationSpeed * Time.deltaTime, 0f);
 
-		if (Mathf.Abs (buttons [buttonId].GetComponent<RectTransform> ().localRotation.eulerAngles.y - 90f) < 5f && !buttonChangedSprite [buttonId]) {
+		if ( buttons [buttonId].GetComponent<RectTransform> ().localRotation.eulerAngles.y > 85f && !buttonChangedSprite [buttonId]) {
 			buttonChangedSprite [buttonId] = true;
 
 			if (questionAnswer == true) {
@@ -74,7 +74,7 @@ public class QuizManager : MonoBehaviour {
 				}
 			}
 
-		} else if (Mathf.Abs (buttons [buttonId].GetComponent<RectTransform> ().localRotation.eulerAngles.y - 180f) < 5f) {
+		} else if ( buttons [buttonId].GetComponent<RectTransform> ().localRotation.eulerAngles.y > 188f ) {
 			buttonCanRotate [buttonId] = false;
 			buttons [buttonId].GetComponent<RectTransform> ().localRotation = Quaternion.Euler (new Vector3 (0f, 180f, 0f));
 
