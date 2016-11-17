@@ -62,7 +62,7 @@ public class CardClickManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if( !spriteUpdated && _cardState== CardState.Activated && Mathf.Abs(rt.localRotation.eulerAngles.y - 90f) < 10f ) {
+		if( !spriteUpdated && _cardState== CardState.Activated && rt.localRotation.eulerAngles.y > 80f ) {
 			cardBack.sprite = activatedSprite;
 			spriteUpdated = true;
 		}
