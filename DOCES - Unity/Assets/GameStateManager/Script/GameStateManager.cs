@@ -620,6 +620,11 @@ public class GameStateManager : MonoBehaviour {
 		_projectDeadline = deadline + currentWeek;
 		_projectDifficulty = difficulty;
 		_projectPayment = payment;
+
+		for (int i = 0; i < _projectMaxGoals.Count; i++) {
+			_projectMaxGoals [i] = 0;
+		}
+
 		removeClientProposal ();
 
 		initializeQuiz ();
@@ -669,7 +674,11 @@ public class GameStateManager : MonoBehaviour {
 		//terminei o projeto
 		} else {
 			//inicializar a tela de resultados
-			resultsCanvas.GetComponent<ResultsManager>().showProjectResults();
+			setGameState(GameState.ProjectResults);
+
+			if (_gameState == GameState.ProjectResults) {
+				resultsCanvas.GetComponent<ResultsManager> ().showProjectResults ();
+			}
 		}
 	}
 
@@ -693,6 +702,14 @@ public class GameStateManager : MonoBehaviour {
 
 		Debug.LogError ("Dificuldade inválida (" + difficulty + ") !");
 		return 0;
+	}
+
+	public void finalResults(int golpinhos, int credibility) {
+		_golpinhos += golpinhos;
+		_credibility += credibility;
+
+		setGameState (GameState.GameOffice);
+		resultsCanvas.SetActive (false);
 	}
 }
 
