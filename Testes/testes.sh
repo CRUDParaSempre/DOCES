@@ -1,6 +1,8 @@
 #!/bin/bash
 
 echo "Rodando testes de integracao"
+mkdir ${PWD}/web2000
+
 /Applications/Unity/Unity.app/Contents/MacOS/Unity \
   -batchmode \
   -nographics \
@@ -10,7 +12,7 @@ echo "Rodando testes de integracao"
   -testscenes=GameScenes \
   -projectPath "${PWD}/DOCES - Unity" \
   -targetPlatform=WebGL \
-  -resultsFileDirectory=${PWD}/../ \
+  -resultsFileDirectory=${PWD}/web2000 \
   -quit
 
 #-buildTarget WebGL "${PWD}/Build/Web"

@@ -11,10 +11,10 @@ echo "=============  Comprimindo arquivos gerados ================="
 echo ''
 echo ''
 
-ls "DOCES*/Temp"
+ls "web2000"
 
 name=$( date +web_build_%Y%m%d%H%M%S.tar ) 
-tar -zcf $name "${PWD}/DOCES\ -\ Unity/Temp/IntegrationTests/*"
+tar -zcf $name "${PWD}/web2000/*"
 
 echo ''
 echo ''
