@@ -8375,9 +8375,9 @@ MonoBehaviour:
   doorButton: {fileID: 20776788}
   _playerName: Jobso
   _companyName: Jo
-  _frascoO: 0
-  _frascoL: 0
-  _frascoC: 0
+  _frascoO: 1000
+  _frascoL: 1000
+  _frascoC: 1000
   _bonusCre: 0
   _bonusLog: 0
   _bonusOrg: 0
@@ -8392,7 +8392,7 @@ MonoBehaviour:
   - 0.6
   - 0.8
   timeSpeed: 1
-  timePerWeek: 10
+  timePerWeek: 1
   _currentWeek: 0
   quizCanvas: {fileID: 520911358}
   quizQuestions: 0
@@ -22951,6 +22951,7 @@ GameObject:
   - 114: {fileID: 929004284}
   - 114: {fileID: 929004283}
   - 114: {fileID: 929004286}
+  - 82: {fileID: 929004287}
   m_Layer: 0
   m_Name: Project Results Canvas
   m_TagString: Untagged
@@ -23069,8 +23070,84 @@ MonoBehaviour:
   - {fileID: 2112824798}
   minGoalMarkerX: 21
   maxGoalMarkerX: 390
+  computingSound: {fileID: 929004287}
+  timeBetweenAudios: 0.5
   timeBetweenAnimation: 0
-  timeOfAnimation: 0
+  timeOfAnimation: 3
+--- !u!82 &929004287
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 929004281}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 8616bd678eed1ab49a5008ac08031774, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &931092565
 GameObject:
   m_ObjectHideFlags: 0

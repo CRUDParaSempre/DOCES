@@ -14,15 +14,22 @@ public class ResultsManager : MonoBehaviour {
 	[SerializeField]private int minGoalMarkerX=21;
 	[SerializeField]private int maxGoalMarkerX=390;
 
-	[SerializeField] private float timeBetweenAnimation = 0f;
-	private float lastAnimationTime;
-	private float firstAnimationTime;
-	[SerializeField] private float timeOfAnimation = 0f;
+	[SerializeField] private AudioSource computingSound=null;
+	[SerializeField] private float timeBetweenAudios=.5f;
+	private float realTimeBetweenAudios=0f;
+	private float lastAudioTime=0f;
 
-	private int distance = 0;
+	[SerializeField] private float timeBetweenAnimation = 0f;
+	[SerializeField] private float timeOfAnimation = 0f;
+	private float lastAnimationTime=0f;
+	private float firstAnimationTime=0f;
+
+
+	private float distance = 0f;
 	private float animVelocity = 1f;
 
 	private int currentProjectArea = 0;
+	private bool animationFinished = false;
 
 	//distancia/tempo 	|\
 	//  				| \
@@ -40,31 +47,49 @@ public class ResultsManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		projectAreasFillBars [currentProjectArea].fillAmount += animVelocity * Time.deltaTime;
-		changeProjectArea ();
-		recalculateAnimVelocity ();
+		if (!animationFinished) {
+			projectAreasFillBars [currentProjectArea].fillAmount += animVelocity * Time.deltaTime;
+			changeProjectArea ();
+			recalculateAnimVelocity ();
+		}
 	}
 
 	private void changeProjectArea() {
-		if (projectAreasFillBars [currentProjectArea].fillAmount > distance / GameStateManager.Instance.projectMaxGoals [currentProjectArea] - .001f) {
-			currentProjectArea++;
-			calculateDistance ();
+		if (projectAreasFillBars [currentProjectArea].fillAmount >= distance ) {
+			if (++currentProjectArea == GameStateManager.Instance.projectGoals.Count) {
+				Debug.Log ("Acabou a animação!");
+				animationFinished = true;
+			} else {
+				Debug.Log ("troca de animação!");
+				firstAnimationTime = Time.time;
+				calculateDistance ();
+			}
+		}
+
+		if(Time.time - lastAudioTime > realTimeBetweenAudios) {
+			lastAudioTime = Time.time;
+			computingSound.Play ();
 		}
 	}
 
 	private void recalculateAnimVelocity() {
-		animVelocity = Mathf.Lerp (((float)distance/timeOfAnimation), 0, (Time.time - firstAnimationTime)/timeOfAnimation );
-		Debug.Log ("Velocidade " + animVelocity);
+		animVelocity = Mathf.Lerp ( ((float)distance/ Mathf.Max((timeOfAnimation - ( Time.time - firstAnimationTime )), 0.01f)) , 0.001f, (Time.time - firstAnimationTime)/timeOfAnimation );
+		realTimeBetweenAudios = Mathf.Lerp(0.2f, 1f, (Time.time - firstAnimationTime) / timeOfAnimation);
+//		Debug.Log ("Velocidade " + animVelocity + " [" + ((float)distance/timeOfAnimation) + ",0," + (Time.time - firstAnimationTime) +"/"+timeOfAnimation + "] " + Time.time);
 	}
 
 	private void calculateDistance() {
-		distance = 0;
+		distance = 0f;
+
 		for (int i = 0; i < GameStateManager.Instance.projectScores [currentProjectArea].Count; i++) {
 			distance += GameStateManager.Instance.projectScores [currentProjectArea] [i];
 		}
 
-		recalculateAnimVelocity ();
+		distance /= GameStateManager.Instance.projectMaxGoals [currentProjectArea];
 		Debug.Log ("Distance to walk " + distance + " in " + currentProjectArea);
+
+		recalculateAnimVelocity ();
+
 	}
 
 	public void showProjectResults() {
@@ -83,10 +108,10 @@ public class ResultsManager : MonoBehaviour {
 		}
 
 
+		firstAnimationTime = Time.time;
 		calculateDistance ();
 
 		this.gameObject.SetActive (true);
-		firstAnimationTime = Time.time;
 	}
 
 	private void resetCanvas() {

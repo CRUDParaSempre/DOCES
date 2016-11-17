@@ -57,7 +57,7 @@ public class GameStateManager : MonoBehaviour {
 	[SerializeField] private int _bonusOrg = 0;
 
 	private int _gender = 0;
-	private int _golpinhos = 0;
+	private int _golpinhos = 10000;
 
 	private List<Color> _colorIds = new List<Color> (){Color.white,Color.white,Color.white,Color.white,Color.white,Color.white}; //0 = skin, 1 = eyes, 2 = hair, 3 = shirt, 4 = pants, 5 = shoes
 	[SerializeField] private CardsManager cardsManager;
