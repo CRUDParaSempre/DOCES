@@ -9,7 +9,7 @@ using Fungus;
 // [IntegrationTest.Ignore]
 [IntegrationTest.ExpectExceptions(false, typeof(ArgumentException))]
 [IntegrationTest.SucceedWithAssertions]
-[IntegrationTest.TimeoutAttribute(1)]
+[IntegrationTest.TimeoutAttribute(10)]
 [IntegrationTest.ExcludePlatformAttribute(RuntimePlatform.Android, RuntimePlatform.LinuxPlayer)]
 
 
@@ -86,13 +86,12 @@ public class teste02_botaoPronto : MonoBehaviour
 	 	yield return WaitFor.Frames(150);
 		
 		obj = GameObject.Find("CompSelectScene");
-		if(!obj){ //Checa se tela mudou, pois nao deveria. Nome
-			// nao preenchido
+		if(!obj){ //Checa se tela mudou, pois deveria.
 			Debug.Log("Int Teste Falhou, Botao Pronto Falhou");
 			IntegrationTest.Fail(gameObject);
 		}
 
-		yield return WaitFor.Frames(250);
+		yield return WaitFor.Frames(20);
 
 		IntegrationTest.Pass(gameObject);
 		
