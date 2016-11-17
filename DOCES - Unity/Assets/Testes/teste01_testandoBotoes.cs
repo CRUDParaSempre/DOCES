@@ -71,9 +71,7 @@ public class teste01_testandoBotoes : MonoBehaviour
 
 		yield return WaitFor.Frames(60); 
 
-		obj = GameObject.Find("CharNameCanvas/InputField/Text");
-		Text text = obj.GetComponent<Text>();
-		text.text = "Sou um teste de Integracao";
+		
 
 
 		obj = GameObject.Find("frascoL/botãoMais");
@@ -144,27 +142,27 @@ public class teste01_testandoBotoes : MonoBehaviour
 		
 		Fungus.Flowchart flowchart = obj2.GetComponent<Flowchart>();	
 		flowchart.ExecuteBlock("SkinButtonBlock");
-		Debug.Log("Int Teste 6: Estado 1");
+		Debug.Log("Int Teste 9: Estado 1");
 		yield return WaitFor.Frames(40);
 
 		flowchart.ExecuteBlock("HairButtonBlock");
-		Debug.Log("Int Teste 6: Estado 2");
+		Debug.Log("Int Teste 9: Estado 2");
 		yield return WaitFor.Frames(40);
 
 		flowchart.ExecuteBlock("EyesButtonBlock");
-		Debug.Log("Int Teste 6: Estado 3");
+		Debug.Log("Int Teste 9: Estado 3");
 		yield return WaitFor.Frames(40);
 
 		flowchart.ExecuteBlock("ShirtButtonBlock");
-		Debug.Log("Int Teste 6: Estado 4");
+		Debug.Log("Int Teste 9: Estado 4");
 		yield return WaitFor.Frames(40);
 
 		flowchart.ExecuteBlock("PantsButtonBlock");
-		Debug.Log("Int Teste 6: Estado 5");
+		Debug.Log("Int Teste 9: Estado 5");
 		yield return WaitFor.Frames(40);
 
 		flowchart.ExecuteBlock("ShoesButtonBlock");
-		Debug.Log("Int Teste 6: Estado 6");
+		Debug.Log("Int Teste 9: Estado 6");
 		yield return WaitFor.Frames(40);
 
 
