@@ -1576,7 +1576,7 @@ GameObject:
   - 114: {fileID: 52934702}
   - 114: {fileID: 52934699}
   m_Layer: 0
-  m_Name: Flowchart
+  m_Name: Flowchart_panel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1606,8 +1606,9 @@ MonoBehaviour:
     y: -340
     width: 1131
     height: 859
-  selectedBlock: {fileID: 52934674}
-  selectedCommands: []
+  selectedBlock: {fileID: 52934680}
+  selectedCommands:
+  - {fileID: 52934699}
   variables:
   - {fileID: 52934672}
   description: 
@@ -1678,7 +1679,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 67
     y: 70
-    width: 141
+    width: 135
     height: 40
   itemId: 0
   blockName: ManButtonBlock
@@ -1780,7 +1781,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 227
     y: 69
-    width: 161
+    width: 152
     height: 40
   itemId: 1
   blockName: WomanButtonBlock
@@ -9814,7 +9815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1960128264}
+  selectedFlowchart: {fileID: 967225534}
 --- !u!4 &395558029
 Transform:
   m_ObjectHideFlags: 1
@@ -11676,6 +11677,68 @@ MonoBehaviour:
   buttonCanRotate: 0000
   bonus: 00000000000000000000000000000000
   timeAfterAnimation: 2
+--- !u!1 &546384570
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 546384571}
+  - 114: {fileID: 546384573}
+  - 114: {fileID: 546384572}
+  m_Layer: 0
+  m_Name: teste01_testandoBotoes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &546384571
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 546384570}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1189339563}
+  m_RootOrder: 0
+--- !u!114 &546384572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 546384570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60bc40542e4384c6bb590404559548de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &546384573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 546384570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1dba0b27b0864740a8720e920aa88c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeout: 30
+  ignored: 0
+  succeedAfterAllAssertionsAreExecuted: 0
+  expectException: 0
+  expectedExceptionList: 
+  succeedWhenExceptionIsThrown: 0
+  includedPlatforms: -1
+  platformsToIgnore: []
+  dynamic: 0
+  dynamicTypeName: 
 --- !u!1 &548034948
 GameObject:
   m_ObjectHideFlags: 0
@@ -15373,6 +15436,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 2107677797}
+  - {fileID: 1189339563}
   m_Father: {fileID: 2517034}
   m_RootOrder: 0
 --- !u!114 &712335999
@@ -18050,7 +18114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &821010000
 Transform:
   m_ObjectHideFlags: 0
@@ -21881,14 +21945,14 @@ MonoBehaviour:
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 0
   blockViewHeight: 400
-  zoom: 0.9100001
+  zoom: 0.7329894
   scrollViewRect:
     serializedVersion: 2
     x: -496.11975
     y: -463.13586
     width: 1952.8837
     height: 1172.3928
-  selectedBlock: {fileID: 0}
+  selectedBlock: {fileID: 967225561}
   selectedCommands: []
   variables:
   - {fileID: 967225535}
@@ -21950,7 +22014,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 590.3121
     y: 85.18307
-    width: 201
+    width: 191
     height: 40
   itemId: 12
   blockName: DeselectLastButtonClicked
@@ -22016,7 +22080,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 398.0488
     y: 48.780487
-    width: 145
+    width: 137
     height: 40
   itemId: 2
   blockName: EyesButtonBlock
@@ -22379,7 +22443,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 392.21475
     y: 218.98184
-    width: 153
+    width: 145
     height: 40
   itemId: 5
   blockName: ShoesButtonBlock
@@ -22405,7 +22469,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 394.96735
     y: 160.33257
-    width: 149
+    width: 142
     height: 40
   itemId: 4
   blockName: PantsButtonBlock
@@ -22431,7 +22495,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 396.45044
     y: 106.088806
-    width: 145
+    width: 138
     height: 40
   itemId: 3
   blockName: ShirtButtonBlock
@@ -22457,7 +22521,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 396.93408
     y: -5.30217
-    width: 141
+    width: 135
     height: 40
   itemId: 1
   blockName: HairButtonBlock
@@ -22483,7 +22547,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 397.82574
     y: -63.13587
-    width: 143
+    width: 135
     height: 40
   itemId: 0
   blockName: SkinButtonBlock
@@ -22727,7 +22791,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 823.0682
     y: 85.82219
-    width: 225
+    width: 215
     height: 40
   itemId: 50
   blockName: ExecuteChangesToColorPicker
@@ -29154,20 +29218,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: -114.12808, y: 88.84146}
+  scrollPos: {x: -31.878082, y: 90.34146}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 0
   blockViewHeight: 257
-  zoom: 1
+  zoom: 0.7961957
   scrollViewRect:
     serializedVersion: 2
     x: -680.8048
-    y: -389.6829
+    y: -438.84146
     width: 2218.8047
-    height: 1083.9023
-  selectedBlock: {fileID: 1173192971}
-  selectedCommands:
-  - {fileID: 1173193027}
+    height: 1133.0609
+  selectedBlock: {fileID: 0}
+  selectedCommands: []
   variables:
   - {fileID: 1173192975}
   - {fileID: 1173192978}
@@ -29249,7 +29312,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 198.46341
     y: 96.902435
-    width: 149
+    width: 144
     height: 40
   itemId: 2
   blockName: BlockMaisFrascoL
@@ -29299,7 +29362,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 178.9512
     y: 18.853668
-    width: 160
+    width: 155
     height: 40
   itemId: 0
   blockName: BlockMenosFrascoL
@@ -29322,7 +29385,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 389.56097
     y: 101.46341
-    width: 152
+    width: 147
     height: 40
   itemId: 6
   blockName: BlockMaisFrascoO
@@ -29372,7 +29435,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 383.29272
     y: 24.170685
-    width: 163
+    width: 158
     height: 40
   itemId: 4
   blockName: BlockMenosFrascoO
@@ -29422,7 +29485,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -11.292671
     y: 99.34146
-    width: 152
+    width: 146
     height: 40
   itemId: 9
   blockName: BlockMaisFrascoC
@@ -29445,7 +29508,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: -34.463394
     y: 28.60978
-    width: 163
+    width: 157
     height: 40
   itemId: 8
   blockName: BlockMenosFrascoC
@@ -29583,7 +29646,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 601.21954
     y: 27.47792
-    width: 150
+    width: 145
     height: 40
   itemId: 12
   blockName: botaoProntoBlock
@@ -31603,6 +31666,57 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1186889381}
+--- !u!1 &1189339562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1189339563}
+  - 114: {fileID: 1189339564}
+  m_Layer: 0
+  m_Name: Tela_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1189339563
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1189339562}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 546384571}
+  m_Father: {fileID: 712335998}
+  m_RootOrder: 1
+--- !u!114 &1189339564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1189339562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1dba0b27b0864740a8720e920aa88c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeout: 5
+  ignored: 1
+  succeedAfterAllAssertionsAreExecuted: 0
+  expectException: 0
+  expectedExceptionList: 
+  succeedWhenExceptionIsThrown: 0
+  includedPlatforms: -1
+  platformsToIgnore: []
+  dynamic: 0
+  dynamicTypeName: 
 --- !u!1 &1189477606
 GameObject:
   m_ObjectHideFlags: 0
