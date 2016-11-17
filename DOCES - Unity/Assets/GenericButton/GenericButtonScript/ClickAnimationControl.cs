@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using Fungus;
@@ -11,6 +11,8 @@ public class ClickAnimationControl : MonoBehaviour {
 	private int stage = 0;
 	private bool isMouseOver = false;
 	private bool clicked = false;
+	private bool fake_clickUp;
+	private bool fake_clickDown;
 	private SpriteRenderer rend;
 
 	[SerializeField] private Fungus.Flowchart flowchart;
@@ -28,7 +30,7 @@ public class ClickAnimationControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (isMouseOver && Input.GetMouseButtonDown(0)) {
+		if (isMouseOver && (fake_clickDown || Input.GetMouseButtonDown(0))) {
 			setMouseStatus (2);
 			clicked = true;
 
@@ -46,7 +48,7 @@ public class ClickAnimationControl : MonoBehaviour {
 				}
 			}
 
-		} else if(clicked && Input.GetMouseButtonUp(0)) {
+		} else if(clicked && (fake_clickUp || Input.GetMouseButtonUp(0))) {
 			
 			clicked = false;
 
@@ -114,6 +116,16 @@ public class ClickAnimationControl : MonoBehaviour {
 
 		if (changeSpriteWhileClick) {
 			rend.sprite = buttonSprites [0];
+		}
+	}
+
+	public void fakeClick(bool up){
+		if(!up){
+			fake_clickUp = false;
+			fake_clickDown = true;
+		}else{
+			fake_clickUp = true;
+			fake_clickDown = false;
 		}
 	}
 }
