@@ -29,11 +29,11 @@ public class teste10_botoesExternos : MonoBehaviour
 	public IEnumerator checa_acesso_creditos(){
 			obj = GameObject.Find("CreditsButton");
 			ClickAnimationControl component = obj.GetComponent<ClickAnimationControl>();		
-			Debug.Log("Int Teste 2: Estado 1");
+			Debug.Log("Int Teste 10: Estado 1");
 	    	component.OnMouseEnter();
 			component.fakeClick(false);		
 	    	yield return WaitFor.Frames(2); 	    	
-	    	Debug.Log("Int Teste 2: Estado 2");
+	    	Debug.Log("Int Teste 10: Estado 2");
 			component.fakeClick(true);
 			component.OnMouseExit();
 			IntegrationTest.Pass(gameObject);
@@ -42,11 +42,11 @@ public class teste10_botoesExternos : MonoBehaviour
 	public IEnumerator checa_acesso_projeto(){
 			obj = GameObject.Find("ProjectPageButton");
 			ClickAnimationControl component = obj.GetComponent<ClickAnimationControl>();		
-			Debug.Log("Int Teste 2: Estado 3");
+			Debug.Log("Int Teste 10: Estado 3");
 	    	component.OnMouseEnter();
 			component.fakeClick(false);		
 	    	yield return WaitFor.Frames(2); 	    	
-	    	Debug.Log("Int Teste 2: Estado 4");
+	    	Debug.Log("Int Teste 10: Estado 4");
 			component.fakeClick(true);
 			component.OnMouseExit();
 			IntegrationTest.Pass(gameObject);
