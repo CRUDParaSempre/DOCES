@@ -33,12 +33,12 @@ public class ClientManager : MonoBehaviour {
 		get {  return _difficulty; }
 	}
 
-	[SerializeField] private List<float> difficultyRatio = null;
-	[SerializeField] private List<int> maxGoals = null;
-	[SerializeField] private List<int> _goals = null;
-	public List<int> goals {
-		get {  return _goals; }
-	}
+//	[SerializeField] private List<float> difficultyRatio = null;
+//	[SerializeField] private List<int> maxGoals = null;
+//	[SerializeField] private List<int> _goals = null;
+//	public List<int> goals {
+//		get {  return _goals; }
+//	}
 
 	private List<string> projectTexts = new List<string>();
 	private int index=0;
@@ -157,29 +157,29 @@ public class ClientManager : MonoBehaviour {
 		showClient ("Baixa");
 	}
 
-	private void determineDifficulty() {
-		if (difficulty.ToLower ().CompareTo ("baixa") == 0) {
-			for (int i = 0; i < maxGoals.Count; i++) {
-				_goals [i] = (int)Mathf.Round(maxGoals [i] * difficultyRatio [0]);
-			}
-
-		} else if (difficulty.ToLower ().CompareTo ("média") == 0) {
-			for (int i = 0; i < maxGoals.Count; i++) {
-				_goals [i] = (int)Mathf.Round(maxGoals [i] * difficultyRatio [1]);
-			}
-
-		} else if (difficulty.ToLower ().CompareTo ("alta") == 0) {
-			for (int i = 0; i < maxGoals.Count; i++) {
-				_goals [i] = (int)Mathf.Round(maxGoals [i] * difficultyRatio [2]);
-			}
-
-		} else if (difficulty.ToLower ().CompareTo ("altíssima") == 0) {
-			for (int i = 0; i < maxGoals.Count; i++) {
-				_goals [i] = (int)Mathf.Round(maxGoals [i] * difficultyRatio [3]);
-			}
-
-		}
-	}
+//	private void determineDifficulty() {
+//		if (difficulty.ToLower ().CompareTo ("baixa") == 0) {
+//			for (int i = 0; i < maxGoals.Count; i++) {
+//				_goals [i] = (int)Mathf.Round(maxGoals [i] * difficultyRatio [0]);
+//			}
+//
+//		} else if (difficulty.ToLower ().CompareTo ("média") == 0) {
+//			for (int i = 0; i < maxGoals.Count; i++) {
+//				_goals [i] = (int)Mathf.Round(maxGoals [i] * difficultyRatio [1]);
+//			}
+//
+//		} else if (difficulty.ToLower ().CompareTo ("alta") == 0) {
+//			for (int i = 0; i < maxGoals.Count; i++) {
+//				_goals [i] = (int)Mathf.Round(maxGoals [i] * difficultyRatio [2]);
+//			}
+//
+//		} else if (difficulty.ToLower ().CompareTo ("altíssima") == 0) {
+//			for (int i = 0; i < maxGoals.Count; i++) {
+//				_goals [i] = (int)Mathf.Round(maxGoals [i] * difficultyRatio [3]);
+//			}
+//
+//		}
+//	}
 
 	private string moneyToString(int payment) {
 		string parsing = payment.ToString ();
@@ -204,9 +204,9 @@ public class ClientManager : MonoBehaviour {
 	}
 
 	public void acceptClient() {
-		determineDifficulty ();
+//		determineDifficulty ();
 
-		GameStateManager.Instance.newClientAccepted(deadline,payment,goals);
+		GameStateManager.Instance.newClientAccepted(clientName,deadline,payment, _difficulty);
 		this.gameObject.SetActive (false);
 	}
 
@@ -218,8 +218,8 @@ public class ClientManager : MonoBehaviour {
 	public void randomizeClientByDifficulty(string difficulty){
 		projectCSV.Load (projectCSV.file);
 
-		int random = Random.Range (0,3);
-		List<string> infos = projectCSV.getInfo (difficulty, random);
+		int random = Random.Range (0,4);
+		List<string> infos = projectCSV.getInfo ("Baixa", 4);
 
 		clientImageID = int.Parse (infos[0]);
 
