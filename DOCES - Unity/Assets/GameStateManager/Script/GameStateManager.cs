@@ -408,7 +408,7 @@ public class GameStateManager : MonoBehaviour {
 	}
 
 	//oferece novo cliente para o player
-	private void newClient() {
+	public void newClient() {
 		cameraFlowchart.ExecuteBlock (shakeScreenBlock);
 		clientWeek = currentWeek;
 		hasClient = true;

@@ -10,10 +10,11 @@ echo ''
 echo "=============  Comprimindo arquivos gerados ================="
 echo ''
 echo ''
-ls ${PWD} -lah
-ls ${PWD}/Build/ -lah
-ls ${PWD}/Build/Web -lah
-tar -zcf web_build.tar ${PWD}/Build/Web
+
+ls "web2000"
+
+name=$( date +web_build_%Y%m%d%H%M%S.tar ) 
+tar -zcf $name "${PWD}/web2000/*"
 
 echo ''
 echo ''
@@ -21,11 +22,4 @@ echo "=============  Enviando arquivo comprimido para servidor ================"
 echo ''
 echo ''
 
-ftp -n $HOST <<END_SCRIPT
-quote USER $USER
-quote PASS $PASSWD
-cd $REMOTEPATH
-put web_build.tar
-quit
-END_SCRIPT
-exit 0
+curl -F "uploadedfile=@${name}" http://homepages.dcc.ufmg.br/~juniocezar/games/minhaempresa/builds/uploads.php

@@ -11,6 +11,8 @@ public class VolumeButtonAnim : MonoBehaviour {
 	private int stage = 0;
 	private bool isMouseOver = false;
 	private bool clicked = false;
+	private bool fake_clickUp;
+	private bool fake_clickDown;
 	private SpriteRenderer rend;
 	private List<Sprite> buttonSprites = new List<Sprite>(); // 0 not selected, 1 selected, 2 pressed
 
@@ -31,7 +33,7 @@ public class VolumeButtonAnim : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (isMouseOver && Input.GetMouseButtonDown(0)) {
+		if (isMouseOver &&  (fake_clickDown || Input.GetMouseButtonDown(0))) {
 			setMouseStatus (2);
 			clicked = true;
 
@@ -49,7 +51,7 @@ public class VolumeButtonAnim : MonoBehaviour {
 				}
 			}
 
-		} else if(clicked && Input.GetMouseButtonUp(0)) {
+		} else if(clicked && (fake_clickUp || Input.GetMouseButtonUp(0))) {
 			
 			clicked = false;
 
@@ -129,5 +131,15 @@ public class VolumeButtonAnim : MonoBehaviour {
 		}
 
 		rend.sprite = buttonSprites [0];
+	}
+
+	public void fakeClick(bool up){
+		if(!up){
+			fake_clickUp = false;
+			fake_clickDown = true;
+		}else{
+			fake_clickUp = true;
+			fake_clickDown = false;
+		}
 	}
 }

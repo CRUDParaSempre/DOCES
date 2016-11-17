@@ -9,12 +9,12 @@ before_install:
 - chmod +x ./Testes/instalador.sh
 
 before_script: 
-- chmod +x ./Testes/compilador.sh
+- chmod +x ./Testes/testes.sh
 - chmod +x ./Testes/upload.sh
 
 
 install:
 - ./Testes/instalador.sh
 script:
-- travis_wait 50 ./Testes/compilador.sh
+- travis_wait 50 ./Testes/testes.sh
 - travis_wait 20 ./Testes/upload.sh

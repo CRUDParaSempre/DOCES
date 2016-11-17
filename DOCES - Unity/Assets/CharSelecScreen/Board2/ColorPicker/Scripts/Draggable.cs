@@ -26,7 +26,7 @@ public class Draggable : MonoBehaviour
 		}
 	}
 
-	void SetDragPoint(Vector3 point)
+	public void SetDragPoint(Vector3 point)
 	{
 		point = (Vector3.one - point) * GetComponent<Collider>().bounds.size.x + GetComponent<Collider>().bounds.min;
 		SetThumbPosition(point);
