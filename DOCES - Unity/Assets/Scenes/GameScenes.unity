@@ -100,7 +100,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2517033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3759,7 +3759,7 @@ MonoBehaviour:
   scrollPos: {x: 54.046387, y: 52.42729}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 434
+  blockViewHeight: 244
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -3769,7 +3769,7 @@ MonoBehaviour:
     height: 928
   selectedBlock: {fileID: 141515391}
   selectedCommands:
-  - {fileID: 141515414}
+  - {fileID: 141515390}
   variables:
   - {fileID: 141515399}
   - {fileID: 141515407}
@@ -9816,7 +9816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 141515389}
+  selectedFlowchart: {fileID: 925788254}
 --- !u!4 &395558029
 Transform:
   m_ObjectHideFlags: 1
@@ -15439,6 +15439,7 @@ Transform:
   - {fileID: 2107677797}
   - {fileID: 1189339563}
   - {fileID: 1149559305}
+  - {fileID: 1437419802}
   m_Father: {fileID: 2517034}
   m_RootOrder: 0
 --- !u!114 &712335999
@@ -20938,7 +20939,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 576
     y: 70
-    width: 133
+    width: 128
     height: 40
   itemId: 3
   blockName: NoButtonBlock
@@ -20962,7 +20963,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 67
     y: 70
-    width: 167
+    width: 159
     height: 40
   itemId: 0
   blockName: PreviousButtonBlock
@@ -20987,16 +20988,16 @@ MonoBehaviour:
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 1
+  zoom: 0.7939875
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1501
     height: 859
-  selectedBlock: {fileID: 925788252}
+  selectedBlock: {fileID: 925788255}
   selectedCommands:
-  - {fileID: 925788257}
+  - {fileID: 925788258}
   variables: []
   description: 
   stepPause: 0
@@ -21023,7 +21024,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 417
     y: 70
-    width: 138
+    width: 132
     height: 40
   itemId: 2
   blockName: YesButtonBlock
@@ -21046,7 +21047,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 254
     y: 70
-    width: 144
+    width: 138
     height: 40
   itemId: 1
   blockName: NextButtonBlock
@@ -31553,7 +31554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1185932374
 Transform:
   m_ObjectHideFlags: 0
@@ -31719,6 +31720,68 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1186889381}
+--- !u!1 &1187065518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1187065519}
+  - 114: {fileID: 1187065521}
+  - 114: {fileID: 1187065520}
+  m_Layer: 0
+  m_Name: teste07_quiz
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1187065519
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1187065518}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1437419802}
+  m_RootOrder: 1
+--- !u!114 &1187065520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1187065518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d038506fb5e34019acb9a84f0d598ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1187065521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1187065518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1dba0b27b0864740a8720e920aa88c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeout: 50
+  ignored: 0
+  succeedAfterAllAssertionsAreExecuted: 0
+  expectException: 0
+  expectedExceptionList: 
+  succeedWhenExceptionIsThrown: 0
+  includedPlatforms: -1
+  platformsToIgnore: []
+  dynamic: 0
+  dynamicTypeName: 
 --- !u!1 &1189339562
 GameObject:
   m_ObjectHideFlags: 0
@@ -33930,6 +33993,68 @@ SpriteRenderer:
   m_Color: {r: 0.8509804, g: 0.827451, b: 0.7882353, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1295203406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1295203407}
+  - 114: {fileID: 1295203408}
+  - 114: {fileID: 1295203409}
+  m_Layer: 0
+  m_Name: teste06_loja
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1295203407
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1295203406}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1437419802}
+  m_RootOrder: 0
+--- !u!114 &1295203408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1295203406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1dba0b27b0864740a8720e920aa88c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeout: 30
+  ignored: 0
+  succeedAfterAllAssertionsAreExecuted: 0
+  expectException: 0
+  expectedExceptionList: 
+  succeedWhenExceptionIsThrown: 0
+  includedPlatforms: -1
+  platformsToIgnore: []
+  dynamic: 0
+  dynamicTypeName: 
+--- !u!114 &1295203409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1295203406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07adecbdeb87b4bc6b55b7d578ad6b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1297306038
 GameObject:
   m_ObjectHideFlags: 0
@@ -36678,6 +36803,58 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1436602281}
+--- !u!1 &1437419801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1437419802}
+  - 114: {fileID: 1437419803}
+  m_Layer: 0
+  m_Name: Tela_4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1437419802
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1437419801}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1295203407}
+  - {fileID: 1187065519}
+  m_Father: {fileID: 712335998}
+  m_RootOrder: 3
+--- !u!114 &1437419803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1437419801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1dba0b27b0864740a8720e920aa88c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeout: 5
+  ignored: 0
+  succeedAfterAllAssertionsAreExecuted: 0
+  expectException: 0
+  expectedExceptionList: 
+  succeedWhenExceptionIsThrown: 0
+  includedPlatforms: -1
+  platformsToIgnore: []
+  dynamic: 0
+  dynamicTypeName: 
 --- !u!1 &1443591070
 GameObject:
   m_ObjectHideFlags: 0
@@ -38305,7 +38482,7 @@ MonoBehaviour:
   value: 0
 --- !u!114 &1541461020
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1541461017}
@@ -38359,7 +38536,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 69
     y: 70
-    width: 146
+    width: 140
     height: 40
   itemId: 0
   blockName: DoorButtonBlock
@@ -49322,7 +49499,7 @@ MonoBehaviour:
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 207
-  zoom: 0.99099946
+  zoom: 0.6929813
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -50570,7 +50747,7 @@ MonoBehaviour:
     y: -350
     width: 1547
     height: 1024
-  selectedBlock: {fileID: 0}
+  selectedBlock: {fileID: 2001343609}
   selectedCommands: []
   variables:
   - {fileID: 2001343582}
@@ -51015,7 +51192,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 168
     y: 205
-    width: 164
+    width: 157
     height: 40
   itemId: 2
   blockName: ConfirmButtonBlock
@@ -51038,7 +51215,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 157
     y: 133
-    width: 180
+    width: 170
     height: 40
   itemId: 1
   blockName: EmployeesButtonBlock
@@ -51070,7 +51247,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 168
     y: 62
-    width: 148
+    width: 143
     height: 40
   itemId: 0
   blockName: ToolsButtonBlock
