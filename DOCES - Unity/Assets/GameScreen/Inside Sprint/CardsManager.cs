@@ -114,26 +114,31 @@ public class CardsManager : MonoBehaviour {
 	}
 
 	public static string abreviateMoney(string price) {
+		string result = "";
+
 		if (price.Length == 4) {
 			if (int.Parse (price.ToString())%1000 > 0) {
-				return ("+" + price[0].ToString() + "K");
+				result =  ("+" + price[0].ToString() + "K");
 			
 			} else {
-				return (price[0].ToString() + "K");
+				result = (price[0].ToString() + "K");
 			}
 
 		} else if (price.Length == 5) {
 			if (int.Parse (price.ToString ()) % 10000 > 0) {
-				return ("+" + price [0].ToString () + price [1].ToString () + "K");
+				result =  ("+" + price [0].ToString () + price [1].ToString () + "K");
 			} else {
-				return (price [0].ToString () + price [1].ToString () + "K");
+				result =  (price [0].ToString () + price [1].ToString () + "K");
 			}
 		} else if (price.Length < 4) {
-			return price;
+			result =  price;
 		}
 
-		Debug.LogError ("Valor nao válido");
-		return "";
+		if (result.Length == 0) {
+			Debug.LogError ("Valor nao válido");
+		}
+
+		return result;
 	}
 
 	private void setCardStyle(GameObject card, string typeId) {
