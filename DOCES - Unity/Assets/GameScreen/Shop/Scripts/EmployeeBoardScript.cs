@@ -23,6 +23,8 @@ public class EmployeeBoardScript : MonoBehaviour {
     private int _idx = 0;
     private int _nb_itens;
 
+	[SerializeField] private WarningManager warning;
+
     // Tem algum item selecionado?
     private bool selected = false;
     // Se sim, ele está visivel?
@@ -153,6 +155,9 @@ public class EmployeeBoardScript : MonoBehaviour {
             gsm.frascoO += _organizacoes[index];
             gsm.frascoL += _logicas[index];
             gsm.frascoC += _criatividades[index];
-        }
+		} else {
+
+			warning.showWarning ("Você não tem golpinhos suficientes para contratar este funcionário!\nTrabalhe mais para não continuar pobre!");
+		}
     }
 }

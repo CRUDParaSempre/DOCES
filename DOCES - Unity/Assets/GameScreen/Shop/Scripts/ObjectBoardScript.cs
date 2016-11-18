@@ -34,6 +34,8 @@ public class ObjectBoardScript : MonoBehaviour {
 
 	private bool call_start = false;
 
+	[SerializeField] private WarningManager warning;
+
 	// Tem algum item selecionado?
 	private bool selected = false;
 	// Se sim, ele está visivel?
@@ -203,51 +205,54 @@ public class ObjectBoardScript : MonoBehaviour {
         var preco = _precos[index];
 		var dinheiro = gsm.golpinhos;
         var tipo = _tipos[index];
-        if (dinheiro - preco > 0) {
-            if (tipo == 0) {
-                // pc
-                if (curr_pc_idx > -1) {
-                    var org = _organizacoes[curr_pc_idx];
-                    var logi = _logicas[curr_pc_idx];
-                    var cri = _criatividades[curr_pc_idx];
+		if (dinheiro - preco > 0) {
+			if (tipo == 0) {
+				// pc
+				if (curr_pc_idx > -1) {
+					var org = _organizacoes [curr_pc_idx];
+					var logi = _logicas [curr_pc_idx];
+					var cri = _criatividades [curr_pc_idx];
 
-                    gsm.frascoO -= org;
-                    gsm.frascoL -= logi;
-                    gsm.frascoC -= cri;
-                }
-                notebook.sprite = _renderers[index];
-                curr_pc_idx = index;
-            } else if (tipo == 1) {
-                // cadeira
-                if (curr_cadeira_idx > -1) {
-                    var org = _organizacoes[curr_cadeira_idx];
-                    var logi = _logicas[curr_cadeira_idx];
-                    var cri = _criatividades[curr_cadeira_idx];
+					gsm.frascoO -= org;
+					gsm.frascoL -= logi;
+					gsm.frascoC -= cri;
+				}
+				notebook.sprite = _renderers [index];
+				curr_pc_idx = index;
+			} else if (tipo == 1) {
+				// cadeira
+				if (curr_cadeira_idx > -1) {
+					var org = _organizacoes [curr_cadeira_idx];
+					var logi = _logicas [curr_cadeira_idx];
+					var cri = _criatividades [curr_cadeira_idx];
 
-                    gsm.frascoO -= org;
-                    gsm.frascoL -= logi;
-                    gsm.frascoC -= cri;
-                }
-                cadeira.sprite = _renderers[index];
-                curr_cadeira_idx = index;
-            } else if (tipo == 2) {
-                // mesa
-                if (curr_mesa_idx > -1) {
-                    var org = _organizacoes[curr_mesa_idx];
-                    var logi = _logicas[curr_mesa_idx];
-                    var cri = _criatividades[curr_mesa_idx];
+					gsm.frascoO -= org;
+					gsm.frascoL -= logi;
+					gsm.frascoC -= cri;
+				}
+				cadeira.sprite = _renderers [index];
+				curr_cadeira_idx = index;
+			} else if (tipo == 2) {
+				// mesa
+				if (curr_mesa_idx > -1) {
+					var org = _organizacoes [curr_mesa_idx];
+					var logi = _logicas [curr_mesa_idx];
+					var cri = _criatividades [curr_mesa_idx];
 
-                    gsm.frascoO -= org;
-                    gsm.frascoL -= logi;
-                    gsm.frascoC -= cri;
-                }
-                mesa.sprite = _renderers[index];
-                curr_mesa_idx = index;
-            }
-            deselectItem();
-            gsm.frascoO += _organizacoes[index];
-            gsm.frascoL += _logicas[index];
-            gsm.frascoC += _criatividades[index];
-        }
+					gsm.frascoO -= org;
+					gsm.frascoL -= logi;
+					gsm.frascoC -= cri;
+				}
+				mesa.sprite = _renderers [index];
+				curr_mesa_idx = index;
+			}
+			deselectItem ();
+			gsm.frascoO += _organizacoes [index];
+			gsm.frascoL += _logicas [index];
+			gsm.frascoC += _criatividades [index];
+		} else {
+
+			warning.showWarning ("Você não tem golpinhos suficientes para comprar este objeto!\nTrabalhe mais para não continuar pobre!");
+		}
     }
 }

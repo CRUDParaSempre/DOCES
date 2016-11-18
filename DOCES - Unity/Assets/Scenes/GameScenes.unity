@@ -38938,6 +38938,7 @@ MonoBehaviour:
   - {fileID: 1163084913}
   - {fileID: 910806279}
   - {fileID: 1486911376}
+  warning: {fileID: 133153659}
 --- !u!114 &1393928173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39013,6 +39014,7 @@ MonoBehaviour:
   - {fileID: 1163084913}
   - {fileID: 910806279}
   - {fileID: 1486911376}
+  warning: {fileID: 133153659}
 --- !u!1 &1398769798
 GameObject:
   m_ObjectHideFlags: 0
