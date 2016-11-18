@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿//Created by Marcelo Gomes  | Revised by: Mariana Silva
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,6 +18,8 @@ public class ResultsManager : MonoBehaviour {
 	[SerializeField]private int maxGoalMarkerX=390;
 
 	[SerializeField] private AudioSource computingSound=null;
+	[SerializeField] private AudioSource correctSound=null;
+	[SerializeField] private AudioSource wrongSound=null;
 	[SerializeField] private float timeBetweenAudios=.5f;
 	private float realTimeBetweenAudios=0f;
 	private float lastAudioTime=0f;
@@ -80,11 +83,16 @@ public class ResultsManager : MonoBehaviour {
 				projectAreasGoalAchieved [currentProjectArea].sprite = resultIcons [0];
 				projectAreasGoalAchieved [currentProjectArea].color = resultIconColors[0];
 				count++;
+				correctSound.Play();
 
 			} else {
 				projectAreasGoalAchieved [currentProjectArea].sprite = resultIcons [1];
 				projectAreasGoalAchieved [currentProjectArea].color = resultIconColors[1];
+				wrongSound.Play();
 			}
+
+			wrongSound.Stop();
+			correctSound.Stop();
 
 
 			if (++currentProjectArea == GameStateManager.Instance.projectGoals.Count) {
@@ -92,6 +100,7 @@ public class ResultsManager : MonoBehaviour {
 				readyButton.SetActive (true);
 
 			}
+
 
 			firstAnimationTime = Time.time + 1f;
 		}
@@ -137,7 +146,7 @@ public class ResultsManager : MonoBehaviour {
 
 		clientNameUI.text = GameStateManager.Instance.clientName;
 		payment = GameStateManager.Instance.projectPayment;
-		paymentUI.text = "G$ +" + (payment.ToString());
+		paymentUI.text = "G$ +" + (GameStateManager.Instance.moneyToString(payment));
 
 		GameStateManager.Instance.calculateProjectGoals ();
 

@@ -57,7 +57,7 @@ public class GameStateManager : MonoBehaviour {
 	[SerializeField] private int _bonusOrg = 0;
 
 	private int _gender = 0;
-	private int _golpinhos = 100;
+	private int _golpinhos = 1000;
 
 	private List<Color> _colorIds = new List<Color> (){Color.white,Color.white,Color.white,Color.white,Color.white,Color.white}; //0 = skin, 1 = eyes, 2 = hair, 3 = shirt, 4 = pants, 5 = shoes
 	[SerializeField] private CardsManager cardsManager;
@@ -106,8 +106,6 @@ public class GameStateManager : MonoBehaviour {
 	}
 
 	[SerializeField] private GameObject resultsCanvas;
-
-
 
 	public Text weekUI;
 	public Text monthYearUI;
@@ -233,7 +231,7 @@ public class GameStateManager : MonoBehaviour {
 	void Update () {
 		if (gameState == GameState.GameOffice) {
 			
-			golpinhosUI.text = "G$ " + _golpinhos.ToString();
+			golpinhosUI.text = "G$ " + moneyToString(_golpinhos);
 			credibilidadeUI.text = _credibility.ToString();
 
 			if (canCreateClient ()) {
@@ -709,12 +707,34 @@ public class GameStateManager : MonoBehaviour {
 
 	public void finalResults(int golpinhos, int credibility) {
 		_golpinhos += golpinhos;
-		golpinhosUI.text = "G$ " + _golpinhos.ToString();
+		golpinhosUI.text = "G$ " + moneyToString(_golpinhos);
 		_credibility += credibility;
 		credibilidadeUI.text = _credibility.ToString();
 
 		setGameState (GameState.GameOffice);
 		resultsCanvas.SetActive (false);
+	}
+
+	public string moneyToString(int payment) {
+		string parsing = payment.ToString ();
+		string reverseResult = "00,";
+		int count = 0;
+		//3210
+		//2000
+		for (int i = parsing.Length-1 ; i >= 0 ; i--) {
+			if (count++ % 3 == 0 && i !=parsing.Length-1 ) {
+				reverseResult += ("." + parsing [i]);
+			} else {
+				reverseResult += parsing [i];
+			}
+		}
+
+		string result = "";
+		for (int i = reverseResult.Length - 1; i >= 0; i--) {
+			result += reverseResult [i];
+		}
+
+		return result;
 	}
 }
 

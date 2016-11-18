@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿//Created by Marcelo Gomes  | Revised by: Mariana Silva
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -72,8 +73,7 @@ public class ClientManager : MonoBehaviour {
 		titleText.text = clientName;
 
 		//make last page (project information)
-		projectTexts.Add("Cliente: "+ clientName +".\nDificuldade: " + difficulty + ".\nPrazo de entrega: " + deadline + " semanas.\nPagamento: G$ " + moneyToString(payment) );
-
+		projectTexts.Add("Cliente: "+ clientName +".\nDificuldade: " + difficulty + ".\nPrazo de entrega: " + deadline + " semanas.\nPagamento: G$ " + GameStateManager.Instance.moneyToString(payment) );
 
 		//make previous tip unavailable
 		previousButton.color = halfTransparent;
@@ -181,27 +181,27 @@ public class ClientManager : MonoBehaviour {
 //		}
 //	}
 
-	private string moneyToString(int payment) {
-		string parsing = payment.ToString ();
-		string reverseResult = "00,";
-		int count = 0;
-		//3210
-		//2000
-		for (int i = parsing.Length-1 ; i >= 0 ; i--) {
-			if (count++ % 3 == 0 && i !=parsing.Length-1 ) {
-				reverseResult += ("." + parsing [i]);
-			} else {
-				reverseResult += parsing [i];
-			}
-		}
-
-		string result = "";
-		for (int i = reverseResult.Length - 1; i >= 0; i--) {
-			result += reverseResult [i];
-		}
-
-		return result;
-	}
+//	private string moneyToString(int payment) {
+//		string parsing = payment.ToString ();
+//		string reverseResult = "00,";
+//		int count = 0;
+//		//3210
+//		//2000
+//		for (int i = parsing.Length-1 ; i >= 0 ; i--) {
+//			if (count++ % 3 == 0 && i !=parsing.Length-1 ) {
+//				reverseResult += ("." + parsing [i]);
+//			} else {
+//				reverseResult += parsing [i];
+//			}
+//		}
+//
+//		string result = "";
+//		for (int i = reverseResult.Length - 1; i >= 0; i--) {
+//			result += reverseResult [i];
+//		}
+//
+//		return result;
+//	}
 
 	public void acceptClient() {
 //		determineDifficulty ();

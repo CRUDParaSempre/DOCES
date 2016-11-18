@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿//Created by Marcelo Gomes  | Revised by: Mariana Silva
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -114,10 +115,19 @@ public class CardsManager : MonoBehaviour {
 
 	public static string abreviateMoney(string price) {
 		if (price.Length == 4) {
-			return (price[0].ToString() + "K");
+			if (int.Parse (price.ToString())%1000 > 0) {
+				return ("+" + price[0].ToString() + "K");
+			
+			} else {
+				return (price[0].ToString() + "K");
+			}
 
 		} else if (price.Length == 5) {
-			return (price[0].ToString() + price[1].ToString() + "K");
+			if (int.Parse (price.ToString ()) % 10000 > 0) {
+				return ("+" + price [0].ToString () + price [1].ToString () + "K");
+			} else {
+				return (price [0].ToString () + price [1].ToString () + "K");
+			}
 		} else if (price.Length < 4) {
 			return price;
 		}
