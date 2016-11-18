@@ -138,7 +138,12 @@ public class QuizManager : MonoBehaviour {
 				//status 3 = golpinhos
 				if (currentStatus == 3) {
 					pointsDistributed = Random.Range (0, pointsToDistribute);
-					pointsUI [currentStatus].text = "+" + CardsManager.abreviateMoney ((pointsDistributed*golpinhosPerPoint).ToString());
+					if ((CardsManager.abreviateMoney ((pointsDistributed * golpinhosPerPoint).ToString ())) [0].CompareTo ("+") == 0) {
+						pointsUI [currentStatus].text = CardsManager.abreviateMoney ((pointsDistributed * golpinhosPerPoint).ToString ());
+					} else {
+						pointsUI [currentStatus].text = "+" + CardsManager.abreviateMoney ((pointsDistributed * golpinhosPerPoint).ToString ());
+					}
+					
 					bonus [currentStatus] = pointsDistributed * golpinhosPerPoint;
 					Debug.Log ("Setei bonus["+currentStatus+"]= " + pointsDistributed * golpinhosPerPoint + " (" + bonus[currentStatus] +")");
 				} else {
