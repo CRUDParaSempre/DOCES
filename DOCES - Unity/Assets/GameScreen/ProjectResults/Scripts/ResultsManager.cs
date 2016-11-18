@@ -91,17 +91,13 @@ public class ResultsManager : MonoBehaviour {
 				wrongSound.Play();
 			}
 
-			wrongSound.Stop();
-			correctSound.Stop();
-
 
 			if (++currentProjectArea == GameStateManager.Instance.projectGoals.Count) {
 				calculateCredibility ();
 				readyButton.SetActive (true);
 
 			}
-
-
+	
 			firstAnimationTime = Time.time + 1f;
 		}
 	}
