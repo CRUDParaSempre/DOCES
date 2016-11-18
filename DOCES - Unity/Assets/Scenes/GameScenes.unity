@@ -8681,7 +8681,7 @@ MonoBehaviour:
   - 0.6
   - 0.8
   timeSpeed: 1
-  timePerWeek: 1
+  timePerWeek: 10
   _currentWeek: 0
   quizCanvas: {fileID: 520911358}
   quizQuestions: 0

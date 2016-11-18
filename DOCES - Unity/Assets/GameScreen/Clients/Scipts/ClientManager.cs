@@ -219,7 +219,7 @@ public class ClientManager : MonoBehaviour {
 		projectCSV.Load (projectCSV.file);
 
 		int random = Random.Range (0,4);
-		List<string> infos = projectCSV.getInfo ("Baixa", 4);
+		List<string> infos = projectCSV.getInfo (difficulty, random);
 
 		clientImageID = int.Parse (infos[0]);
 
