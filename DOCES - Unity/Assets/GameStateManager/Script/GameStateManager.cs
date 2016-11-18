@@ -111,6 +111,8 @@ public class GameStateManager : MonoBehaviour {
 
 	public Text weekUI;
 	public Text monthYearUI;
+	public Text golpinhosUI;
+	public Text credibilidadeUI;
 
 
 	public enum Colorable {
@@ -229,7 +231,10 @@ public class GameStateManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (gameState == GameState.GameOffice) { 
+		if (gameState == GameState.GameOffice) {
+			
+			golpinhosUI.text = "G$ " + _golpinhos.ToString();
+			credibilidadeUI.text = _credibility.ToString();
 
 			if (canCreateClient ()) {
 				newClient ();
@@ -240,6 +245,7 @@ public class GameStateManager : MonoBehaviour {
 			}
 		}
 	}
+
 
 	public void setLogoId (int logoId){
 		//Debug.Log ("Salvando logo Id " + logoId);
@@ -703,7 +709,9 @@ public class GameStateManager : MonoBehaviour {
 
 	public void finalResults(int golpinhos, int credibility) {
 		_golpinhos += golpinhos;
+		golpinhosUI.text = "G$ " + _golpinhos.ToString();
 		_credibility += credibility;
+		credibilidadeUI.text = _credibility.ToString();
 
 		setGameState (GameState.GameOffice);
 		resultsCanvas.SetActive (false);
