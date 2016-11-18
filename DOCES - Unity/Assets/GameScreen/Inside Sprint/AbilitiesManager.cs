@@ -47,6 +47,7 @@ public class AbilitiesManager : MonoBehaviour {
 		}
 
 		abilities [3].text = CardsManager.abreviateMoney( currentStats [3].ToString () );
+		Debug.Log ("GOLPINHOS: " + abilities [3].text);
 		if (currentStats [3] < originalStats [3]) {
 			abilities [3].color = reduced;
 		} else {

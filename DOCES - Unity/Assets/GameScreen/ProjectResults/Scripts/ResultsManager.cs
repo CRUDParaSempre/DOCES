@@ -32,10 +32,12 @@ public class ResultsManager : MonoBehaviour {
 
 	private int currentProjectArea = 0;
 	private bool animationFinished = false;
+	private bool resultsFinished = false;
 	private int count = 0;
 	private int payment;
 	private int credibility;
 	private List<int> finalScores = new List<int>();
+	public GameObject readyButton;
 
 	//distancia/tempo 	|\
 	//  				| \
@@ -87,6 +89,8 @@ public class ResultsManager : MonoBehaviour {
 
 			if (++currentProjectArea == GameStateManager.Instance.projectGoals.Count) {
 				calculateCredibility ();
+				readyButton.SetActive (true);
+
 			}
 
 			firstAnimationTime = Time.time + 1f;

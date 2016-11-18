@@ -57,7 +57,7 @@ public class GameStateManager : MonoBehaviour {
 	[SerializeField] private int _bonusOrg = 0;
 
 	private int _gender = 0;
-	private int _golpinhos = 10000;
+	private int _golpinhos = 100;
 
 	private List<Color> _colorIds = new List<Color> (){Color.white,Color.white,Color.white,Color.white,Color.white,Color.white}; //0 = skin, 1 = eyes, 2 = hair, 3 = shirt, 4 = pants, 5 = shoes
 	[SerializeField] private CardsManager cardsManager;
@@ -230,10 +230,8 @@ public class GameStateManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (gameState == GameState.GameOffice) { 
-			if (hasClient && clientWeek < currentWeek) {
-				removeClientProposal ();
-			
-			} else if (canCreateClient ()) {
+
+			if (canCreateClient ()) {
 				newClient ();
 			}
 
@@ -544,7 +542,7 @@ public class GameStateManager : MonoBehaviour {
 	}
 
 	public void setGameState(GameState state) {
-		Debug.Log ("Estado atual: " + _gameState + " Proximo estado: " + state );
+		//Debug.Log ("Estado atual: " + _gameState + " Proximo estado: " + state );
 		if (_gameState == GameState.Menu && state == GameState.Selection) {
 			_gameState = state;
 		
@@ -576,7 +574,7 @@ public class GameStateManager : MonoBehaviour {
 //	}
 
 	public void addProjectScores(int score, int id) {
-		Debug.Log ("Adding " + score + " points to " + id);
+		//Debug.Log ("Adding " + score + " points to " + id);
 		_projectScores [id].Add(score);
 	}
 
@@ -604,7 +602,6 @@ public class GameStateManager : MonoBehaviour {
 		setGameState (GameState.GameQuiz);
 
 		quizQuestions = Random.Range (1,3);
-//		quizQuestions = 3;
 
 		_bonusCre = 0;
 		_bonusLog = 0;
@@ -636,7 +633,7 @@ public class GameStateManager : MonoBehaviour {
 	}
 
 	public void playerAnswered(List<int> bonus, bool isPlayerRight) {
-		Debug.Log ("Respondi uma pergunta!");
+	//	Debug.Log ("Respondi uma pergunta!");
 
 		if (isPlayerRight) {
 			_bonusCre += bonus [0];

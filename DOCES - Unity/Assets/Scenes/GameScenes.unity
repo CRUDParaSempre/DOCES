@@ -7358,9 +7358,19 @@ GameObject:
   - 114: {fileID: 251290612}
   - 114: {fileID: 251290581}
   - 114: {fileID: 251290579}
-  - 114: {fileID: 251290604}
   - 114: {fileID: 251290605}
   - 114: {fileID: 251290606}
+  - 114: {fileID: 251290607}
+  - 114: {fileID: 251290617}
+  - 114: {fileID: 251290604}
+  - 114: {fileID: 251290608}
+  - 114: {fileID: 251290609}
+  - 114: {fileID: 251290610}
+  - 114: {fileID: 251290611}
+  - 114: {fileID: 251290613}
+  - 114: {fileID: 251290614}
+  - 114: {fileID: 251290615}
+  - 114: {fileID: 251290616}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -7383,17 +7393,16 @@ MonoBehaviour:
   scrollPos: {x: 0, y: 0}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 400
+  blockViewHeight: 254
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
     x: -332
     y: -399
     width: 961
-    height: 909
-  selectedBlock: {fileID: 251290581}
-  selectedCommands:
-  - {fileID: 251290579}
+    height: 910
+  selectedBlock: {fileID: 251290580}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -7440,8 +7449,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 68
-    y: 70
+    x: 77
+    y: 66
     width: 120
     height: 40
   itemId: 0
@@ -7470,7 +7479,17 @@ MonoBehaviour:
   - {fileID: 251290588}
   - {fileID: 251290587}
   - {fileID: 251290586}
+  - {fileID: 251290617}
+  - {fileID: 251290616}
+  - {fileID: 251290615}
+  - {fileID: 251290614}
+  - {fileID: 251290613}
+  - {fileID: 251290611}
+  - {fileID: 251290610}
+  - {fileID: 251290609}
+  - {fileID: 251290608}
   - {fileID: 251290604}
+  - {fileID: 251290607}
 --- !u!114 &251290581
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -7979,19 +7998,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 251290577}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 37
+  itemId: 42
   errorMessage: 
   indentLevel: 0
-  _targetGameObject:
-    gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 2040106850}
-  activeState:
-    booleanRef: {fileID: 0}
-    booleanVal: 1
-  targetGameObjectOLD: {fileID: 0}
+  targetObject: {fileID: 1736617166}
+  targetComponentAssemblyName: CardClickManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: CardClickManager
+  targetMethod: setClick
+  targetMethodText: 'setClick (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!114 &251290605
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -8046,6 +8071,135 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
+--- !u!114 &251290607
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 251290577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd8c931f22994b9d90e2037fffaa770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 40
+  errorMessage: 
+  indentLevel: 0
+  _targetGameObject:
+    gameObjectRef: {fileID: 0}
+    gameObjectVal: {fileID: 2040106850}
+  activeState:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  targetGameObjectOLD: {fileID: 0}
+--- !u!114 &251290608
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 251290577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 43
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 277928687}
+  targetComponentAssemblyName: CardClickManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: CardClickManager
+  targetMethod: setClick
+  targetMethodText: 'setClick (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &251290609
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 251290577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 44
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 1039458812}
+  targetComponentAssemblyName: CardClickManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: CardClickManager
+  targetMethod: setClick
+  targetMethodText: 'setClick (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &251290610
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 251290577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 45
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 1931741119}
+  targetComponentAssemblyName: CardClickManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: CardClickManager
+  targetMethod: setClick
+  targetMethodText: 'setClick (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &251290611
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 251290577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 46
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 1236880549}
+  targetComponentAssemblyName: CardClickManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: CardClickManager
+  targetMethod: setClick
+  targetMethodText: 'setClick (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!114 &251290612
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -8067,6 +8221,141 @@ MonoBehaviour:
   targetComponentText: CardsManager
   targetMethod: fillCards
   targetMethodText: 'fillCards (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &251290613
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 251290577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 47
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 1554312377}
+  targetComponentAssemblyName: CardClickManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: CardClickManager
+  targetMethod: setClick
+  targetMethodText: 'setClick (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &251290614
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 251290577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 48
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 1623350918}
+  targetComponentAssemblyName: CardClickManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: CardClickManager
+  targetMethod: setClick
+  targetMethodText: 'setClick (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &251290615
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 251290577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 49
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 1829405424}
+  targetComponentAssemblyName: CardClickManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: CardClickManager
+  targetMethod: setClick
+  targetMethodText: 'setClick (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &251290616
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 251290577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 50
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 632088215}
+  targetComponentAssemblyName: CardClickManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: CardClickManager
+  targetMethod: setClick
+  targetMethodText: 'setClick (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &251290617
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 251290577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 41
+  errorMessage: 
+  indentLevel: 0
+  targetObject: {fileID: 1808714250}
+  targetComponentAssemblyName: CardClickManager, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: CardClickManager
+  targetMethod: setClick
+  targetMethodText: 'setClick (): Void'
   methodParameters: []
   saveReturnValue: 0
   returnValueVariableKey: 
@@ -8373,8 +8662,8 @@ MonoBehaviour:
   clientCanvas: {fileID: 1934179109}
   sprintCanvas: {fileID: 1703276234}
   doorButton: {fileID: 20776788}
-  _playerName: Jobso
-  _companyName: Jo
+  _playerName: 
+  _companyName: 
   _frascoO: 0
   _frascoL: 0
   _frascoC: 0
@@ -8723,7 +9012,7 @@ GameObject:
   - 224: {fileID: 296021560}
   m_Layer: 0
   m_Name: Results
-  m_TagString: Untagged
+  m_TagString: button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15653,6 +15942,8 @@ GameObject:
   - 114: {fileID: 653623857}
   - 114: {fileID: 653623858}
   - 114: {fileID: 653623859}
+  - 114: {fileID: 653623863}
+  - 114: {fileID: 653623861}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -15676,17 +15967,16 @@ MonoBehaviour:
   scrollPos: {x: 0, y: 0}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 400
+  blockViewHeight: 280
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
-    x: -343
-    y: -340
-    width: 1114
-    height: 859
-  selectedBlock: {fileID: 653623858}
-  selectedCommands:
-  - {fileID: 653623859}
+    x: -350
+    y: -375
+    width: 1121
+    height: 955
+  selectedBlock: {fileID: 0}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -15724,7 +16014,7 @@ MonoBehaviour:
   - {fileID: 653623859}
 --- !u!114 &653623859
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 653623856}
@@ -15762,6 +16052,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 929004282}
   m_RootOrder: 2
+--- !u!114 &653623861
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 653623856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff5d850a887844fe87ae7d366d3ab5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 0}
+--- !u!114 &653623863
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 653623856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff5d850a887844fe87ae7d366d3ab5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 0}
 --- !u!1 &653986483
 GameObject:
   m_ObjectHideFlags: 0
@@ -21490,11 +21804,11 @@ GameObject:
   - 82: {fileID: 878030552}
   m_Layer: 0
   m_Name: ReadyButton
-  m_TagString: Untagged
+  m_TagString: button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &878030549
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23110,6 +23424,7 @@ MonoBehaviour:
   timeBetweenAudios: 0.5
   timeBetweenAnimation: 0
   timeOfAnimation: 3
+  readyButton: {fileID: 878030548}
 --- !u!82 &929004287
 AudioSource:
   m_ObjectHideFlags: 0
