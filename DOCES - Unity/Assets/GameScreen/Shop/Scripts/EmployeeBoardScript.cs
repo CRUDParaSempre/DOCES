@@ -44,6 +44,7 @@ public class EmployeeBoardScript : MonoBehaviour {
 
         selectedItemWindow = -1;
         selectedItem = 0;
+		updateItens();
 
         for (var i = 0; i < funcionario.Count; ++i) {
             funcionario[i].gameObject.SetActive(false);
