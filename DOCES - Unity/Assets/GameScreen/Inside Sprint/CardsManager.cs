@@ -71,6 +71,8 @@ public class CardsManager : MonoBehaviour {
 			cardTexts [2].text = "+" + csvManager.getBonus(idToCardName(cardTypes[i]),id) + " em " + idToCardName(cardTypes[i]);
 			card.GetComponent<CardClickManager> ().bonusValue = int.Parse( csvManager.getBonus (idToCardName (cardTypes [i]), id));
 
+			GameStateManager.Instance.projectMaxGoals [cardTypes [i]] += card.GetComponent<CardClickManager> ().bonusValue;
+
 			cardTexts [1].text = csvManager.getDescription (idToCardName(cardTypes[i]),id);
 			cardTexts [3].text = costs[0].ToString();
 			cardTexts [4].text = costs[1].ToString();

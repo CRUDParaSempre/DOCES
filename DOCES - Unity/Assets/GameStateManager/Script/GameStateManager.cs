@@ -31,6 +31,12 @@ public class GameStateManager : MonoBehaviour {
 	public int projectStartWeek {
 		get { return clientWeek; }
 	}
+
+	private string _clientName;
+	public string clientName {
+		get { return _clientName; }
+	}
+
 	public bool hasClient = false;
 	[SerializeField] private GameObject clientCanvas;
 	[SerializeField] private GameObject sprintCanvas;
@@ -51,7 +57,7 @@ public class GameStateManager : MonoBehaviour {
 	[SerializeField] private int _bonusOrg = 0;
 
 	private int _gender = 0;
-	private int _golpinhos = 0;
+	private int _golpinhos = 100;
 
 	private List<Color> _colorIds = new List<Color> (){Color.white,Color.white,Color.white,Color.white,Color.white,Color.white}; //0 = skin, 1 = eyes, 2 = hair, 3 = shirt, 4 = pants, 5 = shoes
 	[SerializeField] private CardsManager cardsManager;
@@ -61,14 +67,19 @@ public class GameStateManager : MonoBehaviour {
 		get{ return _projectPayment; }
 	}
 
+	[SerializeField] private string _projectDifficulty = null;
+	public string projectDifficulty {
+		get{ return _projectDifficulty; }
+	}
+
 	[SerializeField] private int _projectDeadline = 0;
 	public int projectDeadline {
 		set { _projectDeadline = value; }
 		get { return _projectDeadline; }
 	}
 
-	[SerializeField] private List<int> _projectScores;
-	public List<int> projectScores {
+	[SerializeField] private List< List<int> > _projectScores;
+	public List< List<int> > projectScores {
 		get { return _projectScores; }
 	}
 
@@ -76,6 +87,13 @@ public class GameStateManager : MonoBehaviour {
 	public List<int> projectGoals {
 		get { return _projectGoals; }
 	}
+
+	[SerializeField] private List<int> _projectMaxGoals;
+	public List<int> projectMaxGoals {
+		get { return _projectMaxGoals; }
+	}
+
+	[SerializeField] private List<float> _difficultyRatio;
 
 	[SerializeField] private float timeSpeed = 1f;
 	[SerializeField] private float timePerWeek = 60f;
@@ -86,6 +104,8 @@ public class GameStateManager : MonoBehaviour {
 	public int currentWeek {
 		get { return _currentWeek; }
 	}
+
+	[SerializeField] private GameObject resultsCanvas;
 
 
 
@@ -201,16 +221,17 @@ public class GameStateManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		_projectScores = new List<List<int>> ();
+		for (int i = 0; i < 5; i++) {
+			_projectScores.Add (new List<int> ());
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (gameState == GameState.GameOffice) { 
-			if (hasClient && clientWeek < currentWeek) {
-				removeClientProposal ();
-			
-			} else if (canCreateClient ()) {
+
+			if (canCreateClient ()) {
 				newClient ();
 			}
 
@@ -521,7 +542,7 @@ public class GameStateManager : MonoBehaviour {
 	}
 
 	public void setGameState(GameState state) {
-		Debug.Log ("Estado atual: " + _gameState + " Proximo estado: " + state );
+		//Debug.Log ("Estado atual: " + _gameState + " Proximo estado: " + state );
 		if (_gameState == GameState.Menu && state == GameState.Selection) {
 			_gameState = state;
 		
@@ -546,15 +567,15 @@ public class GameStateManager : MonoBehaviour {
 		}
 	}
 
-	public void addProjectScores(List<int> scores) {
-		for (int i = 0; i < scores.Count; i++) {
-			_projectScores [i] += scores [i];
-		}
-	}
+//	public void addProjectScores(List<int> scores) {
+//		for (int i = 0; i < scores.Count; i++) {
+//			_projectScores [i] += scores [i];
+//		}
+//	}
 
 	public void addProjectScores(int score, int id) {
-		Debug.Log ("Adding " + score + " points to " + id);
-		_projectScores [id] += score;
+		//Debug.Log ("Adding " + score + " points to " + id);
+		_projectScores [id].Add(score);
 	}
 
 	public void addProjectScores(int score, string id) {
@@ -581,7 +602,6 @@ public class GameStateManager : MonoBehaviour {
 		setGameState (GameState.GameQuiz);
 
 		quizQuestions = Random.Range (1,3);
-//		quizQuestions = 3;
 
 		_bonusCre = 0;
 		_bonusLog = 0;
@@ -592,10 +612,16 @@ public class GameStateManager : MonoBehaviour {
 		}
 	}
 
-	public void newClientAccepted(int deadline, int payment, List<int> goals) {
+	public void newClientAccepted(string clientName, int deadline, int payment, string difficulty) {
+		_clientName = clientName;
 		_projectDeadline = deadline + currentWeek;
-		_projectGoals = goals;
+		_projectDifficulty = difficulty;
 		_projectPayment = payment;
+
+		for (int i = 0; i < _projectMaxGoals.Count; i++) {
+			_projectMaxGoals [i] = 0;
+		}
+
 		removeClientProposal ();
 
 		initializeQuiz ();
@@ -607,7 +633,7 @@ public class GameStateManager : MonoBehaviour {
 	}
 
 	public void playerAnswered(List<int> bonus, bool isPlayerRight) {
-		Debug.Log ("Respondi uma pergunta!");
+	//	Debug.Log ("Respondi uma pergunta!");
 
 		if (isPlayerRight) {
 			_bonusCre += bonus [0];
@@ -645,7 +671,42 @@ public class GameStateManager : MonoBehaviour {
 		//terminei o projeto
 		} else {
 			//inicializar a tela de resultados
+			setGameState(GameState.ProjectResults);
+
+			if (_gameState == GameState.ProjectResults) {
+				resultsCanvas.GetComponent<ResultsManager> ().showProjectResults ();
+			}
 		}
+	}
+
+	public void calculateProjectGoals() {
+		for (int i = 0; i < _projectGoals.Count; i++) {
+			_projectGoals [i] = (int)Mathf.Round( _projectMaxGoals [i] * _difficultyRatio [difficultyToId (_projectDifficulty)]);
+		}
+	}
+
+	private int difficultyToId(string difficulty) {
+		if (difficulty.ToLower ().CompareTo ("baixa") == 0) {
+			return 0;
+		
+		} else if (difficulty.ToLower ().CompareTo ("média") == 0) {
+			return 1;
+
+		} else if (difficulty.ToLower ().CompareTo ("alta") == 0) {
+			return 2;
+
+		}
+
+		Debug.LogError ("Dificuldade inválida (" + difficulty + ") !");
+		return 0;
+	}
+
+	public void finalResults(int golpinhos, int credibility) {
+		_golpinhos += golpinhos;
+		_credibility += credibility;
+
+		setGameState (GameState.GameOffice);
+		resultsCanvas.SetActive (false);
 	}
 }
 

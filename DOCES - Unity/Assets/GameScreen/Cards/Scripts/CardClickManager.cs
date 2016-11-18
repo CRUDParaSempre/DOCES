@@ -70,8 +70,6 @@ public class CardClickManager : MonoBehaviour {
 		if (Input.GetMouseButtonDown (0)) {
 			if ((_cardState== CardState.Zoomed || _cardState== CardState.SelectedAndZoomed)) {
 				zoomOutCard ();
-//				can.sortingOrder = 18; //ARRUMAR O TEMPO DO ZOOM!
-
 
 			} else if (isMouseOver && isClickable) {
 				if (Time.time - lastClickTime > clickInterval) {
@@ -105,7 +103,6 @@ public class CardClickManager : MonoBehaviour {
 
 			} else if (clicksCount == clicksToZoom && (_cardState== CardState.Activated || _cardState== CardState.Selected)) {
 //				Debug.Log ("Time: " + Time.time + " " + clicksCount + " " + _cardState);
-//				can.sortingOrder = 19;
 				zoomInCard ();
 				clicksCount = 0;
 			}
@@ -155,8 +152,11 @@ public class CardClickManager : MonoBehaviour {
 
 	public void activateCard() {
 		anim.SetBool ("activated", true);
-		isClickable = true;
 		_cardState= CardState.Activated;
+	}
+
+	public void setClick(){
+		isClickable = true;	
 	}
 
 	void OnMouseEnter() {
