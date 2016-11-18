@@ -421,7 +421,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &19039862
 Transform:
   m_ObjectHideFlags: 0
@@ -10973,7 +10973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 251290578}
+  selectedFlowchart: {fileID: 2001343581}
 --- !u!4 &395558029
 Transform:
   m_ObjectHideFlags: 1
@@ -11678,9 +11678,8 @@ Transform:
   - {fileID: 327812229}
   - {fileID: 1393928170}
   - {fileID: 1347736872}
-  - {fileID: 1157653928}
   m_Father: {fileID: 1185932374}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!114 &433786790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12792,7 +12791,7 @@ RectTransform:
   - {fileID: 1235694101}
   - {fileID: 738676364}
   m_Father: {fileID: 1185932374}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -14866,7 +14865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &616440877
 Transform:
   m_ObjectHideFlags: 0
@@ -19089,7 +19088,7 @@ RectTransform:
   - {fileID: 1809626033}
   - {fileID: 832760213}
   m_Father: {fileID: 1185932374}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -23514,7 +23513,7 @@ RectTransform:
   - {fileID: 296021560}
   - {fileID: 653623860}
   m_Father: {fileID: 1185932374}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -31861,8 +31860,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1157653927}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -10.700012, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 171803870}
@@ -31870,8 +31869,8 @@ Transform:
   - {fileID: 1857006771}
   - {fileID: 282624847}
   - {fileID: 685042768}
-  m_Father: {fileID: 433786789}
-  m_RootOrder: 4
+  m_Father: {fileID: 1185932374}
+  m_RootOrder: 6
 --- !u!1 &1160217306
 GameObject:
   m_ObjectHideFlags: 0
@@ -34578,6 +34577,7 @@ Transform:
   - {fileID: 1964600317}
   - {fileID: 1017101199}
   - {fileID: 1276633228}
+  - {fileID: 1157653928}
   - {fileID: 433786789}
   - {fileID: 1687240619}
   - {fileID: 765224451}
@@ -35125,7 +35125,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1196029612
 Transform:
   m_ObjectHideFlags: 0
@@ -38928,11 +38928,11 @@ MonoBehaviour:
   _organizacoes: 0000000000000000000000000000000000000000
   _criatividades: 0000000000000000000000000000000000000000
   _precos:
-  - 10
-  - 20
-  - 30
-  - 40
-  - 50
+  - 1000
+  - 1500
+  - 2000
+  - 3000
+  - 5000
   _sprites:
   - {fileID: 2091995083}
   - {fileID: 1163084913}
@@ -38997,17 +38997,17 @@ MonoBehaviour:
   _organizacoes: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   _criatividades: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   _precos:
-  - 10
-  - 20
-  - 30
-  - 40
-  - 50
-  - 60
-  - 70
-  - 80
-  - 90
+  - 400
   - 100
-  - 110
+  - 200
+  - 2000
+  - 600
+  - 300
+  - 5000
+  - 500
+  - 700
+  - 800
+  - 1000
   _sprites:
   - {fileID: 2091995083}
   - {fileID: 1163084913}
@@ -44984,7 +44984,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1185932374}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!82 &1687240620
 AudioSource:
   m_ObjectHideFlags: 0
@@ -45306,7 +45306,7 @@ RectTransform:
   - {fileID: 1613213454}
   - {fileID: 251290582}
   m_Father: {fileID: 1185932374}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -50309,7 +50309,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1835126433
 Transform:
   m_ObjectHideFlags: 0
@@ -52957,7 +52957,7 @@ RectTransform:
   - {fileID: 1119850185}
   - {fileID: 925788251}
   m_Father: {fileID: 1185932374}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -54733,8 +54733,9 @@ MonoBehaviour:
     y: -350
     width: 1547
     height: 1024
-  selectedBlock: {fileID: 2001343609}
-  selectedCommands: []
+  selectedBlock: {fileID: 2001343611}
+  selectedCommands:
+  - {fileID: 2001343593}
   variables:
   - {fileID: 2001343582}
   description: 
@@ -54780,7 +54781,7 @@ MonoBehaviour:
     gameObjectVal: {fileID: 1196029611}
   activeState:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
   targetGameObjectOLD: {fileID: 0}
 --- !u!114 &2001343584
 MonoBehaviour:
@@ -54842,7 +54843,7 @@ MonoBehaviour:
     gameObjectVal: {fileID: 554248563}
   activeState:
     booleanRef: {fileID: 0}
-    booleanVal: 0
+    booleanVal: 1
   targetGameObjectOLD: {fileID: 0}
 --- !u!114 &2001343588
 MonoBehaviour:
@@ -54972,10 +54973,10 @@ MonoBehaviour:
   indentLevel: 1
   _targetGameObject:
     gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 19039861}
+    gameObjectVal: {fileID: 1196029611}
   activeState:
     booleanRef: {fileID: 0}
-    booleanVal: 0
+    booleanVal: 1
   targetGameObjectOLD: {fileID: 0}
 --- !u!114 &2001343594
 MonoBehaviour:
@@ -54993,10 +54994,10 @@ MonoBehaviour:
   indentLevel: 1
   _targetGameObject:
     gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 1835126432}
+    gameObjectVal: {fileID: 554248563}
   activeState:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
   targetGameObjectOLD: {fileID: 0}
 --- !u!114 &2001343595
 MonoBehaviour:
@@ -55014,10 +55015,10 @@ MonoBehaviour:
   indentLevel: 1
   _targetGameObject:
     gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 19039861}
+    gameObjectVal: {fileID: 1734343983}
   activeState:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
   targetGameObjectOLD: {fileID: 0}
 --- !u!114 &2001343599
 MonoBehaviour:
@@ -55035,10 +55036,10 @@ MonoBehaviour:
   indentLevel: 1
   _targetGameObject:
     gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 554248563}
+    gameObjectVal: {fileID: 1835126432}
   activeState:
     booleanRef: {fileID: 0}
-    booleanVal: 1
+    booleanVal: 0
   targetGameObjectOLD: {fileID: 0}
 --- !u!114 &2001343600
 MonoBehaviour:
@@ -55056,10 +55057,10 @@ MonoBehaviour:
   indentLevel: 1
   _targetGameObject:
     gameObjectRef: {fileID: 0}
-    gameObjectVal: {fileID: 1196029611}
+    gameObjectVal: {fileID: 1734343983}
   activeState:
     booleanRef: {fileID: 0}
-    booleanVal: 0
+    booleanVal: 1
   targetGameObjectOLD: {fileID: 0}
 --- !u!114 &2001343601
 MonoBehaviour:
@@ -55108,7 +55109,7 @@ MonoBehaviour:
     gameObjectVal: {fileID: 1835126432}
   activeState:
     booleanRef: {fileID: 0}
-    booleanVal: 0
+    booleanVal: 1
   targetGameObjectOLD: {fileID: 0}
 --- !u!114 &2001343605
 MonoBehaviour:
@@ -55178,7 +55179,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 168
     y: 205
-    width: 157
+    width: 164
     height: 40
   itemId: 2
   blockName: ConfirmButtonBlock
@@ -55201,7 +55202,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 157
     y: 133
-    width: 170
+    width: 180
     height: 40
   itemId: 1
   blockName: EmployeesButtonBlock
@@ -55233,7 +55234,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 168
     y: 62
-    width: 143
+    width: 148
     height: 40
   itemId: 0
   blockName: ToolsButtonBlock
@@ -55399,7 +55400,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 414508, guid: b9c0d8294a337754391a36c3de7b9712, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 21240808, guid: b9c0d8294a337754391a36c3de7b9712, type: 2}
       propertyPath: m_Sprite

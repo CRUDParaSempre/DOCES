@@ -219,15 +219,12 @@ public class GameStateManager : MonoBehaviour {
 		get{ return _gender; }
 	} 
 
-	public Text money;
-
 	// Use this for initialization
 	void Start () {
 		_projectScores = new List<List<int>> ();
 		for (int i = 0; i < 5; i++) {
 			_projectScores.Add (new List<int> ());
 		}
-		money.text = _golpinhos.ToString();
 	}
 	
 	// Update is called once per frame

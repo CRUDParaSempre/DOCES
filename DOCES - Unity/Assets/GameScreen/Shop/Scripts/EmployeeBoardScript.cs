@@ -146,7 +146,7 @@ public class EmployeeBoardScript : MonoBehaviour {
     public void compraItem() {
         var index = selectedItem;
         var preco = _precos[index];
-        var dinheiro = 1000;
+		var dinheiro = gsm.golpinhos;
         if (dinheiro - preco > 0) {
             funcionario[index].gameObject.SetActive(true);
             deselectItem();
