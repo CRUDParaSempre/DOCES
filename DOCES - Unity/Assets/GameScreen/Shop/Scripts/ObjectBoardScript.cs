@@ -201,7 +201,7 @@ public class ObjectBoardScript : MonoBehaviour {
 //		var index = _idx + selectedItemWindow;
 		var index = selectedItem;
         var preco = _precos[index];
-        var dinheiro = 1000;
+		var dinheiro = gsm.golpinhos;
         var tipo = _tipos[index];
         if (dinheiro - preco > 0) {
             if (tipo == 0) {
