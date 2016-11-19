@@ -152,6 +152,7 @@ public class EmployeeBoardScript : MonoBehaviour {
         if (dinheiro - preco > 0) {
             funcionario[index].gameObject.SetActive(true);
             deselectItem();
+			gsm.golpinhos -= (int)preco;
             gsm.frascoO += _organizacoes[index];
             gsm.frascoL += _logicas[index];
             gsm.frascoC += _criatividades[index];

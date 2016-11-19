@@ -219,6 +219,7 @@ public class ObjectBoardScript : MonoBehaviour {
 				}
 				notebook.sprite = _renderers [index];
 				curr_pc_idx = index;
+				gsm.golpinhos -= (int)preco;
 			} else if (tipo == 1) {
 				// cadeira
 				if (curr_cadeira_idx > -1) {
@@ -232,6 +233,7 @@ public class ObjectBoardScript : MonoBehaviour {
 				}
 				cadeira.sprite = _renderers [index];
 				curr_cadeira_idx = index;
+				gsm.golpinhos -= (int)preco;
 			} else if (tipo == 2) {
 				// mesa
 				if (curr_mesa_idx > -1) {
@@ -245,8 +247,10 @@ public class ObjectBoardScript : MonoBehaviour {
 				}
 				mesa.sprite = _renderers [index];
 				curr_mesa_idx = index;
+				gsm.golpinhos -= (int)preco;
 			}
 			deselectItem ();
+
 			gsm.frascoO += _organizacoes [index];
 			gsm.frascoL += _logicas [index];
 			gsm.frascoC += _criatividades [index];
