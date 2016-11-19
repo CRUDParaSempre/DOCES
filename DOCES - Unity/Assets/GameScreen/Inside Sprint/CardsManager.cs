@@ -265,6 +265,9 @@ public class CardsManager : MonoBehaviour {
 			if (manager.cardState == CardClickManager.CardState.Selected || manager.cardState == CardClickManager.CardState.SelectedAndZoomed	) {
 				Debug.Log ("Card " + i + " " + manager.type);
 				GameStateManager.Instance.addProjectScores (manager.bonusValue,manager.type);
+
+				GameStateManager.Instance.subtractMoney (manager.costs[3]);
+
 			}
 		}
 	}

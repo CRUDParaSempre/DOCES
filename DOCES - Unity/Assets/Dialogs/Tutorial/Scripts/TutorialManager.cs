@@ -25,6 +25,8 @@ public class TutorialManager : MonoBehaviour {
 	private Color halfTransparent = new Color(1f,1f,1f,.5f);
 	private Color opaque = new Color(1f,1f,1f,1f);
 
+	private float focusX, focusY, focusWidth, focusHeight;
+
 
 	// Use this for initialization
 	void Start () {
@@ -37,7 +39,10 @@ public class TutorialManager : MonoBehaviour {
 	}
 
 	public void showTutorialAtPosition(List<string> texts, float focusX, float focusY, float focusWidth, float focusHeight, bool aboveFocus, float xPivot) {
+		this.gameObject.SetActive (true);
 		createFocusArea (focusX,focusY,focusWidth,focusHeight);
+
+		GameStateManager.Instance.setGameState (GameStateManager.GameState.Tutorial);
 		Vector3 newPos;
 		tutorialTexts = texts;
 		this.aboveFocus = aboveFocus;
@@ -45,10 +50,11 @@ public class TutorialManager : MonoBehaviour {
 		if (aboveFocus) {
 			//set tutorial message position
 			newPos = new Vector3 (Mathf.Lerp(focusX,(focusX + focusWidth),xPivot), -focusY, 0f);
-			upTutorialCanvas.GetComponent<RectTransform> ().localPosition = newPos;
+			upTutorialCanvas.GetComponent<RectTransform> ().anchoredPosition3D = newPos;
 
 			//initialize text
-			upTutorialText.text = texts [0];
+			index = 0;
+			upTutorialText.text = texts [index];
 
 			//activate tutorial message canvas
 			upTutorialCanvas.gameObject.SetActive (true);
@@ -58,12 +64,12 @@ public class TutorialManager : MonoBehaviour {
 			upPreviousButton.gameObject.GetComponent<CircleCollider2D> ().enabled = false;
 
 
-
 		} else {
 			newPos = new Vector3 (Mathf.Lerp(focusX,(focusX + focusWidth),xPivot), (-focusY + -focusHeight), 0f);
-			botTutorialCanvas.GetComponent<RectTransform> ().localPosition = newPos;
+			botTutorialCanvas.GetComponent<RectTransform> ().anchoredPosition3D = newPos;
 
-			botTutorialText.text = texts [0];
+			index = 0;
+			botTutorialText.text = texts [index];
 
 			botTutorialCanvas.gameObject.SetActive (true);
 
@@ -72,10 +78,6 @@ public class TutorialManager : MonoBehaviour {
 
 		}
 
-
-
-
-		this.gameObject.SetActive (true);
 	}
 
 	public void showTutorialAtPosition(string text, float focusX, float focusY, float focusWidth, float focusHeight, bool aboveFocus, float xPivot) {
@@ -91,20 +93,21 @@ public class TutorialManager : MonoBehaviour {
 		}
 
 		//top fade block position and size
-		fadeBlocks[0].localPosition = new Vector3(0f,0f,0f);
+		fadeBlocks[0].anchoredPosition3D = new Vector3(0f,0f,0f);
 		fadeBlocks [0].sizeDelta = new Vector2 (screenWidth,y);
 
 		//bot fade block position and size
-		fadeBlocks[1].localPosition = new Vector3(0f,-y-height,0f);
+		fadeBlocks[1].anchoredPosition3D = new Vector3(0f,-y-height,0f);
 		fadeBlocks[1].sizeDelta = new Vector2(screenWidth, screenHeight - fadeBlocks [0].sizeDelta.y - height);
 
 		//left fade block position and size
-		fadeBlocks[2].localPosition = new Vector3(0f,-y,0f);
+		fadeBlocks[2].anchoredPosition3D = new Vector3(0f,-y,0f);
 		fadeBlocks [2].sizeDelta = new Vector2 (x,height);
 
 		//right fade block position and size
-		fadeBlocks[3].localPosition = new Vector3(width+x,-y,0f);
+		fadeBlocks[3].anchoredPosition3D = new Vector3(width+x,-y,0f);
 		fadeBlocks [3].sizeDelta = new Vector2 (screenWidth - fadeBlocks[2].sizeDelta.x - width,height);
+
 	}
 
 	public void nextTutorialTip() {
@@ -125,11 +128,12 @@ public class TutorialManager : MonoBehaviour {
 		} else {
 
 			foreach(RectTransform rt in fadeBlocks) {
-				rt.gameObject.SetActive (true);
+				rt.gameObject.SetActive (false);
 			}
 
 			upTutorialCanvas.gameObject.SetActive (false);
 			botTutorialCanvas.gameObject.SetActive (false);
+			GameStateManager.Instance.tutorialFinished ();
 			this.gameObject.SetActive (false);
 		}
 	}

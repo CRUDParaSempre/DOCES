@@ -9,7 +9,8 @@ using Fungus;
 public class GameStateManager : MonoBehaviour {
 	private static GameStateManager instance;
 
-	public enum GameState { Menu, Selection, GameClient, GameOffice, GameQuiz, GameCards, ProjectResults }
+	public enum GameState { Menu, Selection, GameClient, GameOffice, GameQuiz, GameCards, ProjectResults, Tutorial, GameOver }
+	private GameState previousState = GameState.Menu;
 	[SerializeField]private GameState _gameState = GameState.Menu;
 	public GameState gameState {
 		get { return _gameState; }
@@ -37,6 +38,8 @@ public class GameStateManager : MonoBehaviour {
 		get { return _clientName; }
 	}
 
+	[SerializeField] private List<bool> tutorialMessages;
+
 	public bool hasClient = false;
 	[SerializeField] private GameObject clientCanvas;
 	[SerializeField] private GameObject sprintCanvas;
@@ -57,7 +60,7 @@ public class GameStateManager : MonoBehaviour {
 	[SerializeField] private int _bonusOrg = 0;
 
 	private int _gender = 0;
-	private int _golpinhos = 100;
+	private int _golpinhos = 1000;
 
 	private List<Color> _colorIds = new List<Color> (){Color.white,Color.white,Color.white,Color.white,Color.white,Color.white}; //0 = skin, 1 = eyes, 2 = hair, 3 = shirt, 4 = pants, 5 = shoes
 	[SerializeField] private CardsManager cardsManager;
@@ -106,6 +109,8 @@ public class GameStateManager : MonoBehaviour {
 	}
 
 	[SerializeField] private GameObject resultsCanvas;
+	[SerializeField] private GameObject gameOverCanvas;
+	[SerializeField] public Text gameOverText;
 
 	public Text weekUI;
 	public Text monthYearUI;
@@ -225,19 +230,78 @@ public class GameStateManager : MonoBehaviour {
 		for (int i = 0; i < 5; i++) {
 			_projectScores.Add (new List<int> ());
 		}
+
+		golpinhosUI.text = "G$ " + moneyToString(_golpinhos);
+		credibilidadeUI.text = _credibility.ToString();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (gameState == GameState.GameOffice) {
+		
+		if (gameState == GameState.Selection) {
+		
+			if (!tutorialMessages[6]) {
+				tutorialMessages[6] = true;
+
+				List<string> l = new List<string> ();
+				l.Add ("Bem vindo ao Minha Empresa!");
+				l.Add ("Nessa tela você poderá personalizar seu persongem e, logo em seguida, sua empresa.");
+				l.Add ("Os pontos de habilidade irão impactar na sua capacidade de realizar ações dentro do jogo...");
+				l.Add ("DICA: distribua os pontos sabiamente!!");
+				tutorial.showTutorialAtPosition (l,26f,261f,977f,491f,true,0.5f); 
+
+			}
+		
+		} else if (gameState == GameState.GameOffice) {
 			
-			golpinhosUI.text = "G$ " + moneyToString(_golpinhos);
-			credibilidadeUI.text = _credibility.ToString();
+			if (_credibility < 0) {
+				Camera.main.backgroundColor = Color.black;
+				Camera.main.GetComponent<SetCameraPosition> ().setCameraPosition(0,0,0);
+
+				setGameState (GameState.GameOver);
+				gameOverCanvas.SetActive (true);
+				gameOverText.text = _companyName + " faliu!";
+			
+			} else if (_credibility >= 100) {
+				Camera.main.backgroundColor = Color.black;
+				Camera.main.GetComponent<SetCameraPosition> ().setCameraPosition(0,0,0);
+
+				setGameState (GameState.GameOver);
+				gameOverCanvas.SetActive (true);
+				gameOverText.color = Color.green;
+				gameOverText.text = _companyName + " é uma empresa de sucesso!";
+			
+			}
+						
+			
+			if (currentWeek == 0 && !tutorialMessages[0]) {
+				tutorialMessages[0] = true;
+		
+				List<string> l = new List<string> ();
+				l.Add ("Olá " + _playerName + "! Agora que você já criou a "+ _companyName+", está na hora de fazer ela bombar!");
+				l.Add ("Nessa parte da tela, é possível ver seus status...");
+				l.Add ("À esquerda, você pode ver a quantidade de Golpinhos (G$) que sua empresa possui...");
+				l.Add ("No centro está a credibilidade da " + _companyName + ". O objetivo do jogo é atingir 100 pontos de credibilidade...");
+				l.Add ("CUIDADO! Se a sua credibilidade ficar menor que 0, nenhum cliente procurará a " + _companyName + " ...");
+				l.Add ("À direita está o calendário. Nele você pode ver a semana em que você está.");
+				tutorial.showTutorialAtPosition (l,133.5f,17f,831f,85f,false,0.5f); 
+
+			} else if (currentWeek == 0 && !tutorialMessages[1]) {
+				tutorialMessages[1] = true;
+
+				List<string> l = new List<string> ();
+				l.Add ("Quando a " + _companyName + " receber um novo cliente, ele irá tocar a campainha...");
+				l.Add ("Quanto mais credibilidade você tiver, mais rápido os clientes vão aparecer...");
+				l.Add ("A "+ _companyName +" é a mais nova startup da área. Então, não se preocupe se o primeiro cliente demorar para chegar...");
+				l.Add ("LEMBRE-SE: Assim que a campainha tocar, você deve clicar na porta para recebê-lo, ou o cliente irá embora!");
+				tutorial.showTutorialAtPosition (l,0f,273f,263f,324f,true,1f);
+
+			} 
 
 			if (canCreateClient ()) {
 				newClient ();
 			}
-
+				
 			if(Time.time - lastWeekAdvance > timePerWeek) {
 				advanceTimeBy (1);
 			}
@@ -434,7 +498,17 @@ public class GameStateManager : MonoBehaviour {
 
 	//oferece novo cliente para o player
 	public void newClient() {
+
 		cameraFlowchart.ExecuteBlock (shakeScreenBlock);
+
+		if (!tutorialMessages [2]) {
+			tutorialMessages[2] = true;
+
+			List<string> l = new List<string> ();
+			l.Add ("Olha! Um novo cliente chegou! Clique na porta para recebê-lo.");
+			tutorial.showTutorialAtPosition (l,0f,273f,263f,324f,true,1f);
+		}
+
 		clientWeek = currentWeek;
 		hasClient = true;
 		doorButton.GetComponent<DoorManager> ().activateDoor ();
@@ -442,8 +516,18 @@ public class GameStateManager : MonoBehaviour {
 	}
 
 	public void playerReceivedClient() {
+
 		if (hasClient) {
 			clientCanvas.SetActive (true);
+
+			if (!tutorialMessages [3]) {
+				tutorialMessages[3] = true;
+
+				List<string> l = new List<string> ();
+				l.Add ("Antes de aceitar o cliente, lembre-se de ler todo o contrado!");
+				l.Add ("Afinal, podem ter projetos muito complexos para uma startup tão nova.");
+				tutorial.showTutorialAtPosition (l,21f,71f,813f,555,false,0.5f);
+			}
 		
 		} else {
 			warning.showWarning ("Não há propostas de cliente!");
@@ -547,13 +631,15 @@ public class GameStateManager : MonoBehaviour {
 
 	public void setGameState(GameState state) {
 		//Debug.Log ("Estado atual: " + _gameState + " Proximo estado: " + state );
+		GameState temp = _gameState;
+
 		if (_gameState == GameState.Menu && state == GameState.Selection) {
 			_gameState = state;
 		
 		} else if((_gameState == GameState.Selection && state == GameState.Menu) || (_gameState == GameState.Selection && state == GameState.GameOffice)  ) {
 			_gameState = state;
 
-		} else if((_gameState == GameState.GameOffice && state == GameState.Menu) || (_gameState == GameState.GameOffice && state == GameState.GameClient)  ) {
+		} else if((_gameState == GameState.GameOffice && state == GameState.Menu) || (_gameState == GameState.GameOffice && state == GameState.GameClient) || (_gameState == GameState.GameOffice && state == GameState.GameOver)  ) {
 			_gameState = state;
 
 		} else if((_gameState == GameState.GameClient && state == GameState.Menu) || (_gameState == GameState.GameClient && state == GameState.GameOffice) || (_gameState == GameState.GameClient && state == GameState.GameQuiz)  ) {
@@ -568,7 +654,16 @@ public class GameStateManager : MonoBehaviour {
 		} else if((_gameState == GameState.ProjectResults && state == GameState.Menu) || (_gameState == GameState.ProjectResults && state == GameState.GameOffice) ) {
 			_gameState = state;
 
-		}
+		} else if(state == GameState.Tutorial) {
+			_gameState = state;
+
+		} else if((_gameState == GameState.Tutorial && state == previousState) ) {
+			_gameState = state;
+
+		} 
+
+		previousState = temp;
+
 	}
 
 //	public void addProjectScores(List<int> scores) {
@@ -603,6 +698,7 @@ public class GameStateManager : MonoBehaviour {
 	}
 
 	public void initializeQuiz() {
+
 		setGameState (GameState.GameQuiz);
 
 		quizQuestions = Random.Range (1,3);
@@ -613,6 +709,18 @@ public class GameStateManager : MonoBehaviour {
 
 		if (_gameState == GameState.GameQuiz) {
 			quizCanvas.GetComponent<QuizManager> ().newQuestion ();
+		}
+
+		if (!tutorialMessages [4]) {
+			tutorialMessages[4] = true;
+
+			List<string> l = new List<string> ();
+			l.Add ("Vamos começar o nosso primeiro projeto!");
+			l.Add ("Para desenvolver um projeto, você deve passar por etapas (corridas)...");
+			l.Add ("No início de cada corrida, você terá a oportunidade de ganhar prêmios...");
+			l.Add ("Mas, para isso, você terá que acertar as perguntas do quiz!");
+			l.Add ("LEMBRE-SE: os pontos só valerão para a corrida atual, porém os golpinhos serão adicionados diretamente ao caixa da empresa.");
+			tutorial.showTutorialAtPosition (l,56f,236f,931f,480f,true,0.5f);
 		}
 	}
 
@@ -659,6 +767,21 @@ public class GameStateManager : MonoBehaviour {
 
 			if (_gameState == GameState.GameCards) {
 				sprintCanvas.gameObject.SetActive (true);
+
+				if (!tutorialMessages [5]) {
+					tutorialMessages[5] = true;
+
+					List<string> l = new List<string> ();
+					l.Add ("É nesta tela que a ação realmente acontece...");
+					l.Add ("Nela, você deve escolher o que você e/ou sua equipe fará...");
+					l.Add ("Para realizar uma ação, você precisar selecionar uma carta...");
+					l.Add ("Para isso, basta clicar duas vezes em cima dela....");
+					l.Add ("Você pode aumentar o tamanho da carta clicando uma vez sobre ela.");
+					l.Add ("Depois que você selecionar todas as cartas desejadas para essa corrida, clique no botão \"Pronto\".");
+					l.Add ("LEMBRE-SE: seu projeto será avaliado em cada área (Requisitos, Análise, Desenho, Implementação e Testes). Tente atingir o maior número de pontos possíveis em cada área.");
+					tutorial.showTutorialAtPosition (l,87f,181f,855f,500f,true,0.5f);
+				}
+
 
 			} else {
 				Debug.LogError ("Não foi possivel entrar no estado da corrida!");
@@ -736,6 +859,32 @@ public class GameStateManager : MonoBehaviour {
 
 		return result;
 	}
+
+	public void tutorialFinished(){
+
+		setGameState (previousState);
+
+	}
+
+
+	public void subtractMoney(int value){
+	
+		_golpinhos -= value;
+
+		golpinhosUI.text = "G$ " + moneyToString(_golpinhos);
+	}
+
+
+	public void enableTutorial(){
+	
+		for(int i = 0; i < tutorialMessages.Count; i++){
+
+			tutorialMessages [i] = false;
+
+		}
+	
+	}
+
 }
 
 
