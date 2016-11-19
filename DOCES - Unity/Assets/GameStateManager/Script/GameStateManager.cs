@@ -216,6 +216,7 @@ public class GameStateManager : MonoBehaviour {
 	}
 
 	public int golpinhos { 
+		set{ _golpinhos = value; }
 		get{ return _golpinhos; }
 	}
 
@@ -237,7 +238,7 @@ public class GameStateManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		golpinhosUI.text = "G$ " + moneyToString(_golpinhos);
 		if (gameState == GameState.Selection) {
 		
 			if (!tutorialMessages[6]) {
