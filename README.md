@@ -1,5 +1,6 @@
 # DOCES
-Link para o jogo: https://crudparasempre.github.io/DOCES/
+Link para o jogo: https://crudparasempre.github.io/DOCES/ .
+
 Trabalho prático de Engenharia de Software
 
 # LEIA ANTES DE CONTRIBUIR!!!!
