@@ -7,6 +7,11 @@ public class SetCameraPosition : MonoBehaviour {
 	private Vector3 dest;
 	private Vector3 dirControl = new Vector3(1f,1f,1f); // 1 means should increase, -1 means should decrease
 	private Rigidbody2D body;
+	[SerializeField] private int targetFrameRate;
+
+	void Awake() {
+		Application.targetFrameRate = targetFrameRate ;
+	}
 
 	// Use this for initialization
 	void Start () {
